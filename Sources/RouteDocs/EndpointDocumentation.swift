@@ -54,26 +54,6 @@ extension EndpointDocumentation.Body {
     public init<T: Content>(object: T.Type, without properties: PartialKeyPath<T>...) throws {
         try self.init(object: object, without: properties)
     }
-
-    @inlinable
-    public init<T: TypeWrapping>(object: T.Type, as mediaType: MediaType, without properties: [PartialKeyPath<T.Wrapped>]) throws where T.Wrapped: Decodable {
-        try self.init(object: object.Wrapped.self, as: mediaType, without: properties)
-    }
-
-    @inlinable
-    public init<T: TypeWrapping>(object: T.Type, as mediaType: MediaType, without properties: PartialKeyPath<T.Wrapped>...) throws where T.Wrapped: Decodable {
-        try self.init(object: object, as: mediaType, without: properties)
-    }
-
-    @inlinable
-    public init<T: TypeWrapping>(object: T.Type, without properties: [PartialKeyPath<T.Wrapped>]) throws where T.Wrapped: Content {
-        try self.init(object: object.Wrapped.self, without: properties)
-    }
-
-    @inlinable
-    public init<T: TypeWrapping>(object: T.Type, without properties: PartialKeyPath<T.Wrapped>...) throws where T.Wrapped: Content {
-        try self.init(object: object, without: properties)
-    }
 }
 
 extension EndpointDocumentation.Object {
@@ -84,7 +64,7 @@ extension EndpointDocumentation.Object {
         assert(depth > 0, "Depth must be greater than 0")
         let levelDecoded = try object.decodeProperties(depth: depth)
         guard !levelDecoded.isEmpty else { return [] }
-        return try Dictionary(grouping: levelDecoded.filter(excluded: excluded),
+        return try Dictionary(grouping: levelDecoded.lazy.filter(excluded: excluded),
                               by: { $0.path.prefix(upTo: depth) }).compactMap { element in
             decoded.first(where: { $0.path.prefix(upTo: depth) == element.key }).flatMap {
                 self.init(type: $0.type, properties: element.value, atDepth: depth)
