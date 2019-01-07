@@ -11,9 +11,18 @@ extension TypeWrapping {
 }
 
 internal extension AnyTypeWrapping {
-    static var leafType: Any.Type {
-        return (wrappedType as? AnyTypeWrapping.Type)?.leafType ?? wrappedType
+    private static func leafType(history: [Any.Type]) -> Any.Type {
+        let wrapped = wrappedType
+        if history.contains(where: { $0 == wrapped }) {
+            // If the history contains our wrapped type already, we encountered a loop.
+            // Loops aren't necessarily bad, we just need to detect them
+            // and return the last element (which is us in this case).
+            return self
+        }
+        return (wrapped as? AnyTypeWrapping.Type)?.leafType(history: history + [self]) ?? wrapped
     }
+
+    static var leafType: Any.Type { return leafType(history: []) }
 }
 
 // We detect optionals seperately, so we need to make them "transparent".
