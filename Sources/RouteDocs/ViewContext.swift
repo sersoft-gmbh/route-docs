@@ -120,4 +120,8 @@ public extension ViewContext {
     public init<C: Comparable>(router: Router, sortedBy sortPath: KeyPath<EndpointDocumentation, C>, usingName namePath: KeyPath<TypeDescription, String>? = nil) {
         self.init(documentables: router.routes, sortedBy: sortPath, usingName: namePath)
     }
+
+    public init(router: Router, usingName namePath: KeyPath<TypeDescription, String>? = nil) {
+        self.init(documentables: router.routes, sortedBy: \.sortOrder, usingName: namePath)
+    }
 }
