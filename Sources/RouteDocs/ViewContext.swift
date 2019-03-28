@@ -96,7 +96,7 @@ fileprivate extension Sequence where Element == EndpointDocumentation {
     }
 }
 
-public extension ViewContext {
+extension ViewContext {
     public init<Docs: Sequence, C: Comparable>(documentables: Docs,
                                                sortedBy sortPath: KeyPath<EndpointDocumentation, C>,
                                                usingName namePath: KeyPath<TypeDescription, String>? = nil)
