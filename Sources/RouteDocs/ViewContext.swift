@@ -91,8 +91,10 @@ extension ViewContext.Documentation {
 }
 
 fileprivate extension Sequence where Element == EndpointDocumentation {
-    func contextDocumentation<C: Comparable>(orderedBy keyPath: KeyPath<Element, C>, usingName namePath: KeyPath<TypeDescription, String>?) -> [ViewContext.Documentation] {
-        return sorted { $0[keyPath: keyPath] < $1[keyPath: keyPath] }.map { ViewContext.Documentation(documentation: $0, usingName: namePath) }
+    func contextDocumentation<C: Comparable>(orderedBy keyPath: KeyPath<Element, C>,
+                                             usingName namePath: KeyPath<TypeDescription, String>?) -> [ViewContext.Documentation] {
+        return sorted { $0[keyPath: keyPath] < $1[keyPath: keyPath] }
+            .map { ViewContext.Documentation(documentation: $0, usingName: namePath) }
     }
 }
 
@@ -102,7 +104,7 @@ extension ViewContext {
                                                usingName namePath: KeyPath<TypeDescription, String>? = nil)
         where Docs.Element == EndpointDocumentable
     {
-        let allDocsByGroup = Dictionary(grouping: documentables.lazy.compactMap { $0.documentation }, by: { $0.groupName ?? "" }) // TODO: Swift 4.2: Optional is Hashable
+        let allDocsByGroup = Dictionary(grouping: documentables.lazy.compactMap { $0.documentation }, by: { $0.groupName ?? "" })
         otherDocumentations = allDocsByGroup["", default: []].lazy.contextDocumentation(orderedBy: sortPath, usingName: namePath)
         groupedDocumentations = allDocsByGroup.lazy
             .filter { !$0.key.isEmpty }
@@ -117,7 +119,8 @@ extension ViewContext {
     }
 
     @inlinable
-    public init<C: Comparable>(router: Router, sortedBy sortPath: KeyPath<EndpointDocumentation, C>, usingName namePath: KeyPath<TypeDescription, String>? = nil) {
+    public init<C: Comparable>(router: Router, sortedBy sortPath: KeyPath<EndpointDocumentation, C>,
+                               usingName namePath: KeyPath<TypeDescription, String>? = nil) {
         self.init(documentables: router.routes, sortedBy: sortPath, usingName: namePath)
     }
 
