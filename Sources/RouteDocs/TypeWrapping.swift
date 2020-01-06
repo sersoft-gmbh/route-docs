@@ -19,7 +19,7 @@ internal extension AnyTypeWrapping {
             // and return the last element (which is us in this case).
             return self
         }
-        return (wrapped as? AnyTypeWrapping.Type)?.leafType(history: history + [self]) ?? wrapped
+        return (wrapped as? AnyTypeWrapping.Type)?.leafType(history: history + CollectionOfOne<Any.Type>(self)) ?? wrapped
     }
 
     static var leafType: Any.Type { return leafType(history: []) }
