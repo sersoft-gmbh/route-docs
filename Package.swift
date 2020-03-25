@@ -1,4 +1,4 @@
-// swift-tools-version:5.1
+// swift-tools-version:5.2
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
@@ -16,15 +16,18 @@ let package = Package(
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
-        .package(url: "https://github.com/vapor/vapor.git", from: "3.3.0"),
-        .package(url: "https://github.com/ffried/FFFoundation.git", from: "7.0.0"),
+        .package(name: "Vapor", url: "https://github.com/vapor/vapor.git", from: "3.3.3"),
+        .package(url: "https://github.com/ffried/FFFoundation.git", from: "7.0.2"),
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages which this package depends on.
         .target(
             name: "RouteDocs",
-            dependencies: ["Vapor", "FFFoundation"]),
+            dependencies: [
+                .product(name: "Vapor", package: "Vapor"),
+                "FFFoundation",
+        ]),
         .testTarget(
             name: "RouteDocsTests",
             dependencies: ["RouteDocs"]),
