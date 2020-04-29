@@ -7,7 +7,7 @@ public protocol TypeWrapping: AnyTypeWrapping {
 }
 
 extension TypeWrapping {
-    public static var wrappedType: Any.Type { return Wrapped.self }
+    public static var wrappedType: Any.Type { Wrapped.self }
 }
 
 internal extension AnyTypeWrapping {
@@ -27,7 +27,7 @@ internal extension AnyTypeWrapping {
 
 // We detect optionals seperately, so we need to make them "transparent".
 extension Optional: AnyTypeWrapping where Wrapped: AnyTypeWrapping {
-    public static var wrappedType: Any.Type { return Wrapped.wrappedType }
+    public static var wrappedType: Any.Type { Wrapped.wrappedType }
 }
 
 // We detect optionals seperately, so we need to make them "transparent".

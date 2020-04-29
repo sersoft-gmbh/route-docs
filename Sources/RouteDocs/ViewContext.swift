@@ -16,7 +16,7 @@ public struct ViewContext: Encodable {
         }
 
         public struct Body: Encodable {
-            public let mediaType: MediaType
+            public let mediaType: HTTPMediaType
             public let objects: [Object]
         }
 
@@ -50,12 +50,12 @@ fileprivate extension HTTPMethod {
 
 fileprivate extension TypeDescription {
     func docsTypeName(using namePath: KeyPath<TypeDescription, String>?) -> String {
-        return namePath.map { self[keyPath: $0] } ?? typeName(includingModule: false)
+        namePath.map { self[keyPath: $0] } ?? typeName(includingModule: false)
     }
 }
 
 fileprivate extension EndpointDocumentation {
-    var sortOrder: String { return method.sortOrder + "/" + path }
+    var sortOrder: String { method.sortOrder + "/" + path }
 }
 
 extension ViewContext.Documentation.Field {
@@ -93,7 +93,7 @@ extension ViewContext.Documentation {
 fileprivate extension Sequence where Element == EndpointDocumentation {
     func contextDocumentation<C: Comparable>(orderedBy keyPath: KeyPath<Element, C>,
                                              usingName namePath: KeyPath<TypeDescription, String>?) -> [ViewContext.Documentation] {
-        return sorted { $0[keyPath: keyPath] < $1[keyPath: keyPath] }
+        sorted { $0[keyPath: keyPath] < $1[keyPath: keyPath] }
             .map { ViewContext.Documentation(documentation: $0, usingName: namePath) }
     }
 }
@@ -104,7 +104,7 @@ extension ViewContext {
                                                usingName namePath: KeyPath<TypeDescription, String>? = nil)
         where Docs.Element == EndpointDocumentable
     {
-        let allDocsByGroup = Dictionary(grouping: documentables.lazy.compactMap { $0.documentation }, by: { $0.groupName ?? "" })
+        let allDocsByGroup = Dictionary(grouping: documentables.lazy.compactMap(\.documentation), by: { $0.groupName ?? "" })
         otherDocumentations = allDocsByGroup["", default: []].lazy.contextDocumentation(orderedBy: sortPath, usingName: namePath)
         groupedDocumentations = allDocsByGroup.lazy
             .filter { !$0.key.isEmpty }
@@ -119,12 +119,12 @@ extension ViewContext {
     }
 
     @inlinable
-    public init<C: Comparable>(router: Router, sortedBy sortPath: KeyPath<EndpointDocumentation, C>,
+    public init<C: Comparable>(routes: Routes, sortedBy sortPath: KeyPath<EndpointDocumentation, C>,
                                usingName namePath: KeyPath<TypeDescription, String>? = nil) {
-        self.init(documentables: router.routes, sortedBy: sortPath, usingName: namePath)
+        self.init(documentables: routes.all, sortedBy: sortPath, usingName: namePath)
     }
 
-    public init(router: Router, usingName namePath: KeyPath<TypeDescription, String>? = nil) {
-        self.init(documentables: router.routes, sortedBy: \.sortOrder, usingName: namePath)
+    public init(routes: Routes, usingName namePath: KeyPath<TypeDescription, String>? = nil) {
+        self.init(documentables: routes.all, sortedBy: \.sortOrder, usingName: namePath)
     }
 }

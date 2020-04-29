@@ -1,4 +1,5 @@
 import Vapor
+import Echo
 import struct FFFoundation.TypeDescription
 
 public struct EndpointDocumentation: Codable, Equatable {
@@ -14,7 +15,7 @@ public struct EndpointDocumentation: Codable, Equatable {
     }
 
     public struct Body: Codable, Equatable {
-        public let mediaType: MediaType
+        public let mediaType: HTTPMediaType
         public let objects: [Object]
     }
 
@@ -25,58 +26,71 @@ public struct EndpointDocumentation: Codable, Equatable {
     public let body: Body?
     public let response: Body?
 }
-
+/*
 extension EndpointDocumentation {
     public init(path: [PathComponent], groupName: String? = nil, query: Object? = nil, body: Body? = nil, response: Body? = nil) throws {
+        precondition(!path.isEmpty)
         try self.init(groupName: groupName,
                       method: HTTPMethod(pathComponent: path[0]),
-                      path: Array(path.dropFirst()).readable,
+                      path: Array(path.dropFirst()).string,
                       query: query, body: body, response: response)
     }
 }
 
 extension EndpointDocumentation.Body {
-    public init<T: Decodable>(object: T.Type, as mediaType: MediaType, without properties: [PartialKeyPath<T>]) throws {
-        try self.init(mediaType: mediaType,
-                      objects: EndpointDocumentation.Object.objects(from: object, without: properties))
+    public init<T: Decodable>(object: T.Type, as mediaType: HTTPMediaType) throws {
+        try self.init(mediaType: mediaType, objects: EndpointDocumentation.Object.objects(from: object))
     }
 
     @inlinable
-    public init<T: Decodable>(object: T.Type, as mediaType: MediaType, without properties: PartialKeyPath<T>...) throws {
-        try self.init(object: object, as: mediaType, without: properties)
-    }
-
-    public init<T: Content>(object: T.Type, without properties: [PartialKeyPath<T>]) throws {
-        try self.init(object: object, as: object.defaultContentType, without: properties)
-    }
-
-    @inlinable
-    public init<T: Content>(object: T.Type, without properties: PartialKeyPath<T>...) throws {
-        try self.init(object: object, without: properties)
+    public init<T: Content>(object: T.Type) throws {
+        try self.init(object: object, as: object.defaultContentType)
     }
 }
 
 extension EndpointDocumentation.Object {
     private static func subObjects<T: Decodable>(of object: T.Type,
                                                  atDepth depth: Int,
-                                                 using decoded: [ReflectedProperty],
-                                                 without excluded: [ReflectedProperty]) throws -> [EndpointDocumentation.Object] {
-        assert(depth > 0, "Depth must be greater than 0")
+                                                 using decoded: [PartialKeyPath<T>]) throws -> [EndpointDocumentation.Object] {
+        assert(depth > 0)
+        let meta = reflect(object)
+        switch meta.kind {
+        case .class:
+            let classMeta = meta as! ClassMetadata
+        case .struct:
+            let structMeta = meta as! StructMetadata
+        case .enum, .optional:
+            let enumMeta = meta as! EnumMetadata
+        case .foreignClass:
+            let concreteMeta = meta as! ForeignClassMetadata
+        case .opaque:
+            let opaqueMeta = meta as! OpaqueMetadata
+        case .tuple:
+            let tupleMeta = meta as! TupleMetadata
+        case .function:
+        case .existential:
+        case .metatype:
+        case .objcClassWrapper:
+        case .existentialMetatype:
+        case .heapLocalVariable:
+        case .heapGenericLocalVariable:
+        case .errorObject:
+        }
         let levelDecoded = try object.decodeProperties(depth: depth)
         guard !levelDecoded.isEmpty else { return [] }
-        return try Dictionary(grouping: levelDecoded.lazy.filter(excluded: excluded),
+        return try Dictionary(grouping: levelDecoded.lazy,
                               by: { $0.path.prefix(upTo: depth) }).compactMap { element in
             decoded.first(where: { $0.path.prefix(upTo: depth) == element.key }).flatMap {
                 self.init(type: $0.type, properties: element.value, atDepth: depth)
             }
-        } + subObjects(of: object, atDepth: depth + 1, using: levelDecoded, without: excluded)
+        } + subObjects(of: object, atDepth: depth + 1, using: levelDecoded)
     }
 
-    fileprivate static func objects<T: Decodable>(from object: T.Type, without properties: [PartialKeyPath<T>]) throws -> [EndpointDocumentation.Object] {
+    fileprivate static func objects<T: Decodable>(from object: T.Type) throws -> [EndpointDocumentation.Object] {
         let excluded = try properties.compactMap { try object.anyDecodeProperty(valueType: Swift.type(of: $0).valueType, keyPath: $0) }
         let decoded = try object.decodeProperties(depth: 0)
-        return try [self.init(type: object, properties: decoded.filter(excluded: excluded))]
-            + subObjects(of: object, atDepth: 1, using: decoded, without: excluded).reduce(into: []) { $0.appendIfNotExists($1) }
+        return try CollectionOfOne(self.init(type: object, properties: decoded))
+            + subObjects(of: object, atDepth: 1, using: decoded).reduce(into: []) { $0.appendIfNotExists($1) }
     }
 
     private init(type: Any.Type, properties: [ReflectedProperty], atDepth depth: Int = 0) {
@@ -85,10 +99,10 @@ extension EndpointDocumentation.Object {
                   fields: properties.map { EndpointDocumentation.Field(reflected: $0, atDepth: depth) })
     }
 
-    public init<T: Decodable>(object: T.Type, without properties: [PartialKeyPath<T>]) throws {
+    public init<T: Decodable>(object: T.Type) throws {
         let excluded = try properties.compactMap { try object.anyDecodeProperty(valueType: Swift.type(of: $0).valueType, keyPath: $0) }
         let decoded = try object.decodeProperties(depth: 0)
-        self.init(type: object, properties: decoded.filter(excluded: excluded))
+        self.init(type: object, properties: decoded)
     }
 
     @inlinable
@@ -107,15 +121,10 @@ extension EndpointDocumentation.Field {
     }
 }
 
-fileprivate extension Collection where Element == ReflectedProperty {
-    func filter<C: Collection>(excluded: C) -> [Element] where C.Element == Element {
-        return filter { p in !excluded.contains { $0.path == p.path } }
-    }
-}
-
 fileprivate extension RangeReplaceableCollection where Element: Equatable {
     mutating func appendIfNotExists(_ element: Element) {
         guard !contains(element) else { return }
         append(element)
     }
 }
+*/
