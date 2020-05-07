@@ -1,54 +1,115 @@
 import NIOConcurrencyHelpers
-//import Echo
 
 extension CodingUserInfoKey {
     public static let isDocumentationDecoder = CodingUserInfoKey(rawValue: "IsDocumentationDecoder")!
 }
 
 public struct DocumentationObject: Hashable, CustomStringConvertible {
+    public enum Body: Hashable {
+        public struct EnumCase: Hashable {
+            public let name: String?
+            public let value: String
+
+            public init(name: String? = nil, value: String) {
+                self.name = name
+                self.value = value
+            }
+
+            public init<R: RawRepresentable>(value: R) {
+                let rawValueDesc = String(describing: value.rawValue)
+                let valueDesc = String(describing: value)
+                self.init(name: rawValueDesc == valueDesc ? nil : valueDesc, value: rawValueDesc)
+            }
+        }
+
+        case none
+        case fields([String: DocumentationObject])
+        case cases([EnumCase])
+
+        public var isEmpty: Bool {
+            switch self {
+            case .none: return true
+            case .fields(let fields): return fields.isEmpty
+            case .cases(let cases): return cases.isEmpty
+            }
+        }
+
+        fileprivate var fields: [String: DocumentationObject]? {
+            get {
+                switch self {
+                case .none: return [:]
+                case .fields(let fields): return fields
+                case .cases(_): return nil
+                }
+            }
+            set {
+                guard let new = newValue else { return }
+                if case .cases(_) = self { return }
+                self = new.isEmpty ? .none : .fields(new)
+            }
+        }
+    }
+
     public let type: Any.Type
-    public fileprivate(set) var fields: [String: DocumentationObject]
+    public fileprivate(set) var body: Body
 
     public var isOptional: Bool { type is _OptionalType.Type }
 
     public var description: String { description(indentedBy: 0) }
 
-    public init<T>(_ type: T.Type, fields: [String: DocumentationObject] = [:]) {
+    fileprivate init(any type: Any.Type, body: Body) {
         self.type = type
-        self.fields = fields
+        self.body = body
     }
 
-    fileprivate init(any type: Any.Type, fields: [String: DocumentationObject] = [:]) {
-        self.type = type
-        self.fields = fields
+    public init<T>(_ type: T.Type, body: Body = .none) {
+        self.init(any: type, body: body)
+    }
+
+    @inlinable
+    public init<T>(_ type: T.Type, fields: [String: DocumentationObject]) {
+        self.init(type, body: .fields(fields))
+    }
+
+    @inlinable
+    public init<T>(casesOf type: T.Type) where T: CaseIterable, T: RawRepresentable {
+        self.init(type, body: type.allCasesDocumentationBody)
     }
 
     private func description(indentedBy indentionLevel: Int, indentionIncrement: Int = 3) -> String {
-        guard !fields.isEmpty else { return "\(type)" }
-        let typeIndention = String(repeating: " ", count: indentionLevel)
+        guard !body.isEmpty else { return "\(type)" }
         let fieldIndention = String(repeating: " ", count: indentionLevel + indentionIncrement)
-        let fieldsDesc = fields.sorted { $0.key < $1.key }.map {
-            "\(fieldIndention)\($0.key): \($0.value.description(indentedBy: indentionLevel + indentionIncrement, indentionIncrement: indentionIncrement))"
-        }.joined(separator: "\n")
+        let bodyDesc: String
+        switch body {
+        case .none: return "\(type)"
+        case .fields(let fields):
+            bodyDesc = fields.sorted { $0.key < $1.key }.map {
+                "\(fieldIndention)\($0.key): \($0.value.description(indentedBy: indentionLevel + indentionIncrement, indentionIncrement: indentionIncrement))"
+            }.joined(separator: "\n")
+        case .cases(let cases):
+            bodyDesc = cases.sorted { $0.value < $1.value }.map {
+                "\(fieldIndention)- \($0.name.map { "\($0): " } ?? "")\($0.value)"
+            }.joined(separator: "\n")
+        }
         return """
         \(type) {
-        \(fieldsDesc)
-        \(typeIndention)}
+        \(bodyDesc)
+        \(String(repeating: " ", count: indentionLevel))}
         """
     }
 
     public func hash(into hasher: inout Hasher) {
         hasher.combine(ObjectIdentifier(type))
-        hasher.combine(fields)
+        hasher.combine(body)
     }
 
     public static func ==(lhs: Self, rhs: Self) -> Bool {
-        lhs.type == rhs.type && lhs.fields == rhs.fields
+        lhs.type == rhs.type && lhs.body == rhs.body
     }
 }
 
 public protocol AnyCustomDocumentable {
-    static var documentationFields: [String: DocumentationObject] { get }
+    static var documentationBody: DocumentationObject.Body { get }
     static var anyDocumentationInstance: Any { get }
 }
 
@@ -62,7 +123,7 @@ extension CustomDocumentable {
 }
 
 fileprivate extension AnyCustomDocumentable {
-    static func object(with type: Any.Type) -> DocumentationObject { .init(any: type, fields: documentationFields) }
+    static func object(with type: Any.Type) -> DocumentationObject { .init(any: type, body: documentationBody) }
 }
 
 extension Decodable {
@@ -95,6 +156,10 @@ fileprivate struct DocumentationDecoder: Decoder {
         .init(storage: storage, codingPath: codingPath + CollectionOfOne<CodingKey>(key))
     }
 
+    func popKey() -> DocumentationDecoder {
+        .init(storage: storage, codingPath: codingPath.dropLast())
+    }
+
     func withCurrentCodingPath<T>(do work: (inout DocumentationObject) throws -> T) throws -> T {
         try storage.withCodingPath(codingPath, do: work)
     }
@@ -117,7 +182,7 @@ fileprivate struct DocumentationDecoder: Decoder {
             try storage.setObject(cachedElement.documentation, for: key, at: codingPath)
             return cachedElement.object as! T
         }
-        if let customDocumentable = type as? AnyCustomDocumentable.Type {
+        if let customDocumentable = T.self as? AnyCustomDocumentable.Type {
             try storage.setObject(customDocumentable.object(with: type), for: key, at: codingPath)
             let result = customDocumentable.anyDocumentationInstance as! T
             try cache(result)
@@ -147,7 +212,7 @@ extension DocumentationDecoder {
         private(set) var decodedObject: DocumentationObject
 
         init<T>(type: T.Type) {
-            decodedObject = .init(type)
+            decodedObject = .init(any: type, body: .none)
         }
 
         func withCodingPath<C, T>(_ path: C, do work: (inout DocumentationObject) throws -> T) throws -> T
@@ -158,26 +223,26 @@ extension DocumentationDecoder {
             {
                 guard !remainingPath.isEmpty else { return try work(&object) }
                 let nextKey = remainingPath[remainingPath.startIndex]
-                guard var nextObject = object.fields[nextKey.stringValue] else {
+                guard var nextObject = object.body.fields?[nextKey.stringValue] else {
                     throw DecodingError.keyNotFound(nextKey, .init(codingPath: path.dropLast(remainingPath.count),
                                                                    debugDescription: "No documentation field was decoded (yet) at the given path!"))
                 }
-                defer { object.fields[nextKey.stringValue] = nextObject }
+                defer { object.body.fields?[nextKey.stringValue] = nextObject }
                 return try withPath(remainingPath: remainingPath.dropFirst(), of: &nextObject, do: work)
             }
             return try withPath(remainingPath: path, of: &decodedObject, do: work)
         }
 
-        func setType<C, P>(_ type: Any.Type, for key: C, at codingPath: P) throws
-            where C: CodingKey, P: Collection, P.Element == CodingKey
-        {
-            try setObject(.init(any: type), for: key, at: codingPath)
-        }
-
         func setObject<C, P>(_ object: @autoclosure() -> DocumentationObject, for key: C, at codingPath: P) throws
             where C: CodingKey, P: Collection, P.Element == CodingKey
         {
-            try withCodingPath(codingPath, do: { $0.fields[key.stringValue] = object() })
+            try withCodingPath(codingPath, do: { $0.body.fields?[key.stringValue] = object() })
+        }
+
+        func setType<C, P>(_ type: Any.Type, for key: C, at codingPath: P) throws
+            where C: CodingKey, P: Collection, P.Element == CodingKey
+        {
+            try setObject(.init(any: type, body: .none), for: key, at: codingPath)
         }
     }
 
@@ -206,7 +271,7 @@ extension DocumentationDecoder {
             isOptional = true
         }
 
-        func finalizeType<T>(with type: T.Type) -> Any.Type {
+        func finalizeType<T>(with _: T.Type) -> Any.Type {
             defer { isOptional = false }
             return isOptional ? Optional<T>.self : T.self
         }
@@ -232,7 +297,9 @@ extension DocumentationDecoder {
         func decode(_ type: UInt16.Type) throws -> UInt16 { .init() }
         func decode(_ type: UInt32.Type) throws -> UInt32 { .init() }
         func decode(_ type: UInt64.Type) throws -> UInt64 { .init() }
-        func decode<T>(_ type: T.Type) throws -> T where T : Decodable { try type.init(from: decoder) }
+        func decode<T>(_ type: T.Type) throws -> T where T : Decodable {
+            try type.init(from: decoder)
+        }
     }
 
     struct KeyedContainer<Key: CodingKey>: KeyedDecodingContainerProtocol {
@@ -243,14 +310,7 @@ extension DocumentationDecoder {
         var codingPath: [CodingKey] { decoder.codingPath }
 
         var allKeys: [Key] {
-//            let x = reflect(Key.self)
-//            switch x.kind {
-//            case .enum:
-//                let meta = x as! EnumMetadata
-//
-//            }
-//            print(Key.self)
-            return []
+            Key(stringValue: "{any}").map { [$0] } ?? []
         }
 
         private func finalize<T>(with type: T.Type, for key: Key) throws {
@@ -370,6 +430,14 @@ extension DocumentationDecoder {
                 self.init(index: intValue)
             }
         }
+//        private struct OpenEndedListKey: CodingKey {
+//            var intValue: Int? { nil }
+//            var stringValue: String { "{0...}" }
+//
+//            init?(intValue: Int) { nil }
+//            init?(stringValue: String) { nil }
+//            init() {}
+//        }
 
         let decoder: DocumentationDecoder
 
@@ -383,12 +451,21 @@ extension DocumentationDecoder {
         private(set) var currentIndex: Int = 0
 
         private mutating func finalize<T>(with type: T.Type, for key: IndexKey) throws {
-            try decoder.setType(builder.finalizeType(with: type), for: IndexKey(index: currentIndex))
+            try decoder.setType(builder.finalizeType(with: type), for: key)
         }
 
         private mutating func finalize<T>(with type: T.Type) throws {
             try finalize(with: type, for: IndexKey(index: currentIndex))
             currentIndex += 1
+            try compressTypeFieldsIfNeeded()
+        }
+
+        private func compressTypeFieldsIfNeeded() throws {
+            guard isAtEnd else { return }
+            try decoder.withCurrentCodingPath {
+                guard let unique = $0.body.fields.map({ Set($0.values) }), unique.count == 1 else { return }
+                $0.body = .fields(["{0...}": unique[unique.startIndex]])
+            }
         }
 
         mutating func decodeNil() throws -> Bool {
@@ -470,6 +547,7 @@ extension DocumentationDecoder {
             let key = IndexKey(index: currentIndex)
             let result: T = try decoder.finalizeObject(ofType: builder.finalizeType(with: type), for: key)
             currentIndex += 1
+            try compressTypeFieldsIfNeeded()
             return result
         }
 
