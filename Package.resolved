@@ -29,15 +29,6 @@
         }
       },
       {
-        "package": "Echo",
-        "repositoryURL": "https://github.com/azoy/echo.git",
-        "state": {
-          "branch": "master",
-          "revision": "ec82dd418629ffe82a12e1eeabfb2ffc22132b0d",
-          "version": null
-        }
-      },
-      {
         "package": "FFFoundation",
         "repositoryURL": "https://github.com/ffried/FFFoundation.git",
         "state": {

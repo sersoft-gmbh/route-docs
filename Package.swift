@@ -19,7 +19,6 @@ let package = Package(
         .package(url: "https://github.com/apple/swift-nio.git", from: "2.0.0"),
         .package(url: "https://github.com/vapor/vapor.git", from: "4.0.0"),
         .package(url: "https://github.com/ffried/FFFoundation.git", from: "7.0.2"),
-        .package(name: "Echo", url: "https://github.com/azoy/echo.git", .branch("master")),
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
@@ -30,7 +29,6 @@ let package = Package(
                 .product(name: "NIOConcurrencyHelpers", package: "swift-nio"),
                 .product(name: "Vapor", package: "vapor"),
                 .product(name: "FFFoundation", package: "FFFoundation"),
-                .product(name: "Echo", package: "Echo"),
         ]),
         .testTarget(
             name: "RouteDocsTests",
