@@ -18,7 +18,6 @@ final class DocumentationDecoderTests: XCTestCase {
             let optional: Int?
             let doubleOptional: String??
             let intRange: ClosedRange<Int>
-//            let recursiveArray: Array<Main>
         }
 
         enum Sub3: Int, CaseIterable, Decodable, CustomDocumentable {
@@ -28,10 +27,16 @@ final class DocumentationDecoderTests: XCTestCase {
             static var documentationInstance: Sub3 { .a }
         }
 
+        struct Sub4: Decodable {
+            let int: Int
+            let recursiveArray: Array<Sub4>
+        }
+
         let bool: Bool
         let sub1: Sub1
         let sub2: Sub2
         let sub3: Sub3
+        let sub4: Sub4
         let date: Date
         let optionalUUID: UUID?
         let dateRange: Range<Date>
@@ -50,7 +55,9 @@ final class DocumentationDecoderTests: XCTestCase {
             "sub1": .init(Main.Sub1.self, fields: [
                 "int": .init(Int.self),
                 "string": .init(String.self),
-                "doubles": .init(Array<Double>.self, fields: ["{0...}": .init(Double.self)]),
+                "doubles": .init(Array<Double>.self, fields: [
+                    "{0...}": .init(Double.self),
+                ]),
             ]),
             "sub2": .init(Main.Sub2.self, fields: [
                 "optional": .init(Optional<Int>.self),
@@ -59,9 +66,27 @@ final class DocumentationDecoderTests: XCTestCase {
                     "0": .init(Int.self),
                     "1": .init(Int.self),
                 ]),
-//                "recursiveArray": .init(Main.self),
             ]),
             "sub3": .init(casesOf: Main.Sub3.self),
+            "sub4": .init(Main.Sub4.self, fields: [
+                "int": .init(Int.self),
+                "recursiveArray": .init(Array<Main.Sub4>.self, fields: [
+                    "{0...}": .init(Main.Sub4.self, fields: [
+                        "int": .init(Int.self),
+                        "recursiveArray": .init(Array<Main.Sub4>.self, fields: [
+                            "{0...}": .init(Main.Sub4.self, fields: [
+                                "int": .init(Int.self),
+                                "recursiveArray": .init(Array<Main.Sub4>.self, fields: [
+                                    "{0...}": .init(Main.Sub4.self, fields: [
+                                        "int": .init(Int.self),
+                                        "recursiveArray": .init(Array<Main.Sub4>.self),
+                                    ]),
+                                ]),
+                            ]),
+                        ]),
+                    ]),
+                ]),
+            ]),
             "date": .init(Date.self),
             "optionalUUID": .init(Optional<UUID>.self),
             "dateRange": .init(Range<Date>.self, fields: [
@@ -72,7 +97,6 @@ final class DocumentationDecoderTests: XCTestCase {
                 "{any}": .init(Int.self),
             ]),
         ])
-        print(doc)
         XCTAssertEqual(doc, expectedDoc)
     }
 }

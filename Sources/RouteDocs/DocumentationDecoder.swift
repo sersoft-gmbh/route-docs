@@ -1,4 +1,5 @@
 import NIOConcurrencyHelpers
+import Vapor
 
 extension CodingUserInfoKey {
     public static let isDocumentationDecoder = CodingUserInfoKey(rawValue: "IsDocumentationDecoder")!
@@ -53,7 +54,7 @@ public struct DocumentationObject: Hashable, CustomStringConvertible {
     public let type: Any.Type
     public fileprivate(set) var body: Body
 
-    public var isOptional: Bool { type is _OptionalType.Type }
+    public var isOptional: Bool { type is AnyOptionalType.Type }
 
     public var description: String { description(indentedBy: 0) }
 
@@ -122,7 +123,7 @@ extension CustomDocumentable {
     public static var anyDocumentationInstance: Any { documentationInstance }
 }
 
-fileprivate extension AnyCustomDocumentable {
+extension AnyCustomDocumentable {
     static func object(with type: Any.Type) -> DocumentationObject { .init(any: type, body: documentationBody) }
 }
 
@@ -133,9 +134,6 @@ extension Decodable {
         return decoder.storage.decodedObject
     }
 }
-
-fileprivate protocol _OptionalType {}
-extension Optional: _OptionalType {}
 
 fileprivate struct DocumentationDecoder: Decoder {
 
@@ -159,6 +157,8 @@ fileprivate struct DocumentationDecoder: Decoder {
     func popKey() -> DocumentationDecoder {
         .init(storage: storage, codingPath: codingPath.dropLast())
     }
+
+    func hasPotentialCycle() -> Bool { storage.hasPotentialCycle(at: codingPath) }
 
     func withCurrentCodingPath<T>(do work: (inout DocumentationObject) throws -> T) throws -> T {
         try storage.withCodingPath(codingPath, do: work)
@@ -209,7 +209,23 @@ fileprivate struct DocumentationDecoder: Decoder {
 
 extension DocumentationDecoder {
     fileprivate final class Storage {
+        private struct KeyTypeCombination: Hashable {
+            let key: String
+            let type: Any.Type
+
+            func hash(into hasher: inout Hasher) {
+                hasher.combine(key)
+                hasher.combine(ObjectIdentifier(type))
+            }
+
+            static func ==(lhs: KeyTypeCombination, rhs: KeyTypeCombination) -> Bool {
+                lhs.key == rhs.key && lhs.type == rhs.type
+            }
+        }
+
         private(set) var decodedObject: DocumentationObject
+
+        private var keyTypeCounts = Dictionary<KeyTypeCombination, Int>()
 
         init<T>(type: T.Type) {
             decodedObject = .init(any: type, body: .none)
@@ -243,6 +259,16 @@ extension DocumentationDecoder {
             where C: CodingKey, P: Collection, P.Element == CodingKey
         {
             try setObject(.init(any: type, body: .none), for: key, at: codingPath)
+            keyTypeCounts[KeyTypeCombination(key: key.stringValue, type: type), default: 0] += 1
+        }
+
+        func hasPotentialCycle<P>(at codingPath: P) -> Bool
+            where P: BidirectionalCollection, P.Element == CodingKey
+        {
+            guard let last = codingPath.last,
+                let existingEntry = try? withCodingPath(codingPath, do: { $0 })
+                else { return false }
+            return keyTypeCounts[.init(key: last.stringValue, type: existingEntry.type), default: 0] > 3
         }
     }
 
@@ -310,16 +336,18 @@ extension DocumentationDecoder {
         var codingPath: [CodingKey] { decoder.codingPath }
 
         var allKeys: [Key] {
-            Key(stringValue: "{any}").map { [$0] } ?? []
+            guard !decoder.hasPotentialCycle() else { return [] }
+            return Key(stringValue: "{any}").map { [$0] } ?? []
         }
 
         private func finalize<T>(with type: T.Type, for key: Key) throws {
             try decoder.setType(builder.finalizeType(with: type), for: key)
         }
 
-        func contains(_ key: Key) -> Bool { true }
+        func contains(_ key: Key) -> Bool { !decoder.hasPotentialCycle() }
 
         func decodeNil(forKey key: Key) throws -> Bool {
+            guard !decoder.hasPotentialCycle() else { return true }
             builder.makeOptional()
             return false
         }
@@ -446,9 +474,9 @@ extension DocumentationDecoder {
         var codingPath: [CodingKey] { decoder.codingPath }
 
         var count: Int? { nil }
-        var isAtEnd: Bool { currentIndex >= 10 }
+        var isAtEnd: Bool { currentIndex >= 10 || decoder.hasPotentialCycle() }
 
-        private(set) var currentIndex: Int = 0
+        private(set) var currentIndex = 0
 
         private mutating func finalize<T>(with type: T.Type, for key: IndexKey) throws {
             try decoder.setType(builder.finalizeType(with: type), for: key)

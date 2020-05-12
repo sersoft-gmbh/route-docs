@@ -1,20 +1,63 @@
 import Vapor
-import Echo
 import struct FFFoundation.TypeDescription
 
 public struct EndpointDocumentation: Codable, Equatable {
-    public struct Field: Codable, Equatable {
-        public let name: String
-        public let type: TypeDescription
-        public let isOptional: Bool
-    }
-
     public struct Object: Codable, Equatable {
+        public enum Body: Codable, Equatable {
+            private enum CodingKeys: String, CodingKey {
+                case isEmpty, fields, cases
+            }
+
+            public struct Field: Codable, Equatable {
+                public let name: String
+                public let type: TypeDescription
+                public let isOptional: Bool
+            }
+
+            public struct EnumCase: Codable, Equatable {
+                public let name: String?
+                public let value: String
+            }
+
+            case empty
+            case fields([Field])
+            case cases([EnumCase])
+
+            public init(from decoder: Decoder) throws {
+                let container = try decoder.container(keyedBy: CodingKeys.self)
+                if try container.decode(Bool.self, forKey: .isEmpty) {
+                    self = .empty
+                } else if let fields = try container.decodeIfPresent([Field].self, forKey: .fields) {
+                    self = .fields(fields)
+                } else {
+                    self = .cases(try container.decode([EnumCase].self, forKey: .cases))
+                }
+            }
+
+            public func encode(to encoder: Encoder) throws {
+                var container = encoder.container(keyedBy: CodingKeys.self)
+                switch self {
+                case .empty:
+                    try container.encode(true, forKey: .isEmpty)
+                    try container.encodeNil(forKey: .fields)
+                    try container.encodeNil(forKey: .cases)
+                case .fields(let fields):
+                    try container.encode(fields.isEmpty, forKey: .isEmpty)
+                    try container.encode(fields, forKey: .fields)
+                    try container.encodeNil(forKey: .cases)
+                case .cases(let cases):
+                    try container.encode(cases.isEmpty, forKey: .isEmpty)
+                    try container.encodeNil(forKey: .fields)
+                    try container.encode(cases, forKey: .cases)
+                }
+            }
+        }
+
         public let type: TypeDescription
-        public let fields: [Field]
+        public let body: Body
     }
 
-    public struct Body: Codable, Equatable {
+    public struct Payload: Codable, Equatable {
         public let mediaType: HTTPMediaType
         public let objects: [Object]
     }
@@ -23,23 +66,29 @@ public struct EndpointDocumentation: Codable, Equatable {
     public let method: HTTPMethod
     public let path: String
     public let query: Object?
-    public let body: Body?
-    public let response: Body?
+    public let request: Payload?
+    public let response: Payload?
 }
-/*
+
 extension EndpointDocumentation {
-    public init(path: [PathComponent], groupName: String? = nil, query: Object? = nil, body: Body? = nil, response: Body? = nil) throws {
+    public init(path: [PathComponent], groupName: String? = nil, query: Object? = nil, request: Payload? = nil, response: Payload? = nil) throws {
         precondition(!path.isEmpty)
         try self.init(groupName: groupName,
                       method: HTTPMethod(pathComponent: path[0]),
                       path: Array(path.dropFirst()).string,
-                      query: query, body: body, response: response)
+                      query: query, request: request, response: response)
     }
 }
 
-extension EndpointDocumentation.Body {
+extension EndpointDocumentation.Payload {
     public init<T: Decodable>(object: T.Type, as mediaType: HTTPMediaType) throws {
-        try self.init(mediaType: mediaType, objects: EndpointDocumentation.Object.objects(from: object))
+        try self.init(mediaType: mediaType,
+                      objects: EndpointDocumentation.Object.objects(from: object.reflectedDocumentation()))
+    }
+
+    public init<T: CustomDocumentable>(object: T.Type, as mediaType: HTTPMediaType) throws {
+        self.init(mediaType: mediaType,
+                  objects: EndpointDocumentation.Object.objects(from: object.object(with: object)))
     }
 
     @inlinable
@@ -49,75 +98,58 @@ extension EndpointDocumentation.Body {
 }
 
 extension EndpointDocumentation.Object {
-    private static func subObjects<T: Decodable>(of object: T.Type,
-                                                 atDepth depth: Int,
-                                                 using decoded: [PartialKeyPath<T>]) throws -> [EndpointDocumentation.Object] {
-        assert(depth > 0)
-        let meta = reflect(object)
-        switch meta.kind {
-        case .class:
-            let classMeta = meta as! ClassMetadata
-        case .struct:
-            let structMeta = meta as! StructMetadata
-        case .enum, .optional:
-            let enumMeta = meta as! EnumMetadata
-        case .foreignClass:
-            let concreteMeta = meta as! ForeignClassMetadata
-        case .opaque:
-            let opaqueMeta = meta as! OpaqueMetadata
-        case .tuple:
-            let tupleMeta = meta as! TupleMetadata
-        case .function:
-        case .existential:
-        case .metatype:
-        case .objcClassWrapper:
-        case .existentialMetatype:
-        case .heapLocalVariable:
-        case .heapGenericLocalVariable:
-        case .errorObject:
+    private static func subObjects(in body: DocumentationObject.Body) -> [EndpointDocumentation.Object] {
+        switch body {
+        case .none, .cases(_): return []
+        case .fields(let fields): return fields.values.flatMap(objects)
         }
-        let levelDecoded = try object.decodeProperties(depth: depth)
-        guard !levelDecoded.isEmpty else { return [] }
-        return try Dictionary(grouping: levelDecoded.lazy,
-                              by: { $0.path.prefix(upTo: depth) }).compactMap { element in
-            decoded.first(where: { $0.path.prefix(upTo: depth) == element.key }).flatMap {
-                self.init(type: $0.type, properties: element.value, atDepth: depth)
-            }
-        } + subObjects(of: object, atDepth: depth + 1, using: levelDecoded)
     }
 
-    fileprivate static func objects<T: Decodable>(from object: T.Type) throws -> [EndpointDocumentation.Object] {
-        let excluded = try properties.compactMap { try object.anyDecodeProperty(valueType: Swift.type(of: $0).valueType, keyPath: $0) }
-        let decoded = try object.decodeProperties(depth: 0)
-        return try CollectionOfOne(self.init(type: object, properties: decoded))
-            + subObjects(of: object, atDepth: 1, using: decoded).reduce(into: []) { $0.appendIfNotExists($1) }
+    fileprivate static func objects(from documentation: DocumentationObject) -> [EndpointDocumentation.Object] {
+        CollectionOfOne(self.init(documentation: documentation))
+            + subObjects(in: documentation.body).reduce(into: []) { $0.appendIfNotExists($1) }
     }
 
-    private init(type: Any.Type, properties: [ReflectedProperty], atDepth depth: Int = 0) {
-        let actualType = (type as? AnyTypeWrapping.Type)?.leafType ?? type
+    private init(documentation: DocumentationObject) {
+        let actualType = (documentation.type as? AnyTypeWrapping.Type)?.leafType ?? documentation.type
         self.init(type: TypeDescription(any: actualType),
-                  fields: properties.map { EndpointDocumentation.Field(reflected: $0, atDepth: depth) })
+                  body: .init(documentation: documentation.body))
     }
 
     public init<T: Decodable>(object: T.Type) throws {
-        let excluded = try properties.compactMap { try object.anyDecodeProperty(valueType: Swift.type(of: $0).valueType, keyPath: $0) }
-        let decoded = try object.decodeProperties(depth: 0)
-        self.init(type: object, properties: decoded)
+        try self.init(documentation: object.reflectedDocumentation())
     }
 
-    @inlinable
-    public init<T: Decodable>(object: T.Type, without properties: PartialKeyPath<T>...) throws {
-        try self.init(object: object, without: properties)
+    public init<T: CustomDocumentable>(object: T.Type) {
+        self.init(documentation: object.object(with: object))
     }
 }
 
-extension EndpointDocumentation.Field {
-    fileprivate init(reflected property: ReflectedProperty, atDepth depth: Int) {
-        let optionalCleanedType = (property.type as? AnyOptionalType.Type)?.anyWrappedType ?? property.type
+extension EndpointDocumentation.Object.Body {
+    fileprivate init(documentation: DocumentationObject.Body) {
+        switch documentation {
+        case .none: self = .empty
+        case .fields(let fields):
+            self = .fields(fields.sorted(by: { $0.key < $1.key }).map { Field(name: $0.key, documentation: $0.value) })
+        case .cases(let cases):
+            self = .cases(cases.sorted(by: { $0.name ?? ""  < $1.name ?? "" && $0.value < $1.value }).map(EnumCase.init))
+        }
+    }
+}
+
+extension EndpointDocumentation.Object.Body.Field {
+    fileprivate init(name: String, documentation: DocumentationObject) {
+        let optionalCleanedType = (documentation.type as? AnyOptionalType.Type)?.anyWrappedType ?? documentation.type
         let dtoCleanedType = (optionalCleanedType as? AnyTypeWrapping.Type)?.leafType ?? optionalCleanedType
-        self.init(name: property.path[depth],
+        self.init(name: name,
                   type: TypeDescription(any: dtoCleanedType),
-                  isOptional: (property.type is AnyOptionalType.Type))
+                  isOptional: documentation.isOptional)
+    }
+}
+
+extension EndpointDocumentation.Object.Body.EnumCase {
+    fileprivate init(documentation: DocumentationObject.Body.EnumCase) {
+        self.init(name: documentation.name, value: documentation.value)
     }
 }
 
@@ -127,4 +159,3 @@ fileprivate extension RangeReplaceableCollection where Element: Equatable {
         append(element)
     }
 }
-*/

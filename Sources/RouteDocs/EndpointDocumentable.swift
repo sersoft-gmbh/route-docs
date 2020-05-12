@@ -24,8 +24,8 @@ extension Route: EndpointDocumentable {
     @inlinable
     public func addDocumentation(groupedAs groupName: String? = nil,
                                  query: EndpointDocumentation.Object? = nil,
-                                 body: EndpointDocumentation.Body? = nil,
-                                 response: EndpointDocumentation.Body? = nil) throws {
-//        try addDocumentation(EndpointDocumentation(path: path, groupName: groupName, query: query, body: body, response: response))
+                                 request: EndpointDocumentation.Payload? = nil,
+                                 response: EndpointDocumentation.Payload? = nil) throws {
+        try addDocumentation(EndpointDocumentation(path: path, groupName: groupName, query: query, request: request, response: response))
     }
 }
