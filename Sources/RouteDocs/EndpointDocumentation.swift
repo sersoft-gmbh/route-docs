@@ -176,16 +176,17 @@ extension EndpointDocumentation.Payload {
 }
 
 extension EndpointDocumentation.Object {
-    private static func subObjects(in body: DocumentationObject.Body) -> [EndpointDocumentation.Object] {
-        switch body {
-        case .none, .cases(_): return []
-        case .fields(let fields): return fields.values.flatMap(objects)
+    fileprivate static func addObjects(from documentation: DocumentationObject, to list: inout [EndpointDocumentation.Object]) {
+        list.appendIfNotExists(self.init(documentation: documentation))
+        if case .fields(let fields) = documentation.body {
+            fields.values.forEach { addObjects(from: $0, to: &list) }
         }
     }
 
     fileprivate static func objects(from documentation: DocumentationObject) -> [EndpointDocumentation.Object] {
-        CollectionOfOne(self.init(documentation: documentation))
-            + subObjects(in: documentation.body).reduce(into: []) { $0.appendIfNotExists($1) }
+        var list = Array<EndpointDocumentation.Object>()
+        addObjects(from: documentation, to: &list)
+        return list
     }
 
     private init(documentation: DocumentationObject) {
