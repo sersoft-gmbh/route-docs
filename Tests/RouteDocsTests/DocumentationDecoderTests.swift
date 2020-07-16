@@ -49,7 +49,7 @@ final class DocumentationDecoderTests: XCTestCase {
     }
 
     func testSimpleStruct() throws {
-        let doc = try Main.reflectedDocumentation()
+        let doc = try Main.reflectedDocumentation(withCustomUserInfo: [:])
         let expectedDoc = DocumentationObject(Main.self, fields: [
             "bool": .init(Bool.self),
             "sub1": .init(Main.Sub1.self, fields: [
@@ -98,5 +98,26 @@ final class DocumentationDecoderTests: XCTestCase {
             ]),
         ])
         XCTAssertEqual(doc, expectedDoc)
+    }
+
+    func testPassingCustomUserInfo() throws {
+        struct TestObject: Decodable {
+            static var lastDecodedInstance: TestObject?
+
+            let coderUserInfo: [CodingUserInfoKey: Any]
+
+            init(from decoder: Decoder) throws {
+                coderUserInfo = decoder.userInfo
+                Self.lastDecodedInstance = self
+            }
+        }
+
+        let intKey = CodingUserInfoKey(rawValue: "intKey")!
+        let stringKey = CodingUserInfoKey(rawValue: "stringKey")!
+        _ = try TestObject.reflectedDocumentation(withCustomUserInfo: [intKey: 42, stringKey: "ABC"])
+        let obj = try XCTUnwrap(TestObject.lastDecodedInstance)
+        XCTAssertEqual(obj.coderUserInfo[.isDocumentationDecoder] as? Bool, true)
+        XCTAssertEqual(obj.coderUserInfo[intKey] as? Int, 42)
+        XCTAssertEqual(obj.coderUserInfo[stringKey] as? String, "ABC")
     }
 }

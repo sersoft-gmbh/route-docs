@@ -159,9 +159,9 @@ extension EndpointDocumentation {
 }
 
 extension EndpointDocumentation.Payload {
-    public init<T: Decodable>(object: T.Type, as mediaType: HTTPMediaType) throws {
+    public init<T: Decodable>(object: T.Type, as mediaType: HTTPMediaType, customUserInfo: [CodingUserInfoKey: Any] = [:]) throws {
         try self.init(mediaType: mediaType,
-                      objects: EndpointDocumentation.Object.objects(from: object.reflectedDocumentation()))
+                      objects: EndpointDocumentation.Object.objects(from: object.reflectedDocumentation(withCustomUserInfo: customUserInfo)))
     }
 
     public init<T: CustomDocumentable>(object: T.Type, as mediaType: HTTPMediaType) throws {
@@ -195,8 +195,8 @@ extension EndpointDocumentation.Object {
                   body: .init(documentation: documentation.body))
     }
 
-    public init<T: Decodable>(object: T.Type) throws {
-        try self.init(documentation: object.reflectedDocumentation())
+    public init<T: Decodable>(object: T.Type, customUserInfo: [CodingUserInfoKey: Any] = [:]) throws {
+        try self.init(documentation: object.reflectedDocumentation(withCustomUserInfo: customUserInfo))
     }
 
     public init<T: CustomDocumentable>(object: T.Type) {

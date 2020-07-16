@@ -128,8 +128,8 @@ extension AnyCustomDocumentable {
 }
 
 extension Decodable {
-    static func reflectedDocumentation() throws -> DocumentationObject {
-        let decoder = DocumentationDecoder(type: self)
+    static func reflectedDocumentation(withCustomUserInfo customUserInfo: [CodingUserInfoKey: Any]) throws -> DocumentationObject {
+        let decoder = DocumentationDecoder(type: self, customUserInfo: customUserInfo)
         _ = try self.init(from: decoder)
         return decoder.storage.decodedObject
     }
@@ -138,24 +138,27 @@ extension Decodable {
 fileprivate struct DocumentationDecoder: Decoder {
 
     let storage: Storage
-
     let codingPath: [CodingKey]
+    let userInfo: [CodingUserInfoKey: Any]
 
-    var userInfo: [CodingUserInfoKey: Any] { [.isDocumentationDecoder: true] }
-
-    init(storage: Storage, codingPath: [CodingKey]) {
+    private init(storage: Storage, codingPath: [CodingKey], userInfo: [CodingUserInfoKey: Any]) {
         self.storage = storage
         self.codingPath = codingPath
+        self.userInfo = userInfo
     }
 
-    init<T>(type: T.Type) { self.init(storage: .init(type: type), codingPath: []) }
+    init<T>(type: T.Type, customUserInfo: [CodingUserInfoKey: Any]) {
+        var userInfo = customUserInfo
+        userInfo[.isDocumentationDecoder] = true
+        self.init(storage: .init(type: type), codingPath: [], userInfo: userInfo)
+    }
 
     func push<C: CodingKey>(key: C) -> DocumentationDecoder {
-        .init(storage: storage, codingPath: codingPath + CollectionOfOne<CodingKey>(key))
+        .init(storage: storage, codingPath: codingPath + CollectionOfOne<CodingKey>(key), userInfo: userInfo)
     }
 
     func popKey() -> DocumentationDecoder {
-        .init(storage: storage, codingPath: codingPath.dropLast())
+        .init(storage: storage, codingPath: codingPath.dropLast(), userInfo: userInfo)
     }
 
     func hasPotentialCycle() -> Bool { storage.hasPotentialCycle(at: codingPath) }
