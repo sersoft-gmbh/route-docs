@@ -170,8 +170,8 @@ extension EndpointDocumentation.Payload {
     }
 
     @inlinable
-    public init<T: Content>(object: T.Type) throws {
-        try self.init(object: object, as: object.defaultContentType)
+    public init<T: Content>(object: T.Type, customUserInfo: [CodingUserInfoKey: Any] = [:]) throws {
+        try self.init(object: object, as: object.defaultContentType, customUserInfo: customUserInfo)
     }
 }
 
