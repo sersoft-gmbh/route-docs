@@ -1,0 +1,13 @@
+#for(groupedDoc in groupedDocumentations):
+    #extend("doc_grouped_documentation"):
+        #export("groupID"):#lowercased(escape(groupedDoc.groupName))#endexport
+    #endextend
+#endfor
+<div id="other-docs-accordion-all" class="mb-2 mt-3 mx-3">
+    #for(doc in otherDocumentations):
+        #extend("doc_documentation"):
+            #export("accordionID", "other-docs-accordion")
+            #export("groupID", "all")
+        #endextend
+    #endfor
+</div>

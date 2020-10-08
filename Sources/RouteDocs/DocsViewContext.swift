@@ -2,7 +2,7 @@ import Vapor
 import struct FFFoundation.TypeDescription
 
 /// This can be used as context for a Documentation view.
-public struct ViewContext: Encodable {
+public struct DocsViewContext: Encodable {
     public struct Documentation: Encodable {
         public struct Object: Encodable {
             public enum Body: Encodable {
@@ -89,13 +89,13 @@ fileprivate extension EndpointDocumentation {
     var sortOrder: String { method.sortOrder + "/" + path }
 }
 
-extension ViewContext.Documentation.Object.Body.EnumCase {
+extension DocsViewContext.Documentation.Object.Body.EnumCase {
     public init(enumCase: EndpointDocumentation.Object.Body.EnumCase) {
         self.init(name: enumCase.name, value: enumCase.value)
     }
 }
 
-extension ViewContext.Documentation.Object.Body.Field {
+extension DocsViewContext.Documentation.Object.Body.Field {
     public init(field: EndpointDocumentation.Object.Body.Field, usingName namePath: KeyPath<TypeDescription, String>? = nil) {
         self.init(name: field.name,
                   type: field.type.docsTypeName(using: namePath),
@@ -103,7 +103,7 @@ extension ViewContext.Documentation.Object.Body.Field {
     }
 }
 
-extension ViewContext.Documentation.Object.Body {
+extension DocsViewContext.Documentation.Object.Body {
     @inlinable
     public init(body: EndpointDocumentation.Object.Body, usingName namePath: KeyPath<TypeDescription, String>? = nil) {
         switch body {
@@ -114,21 +114,21 @@ extension ViewContext.Documentation.Object.Body {
     }
 }
 
-extension ViewContext.Documentation.Object {
+extension DocsViewContext.Documentation.Object {
     public init(object: EndpointDocumentation.Object, usingName namePath: KeyPath<TypeDescription, String>? = nil) {
         self.init(name: object.type.docsTypeName(using: namePath),
                   body: .init(body: object.body, usingName: namePath))
     }
 }
 
-extension ViewContext.Documentation.Payload {
+extension DocsViewContext.Documentation.Payload {
     public init(payload: EndpointDocumentation.Payload, usingName namePath: KeyPath<TypeDescription, String>? = nil) {
         self.init(mediaType: payload.mediaType,
                   objects: payload.objects.map { .init(object: $0, usingName: namePath) })
     }
 }
 
-extension ViewContext.Documentation {
+extension DocsViewContext.Documentation {
     public init(documentation: EndpointDocumentation, usingName namePath: KeyPath<TypeDescription, String>? = nil) {
         self.init(method: documentation.method,
                   path: documentation.path,
@@ -140,13 +140,13 @@ extension ViewContext.Documentation {
 
 fileprivate extension Sequence where Element == EndpointDocumentation {
     func contextDocumentation<C: Comparable>(orderedBy keyPath: KeyPath<Element, C>,
-                                             usingName namePath: KeyPath<TypeDescription, String>?) -> [ViewContext.Documentation] {
+                                             usingName namePath: KeyPath<TypeDescription, String>?) -> [DocsViewContext.Documentation] {
         sorted { $0[keyPath: keyPath] < $1[keyPath: keyPath] }
-            .map { ViewContext.Documentation(documentation: $0, usingName: namePath) }
+            .map { DocsViewContext.Documentation(documentation: $0, usingName: namePath) }
     }
 }
 
-extension ViewContext {
+extension DocsViewContext {
     public init<Docs: Sequence, C: Comparable>(documentables: Docs,
                                                sortedBy sortPath: KeyPath<EndpointDocumentation, C>,
                                                usingName namePath: KeyPath<TypeDescription, String>? = nil)
@@ -156,7 +156,7 @@ extension ViewContext {
         otherDocumentations = allDocsByGroup["", default: []].lazy.contextDocumentation(orderedBy: sortPath, usingName: namePath)
         groupedDocumentations = allDocsByGroup.lazy
             .filter { !$0.key.isEmpty }
-            .map { ViewContext.GroupedDocumentation(groupName: $0.key,
+            .map { DocsViewContext.GroupedDocumentation(groupName: $0.key,
                                                     documentations: $0.value.contextDocumentation(orderedBy: sortPath, usingName: namePath)) }
             .sorted { $0.groupName < $1.groupName }
     }

@@ -1,10 +1,10 @@
-// swift-tools-version:5.2
+// swift-tools-version:5.3
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
 
 let package = Package(
-    name: "RouteDocs",
+    name: "route-docs",
     platforms: [
         .macOS(.v10_15),
     ],
@@ -18,6 +18,7 @@ let package = Package(
         // Dependencies declare other packages that this package depends on.
         .package(url: "https://github.com/apple/swift-nio.git", from: "2.0.0"),
         .package(url: "https://github.com/vapor/vapor.git", from: "4.0.0"),
+        .package(url: "https://github.com/vapor/leaf.git", from: "4.0.0-rc"),
         .package(url: "https://github.com/ffried/FFFoundation.git", from: "7.0.2"),
     ],
     targets: [
@@ -28,8 +29,12 @@ let package = Package(
             dependencies: [
                 .product(name: "NIOConcurrencyHelpers", package: "swift-nio"),
                 .product(name: "Vapor", package: "vapor"),
+                .product(name: "Leaf", package: "leaf"),
                 .product(name: "FFFoundation", package: "FFFoundation"),
-        ]),
+            ],
+            resources: [
+                .copy("DefaultDocsView"),
+            ]),
         .testTarget(
             name: "RouteDocsTests",
             dependencies: ["RouteDocs"]),

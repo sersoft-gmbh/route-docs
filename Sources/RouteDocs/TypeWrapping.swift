@@ -29,6 +29,4 @@ internal extension AnyTypeWrapping {
 extension Optional: AnyTypeWrapping where Wrapped: AnyTypeWrapping {
     public static var wrappedType: Any.Type { Wrapped.wrappedType }
 }
-
-// We detect optionals seperately, so we need to make them "transparent".
 extension Optional: TypeWrapping where Wrapped: TypeWrapping {}
