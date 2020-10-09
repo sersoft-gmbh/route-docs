@@ -79,9 +79,9 @@ fileprivate extension HTTPMethod {
     }
 }
 
-fileprivate extension TypeDescription {
-    func docsTypeName(using namePath: KeyPath<TypeDescription, String>?) -> String {
-        namePath.map { self[keyPath: $0] } ?? typeName(includingModule: false)
+fileprivate extension DocumentationType {
+    func docsTypeName(using namePath: KeyPath<DocumentationType, String>?) -> String {
+        namePath.map { self[keyPath: $0] } ?? typeDescription.typeName(includingModule: false)
     }
 }
 
@@ -96,7 +96,7 @@ extension DocsViewContext.Documentation.Object.Body.EnumCase {
 }
 
 extension DocsViewContext.Documentation.Object.Body.Field {
-    public init(field: EndpointDocumentation.Object.Body.Field, usingName namePath: KeyPath<TypeDescription, String>? = nil) {
+    public init(field: EndpointDocumentation.Object.Body.Field, usingName namePath: KeyPath<DocumentationType, String>? = nil) {
         self.init(name: field.name,
                   type: field.type.docsTypeName(using: namePath),
                   isOptional: field.isOptional)
@@ -105,7 +105,7 @@ extension DocsViewContext.Documentation.Object.Body.Field {
 
 extension DocsViewContext.Documentation.Object.Body {
     @inlinable
-    public init(body: EndpointDocumentation.Object.Body, usingName namePath: KeyPath<TypeDescription, String>? = nil) {
+    public init(body: EndpointDocumentation.Object.Body, usingName namePath: KeyPath<DocumentationType, String>? = nil) {
         switch body {
         case .empty: self = .empty
         case .fields(let fields): self = .fields(fields.map { .init(field: $0, usingName: namePath) })
@@ -115,21 +115,21 @@ extension DocsViewContext.Documentation.Object.Body {
 }
 
 extension DocsViewContext.Documentation.Object {
-    public init(object: EndpointDocumentation.Object, usingName namePath: KeyPath<TypeDescription, String>? = nil) {
+    public init(object: EndpointDocumentation.Object, usingName namePath: KeyPath<DocumentationType, String>? = nil) {
         self.init(name: object.type.docsTypeName(using: namePath),
                   body: .init(body: object.body, usingName: namePath))
     }
 }
 
 extension DocsViewContext.Documentation.Payload {
-    public init(payload: EndpointDocumentation.Payload, usingName namePath: KeyPath<TypeDescription, String>? = nil) {
+    public init(payload: EndpointDocumentation.Payload, usingName namePath: KeyPath<DocumentationType, String>? = nil) {
         self.init(mediaType: payload.mediaType,
                   objects: payload.objects.map { .init(object: $0, usingName: namePath) })
     }
 }
 
 extension DocsViewContext.Documentation {
-    public init(documentation: EndpointDocumentation, usingName namePath: KeyPath<TypeDescription, String>? = nil) {
+    public init(documentation: EndpointDocumentation, usingName namePath: KeyPath<DocumentationType, String>? = nil) {
         self.init(method: documentation.method,
                   path: documentation.path,
                   query: documentation.query.map { .init(object: $0, usingName: namePath) },
@@ -140,7 +140,7 @@ extension DocsViewContext.Documentation {
 
 fileprivate extension Sequence where Element == EndpointDocumentation {
     func contextDocumentation<C: Comparable>(orderedBy keyPath: KeyPath<Element, C>,
-                                             usingName namePath: KeyPath<TypeDescription, String>?) -> [DocsViewContext.Documentation] {
+                                             usingName namePath: KeyPath<DocumentationType, String>?) -> [DocsViewContext.Documentation] {
         sorted { $0[keyPath: keyPath] < $1[keyPath: keyPath] }
             .map { DocsViewContext.Documentation(documentation: $0, usingName: namePath) }
     }
@@ -149,7 +149,7 @@ fileprivate extension Sequence where Element == EndpointDocumentation {
 extension DocsViewContext {
     public init<Docs: Sequence, C: Comparable>(documentables: Docs,
                                                sortedBy sortPath: KeyPath<EndpointDocumentation, C>,
-                                               usingName namePath: KeyPath<TypeDescription, String>? = nil)
+                                               usingName namePath: KeyPath<DocumentationType, String>? = nil)
         where Docs.Element == EndpointDocumentable
     {
         let allDocsByGroup = Dictionary(grouping: documentables.lazy.compactMap(\.documentation), by: { $0.groupName ?? "" })
@@ -161,7 +161,7 @@ extension DocsViewContext {
             .sorted { $0.groupName < $1.groupName }
     }
 
-    public init<Docs: Sequence>(documentables: Docs, usingName namePath: KeyPath<TypeDescription, String>? = nil)
+    public init<Docs: Sequence>(documentables: Docs, usingName namePath: KeyPath<DocumentationType, String>? = nil)
         where Docs.Element == EndpointDocumentable
     {
         self.init(documentables: documentables, sortedBy: \.sortOrder, usingName: namePath)
@@ -169,11 +169,11 @@ extension DocsViewContext {
 
     @inlinable
     public init<C: Comparable>(routes: Routes, sortedBy sortPath: KeyPath<EndpointDocumentation, C>,
-                               usingName namePath: KeyPath<TypeDescription, String>? = nil) {
+                               usingName namePath: KeyPath<DocumentationType, String>? = nil) {
         self.init(documentables: routes.all, sortedBy: sortPath, usingName: namePath)
     }
 
-    public init(routes: Routes, usingName namePath: KeyPath<TypeDescription, String>? = nil) {
+    public init(routes: Routes, usingName namePath: KeyPath<DocumentationType, String>? = nil) {
         self.init(documentables: routes.all, sortedBy: \.sortOrder, usingName: namePath)
     }
 }

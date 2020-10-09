@@ -1,6 +1,32 @@
 import Vapor
 import struct FFFoundation.TypeDescription
 
+public struct DocumentationType: Codable, Equatable, CustomStringConvertible {
+    public let typeDescription: TypeDescription
+    public let customName: String?
+
+    public var defaultName: String {
+        customName ?? typeDescription.typeName(includingModule: true)
+    }
+
+    public var description: String { defaultName }
+
+    init(_ type: Any.Type) {
+        typeDescription = .init(any: type)
+        customName = (type as? CustomDocumentationNamed.Type)?.documentationName
+    }
+
+    init<T>(_ type: T.Type) {
+        typeDescription = .init(type)
+        customName = (type as? CustomDocumentationNamed.Type)?.documentationName
+    }
+
+    init<T: CustomDocumentationNamed>(_ type: T.Type) {
+        typeDescription = .init(type)
+        customName = type.documentationName
+    }
+}
+
 public struct EndpointDocumentation: Codable, Equatable, CustomStringConvertible {
     public struct Object: Codable, Equatable, CustomStringConvertible {
         public enum Body: Codable, Equatable, CustomStringConvertible {
@@ -10,11 +36,11 @@ public struct EndpointDocumentation: Codable, Equatable, CustomStringConvertible
 
             public struct Field: Codable, Equatable, CustomStringConvertible {
                 public let name: String
-                public let type: TypeDescription
+                public let type: DocumentationType
                 public let isOptional: Bool
 
                 public var description: String {
-                    "\(name): \(type.typeName(includingModule: true))\(isOptional ? "?" : "")"
+                    "\(name): \(type)\(isOptional ? "?" : "")"
                 }
             }
 
@@ -93,15 +119,15 @@ public struct EndpointDocumentation: Codable, Equatable, CustomStringConvertible
             }
         }
 
-        public let type: TypeDescription
+        public let type: DocumentationType
         public let body: Body
 
         public var description: String {
-            guard !body.isEmpty else { return type.typeName(includingModule: true) }
+            guard !body.isEmpty else { return String(describing: type) }
             let fieldIndention = String(repeating: " ", count: 3)
             let bodyDesc: String
             switch body {
-            case .empty: return type.typeName(includingModule: true)
+            case .empty: return String(describing: type)
             case .fields(let fields):
                 bodyDesc = fields
                     .sorted { $0.name < $1.name }
@@ -114,7 +140,7 @@ public struct EndpointDocumentation: Codable, Equatable, CustomStringConvertible
                     .joined(separator: "\n")
             }
             return """
-            \(type.typeName(includingModule: true)) {
+            \(type) {
             \(bodyDesc)
             }
             """
@@ -191,7 +217,7 @@ extension EndpointDocumentation.Object {
 
     private init(documentation: DocumentationObject) {
         let actualType = (documentation.type as? AnyTypeWrapping.Type)?.leafType ?? documentation.type
-        self.init(type: TypeDescription(any: actualType),
+        self.init(type: DocumentationType(actualType),
                   body: .init(documentation: documentation.body))
     }
 
@@ -221,7 +247,7 @@ extension EndpointDocumentation.Object.Body.Field {
         let optionalCleanedType = (documentation.type as? AnyOptionalType.Type)?.anyWrappedType ?? documentation.type
         let leafType = (optionalCleanedType as? AnyTypeWrapping.Type)?.leafType ?? optionalCleanedType
         self.init(name: name,
-                  type: TypeDescription(any: leafType),
+                  type: DocumentationType(leafType),
                   isOptional: documentation.isOptional)
     }
 }

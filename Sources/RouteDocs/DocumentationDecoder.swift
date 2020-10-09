@@ -109,6 +109,10 @@ public struct DocumentationObject: Hashable, CustomStringConvertible {
     }
 }
 
+public protocol CustomDocumentationNamed {
+    static var documentationName: String { get }
+}
+
 public protocol AnyCustomDocumentable {
     static var documentationBody: DocumentationObject.Body { get }
     static var anyDocumentationInstance: Any { get }
