@@ -1,6 +1,6 @@
 #for(groupedDoc in groupedDocumentations):
     #extend("doc_grouped_documentation"):
-        #export("groupID"):#escaped(hashed(lowercased(groupedDoc.groupName)))#endexport
+        #export("groupID"):#(groupedDoc.id)#endexport
     #endextend
 #endfor
 <div id="other-docs-accordion-all" class="mb-2 mt-3 mx-3">

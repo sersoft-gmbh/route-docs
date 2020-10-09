@@ -28,14 +28,38 @@ extension Application {
     public var defaultDocsLeafSource: some LeafSource { NIOLeafFiles.defaultDocs(with: fileio) }
 }
 
-extension LeafRenderer {
+extension LeafSources {
     @inlinable
     public func addDefaultDocsSource(with fileio: NonBlockingFileIO) throws {
-        try sources.register(using: NIOLeafFiles.defaultDocs(with: fileio))
+        try register(source: "docs", using: NIOLeafFiles.defaultDocs(with: fileio))
     }
 
     @inlinable
     public func addDefaultDocsSource(for app: Application) throws {
-        try sources.register(using: app.defaultDocsLeafSource)
+        try register(source: "docs", using: app.defaultDocsLeafSource)
+    }
+}
+
+extension LeafRenderer {
+    @inlinable
+    public func addDefaultDocsSource(with fileio: NonBlockingFileIO) throws {
+        try sources.addDefaultDocsSource(with: fileio)
+    }
+
+    @inlinable
+    public func addDefaultDocsSource(for app: Application) throws {
+        try sources.addDefaultDocsSource(for: app)
+    }
+}
+
+extension Application.Leaf {
+    public func registerDocumentationTags() {
+        tags["escaped"] = EscapeTag()
+    }
+
+    @inlinable
+    public func setupRouteDocs() throws {
+        registerDocumentationTags()
+        try sources.addDefaultDocsSource(for: application)
     }
 }

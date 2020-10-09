@@ -59,6 +59,7 @@ public struct DocsViewContext: Encodable {
     }
 
     public struct GroupedDocumentation: Encodable {
+        public let id: Int
         public let groupName: String
         public let documentations: [Documentation]
     }
@@ -152,13 +153,15 @@ extension DocsViewContext {
                                                usingName namePath: KeyPath<DocumentationType, String>? = nil)
         where Docs.Element == EndpointDocumentable
     {
-        let allDocsByGroup = Dictionary(grouping: documentables.lazy.compactMap(\.documentation), by: { $0.groupName ?? "" })
-        otherDocumentations = allDocsByGroup["", default: []].lazy.contextDocumentation(orderedBy: sortPath, usingName: namePath)
+        let allDocsByGroup = Dictionary(grouping: documentables.lazy.compactMap(\.documentation), by: \.groupName)
+        otherDocumentations = allDocsByGroup[nil, default: []].lazy.contextDocumentation(orderedBy: sortPath, usingName: namePath)
         groupedDocumentations = allDocsByGroup.lazy
-            .filter { !$0.key.isEmpty }
-            .map { DocsViewContext.GroupedDocumentation(groupName: $0.key,
-                                                    documentations: $0.value.contextDocumentation(orderedBy: sortPath, usingName: namePath)) }
-            .sorted { $0.groupName < $1.groupName }
+            .compactMap { (key, elem) in key.map { (key: $0, value: elem) } }
+            .sorted { $0.key < $1.key }
+            .enumerated()
+            .map { GroupedDocumentation(id: $0.offset,
+                                        groupName: $0.element.key,
+                                        documentations: $0.element.value.contextDocumentation(orderedBy: sortPath, usingName: namePath)) }
     }
 
     public init<Docs: Sequence>(documentables: Docs, usingName namePath: KeyPath<DocumentationType, String>? = nil)
