@@ -23,7 +23,6 @@
         </script>
     </head>
     <body>
-        <!-- <div class="container header-container"></div> -->
         <div class="container content-container">
             <div class="bg-light rounded pb-3">
                 <div class="jumbotron pt-5 pb-4 mb-0">
@@ -35,11 +34,11 @@
                 #endextend
             </div>
         </div>
-        <!-- <div class="container footer-container">
+        <div class="container footer-container">
             <div class="footer rounded-top bg-dark fixed-bottom text-white text-center py-2">
                 <p class="my-1">A <a href="https://www.sersoft.de" class="text-info">ser.soft GmbH</a> creation.</p>
                 <p class="my-1">&copy; <span id="docs-current-year">2020</span> - All rights reserved.</p>
             </div>
-        </div> -->
+        </div>
     </body>
 </html>

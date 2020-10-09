@@ -2,7 +2,7 @@
     <div id="endpoint-header-#import("groupID")-#(index)" class="card-header">
         <h3 class="mb-0">
             <button class="btn btn-link collapsed" data-toggle="collapse" data-target="\#endpoint-content-#import("groupID")-#(index)" aria-expanded="false" aria-controls="endpoint-content-#import("groupID")-#(index)">
-                <strong>#escape(doc.method)</strong> <em>#escape(doc.path)</em>
+                <strong>#escaped(doc.method)</strong> <em>#escaped(doc.path)</em>
             </button>
         </h3>
     </div>
@@ -19,7 +19,7 @@
             #endif
             #if(doc.query && !doc.query.body.isEmpty):
                 <div class="card">
-                    <h4 class="card-header">Query (<em>#escape(doc.query.name)</em>) parameters</h4>
+                    <h4 class="card-header">Query (<em>#escaped(doc.query.name)</em>) parameters</h4>
                     #if(doc.query.body.fields):
                         <ul class="list-group list-group-flush">
                             #for(field in doc.query.body.fields):
@@ -35,7 +35,7 @@
             #if(doc.request):
                 <div class="card#if(doc.query && !doc.query.body.isEmpty): mt-3#endif">
                     <h4 class="card-header">
-                        Request Body (<em>#escape(doc.request.mediaType.type)/#escape(doc.request.mediaType.subtype)</em>)
+                        Request Body (<em>#escaped(doc.request.mediaType.type)/#escaped(doc.request.mediaType.subtype)</em>)
                     </h4>
                     #for(object in doc.request.objects):
                         #extend("doc_object"):
@@ -48,7 +48,7 @@
             #if(doc.response):
                 <div class="card #if((doc.query && !doc.query.body.isEmpty) || doc.response): mt-3#endif">
                     <h4 class="card-header">
-                        Response Body (<em>#escape(doc.response.mediaType.type)/#escape(doc.response.mediaType.subtype)</em>)
+                        Response Body (<em>#escaped(doc.response.mediaType.type)/#escaped(doc.response.mediaType.subtype)</em>)
                     </h4>
                     #for(object in doc.response.objects):
                        #extend("doc_object"):
