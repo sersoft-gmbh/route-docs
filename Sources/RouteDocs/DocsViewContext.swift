@@ -81,7 +81,7 @@ fileprivate extension HTTPMethod {
 
 fileprivate extension DocumentationType {
     func docsTypeName(using namePath: KeyPath<DocumentationType, String>?) -> String {
-        namePath.map { self[keyPath: $0] } ?? typeDescription.typeName(includingModule: false)
+        customName ?? namePath.map { self[keyPath: $0] } ?? typeDescription.typeName(includingModule: false)
     }
 }
 
