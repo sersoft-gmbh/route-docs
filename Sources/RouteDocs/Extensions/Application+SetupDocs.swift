@@ -16,7 +16,7 @@ extension ViewRenderer {
 extension NIOLeafFiles {
     public static func defaultDocs(with fileio: NonBlockingFileIO) -> Self {
         NIOLeafFiles(fileio: fileio,
-                     limits: [.onlyLeafExtensions, .default],
+                     limits: [.onlyLeafExtensions, .toSandbox, .requireExtensions], // We must not insert .toVisibleFiles or we can't load from the `.build` directory.
                      sandboxDirectory: DocsViewContext.defaultDocsViewPath,
                      viewDirectory: DocsViewContext.defaultDocsViewPath,
                      defaultExtension: "leaf")
