@@ -140,7 +140,6 @@ extension Decodable {
 }
 
 fileprivate struct DocumentationDecoder: Decoder {
-
     let storage: Storage
     let codingPath: [CodingKey]
     let userInfo: [CodingUserInfoKey: Any]
@@ -171,15 +170,11 @@ fileprivate struct DocumentationDecoder: Decoder {
         try storage.withCodingPath(codingPath, do: work)
     }
 
-    func setType<C>(_ type: Any.Type, for key: C) throws
-        where C: CodingKey
-    {
+    func setType<C: CodingKey>(_ type: Any.Type, for key: C) throws {
         try storage.setType(type, for: key, at: codingPath)
     }
 
-    func finalizeObject<T, C>(ofType type: Any.Type, for key: C) throws -> T
-        where T: Decodable, C: CodingKey
-    {
+    func finalizeObject<T: Decodable, C: CodingKey>(ofType type: Any.Type, for key: C) throws -> T {
         func cache(_ object: T) throws {
             try Cache.cache(entry: .init(object: object,
                                          documentation: storage.withCodingPath(codingPath + CollectionOfOne<CodingKey>(key),
@@ -330,12 +325,12 @@ extension DocumentationDecoder {
         func decode(_ type: UInt16.Type) throws -> UInt16 { .init() }
         func decode(_ type: UInt32.Type) throws -> UInt32 { .init() }
         func decode(_ type: UInt64.Type) throws -> UInt64 { .init() }
-        func decode<T>(_ type: T.Type) throws -> T where T : Decodable {
+        func decode<T>(_ type: T.Type) throws -> T where T: Decodable {
             try type.init(from: decoder)
         }
     }
 
-    struct KeyedContainer<Key: CodingKey>: KeyedDecodingContainerProtocol {
+    fileprivate struct KeyedContainer<Key: CodingKey>: KeyedDecodingContainerProtocol {
         let decoder: DocumentationDecoder
 
         private let builder = TypeBuilder()
@@ -445,7 +440,7 @@ extension DocumentationDecoder {
         func superDecoder(forKey key: Key) throws -> Decoder { decoder.push(key: key) }
     }
 
-    struct UnkeyedContainer: UnkeyedDecodingContainer {
+    fileprivate struct UnkeyedContainer: UnkeyedDecodingContainer {
         private struct IndexKey: CodingKey {
             let index: Int
 
