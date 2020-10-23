@@ -9,7 +9,7 @@ extension DocsViewContext {
 
 extension ViewRenderer {
     public func renderDefaultDocs(with context: DocsViewContext) -> EventLoopFuture<View> {
-        render(DocsViewContext.defaultDocsViewPath + "docs.leaf", context)
+        render("docs", context)
     }
 }
 
@@ -55,7 +55,7 @@ extension LeafRenderer {
 extension Application.Leaf {
     /// Registers the tags needed to display the default docs.
     /// Currently this is:
-    /// - escape: `EscapeTag`
+    /// - escaped: `EscapeTag`
     public func registerDocumentationTags() {
         tags["escaped"] = EscapeTag()
     }
