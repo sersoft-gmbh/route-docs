@@ -178,7 +178,12 @@ public struct EndpointDocumentation: Codable, Equatable, CustomStringConvertible
 }
 
 extension EndpointDocumentation {
-    public init(method: HTTPMethod, path: [PathComponent], groupName: String? = nil, query: Object? = nil, request: Payload? = nil, response: Payload? = nil) {
+    public init(method: HTTPMethod,
+                path: [PathComponent],
+                groupName: String? = nil,
+                query: Object? = nil,
+                request: Payload? = nil,
+                response: Payload? = nil) {
         self.init(groupName: groupName, method: method, path: path.string,
                   query: query, request: request, response: response)
     }
