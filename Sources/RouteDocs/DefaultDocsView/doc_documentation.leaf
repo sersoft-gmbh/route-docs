@@ -9,8 +9,10 @@
     <div id="endpoint-content-#import("groupID")-#(index)" class="collapse" aria-labelledby="endpoint-header-#import("groupID")-#(index)" data-parent="\##import("accordionID")-#import("groupID")">
         <div class="card-body">
             #if(!doc.query || doc.query.body.isEmpty):
-                #if(!doc.request || count(doc.request.objects) <= 0):
-                    #if(!doc.response || count(doc.response.objects) <= 0):
+                #if(!doc.request):
+                <!-- if(!doc.request || count(doc.request.objects) <= 0): -->
+                    #if(!doc.response):
+                    <!-- if(!doc.response || count(doc.response.objects) <= 0): -->
                         <p class="card-text text-body">
                             <em>This request has no query or body and returns no response (usually a HTTP 204).</em>
                         </p>
