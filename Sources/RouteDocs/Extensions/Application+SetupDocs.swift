@@ -1,4 +1,5 @@
 import Vapor
+import LeafKit
 import Leaf
 
 extension DocsViewContext {

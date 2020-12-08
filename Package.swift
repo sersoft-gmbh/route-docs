@@ -18,7 +18,8 @@ let package = Package(
         // Dependencies declare other packages that this package depends on.
         .package(url: "https://github.com/apple/swift-nio.git", from: "2.0.0"),
         .package(url: "https://github.com/vapor/vapor.git", from: "4.0.0"),
-        .package(url: "https://github.com/vapor/leaf.git", from: "4.0.0-rc"),
+        .package(url: "https://github.com/vapor/leaf-kit.git", from: "1.0.0"),
+        .package(url: "https://github.com/vapor/leaf.git", from: "4.0.0"),
         .package(url: "https://github.com/ffried/FFFoundation.git", from: "8.1.0"),
     ],
     targets: [
@@ -29,6 +30,7 @@ let package = Package(
             dependencies: [
                 .product(name: "NIOConcurrencyHelpers", package: "swift-nio"),
                 .product(name: "Vapor", package: "vapor"),
+                .product(name: "LeafKit", package: "leaf-kit"),
                 .product(name: "Leaf", package: "leaf"),
                 .product(name: "FFFoundation", package: "FFFoundation"),
             ],
