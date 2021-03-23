@@ -46,7 +46,7 @@ extension LeafRenderer {
     public func addDefaultDocsSource(with fileio: NonBlockingFileIO) throws {
         try sources.addDefaultDocsSource(with: fileio)
     }
-
+    
     @inlinable
     public func addDefaultDocsSource(for app: Application) throws {
         try sources.addDefaultDocsSource(for: app)

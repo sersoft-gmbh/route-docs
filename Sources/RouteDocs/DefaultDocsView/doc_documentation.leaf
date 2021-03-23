@@ -1,10 +1,18 @@
 <div class="card">
-    <div id="endpoint-header-#import("groupID")-#(index)" class="card-header">
-        <h3 class="mb-0">
+    <div id="endpoint-header-#import("groupID")-#(index)" class="card-header d-flex justify-content-between">
+        <h3 class="mb-0 mr-5 flex-fill">
+            <!-- 'w-100 text-left' => would stretch the button to full width, extending the clickable space -->
             <button class="btn btn-link collapsed" data-toggle="collapse" data-target="\#endpoint-content-#import("groupID")-#(index)" aria-expanded="false" aria-controls="endpoint-content-#import("groupID")-#(index)">
                 <strong>#escaped(doc.method)</strong> <em>#escaped(doc.path)</em>
             </button>
         </h3>
+        #if(count(doc.requiredAuthorization) > 0):
+            <div class="pl-1 d-flex align-content-center flex-wrap">
+                #for(requiredAuth in doc.requiredAuthorization):
+                    <span class="badge badge-warning text-monospace mx-1">#escaped(requiredAuth)</span>
+                #endfor
+            </div>
+        #endif
     </div>
     <div id="endpoint-content-#import("groupID")-#(index)" class="collapse" aria-labelledby="endpoint-header-#import("groupID")-#(index)" data-parent="\##import("accordionID")-#import("groupID")">
         <div class="card-body">

@@ -10,7 +10,7 @@ extension TypeWrapping {
     public static var wrappedType: Any.Type { Wrapped.self }
 }
 
-internal extension AnyTypeWrapping {
+extension AnyTypeWrapping {
     private static func leafType(history: [Any.Type]) -> Any.Type {
         let wrapped = wrappedType
         guard !history.contains(where: { $0 == wrapped }) else {
@@ -22,7 +22,7 @@ internal extension AnyTypeWrapping {
         return (wrapped as? AnyTypeWrapping.Type)?.leafType(history: history + CollectionOfOne<Any.Type>(self)) ?? wrapped
     }
 
-    static var leafType: Any.Type { leafType(history: []) }
+    internal static var leafType: Any.Type { leafType(history: []) }
 }
 
 // We detect optionals seperately, so we need to make them "transparent".

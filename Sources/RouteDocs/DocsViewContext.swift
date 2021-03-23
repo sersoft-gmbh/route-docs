@@ -56,6 +56,7 @@ public struct DocsViewContext: Encodable {
         public let query: Object?
         public let request: Payload?
         public let response: Payload?
+        public let requiredAuthorization: [String]
     }
 
     public struct GroupedDocumentation: Encodable {
@@ -135,7 +136,8 @@ extension DocsViewContext.Documentation {
                   path: documentation.path,
                   query: documentation.query.map { .init(object: $0, usingName: namePath) },
                   request: documentation.request.map { .init(payload: $0, usingName: namePath) },
-                  response: documentation.response.map { .init(payload: $0, usingName: namePath) })
+                  response: documentation.response.map { .init(payload: $0, usingName: namePath) },
+                  requiredAuthorization: documentation.requiredAuthorization)
     }
 }
 
@@ -151,7 +153,7 @@ extension DocsViewContext {
     public init<Docs: Sequence, C: Comparable>(documentables: Docs,
                                                sortedBy sortPath: KeyPath<EndpointDocumentation, C>,
                                                usingName namePath: KeyPath<DocumentationType, String>? = nil)
-        where Docs.Element == EndpointDocumentable
+    where Docs.Element == EndpointDocumentable
     {
         let allDocsByGroup = Dictionary(grouping: documentables.lazy.compactMap(\.documentation), by: \.groupName)
         otherDocumentations = allDocsByGroup[nil, default: []].lazy.contextDocumentation(orderedBy: sortPath, usingName: namePath)
@@ -165,7 +167,7 @@ extension DocsViewContext {
     }
 
     public init<Docs: Sequence>(documentables: Docs, usingName namePath: KeyPath<DocumentationType, String>? = nil)
-        where Docs.Element == EndpointDocumentable
+    where Docs.Element == EndpointDocumentable
     {
         self.init(documentables: documentables, sortedBy: \.sortOrder, usingName: namePath)
     }

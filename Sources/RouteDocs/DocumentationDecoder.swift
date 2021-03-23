@@ -234,10 +234,10 @@ extension DocumentationDecoder {
         }
 
         func withCodingPath<C, T>(_ path: C, do work: (inout DocumentationObject) throws -> T) throws -> T
-            where C: Collection, C.Element == CodingKey
+        where C: Collection, C.Element == CodingKey
         {
             func withPath<P>(remainingPath: P, of object: inout DocumentationObject, do work: (inout DocumentationObject) throws -> T) throws -> T
-                where P: Collection, P.Element == C.Element
+            where P: Collection, P.Element == C.Element
             {
                 guard !remainingPath.isEmpty else { return try work(&object) }
                 let nextKey = remainingPath[remainingPath.startIndex]
@@ -252,24 +252,24 @@ extension DocumentationDecoder {
         }
 
         func setObject<C, P>(_ object: @autoclosure() -> DocumentationObject, for key: C, at codingPath: P) throws
-            where C: CodingKey, P: Collection, P.Element == CodingKey
+        where C: CodingKey, P: Collection, P.Element == CodingKey
         {
             try withCodingPath(codingPath, do: { $0.body.fields?[key.stringValue] = object() })
         }
 
         func setType<C, P>(_ type: Any.Type, for key: C, at codingPath: P) throws
-            where C: CodingKey, P: Collection, P.Element == CodingKey
+        where C: CodingKey, P: Collection, P.Element == CodingKey
         {
             try setObject(.init(any: type, body: .none), for: key, at: codingPath)
             keyTypeCounts[KeyTypeCombination(key: key.stringValue, type: type), default: 0] += 1
         }
 
         func hasPotentialCycle<P>(at codingPath: P) -> Bool
-            where P: BidirectionalCollection, P.Element == CodingKey
+        where P: BidirectionalCollection, P.Element == CodingKey
         {
             guard let last = codingPath.last,
-                let existingEntry = try? withCodingPath(codingPath, do: { $0 })
-                else { return false }
+                  let existingEntry = try? withCodingPath(codingPath, do: { $0 })
+            else { return false }
             return keyTypeCounts[.init(key: last.stringValue, type: existingEntry.type), default: 0] > 3
         }
     }

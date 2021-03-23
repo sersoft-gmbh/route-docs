@@ -25,8 +25,10 @@ extension Route: EndpointDocumentable {
     public func addDocumentation(groupedAs groupName: String? = nil,
                                  query: EndpointDocumentation.Object? = nil,
                                  request: EndpointDocumentation.Payload? = nil,
-                                 response: EndpointDocumentation.Payload? = nil) {
+                                 response: EndpointDocumentation.Payload? = nil,
+                                 requiredAuthorization: [String] = []) {
         addDocumentation(.init(method: method, path: path, groupName: groupName,
-                               query: query, request: request, response: response))
+                               query: query, request: request, response: response,
+                               requiredAuthorization: requiredAuthorization))
     }
 }

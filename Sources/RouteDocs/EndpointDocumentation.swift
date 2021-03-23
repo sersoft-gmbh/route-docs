@@ -39,9 +39,7 @@ public struct EndpointDocumentation: Codable, Equatable, CustomStringConvertible
                 public let type: DocumentationType
                 public let isOptional: Bool
 
-                public var description: String {
-                    "\(name): \(type)\(isOptional ? "?" : "")"
-                }
+                public var description: String { "\(name): \(type)\(isOptional ? "?" : "")" }
             }
 
             public struct EnumCase: Codable, Equatable, CustomStringConvertible {
@@ -63,9 +61,9 @@ public struct EndpointDocumentation: Codable, Equatable, CustomStringConvertible
                     return """
                     Fields {
                     \(fields
-                    .sorted { $0.name < $1.name }
-                    .map { "   \($0)" }
-                    .joined(separator: "\n"))
+                        .sorted { $0.name < $1.name }
+                        .map { "   \($0)" }
+                        .joined(separator: "\n"))
                     }
                     """
                 case .cases(let cases):
@@ -73,9 +71,9 @@ public struct EndpointDocumentation: Codable, Equatable, CustomStringConvertible
                     return """
                     Cases {
                     \(cases
-                    .sorted { $0.value < $1.value }
-                    .map { "   - \($0)" }
-                    .joined(separator: "\n"))
+                        .sorted { $0.value < $1.value }
+                        .map { "   - \($0)" }
+                        .joined(separator: "\n"))
                     }
                     """
                 }
@@ -139,11 +137,7 @@ public struct EndpointDocumentation: Codable, Equatable, CustomStringConvertible
                     .map { "\(fieldIndention)- \($0)" }
                     .joined(separator: "\n")
             }
-            return """
-            \(type) {
-            \(bodyDesc)
-            }
-            """
+            return "\(type) {\n\(bodyDesc)\n}"
         }
     }
 
@@ -165,6 +159,7 @@ public struct EndpointDocumentation: Codable, Equatable, CustomStringConvertible
     public let query: Object?
     public let request: Payload?
     public let response: Payload?
+    public let requiredAuthorization: [String]
 
     public var description: String {
         [
@@ -173,6 +168,7 @@ public struct EndpointDocumentation: Codable, Equatable, CustomStringConvertible
             query.map { "Query:\n\($0)" },
             request.map { "Request:\n\($0)" },
             response.map { "Request:\n\($0)" },
+            requiredAuthorization.isEmpty ? nil : "Required Authorization: " + requiredAuthorization.joined(separator: ", "),
         ].lazy.compactMap { $0 }.joined(separator: "\n")
     }
 }
@@ -183,9 +179,11 @@ extension EndpointDocumentation {
                 groupName: String? = nil,
                 query: Object? = nil,
                 request: Payload? = nil,
-                response: Payload? = nil) {
+                response: Payload? = nil,
+                requiredAuthorization: [String] = []) {
         self.init(groupName: groupName, method: method, path: path.string,
-                  query: query, request: request, response: response)
+                  query: query, request: request, response: response,
+                  requiredAuthorization: requiredAuthorization)
     }
 }
 
@@ -222,8 +220,7 @@ extension EndpointDocumentation.Object {
 
     private init(documentation: DocumentationObject) {
         let actualType = (documentation.type as? AnyTypeWrapping.Type)?.leafType ?? documentation.type
-        self.init(type: DocumentationType(actualType),
-                  body: .init(documentation: documentation.body))
+        self.init(type: DocumentationType(actualType), body: .init(documentation: documentation.body))
     }
 
     public init<T: Decodable>(object: T.Type, customUserInfo: [CodingUserInfoKey: Any] = [:]) throws {
@@ -242,7 +239,7 @@ extension EndpointDocumentation.Object.Body {
         case .fields(let fields):
             self = .fields(fields.sorted { $0.key < $1.key }.map { Field(name: $0.key, documentation: $0.value) })
         case .cases(let cases):
-            self = .cases(cases.sorted { $0.name ?? "" < $1.name ?? "" && $0.value < $1.value }.map(EnumCase.init))
+            self = .cases(cases.sorted { ($0.name ?? "", $0.value) < ($1.name ?? "", $1.value) }.map(EnumCase.init))
         }
     }
 }
@@ -251,9 +248,7 @@ extension EndpointDocumentation.Object.Body.Field {
     fileprivate init(name: String, documentation: DocumentationObject) {
         let optionalCleanedType = (documentation.type as? AnyOptionalType.Type)?.anyWrappedType ?? documentation.type
         let leafType = (optionalCleanedType as? AnyTypeWrapping.Type)?.leafType ?? optionalCleanedType
-        self.init(name: name,
-                  type: DocumentationType(leafType),
-                  isOptional: documentation.isOptional)
+        self.init(name: name, type: DocumentationType(leafType), isOptional: documentation.isOptional)
     }
 }
 
