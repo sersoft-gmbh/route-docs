@@ -16,6 +16,14 @@ extension UUID: CustomDocumentable {
     public static var documentationBody: DocumentationObject.Body { .none }
 }
 
+extension URL: CustomDocumentable {
+    @inlinable
+    public static var documentationInstance: URL { URL(fileURLWithPath: "/") }
+
+    @inlinable
+    public static var documentationBody: DocumentationObject.Body { .none }
+}
+
 extension CaseIterable where Self: RawRepresentable {
     @usableFromInline
     static var allCasesDocumentationBody: DocumentationObject.Body {

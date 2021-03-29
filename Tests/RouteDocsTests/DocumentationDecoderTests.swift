@@ -36,6 +36,7 @@ final class DocumentationDecoderTests: XCTestCase {
         let sub1: Sub1
         let sub2: Sub2
         let sub3: Sub3
+        let optSub3: Sub3?
         let sub4: Sub4
         let date: Date
         let optionalUUID: UUID?
@@ -68,6 +69,7 @@ final class DocumentationDecoderTests: XCTestCase {
                 ]),
             ]),
             "sub3": .init(casesOf: Main.Sub3.self),
+            "optSub3": .init(Optional<Main.Sub3>.self, body: Main.Sub3.allCasesDocumentationBody),
             "sub4": .init(Main.Sub4.self, fields: [
                 "int": .init(Int.self),
                 "recursiveArray": .init(Array<Main.Sub4>.self, fields: [

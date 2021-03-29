@@ -131,6 +131,11 @@ extension AnyCustomDocumentable {
     static func object(with type: Any.Type) -> DocumentationObject { .init(any: type, body: documentationBody) }
 }
 
+extension Optional: AnyCustomDocumentable, CustomDocumentable where Wrapped: CustomDocumentable {
+    public static var documentationBody: DocumentationObject.Body { Wrapped.documentationBody }
+    public static var documentationInstance: Self { .some(Wrapped.documentationInstance) }
+}
+
 extension Decodable {
     static func reflectedDocumentation(withCustomUserInfo customUserInfo: [CodingUserInfoKey: Any]) throws -> DocumentationObject {
         let decoder = DocumentationDecoder(type: self, customUserInfo: customUserInfo)
