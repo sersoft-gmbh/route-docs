@@ -115,6 +115,19 @@ public struct EndpointDocumentation: Codable, Equatable, CustomStringConvertible
                     try container.encode(cases, forKey: .cases)
                 }
             }
+
+            public func filter(fieldNames: Set<String>) -> Self {
+                switch self {
+                case .empty: return .empty
+                case .fields(let fields): return .fields(fields.filter { !fieldNames.contains($0.name) })
+                case .cases(let cases): return .cases(cases.filter { $0.name.map(fieldNames.contains) != true })
+                }
+            }
+
+            @inlinable
+            public func filter(fieldNames: String...) -> Self {
+                filter(fieldNames: Set(fieldNames))
+            }
         }
 
         public let type: DocumentationType
@@ -139,6 +152,12 @@ public struct EndpointDocumentation: Codable, Equatable, CustomStringConvertible
             }
             return "\(type) {\n\(bodyDesc)\n}"
         }
+
+        public func adjustingBody(with closure: (inout Body) throws -> ()) rethrows -> Self {
+            var newBody = body
+            try closure(&newBody)
+            return .init(type: type, body: newBody)
+        }
     }
 
     public struct Payload: Codable, Equatable, CustomStringConvertible {
@@ -150,6 +169,14 @@ public struct EndpointDocumentation: Codable, Equatable, CustomStringConvertible
             <\(mediaType)>
             \(objects.map { String(describing: $0) }.joined(separator: "\n\n"))
             """
+        }
+
+        public func filterObjects(with closure: (Object) throws -> Object?) rethrows -> Self {
+            try .init(mediaType: mediaType, objects: objects.compactMap(closure))
+        }
+
+        public func filterObjects(with closure: (Object) throws -> Bool) rethrows -> Self {
+            try .init(mediaType: mediaType, objects: objects.filter(closure))
         }
     }
 
