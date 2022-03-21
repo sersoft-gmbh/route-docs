@@ -32,8 +32,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/ffried/FFFoundation.git",
       "state" : {
-        "revision" : "22a699620da5848bef38022e46a5185d2edb1763",
-        "version" : "9.3.0"
+        "revision" : "f01c25f484ed31220ae0dbb9972d93a07db8e763",
+        "version" : "9.4.0"
       }
     },
     {
