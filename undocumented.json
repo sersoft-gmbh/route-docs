@@ -1,0 +1,1083 @@
+{
+  "warnings": [
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/DocsViewContext.swift",
+      "line": 6,
+      "symbol": "DocsViewContext.Documentation",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/DocsViewContext.swift",
+      "line": 7,
+      "symbol": "DocsViewContext.Documentation.Object",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/DocsViewContext.swift",
+      "line": 8,
+      "symbol": "DocsViewContext.Documentation.Object.Body",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/DocsViewContext.swift",
+      "line": 13,
+      "symbol": "DocsViewContext.Documentation.Object.Body.Field",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/DocsViewContext.swift",
+      "line": 14,
+      "symbol": "DocsViewContext.Documentation.Object.Body.Field.name",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/DocsViewContext.swift",
+      "line": 15,
+      "symbol": "DocsViewContext.Documentation.Object.Body.Field.type",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/DocsViewContext.swift",
+      "line": 16,
+      "symbol": "DocsViewContext.Documentation.Object.Body.Field.isOptional",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/DocsViewContext.swift",
+      "line": 18,
+      "symbol": "DocsViewContext.Documentation.Object.Body.EnumCase",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/DocsViewContext.swift",
+      "line": 19,
+      "symbol": "DocsViewContext.Documentation.Object.Body.EnumCase.name",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/DocsViewContext.swift",
+      "line": 20,
+      "symbol": "DocsViewContext.Documentation.Object.Body.EnumCase.value",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/DocsViewContext.swift",
+      "line": 23,
+      "symbol": "DocsViewContext.Documentation.Object.Body.empty",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/DocsViewContext.swift",
+      "line": 24,
+      "symbol": "DocsViewContext.Documentation.Object.Body.fields(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/DocsViewContext.swift",
+      "line": 25,
+      "symbol": "DocsViewContext.Documentation.Object.Body.cases(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/DocsViewContext.swift",
+      "line": 45,
+      "symbol": "DocsViewContext.Documentation.Object.name",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/DocsViewContext.swift",
+      "line": 46,
+      "symbol": "DocsViewContext.Documentation.Object.body",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/DocsViewContext.swift",
+      "line": 49,
+      "symbol": "DocsViewContext.Documentation.Payload",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/DocsViewContext.swift",
+      "line": 50,
+      "symbol": "DocsViewContext.Documentation.Payload.mediaType",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/DocsViewContext.swift",
+      "line": 51,
+      "symbol": "DocsViewContext.Documentation.Payload.objects",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/DocsViewContext.swift",
+      "line": 54,
+      "symbol": "DocsViewContext.Documentation.method",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/DocsViewContext.swift",
+      "line": 55,
+      "symbol": "DocsViewContext.Documentation.path",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/DocsViewContext.swift",
+      "line": 56,
+      "symbol": "DocsViewContext.Documentation.query",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/DocsViewContext.swift",
+      "line": 57,
+      "symbol": "DocsViewContext.Documentation.request",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/DocsViewContext.swift",
+      "line": 58,
+      "symbol": "DocsViewContext.Documentation.response",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/DocsViewContext.swift",
+      "line": 59,
+      "symbol": "DocsViewContext.Documentation.requiredAuthorization",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/DocsViewContext.swift",
+      "line": 62,
+      "symbol": "DocsViewContext.GroupedDocumentation",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/DocsViewContext.swift",
+      "line": 63,
+      "symbol": "DocsViewContext.GroupedDocumentation.id",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/DocsViewContext.swift",
+      "line": 64,
+      "symbol": "DocsViewContext.GroupedDocumentation.groupName",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/DocsViewContext.swift",
+      "line": 65,
+      "symbol": "DocsViewContext.GroupedDocumentation.documentations",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/DocsViewContext.swift",
+      "line": 68,
+      "symbol": "DocsViewContext.groupedDocumentations",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/DocsViewContext.swift",
+      "line": 69,
+      "symbol": "DocsViewContext.otherDocumentations",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/DocsViewContext.swift",
+      "line": 94,
+      "symbol": "DocsViewContext.Documentation.Object.Body.EnumCase",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/DocsViewContext.swift",
+      "line": 95,
+      "symbol": "DocsViewContext.Documentation.Object.Body.EnumCase.init(enumCase:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/DocsViewContext.swift",
+      "line": 100,
+      "symbol": "DocsViewContext.Documentation.Object.Body.Field",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/DocsViewContext.swift",
+      "line": 101,
+      "symbol": "DocsViewContext.Documentation.Object.Body.Field.init(field:usingName:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/DocsViewContext.swift",
+      "line": 108,
+      "symbol": "DocsViewContext.Documentation.Object.Body",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/DocsViewContext.swift",
+      "line": 110,
+      "symbol": "DocsViewContext.Documentation.Object.Body.init(body:usingName:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/DocsViewContext.swift",
+      "line": 119,
+      "symbol": "DocsViewContext.Documentation.Object",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/DocsViewContext.swift",
+      "line": 120,
+      "symbol": "DocsViewContext.Documentation.Object.init(object:usingName:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/DocsViewContext.swift",
+      "line": 126,
+      "symbol": "DocsViewContext.Documentation.Payload",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/DocsViewContext.swift",
+      "line": 127,
+      "symbol": "DocsViewContext.Documentation.Payload.init(payload:usingName:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/DocsViewContext.swift",
+      "line": 133,
+      "symbol": "DocsViewContext.Documentation",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/DocsViewContext.swift",
+      "line": 134,
+      "symbol": "DocsViewContext.Documentation.init(documentation:usingName:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/DocsViewContext.swift",
+      "line": 153,
+      "symbol": "DocsViewContext.init(documentables:sortedBy:usingName:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/DocsViewContext.swift",
+      "line": 169,
+      "symbol": "DocsViewContext.init(documentables:usingName:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/DocsViewContext.swift",
+      "line": 176,
+      "symbol": "DocsViewContext.init(routes:sortedBy:usingName:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/DocsViewContext.swift",
+      "line": 181,
+      "symbol": "DocsViewContext.init(routes:usingName:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/DocumentationDecoder.swift",
+      "line": 5,
+      "symbol": "CodingUserInfoKey.isDocumentationDecoder",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/DocumentationDecoder.swift",
+      "line": 8,
+      "symbol": "DocumentationObject",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/DocumentationDecoder.swift",
+      "line": 9,
+      "symbol": "DocumentationObject.Body",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/DocumentationDecoder.swift",
+      "line": 10,
+      "symbol": "DocumentationObject.Body.EnumCase",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/DocumentationDecoder.swift",
+      "line": 11,
+      "symbol": "DocumentationObject.Body.EnumCase.name",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/DocumentationDecoder.swift",
+      "line": 12,
+      "symbol": "DocumentationObject.Body.EnumCase.value",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/DocumentationDecoder.swift",
+      "line": 14,
+      "symbol": "DocumentationObject.Body.EnumCase.init(name:value:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/DocumentationDecoder.swift",
+      "line": 19,
+      "symbol": "DocumentationObject.Body.EnumCase.init(value:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/DocumentationDecoder.swift",
+      "line": 26,
+      "symbol": "DocumentationObject.Body.none",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/DocumentationDecoder.swift",
+      "line": 27,
+      "symbol": "DocumentationObject.Body.fields(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/DocumentationDecoder.swift",
+      "line": 28,
+      "symbol": "DocumentationObject.Body.cases(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/DocumentationDecoder.swift",
+      "line": 30,
+      "symbol": "DocumentationObject.Body.isEmpty",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/DocumentationDecoder.swift",
+      "line": 54,
+      "symbol": "DocumentationObject.type",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/DocumentationDecoder.swift",
+      "line": 55,
+      "symbol": "DocumentationObject.body",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/DocumentationDecoder.swift",
+      "line": 57,
+      "symbol": "DocumentationObject.isOptional",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/DocumentationDecoder.swift",
+      "line": 66,
+      "symbol": "DocumentationObject.init(_:body:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/DocumentationDecoder.swift",
+      "line": 71,
+      "symbol": "DocumentationObject.init(_:fields:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/DocumentationDecoder.swift",
+      "line": 76,
+      "symbol": "DocumentationObject.init(casesOf:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/DocumentationDecoder.swift",
+      "line": 112,
+      "symbol": "CustomDocumentationNamed",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/DocumentationDecoder.swift",
+      "line": 113,
+      "symbol": "CustomDocumentationNamed.documentationName",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/DocumentationDecoder.swift",
+      "line": 116,
+      "symbol": "AnyCustomDocumentable",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/DocumentationDecoder.swift",
+      "line": 117,
+      "symbol": "AnyCustomDocumentable.documentationBody",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/DocumentationDecoder.swift",
+      "line": 118,
+      "symbol": "AnyCustomDocumentable.anyDocumentationInstance",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/DocumentationDecoder.swift",
+      "line": 121,
+      "symbol": "CustomDocumentable",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/DocumentationDecoder.swift",
+      "line": 122,
+      "symbol": "CustomDocumentable.documentationInstance",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/DocumentationDecoder.swift",
+      "line": 125,
+      "symbol": "CustomDocumentable",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/DocumentationDecoder.swift",
+      "line": 127,
+      "symbol": "CustomDocumentable.anyDocumentationInstance",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/DocumentationDecoder.swift",
+      "line": 135,
+      "symbol": "Optional.documentationBody",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/DocumentationDecoder.swift",
+      "line": 136,
+      "symbol": "Optional.documentationInstance",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/EndpointDocumentable.swift",
+      "line": 3,
+      "symbol": "EndpointDocumentable",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/EndpointDocumentable.swift",
+      "line": 4,
+      "symbol": "EndpointDocumentable.documentation",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/EndpointDocumentable.swift",
+      "line": 7,
+      "symbol": "EndpointDocumentable",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/EndpointDocumentable.swift",
+      "line": 8,
+      "symbol": "EndpointDocumentable.documentation",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/EndpointDocumentable.swift",
+      "line": 15,
+      "symbol": "Route.documentation",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/EndpointDocumentable.swift",
+      "line": 20,
+      "symbol": "Route.addDocumentation(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/EndpointDocumentable.swift",
+      "line": 25,
+      "symbol": "Route.addDocumentation(groupedAs:query:request:response:requiredAuthorization:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/EndpointDocumentation.swift",
+      "line": 4,
+      "symbol": "DocumentationType",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/EndpointDocumentation.swift",
+      "line": 5,
+      "symbol": "DocumentationType.typeDescription",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/EndpointDocumentation.swift",
+      "line": 6,
+      "symbol": "DocumentationType.customName",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/EndpointDocumentation.swift",
+      "line": 8,
+      "symbol": "DocumentationType.defaultName",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/EndpointDocumentation.swift",
+      "line": 30,
+      "symbol": "EndpointDocumentation",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/EndpointDocumentation.swift",
+      "line": 31,
+      "symbol": "EndpointDocumentation.Object",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/EndpointDocumentation.swift",
+      "line": 32,
+      "symbol": "EndpointDocumentation.Object.Body",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/EndpointDocumentation.swift",
+      "line": 37,
+      "symbol": "EndpointDocumentation.Object.Body.Field",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/EndpointDocumentation.swift",
+      "line": 38,
+      "symbol": "EndpointDocumentation.Object.Body.Field.name",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/EndpointDocumentation.swift",
+      "line": 39,
+      "symbol": "EndpointDocumentation.Object.Body.Field.type",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/EndpointDocumentation.swift",
+      "line": 40,
+      "symbol": "EndpointDocumentation.Object.Body.Field.isOptional",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/EndpointDocumentation.swift",
+      "line": 45,
+      "symbol": "EndpointDocumentation.Object.Body.EnumCase",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/EndpointDocumentation.swift",
+      "line": 46,
+      "symbol": "EndpointDocumentation.Object.Body.EnumCase.name",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/EndpointDocumentation.swift",
+      "line": 47,
+      "symbol": "EndpointDocumentation.Object.Body.EnumCase.value",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/EndpointDocumentation.swift",
+      "line": 52,
+      "symbol": "EndpointDocumentation.Object.Body.empty",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/EndpointDocumentation.swift",
+      "line": 53,
+      "symbol": "EndpointDocumentation.Object.Body.fields(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/EndpointDocumentation.swift",
+      "line": 54,
+      "symbol": "EndpointDocumentation.Object.Body.cases(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/EndpointDocumentation.swift",
+      "line": 82,
+      "symbol": "EndpointDocumentation.Object.Body.isEmpty",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/EndpointDocumentation.swift",
+      "line": 119,
+      "symbol": "EndpointDocumentation.Object.Body.filter(fieldNames:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/EndpointDocumentation.swift",
+      "line": 128,
+      "symbol": "EndpointDocumentation.Object.Body.filter(fieldNames:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/EndpointDocumentation.swift",
+      "line": 133,
+      "symbol": "EndpointDocumentation.Object.type",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/EndpointDocumentation.swift",
+      "line": 134,
+      "symbol": "EndpointDocumentation.Object.body",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/EndpointDocumentation.swift",
+      "line": 156,
+      "symbol": "EndpointDocumentation.Object.adjustingBody(with:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/EndpointDocumentation.swift",
+      "line": 163,
+      "symbol": "EndpointDocumentation.Payload",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/EndpointDocumentation.swift",
+      "line": 164,
+      "symbol": "EndpointDocumentation.Payload.mediaType",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/EndpointDocumentation.swift",
+      "line": 165,
+      "symbol": "EndpointDocumentation.Payload.objects",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/EndpointDocumentation.swift",
+      "line": 174,
+      "symbol": "EndpointDocumentation.Payload.filterObjects(with:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/EndpointDocumentation.swift",
+      "line": 178,
+      "symbol": "EndpointDocumentation.Payload.filterObjects(with:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/EndpointDocumentation.swift",
+      "line": 183,
+      "symbol": "EndpointDocumentation.groupName",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/EndpointDocumentation.swift",
+      "line": 184,
+      "symbol": "EndpointDocumentation.method",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/EndpointDocumentation.swift",
+      "line": 185,
+      "symbol": "EndpointDocumentation.path",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/EndpointDocumentation.swift",
+      "line": 186,
+      "symbol": "EndpointDocumentation.query",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/EndpointDocumentation.swift",
+      "line": 187,
+      "symbol": "EndpointDocumentation.request",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/EndpointDocumentation.swift",
+      "line": 188,
+      "symbol": "EndpointDocumentation.response",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/EndpointDocumentation.swift",
+      "line": 189,
+      "symbol": "EndpointDocumentation.requiredAuthorization",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/EndpointDocumentation.swift",
+      "line": 203,
+      "symbol": "EndpointDocumentation",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/EndpointDocumentation.swift",
+      "line": 204,
+      "symbol": "EndpointDocumentation.init(method:path:groupName:query:request:response:requiredAuthorization:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/EndpointDocumentation.swift",
+      "line": 217,
+      "symbol": "EndpointDocumentation.Payload",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/EndpointDocumentation.swift",
+      "line": 218,
+      "symbol": "EndpointDocumentation.Payload.init(object:as:customUserInfo:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/EndpointDocumentation.swift",
+      "line": 223,
+      "symbol": "EndpointDocumentation.Payload.init(object:as:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/EndpointDocumentation.swift",
+      "line": 229,
+      "symbol": "EndpointDocumentation.Payload.init(object:customUserInfo:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/EndpointDocumentation.swift",
+      "line": 234,
+      "symbol": "EndpointDocumentation.Object",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/EndpointDocumentation.swift",
+      "line": 253,
+      "symbol": "EndpointDocumentation.Object.init(object:customUserInfo:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/EndpointDocumentation.swift",
+      "line": 257,
+      "symbol": "EndpointDocumentation.Object.init(object:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/Extensions/Application+SetupDocs.swift",
+      "line": 6,
+      "symbol": "DocsViewContext.defaultDocsViewPath",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/Extensions/Application+SetupDocs.swift",
+      "line": 12,
+      "symbol": "ViewRenderer.renderDefaultDocs(with:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/Extensions/Application+SetupDocs.swift",
+      "line": 18,
+      "symbol": "ViewRenderer.renderDefaultDocs(with:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/Extensions/Application+SetupDocs.swift",
+      "line": 61,
+      "symbol": "LeafRenderer.addDefaultDocsSource(with:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/Extensions/Application+SetupDocs.swift",
+      "line": 66,
+      "symbol": "LeafRenderer.addDefaultDocsSource(for:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/Extensions/Application+SetupDocs.swift",
+      "line": 77,
+      "symbol": "Application.Leaf.setupRouteDocs()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/Extensions/CustomDocumentable+Stdlib.swift",
+      "line": 5,
+      "symbol": "Date.documentationInstance",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/Extensions/CustomDocumentable+Stdlib.swift",
+      "line": 8,
+      "symbol": "Date.documentationBody",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/Extensions/CustomDocumentable+Stdlib.swift",
+      "line": 13,
+      "symbol": "UUID.documentationInstance",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/Extensions/CustomDocumentable+Stdlib.swift",
+      "line": 16,
+      "symbol": "UUID.documentationBody",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/Extensions/CustomDocumentable+Stdlib.swift",
+      "line": 21,
+      "symbol": "URL.documentationInstance",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/Extensions/CustomDocumentable+Stdlib.swift",
+      "line": 24,
+      "symbol": "URL.documentationBody",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/Extensions/CustomDocumentable+Stdlib.swift",
+      "line": 36,
+      "symbol": "CaseIterable.documentationBody",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/Extensions/CustomDocumentable+Stdlib.swift",
+      "line": 40,
+      "symbol": "Array.documentationName",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/Extensions/CustomDocumentable+Stdlib.swift",
+      "line": 44,
+      "symbol": "ContiguousArray.documentationName",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/Extensions/CustomDocumentable+Stdlib.swift",
+      "line": 48,
+      "symbol": "Set.documentationName",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/Extensions/CustomDocumentable+Stdlib.swift",
+      "line": 52,
+      "symbol": "Range.documentationName",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/Extensions/CustomDocumentable+Stdlib.swift",
+      "line": 56,
+      "symbol": "ClosedRange.documentationName",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/Extensions/CustomDocumentable+Stdlib.swift",
+      "line": 60,
+      "symbol": "PartialRangeFrom.documentationName",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/Extensions/CustomDocumentable+Stdlib.swift",
+      "line": 64,
+      "symbol": "PartialRangeUpTo.documentationName",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/Extensions/CustomDocumentable+Stdlib.swift",
+      "line": 68,
+      "symbol": "PartialRangeThrough.documentationName",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/TypeWrapping.swift",
+      "line": 1,
+      "symbol": "AnyTypeWrapping",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/TypeWrapping.swift",
+      "line": 2,
+      "symbol": "AnyTypeWrapping.wrappedType",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/TypeWrapping.swift",
+      "line": 5,
+      "symbol": "TypeWrapping",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/TypeWrapping.swift",
+      "line": 6,
+      "symbol": "TypeWrapping.Wrapped",
+      "symbol_kind": "source.lang.swift.decl.associatedtype",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/TypeWrapping.swift",
+      "line": 9,
+      "symbol": "TypeWrapping",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/TypeWrapping.swift",
+      "line": 10,
+      "symbol": "TypeWrapping.wrappedType",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/route-docs/route-docs/Sources/RouteDocs/TypeWrapping.swift",
+      "line": 30,
+      "symbol": "Optional.wrappedType",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/home/runner/work/route-docs/route-docs/Sources"
+}
