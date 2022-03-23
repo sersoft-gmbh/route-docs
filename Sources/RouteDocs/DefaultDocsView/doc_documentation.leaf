@@ -3,13 +3,13 @@
         <h3 class="mb-0 mr-5 flex-fill">
             <!-- 'w-100 text-left' => would stretch the button to full width, extending the clickable space -->
             <button class="btn btn-link collapsed" data-toggle="collapse" data-target="\#endpoint-content-#import("groupID")-#(index)" aria-expanded="false" aria-controls="endpoint-content-#import("groupID")-#(index)">
-                <strong>#escaped(doc.method)</strong> <em>#escaped(doc.path)</em>
+                <strong>#(doc.method)</strong> <em>#(doc.path)</em>
             </button>
         </h3>
         #if(count(doc.requiredAuthorization) > 0):
             <div class="pl-1 d-flex align-content-center flex-wrap">
                 #for(requiredAuth in doc.requiredAuthorization):
-                    <span class="badge badge-warning text-monospace mx-1">#escaped(requiredAuth)</span>
+                    <span class="badge badge-warning text-monospace mx-1">#(requiredAuth)</span>
                 #endfor
             </div>
         #endif
@@ -29,7 +29,7 @@
             #endif
             #if(doc.query && !doc.query.body.isEmpty):
                 <div class="card">
-                    <h4 class="card-header">Query (<em>#escaped(doc.query.name)</em>) parameters</h4>
+                    <h4 class="card-header">Query (<em>#(doc.query.name)</em>) parameters</h4>
                     #if(doc.query.body.fields):
                         <ul class="list-group list-group-flush">
                             #for(field in doc.query.body.fields):
@@ -45,7 +45,7 @@
             #if(doc.request):
                 <div class="card#if(doc.query && !doc.query.body.isEmpty): mt-3#endif">
                     <h4 class="card-header">
-                        Request Body (<em>#escaped(doc.request.mediaType.type)/#escaped(doc.request.mediaType.subtype)</em>)
+                        Request Body (<em>#(doc.request.mediaType.type)/#(doc.request.mediaType.subtype)</em>)
                     </h4>
                     #for(object in doc.request.objects):
                         #extend("doc_object"):
@@ -58,7 +58,7 @@
             #if(doc.response):
                 <div class="card #if((doc.query && !doc.query.body.isEmpty) || doc.response): mt-3#endif">
                     <h4 class="card-header">
-                        Response Body (<em>#escaped(doc.response.mediaType.type)/#escaped(doc.response.mediaType.subtype)</em>)
+                        Response Body (<em>#(doc.response.mediaType.type)/#(doc.response.mediaType.subtype)</em>)
                     </h4>
                     #for(object in doc.response.objects):
                        #extend("doc_object"):

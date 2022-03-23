@@ -1,11 +1,11 @@
 #if(!object.body.isEmpty):
     #if(isFirst):
         <div class="card-body pb-1 pl-3">
-            <h5 class="card-title mb-1">#escaped(object.name)</h5>
+            <h5 class="card-title mb-1">#(object.name)</h5>
         </div>
     #else:
         <div class="card-body pb-1 pl-3 mt-3">
-            <h6 class="card-title mb-1 text-secondary">#escaped(object.name)</h6>
+            <h6 class="card-title mb-1 text-secondary">#(object.name)</h6>
         </div>
     #endif
     #if(object.body.fields):

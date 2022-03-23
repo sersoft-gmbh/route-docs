@@ -1,3 +1,3 @@
 <li class="list-group-item align-items-center">
-	- <code>#if(case.name):#escaped(case.name) <i>(#endif#escaped(case.value)#if(case.name):)</i>#endif</code>
+	- <code>#if(case.name):#(case.name) <i>(#endif#(case.value)#if(case.name):)</i>#endif</code>
 </li>
