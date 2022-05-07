@@ -4,7 +4,7 @@
 ![Tests](https://github.com/sersoft-gmbh/route-docs/workflows/Tests/badge.svg)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/79e8965866ad4ed9a2cf4389c0a3a1a1)](https://www.codacy.com/gh/sersoft-gmbh/route-docs/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=sersoft-gmbh/route-docs&amp;utm_campaign=Badge_Grade)
 [![codecov](https://codecov.io/gh/sersoft-gmbh/route-docs/branch/master/graph/badge.svg?token=UUQetUQ4hG)](https://codecov.io/gh/sersoft-gmbh/route-docs)
-[![jazzy](https://raw.githubusercontent.com/sersoft-gmbh/route-docs/gh-pages/badge.svg?sanitize=true)](https://sersoft-gmbh.github.io/route-docs)
+[![Docs](https://img.shields.io/badge/-documentation-informational)](https://sersoft-gmbh.github.io/route-docs)
 
 This adds some types and extensions to Vapor's `Route` type that allows documenting each route.
 Also, a `ViewContext` object helps in bringing these documentations to a web page.
