@@ -1,10 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "No overview available.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -74,7 +68,15 @@
             },
             {
               "kind" : "text",
-              "text" : " : "
+              "text" : "<"
+            },
+            {
+              "kind" : "typeIdentifier",
+              "text" : "Wrapped"
+            },
+            {
+              "kind" : "text",
+              "text" : "> : "
             },
             {
               "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/AnyTypeWrapping",
@@ -100,7 +102,7 @@
   ],
   "schemaVersion" : {
     "major" : 0,
-    "minor" : 2,
+    "minor" : 3,
     "patch" : 0
   },
   "sections" : [

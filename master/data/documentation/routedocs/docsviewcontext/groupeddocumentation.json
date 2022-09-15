@@ -1,10 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "No overview available.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -82,7 +76,8 @@
   "relationshipsSections" : [
     {
       "identifiers" : [
-        "doc:\/\/RouteDocs\/SE"
+        "doc:\/\/RouteDocs\/SE",
+        "doc:\/\/RouteDocs\/s8SendableP"
       ],
       "kind" : "relationships",
       "title" : "Conforms To",
@@ -91,7 +86,7 @@
   ],
   "schemaVersion" : {
     "major" : 0,
-    "minor" : 2,
+    "minor" : 3,
     "patch" : 0
   },
   "sections" : [
@@ -221,7 +216,16 @@
     },
     {
       "kind" : "text",
-      "text" : ": ["
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sa",
+      "text" : "Array"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
     },
     {
       "kind" : "typeIdentifier",
@@ -239,7 +243,7 @@
     },
     {
       "kind" : "text",
-      "text" : "]"
+      "text" : ">"
     }
   ],
   "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocsViewContext\/GroupedDocumentation\/documentations",
@@ -316,6 +320,11 @@
   "title" : "id",
   "type" : "topic",
   "url" : "\/documentation\/routedocs\/docsviewcontext\/groupeddocumentation\/id"
+},
+"doc://RouteDocs/s8SendableP": {
+  "identifier" : "doc:\/\/RouteDocs\/s8SendableP",
+  "title" : "Swift.Sendable",
+  "type" : "unresolvable"
 }
 }
 }

@@ -1,10 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "No overview available.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -85,7 +79,8 @@
   "relationshipsSections" : [
     {
       "identifiers" : [
-        "doc:\/\/RouteDocs\/SE"
+        "doc:\/\/RouteDocs\/SE",
+        "doc:\/\/RouteDocs\/s8SendableP"
       ],
       "kind" : "relationships",
       "title" : "Conforms To",
@@ -94,7 +89,7 @@
   ],
   "schemaVersion" : {
     "major" : 0,
-    "minor" : 2,
+    "minor" : 3,
     "patch" : 0
   },
   "sections" : [
@@ -505,6 +500,11 @@
   "title" : "type",
   "type" : "topic",
   "url" : "\/documentation\/routedocs\/docsviewcontext\/documentation\/object\/body-swift.enum\/field\/type"
+},
+"doc://RouteDocs/s8SendableP": {
+  "identifier" : "doc:\/\/RouteDocs\/s8SendableP",
+  "title" : "Swift.Sendable",
+  "type" : "unresolvable"
 }
 }
 }

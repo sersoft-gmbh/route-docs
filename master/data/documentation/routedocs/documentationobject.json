@@ -1,10 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "No overview available.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -83,7 +77,8 @@
       "identifiers" : [
         "doc:\/\/RouteDocs\/s23CustomStringConvertibleP",
         "doc:\/\/RouteDocs\/SQ",
-        "doc:\/\/RouteDocs\/SH"
+        "doc:\/\/RouteDocs\/SH",
+        "doc:\/\/RouteDocs\/s8SendableP"
       ],
       "kind" : "relationships",
       "title" : "Conforms To",
@@ -92,7 +87,7 @@
   ],
   "schemaVersion" : {
     "major" : 0,
-    "minor" : 2,
+    "minor" : 3,
     "patch" : 0
   },
   "sections" : [
@@ -543,7 +538,16 @@
     },
     {
       "kind" : "text",
-      "text" : ": ["
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SD",
+      "text" : "Dictionary"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
     },
     {
       "kind" : "typeIdentifier",
@@ -552,7 +556,7 @@
     },
     {
       "kind" : "text",
-      "text" : " : "
+      "text" : ", "
     },
     {
       "kind" : "typeIdentifier",
@@ -561,7 +565,7 @@
     },
     {
       "kind" : "text",
-      "text" : "])"
+      "text" : ">)"
     }
   ],
   "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocumentationObject\/init(_:fields:)",
@@ -690,6 +694,11 @@
 "doc://RouteDocs/s23CustomStringConvertibleP": {
   "identifier" : "doc:\/\/RouteDocs\/s23CustomStringConvertibleP",
   "title" : "Swift.CustomStringConvertible",
+  "type" : "unresolvable"
+},
+"doc://RouteDocs/s8SendableP": {
+  "identifier" : "doc:\/\/RouteDocs\/s8SendableP",
+  "title" : "Swift.Sendable",
   "type" : "unresolvable"
 }
 }

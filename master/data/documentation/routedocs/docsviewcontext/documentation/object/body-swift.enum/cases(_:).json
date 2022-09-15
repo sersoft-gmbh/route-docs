@@ -1,10 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "No overview available.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -38,7 +32,16 @@
       },
       {
         "kind" : "text",
-        "text" : "(["
+        "text" : "("
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:Sa",
+        "text" : "Array"
+      },
+      {
+        "kind" : "text",
+        "text" : "<"
       },
       {
         "kind" : "typeIdentifier",
@@ -83,7 +86,7 @@
       },
       {
         "kind" : "text",
-        "text" : "])"
+        "text" : ">)"
       }
     ],
     "modules" : [
@@ -121,7 +124,16 @@
             },
             {
               "kind" : "text",
-              "text" : "(["
+              "text" : "("
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:Sa",
+              "text" : "Array"
+            },
+            {
+              "kind" : "text",
+              "text" : "<"
             },
             {
               "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocsViewContext",
@@ -171,7 +183,7 @@
             },
             {
               "kind" : "text",
-              "text" : "])"
+              "text" : ">)"
             }
           ]
         }
@@ -181,7 +193,7 @@
   ],
   "schemaVersion" : {
     "major" : 0,
-    "minor" : 2,
+    "minor" : 3,
     "patch" : 0
   },
   "sections" : [
@@ -389,7 +401,16 @@
     },
     {
       "kind" : "text",
-      "text" : "(["
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sa",
+      "text" : "Array"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
     },
     {
       "kind" : "typeIdentifier",
@@ -434,7 +455,7 @@
     },
     {
       "kind" : "text",
-      "text" : "])"
+      "text" : ">)"
     }
   ],
   "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocsViewContext\/Documentation\/Object\/Body-swift.enum\/cases(_:)",

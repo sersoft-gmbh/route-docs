@@ -1,10 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "No overview available.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -36,7 +30,16 @@
       },
       {
         "kind" : "text",
-        "text" : "(["
+        "text" : "("
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SD",
+        "text" : "Dictionary"
+      },
+      {
+        "kind" : "text",
+        "text" : "<"
       },
       {
         "kind" : "typeIdentifier",
@@ -45,7 +48,7 @@
       },
       {
         "kind" : "text",
-        "text" : " : "
+        "text" : ", "
       },
       {
         "kind" : "typeIdentifier",
@@ -54,7 +57,7 @@
       },
       {
         "kind" : "text",
-        "text" : "])"
+        "text" : ">)"
       }
     ],
     "modules" : [
@@ -92,7 +95,16 @@
             },
             {
               "kind" : "text",
-              "text" : "(["
+              "text" : "("
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:SD",
+              "text" : "Dictionary"
+            },
+            {
+              "kind" : "text",
+              "text" : "<"
             },
             {
               "kind" : "typeIdentifier",
@@ -101,7 +113,7 @@
             },
             {
               "kind" : "text",
-              "text" : " : "
+              "text" : ", "
             },
             {
               "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocumentationObject",
@@ -111,7 +123,7 @@
             },
             {
               "kind" : "text",
-              "text" : "])"
+              "text" : ">)"
             }
           ]
         }
@@ -121,7 +133,7 @@
   ],
   "schemaVersion" : {
     "major" : 0,
-    "minor" : 2,
+    "minor" : 3,
     "patch" : 0
   },
   "sections" : [
@@ -233,7 +245,16 @@
     },
     {
       "kind" : "text",
-      "text" : "(["
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SD",
+      "text" : "Dictionary"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
     },
     {
       "kind" : "typeIdentifier",
@@ -242,7 +263,7 @@
     },
     {
       "kind" : "text",
-      "text" : " : "
+      "text" : ", "
     },
     {
       "kind" : "typeIdentifier",
@@ -251,7 +272,7 @@
     },
     {
       "kind" : "text",
-      "text" : "])"
+      "text" : ">)"
     }
   ],
   "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocumentationObject\/Body-swift.enum\/fields(_:)",
