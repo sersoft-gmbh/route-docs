@@ -5,9 +5,9 @@ extension CodingUserInfoKey {
     public static let isDocumentationDecoder = CodingUserInfoKey(rawValue: "IsDocumentationDecoder")!
 }
 
-public struct DocumentationObject: Hashable, CustomStringConvertible {
-    public enum Body: Hashable {
-        public struct EnumCase: Hashable {
+public struct DocumentationObject: Hashable, CustomStringConvertible, _RTSendable {
+    public enum Body: Hashable, _RTSendable {
+        public struct EnumCase: Hashable, _RTSendable {
             public let name: String?
             public let value: String
 
@@ -24,8 +24,8 @@ public struct DocumentationObject: Hashable, CustomStringConvertible {
         }
 
         case none
-        case fields([String: DocumentationObject])
-        case cases([EnumCase])
+        case fields(Dictionary<String, DocumentationObject>)
+        case cases(Array<EnumCase>)
 
         public var isEmpty: Bool {
             switch self {
@@ -35,7 +35,7 @@ public struct DocumentationObject: Hashable, CustomStringConvertible {
             }
         }
 
-        fileprivate var fields: [String: DocumentationObject]? {
+        fileprivate var fields: Dictionary<String, DocumentationObject>? {
             get {
                 switch self {
                 case .none: return [:]
@@ -68,7 +68,7 @@ public struct DocumentationObject: Hashable, CustomStringConvertible {
     }
 
     @inlinable
-    public init<T>(_ type: T.Type, fields: [String: DocumentationObject]) {
+    public init<T>(_ type: T.Type, fields: Dictionary<String, DocumentationObject>) {
         self.init(type, body: .fields(fields))
     }
 
@@ -137,7 +137,7 @@ extension Optional: AnyCustomDocumentable, CustomDocumentable where Wrapped: Cus
 }
 
 extension Decodable {
-    static func reflectedDocumentation(withCustomUserInfo customUserInfo: [CodingUserInfoKey: Any]) throws -> DocumentationObject {
+    static func reflectedDocumentation(withCustomUserInfo customUserInfo: Dictionary<CodingUserInfoKey, Any>) throws -> DocumentationObject {
         let decoder = DocumentationDecoder(type: self, customUserInfo: customUserInfo)
         _ = try self.init(from: decoder)
         return decoder.storage.decodedObject
@@ -146,16 +146,16 @@ extension Decodable {
 
 fileprivate struct DocumentationDecoder: Decoder {
     let storage: Storage
-    let codingPath: [CodingKey]
-    let userInfo: [CodingUserInfoKey: Any]
+    let codingPath: Array<CodingKey>
+    let userInfo: Dictionary<CodingUserInfoKey, Any>
 
-    private init(storage: Storage, codingPath: [CodingKey], userInfo: [CodingUserInfoKey: Any]) {
+    private init(storage: Storage, codingPath: Array<CodingKey>, userInfo: Dictionary<CodingUserInfoKey, Any>) {
         self.storage = storage
         self.codingPath = codingPath
         self.userInfo = userInfo
     }
 
-    init<T>(type: T.Type, customUserInfo: [CodingUserInfoKey: Any]) {
+    init<T>(type: T.Type, customUserInfo: Dictionary<CodingUserInfoKey, Any>) {
         var userInfo = customUserInfo
         userInfo[.isDocumentationDecoder] = true
         self.init(storage: .init(type: type), codingPath: [], userInfo: userInfo)
@@ -286,7 +286,7 @@ extension DocumentationDecoder {
         }
 
         private static let lock = Lock()
-        private static var cache: [ObjectIdentifier: Entry] = [:]
+        private static var cache = Dictionary<ObjectIdentifier, Entry>()
 
         static func cachedValue(for type: Any.Type) -> Entry? {
             lock.withLock { cache[ObjectIdentifier(type)] }
@@ -313,7 +313,7 @@ extension DocumentationDecoder {
     fileprivate struct SingleValueContainer: SingleValueDecodingContainer {
         let decoder: DocumentationDecoder
 
-        var codingPath: [CodingKey] { decoder.codingPath }
+        var codingPath: Array<CodingKey> { decoder.codingPath }
 
         func decodeNil() -> Bool { false }
         func decode(_ type: Bool.Type) throws -> Bool { .init() }
@@ -340,7 +340,7 @@ extension DocumentationDecoder {
 
         private let builder = TypeBuilder()
 
-        var codingPath: [CodingKey] { decoder.codingPath }
+        var codingPath: Array<CodingKey> { decoder.codingPath }
 
         var allKeys: [Key] {
             guard !decoder.hasPotentialCycle() else { return [] }
@@ -478,7 +478,7 @@ extension DocumentationDecoder {
 
         private let builder = TypeBuilder()
 
-        var codingPath: [CodingKey] { decoder.codingPath }
+        var codingPath: Array<CodingKey> { decoder.codingPath }
 
         var count: Int? { nil }
         var isAtEnd: Bool { currentIndex >= 10 || decoder.hasPotentialCycle() }

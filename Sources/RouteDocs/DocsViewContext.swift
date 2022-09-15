@@ -2,27 +2,27 @@ import Vapor
 import struct FFFoundation.TypeDescription
 
 /// This can be used as context for a Documentation view.
-public struct DocsViewContext: Encodable {
-    public struct Documentation: Encodable {
-        public struct Object: Encodable {
-            public enum Body: Encodable {
+public struct DocsViewContext: Encodable, _RTSendable {
+    public struct Documentation: Encodable, _RTSendable {
+        public struct Object: Encodable, _RTSendable {
+            public enum Body: Encodable, _RTSendable {
                 private enum CodingKeys: String, CodingKey {
                     case isEmpty, fields, cases
                 }
 
-                public struct Field: Encodable {
+                public struct Field: Encodable, _RTSendable {
                     public let name: String
                     public let type: String
                     public let isOptional: Bool
                 }
-                public struct EnumCase: Encodable {
+                public struct EnumCase: Encodable, _RTSendable {
                     public let name: String?
                     public let value: String
                 }
 
                 case empty
-                case fields([Field])
-                case cases([EnumCase])
+                case fields(Array<Field>)
+                case cases(Array<EnumCase>)
 
                 public func encode(to encoder: Encoder) throws {
                     var container = encoder.container(keyedBy: CodingKeys.self)
@@ -48,7 +48,7 @@ public struct DocsViewContext: Encodable {
 
         public struct Payload: Encodable {
             public let mediaType: HTTPMediaType
-            public let objects: [Object]
+            public let objects: Array<Object>
         }
 
         public let method: HTTPMethod
@@ -56,18 +56,22 @@ public struct DocsViewContext: Encodable {
         public let query: Object?
         public let request: Payload?
         public let response: Payload?
-        public let requiredAuthorization: [String]
+        public let requiredAuthorization: Array<String>
     }
 
-    public struct GroupedDocumentation: Encodable {
+    public struct GroupedDocumentation: Encodable, _RTSendable {
         public let id: Int
         public let groupName: String
-        public let documentations: [Documentation]
+        public let documentations: Array<Documentation>
     }
 
-    public let groupedDocumentations: [GroupedDocumentation]
-    public let otherDocumentations: [Documentation]
+    public let groupedDocumentations: Array<GroupedDocumentation>
+    public let otherDocumentations: Array<Documentation>
 }
+
+#if compiler(>=5.5.2) && canImport(_Concurrency)
+extension DocsViewContext.Documentation.Payload: @unchecked Sendable {} // unchecked because of HTTPMediaType
+#endif
 
 fileprivate extension HTTPMethod {
     var sortOrder: String {

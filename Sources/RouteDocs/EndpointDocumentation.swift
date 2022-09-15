@@ -1,7 +1,7 @@
 import Vapor
 import struct FFFoundation.TypeDescription
 
-public struct DocumentationType: Codable, Equatable, CustomStringConvertible {
+public struct DocumentationType: Codable, Equatable, CustomStringConvertible, _RTSendable {
     public let typeDescription: TypeDescription
     public let customName: String?
 
@@ -27,14 +27,14 @@ public struct DocumentationType: Codable, Equatable, CustomStringConvertible {
     }
 }
 
-public struct EndpointDocumentation: Codable, Equatable, CustomStringConvertible {
-    public struct Object: Codable, Equatable, CustomStringConvertible {
-        public enum Body: Codable, Equatable, CustomStringConvertible {
+public struct EndpointDocumentation: Codable, Equatable, CustomStringConvertible, _RTSendable {
+    public struct Object: Codable, Equatable, CustomStringConvertible, _RTSendable {
+        public enum Body: Codable, Equatable, CustomStringConvertible, _RTSendable {
             private enum CodingKeys: String, CodingKey {
                 case isEmpty, fields, cases
             }
 
-            public struct Field: Codable, Equatable, CustomStringConvertible {
+            public struct Field: Codable, Equatable, CustomStringConvertible, _RTSendable {
                 public let name: String
                 public let type: DocumentationType
                 public let isOptional: Bool
@@ -42,7 +42,7 @@ public struct EndpointDocumentation: Codable, Equatable, CustomStringConvertible
                 public var description: String { "\(name): \(type)\(isOptional ? "?" : "")" }
             }
 
-            public struct EnumCase: Codable, Equatable, CustomStringConvertible {
+            public struct EnumCase: Codable, Equatable, CustomStringConvertible, _RTSendable {
                 public let name: String?
                 public let value: String
 
@@ -50,8 +50,8 @@ public struct EndpointDocumentation: Codable, Equatable, CustomStringConvertible
             }
 
             case empty
-            case fields([Field])
-            case cases([EnumCase])
+            case fields(Array<Field>)
+            case cases(Array<EnumCase>)
 
             public var description: String {
                 switch self {
@@ -91,10 +91,10 @@ public struct EndpointDocumentation: Codable, Equatable, CustomStringConvertible
                 let container = try decoder.container(keyedBy: CodingKeys.self)
                 if try container.decode(Bool.self, forKey: .isEmpty) {
                     self = .empty
-                } else if let fields = try container.decodeIfPresent([Field].self, forKey: .fields) {
+                } else if let fields = try container.decodeIfPresent(Array<Field>.self, forKey: .fields) {
                     self = .fields(fields)
                 } else {
-                    self = .cases(try container.decode([EnumCase].self, forKey: .cases))
+                    self = .cases(try container.decode(Array<EnumCase>.self, forKey: .cases))
                 }
             }
 
@@ -162,7 +162,7 @@ public struct EndpointDocumentation: Codable, Equatable, CustomStringConvertible
 
     public struct Payload: Codable, Equatable, CustomStringConvertible {
         public let mediaType: HTTPMediaType
-        public let objects: [Object]
+        public let objects: Array<Object>
 
         public var description: String {
             """
@@ -186,7 +186,7 @@ public struct EndpointDocumentation: Codable, Equatable, CustomStringConvertible
     public let query: Object?
     public let request: Payload?
     public let response: Payload?
-    public let requiredAuthorization: [String]
+    public let requiredAuthorization: Array<String>
 
     public var description: String {
         [
@@ -200,14 +200,18 @@ public struct EndpointDocumentation: Codable, Equatable, CustomStringConvertible
     }
 }
 
+#if compiler(>=5.5.2) && canImport(_Concurrency)
+extension EndpointDocumentation.Payload: @unchecked Sendable {}
+#endif
+
 extension EndpointDocumentation {
     public init(method: HTTPMethod,
-                path: [PathComponent],
+                path: Array<PathComponent>,
                 groupName: String? = nil,
                 query: Object? = nil,
                 request: Payload? = nil,
                 response: Payload? = nil,
-                requiredAuthorization: [String] = []) {
+                requiredAuthorization: Array<String> = []) {
         self.init(groupName: groupName, method: method, path: path.string,
                   query: query, request: request, response: response,
                   requiredAuthorization: requiredAuthorization)
@@ -215,7 +219,7 @@ extension EndpointDocumentation {
 }
 
 extension EndpointDocumentation.Payload {
-    public init<T: Decodable>(object: T.Type, as mediaType: HTTPMediaType, customUserInfo: [CodingUserInfoKey: Any] = [:]) throws {
+    public init<T: Decodable>(object: T.Type, as mediaType: HTTPMediaType, customUserInfo: Dictionary<CodingUserInfoKey, Any> = [:]) throws {
         try self.init(mediaType: mediaType,
                       objects: EndpointDocumentation.Object.objects(from: object.reflectedDocumentation(withCustomUserInfo: customUserInfo)))
     }
@@ -226,20 +230,20 @@ extension EndpointDocumentation.Payload {
     }
 
     @inlinable
-    public init<T: Content>(object: T.Type, customUserInfo: [CodingUserInfoKey: Any] = [:]) throws {
+    public init<T: Content>(object: T.Type, customUserInfo: Dictionary<CodingUserInfoKey, Any> = [:]) throws {
         try self.init(object: object, as: object.defaultContentType, customUserInfo: customUserInfo)
     }
 }
 
 extension EndpointDocumentation.Object {
-    fileprivate static func addObjects(from documentation: DocumentationObject, to list: inout [EndpointDocumentation.Object]) {
+    fileprivate static func addObjects(from documentation: DocumentationObject, to list: inout Array<EndpointDocumentation.Object>) {
         list.appendIfNotExists(self.init(documentation: documentation))
         if case .fields(let fields) = documentation.body {
             fields.values.forEach { addObjects(from: $0, to: &list) }
         }
     }
 
-    fileprivate static func objects(from documentation: DocumentationObject) -> [EndpointDocumentation.Object] {
+    fileprivate static func objects(from documentation: DocumentationObject) -> Array<EndpointDocumentation.Object> {
         var list = Array<EndpointDocumentation.Object>()
         addObjects(from: documentation, to: &list)
         return list
@@ -250,7 +254,7 @@ extension EndpointDocumentation.Object {
         self.init(type: DocumentationType(actualType), body: .init(documentation: documentation.body))
     }
 
-    public init<T: Decodable>(object: T.Type, customUserInfo: [CodingUserInfoKey: Any] = [:]) throws {
+    public init<T: Decodable>(object: T.Type, customUserInfo: Dictionary<CodingUserInfoKey, Any> = [:]) throws {
         try self.init(documentation: object.reflectedDocumentation(withCustomUserInfo: customUserInfo))
     }
 
