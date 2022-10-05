@@ -1,7 +1,7 @@
 {
   "abstract" : [
     {
-      "text" : "This can be used as context for a Documentation view.",
+      "text" : "This can be used as context for a documentation view.",
       "type" : "text"
     }
   ],
@@ -108,9 +108,7 @@
     {
       "identifiers" : [
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocsViewContext\/init(documentables:sortedBy:usingName:)",
-        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocsViewContext\/init(documentables:usingName:)",
-        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocsViewContext\/init(routes:sortedBy:usingName:)",
-        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocsViewContext\/init(routes:usingName:)"
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocsViewContext\/init(routes:sortedBy:usingName:)"
       ],
       "title" : "Initializers"
     },
@@ -161,7 +159,7 @@
 "doc://RouteDocs/documentation/RouteDocs/DocsViewContext": {
   "abstract" : [
     {
-      "text" : "This can be used as context for a Documentation view.",
+      "text" : "This can be used as context for a documentation view.",
       "type" : "text"
     }
   ],
@@ -363,23 +361,7 @@
     },
     {
       "kind" : "text",
-      "text" : "<"
-    },
-    {
-      "kind" : "genericParameter",
-      "text" : "Docs"
-    },
-    {
-      "kind" : "text",
-      "text" : ", "
-    },
-    {
-      "kind" : "genericParameter",
-      "text" : "C"
-    },
-    {
-      "kind" : "text",
-      "text" : ">("
+      "text" : "("
     },
     {
       "kind" : "externalParam",
@@ -387,11 +369,12 @@
     },
     {
       "kind" : "text",
-      "text" : ": "
+      "text" : ": some "
     },
     {
       "kind" : "typeIdentifier",
-      "text" : "Docs"
+      "preciseIdentifier" : "s:ST",
+      "text" : "Sequence"
     },
     {
       "kind" : "text",
@@ -421,11 +404,12 @@
     },
     {
       "kind" : "text",
-      "text" : ", "
+      "text" : ", some "
     },
     {
       "kind" : "typeIdentifier",
-      "text" : "C"
+      "preciseIdentifier" : "s:SL",
+      "text" : "Comparable"
     },
     {
       "kind" : "text",
@@ -474,86 +458,6 @@
   "type" : "topic",
   "url" : "\/documentation\/routedocs\/docsviewcontext\/init(documentables:sortedby:usingname:)"
 },
-"doc://RouteDocs/documentation/RouteDocs/DocsViewContext/init(documentables:usingName:)": {
-  "abstract" : [
-
-  ],
-  "fragments" : [
-    {
-      "kind" : "identifier",
-      "text" : "init"
-    },
-    {
-      "kind" : "text",
-      "text" : "<"
-    },
-    {
-      "kind" : "genericParameter",
-      "text" : "Docs"
-    },
-    {
-      "kind" : "text",
-      "text" : ">("
-    },
-    {
-      "kind" : "externalParam",
-      "text" : "documentables"
-    },
-    {
-      "kind" : "text",
-      "text" : ": "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "text" : "Docs"
-    },
-    {
-      "kind" : "text",
-      "text" : ", "
-    },
-    {
-      "kind" : "externalParam",
-      "text" : "usingName"
-    },
-    {
-      "kind" : "text",
-      "text" : ": "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:s7KeyPathC",
-      "text" : "KeyPath"
-    },
-    {
-      "kind" : "text",
-      "text" : "<"
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:9RouteDocs17DocumentationTypeV",
-      "text" : "DocumentationType"
-    },
-    {
-      "kind" : "text",
-      "text" : ", "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:SS",
-      "text" : "String"
-    },
-    {
-      "kind" : "text",
-      "text" : ">?)"
-    }
-  ],
-  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocsViewContext\/init(documentables:usingName:)",
-  "kind" : "symbol",
-  "role" : "symbol",
-  "title" : "init(documentables:usingName:)",
-  "type" : "topic",
-  "url" : "\/documentation\/routedocs\/docsviewcontext\/init(documentables:usingname:)"
-},
 "doc://RouteDocs/documentation/RouteDocs/DocsViewContext/init(routes:sortedBy:usingName:)": {
   "abstract" : [
 
@@ -565,15 +469,7 @@
     },
     {
       "kind" : "text",
-      "text" : "<"
-    },
-    {
-      "kind" : "genericParameter",
-      "text" : "C"
-    },
-    {
-      "kind" : "text",
-      "text" : ">("
+      "text" : "("
     },
     {
       "kind" : "externalParam",
@@ -616,11 +512,12 @@
     },
     {
       "kind" : "text",
-      "text" : ", "
+      "text" : ", some "
     },
     {
       "kind" : "typeIdentifier",
-      "text" : "C"
+      "preciseIdentifier" : "s:SL",
+      "text" : "Comparable"
     },
     {
       "kind" : "text",
@@ -668,79 +565,6 @@
   "title" : "init(routes:sortedBy:usingName:)",
   "type" : "topic",
   "url" : "\/documentation\/routedocs\/docsviewcontext\/init(routes:sortedby:usingname:)"
-},
-"doc://RouteDocs/documentation/RouteDocs/DocsViewContext/init(routes:usingName:)": {
-  "abstract" : [
-
-  ],
-  "fragments" : [
-    {
-      "kind" : "identifier",
-      "text" : "init"
-    },
-    {
-      "kind" : "text",
-      "text" : "("
-    },
-    {
-      "kind" : "externalParam",
-      "text" : "routes"
-    },
-    {
-      "kind" : "text",
-      "text" : ": "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:5Vapor6RoutesC",
-      "text" : "Routes"
-    },
-    {
-      "kind" : "text",
-      "text" : ", "
-    },
-    {
-      "kind" : "externalParam",
-      "text" : "usingName"
-    },
-    {
-      "kind" : "text",
-      "text" : ": "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:s7KeyPathC",
-      "text" : "KeyPath"
-    },
-    {
-      "kind" : "text",
-      "text" : "<"
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:9RouteDocs17DocumentationTypeV",
-      "text" : "DocumentationType"
-    },
-    {
-      "kind" : "text",
-      "text" : ", "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:SS",
-      "text" : "String"
-    },
-    {
-      "kind" : "text",
-      "text" : ">?)"
-    }
-  ],
-  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocsViewContext\/init(routes:usingName:)",
-  "kind" : "symbol",
-  "role" : "symbol",
-  "title" : "init(routes:usingName:)",
-  "type" : "topic",
-  "url" : "\/documentation\/routedocs\/docsviewcontext\/init(routes:usingname:)"
 },
 "doc://RouteDocs/documentation/RouteDocs/DocsViewContext/otherDocumentations": {
   "abstract" : [

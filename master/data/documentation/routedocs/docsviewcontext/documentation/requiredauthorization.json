@@ -148,7 +148,7 @@
 "doc://RouteDocs/documentation/RouteDocs/DocsViewContext": {
   "abstract" : [
     {
-      "text" : "This can be used as context for a Documentation view.",
+      "text" : "This can be used as context for a documentation view.",
       "type" : "text"
     }
   ],

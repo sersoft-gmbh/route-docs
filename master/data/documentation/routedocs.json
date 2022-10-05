@@ -48,7 +48,8 @@
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocsViewContext",
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocumentationObject",
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocumentationType",
-        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentation"
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentation",
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription"
       ],
       "title" : "Structures"
     }
@@ -205,7 +206,7 @@
 "doc://RouteDocs/documentation/RouteDocs/DocsViewContext": {
   "abstract" : [
     {
-      "text" : "This can be used as context for a Documentation view.",
+      "text" : "This can be used as context for a documentation view.",
       "type" : "text"
     }
   ],
@@ -359,6 +360,37 @@
   "title" : "EndpointDocumentation",
   "type" : "topic",
   "url" : "\/documentation\/routedocs\/endpointdocumentation"
+},
+"doc://RouteDocs/documentation/RouteDocs/TypeDescription": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "TypeDescription"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "TypeDescription"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "TypeDescription",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/typedescription"
 },
 "doc://RouteDocs/documentation/RouteDocs/TypeWrapping": {
   "abstract" : [

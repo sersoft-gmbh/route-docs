@@ -173,7 +173,7 @@
             },
             {
               "kind" : "text",
-              "text" : "> = [:]) "
+              "text" : "> = .init()) "
             },
             {
               "kind" : "keyword",

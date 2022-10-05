@@ -13,7 +13,7 @@
   },
   "kind" : "symbol",
   "metadata" : {
-    "externalID" : "s:9RouteDocs17DocumentationTypeV15typeDescription12FFFoundation0dF0Vvp",
+    "externalID" : "s:9RouteDocs17DocumentationTypeV15typeDescriptionAA0dF0Vvp",
     "fragments" : [
       {
         "kind" : "keyword",
@@ -33,7 +33,7 @@
       },
       {
         "kind" : "typeIdentifier",
-        "preciseIdentifier" : "s:12FFFoundation15TypeDescriptionV",
+        "preciseIdentifier" : "s:9RouteDocs15TypeDescriptionV",
         "text" : "TypeDescription"
       }
     ],
@@ -75,8 +75,9 @@
               "text" : ": "
             },
             {
+              "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription",
               "kind" : "typeIdentifier",
-              "preciseIdentifier" : "s:12FFFoundation15TypeDescriptionV",
+              "preciseIdentifier" : "s:9RouteDocs15TypeDescriptionV",
               "text" : "TypeDescription"
             }
           ]
@@ -172,7 +173,7 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:12FFFoundation15TypeDescriptionV",
+      "preciseIdentifier" : "s:9RouteDocs15TypeDescriptionV",
       "text" : "TypeDescription"
     }
   ],
@@ -182,6 +183,37 @@
   "title" : "typeDescription",
   "type" : "topic",
   "url" : "\/documentation\/routedocs\/documentationtype\/typedescription"
+},
+"doc://RouteDocs/documentation/RouteDocs/TypeDescription": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "TypeDescription"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "TypeDescription"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "TypeDescription",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/typedescription"
 }
 }
 }

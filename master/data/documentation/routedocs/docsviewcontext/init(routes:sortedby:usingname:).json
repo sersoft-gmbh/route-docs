@@ -22,15 +22,7 @@
       },
       {
         "kind" : "text",
-        "text" : "<"
-      },
-      {
-        "kind" : "genericParameter",
-        "text" : "C"
-      },
-      {
-        "kind" : "text",
-        "text" : ">("
+        "text" : "("
       },
       {
         "kind" : "externalParam",
@@ -73,11 +65,12 @@
       },
       {
         "kind" : "text",
-        "text" : ", "
+        "text" : ", some "
       },
       {
         "kind" : "typeIdentifier",
-        "text" : "C"
+        "preciseIdentifier" : "s:SL",
+        "text" : "Comparable"
       },
       {
         "kind" : "text",
@@ -146,15 +139,7 @@
             },
             {
               "kind" : "text",
-              "text" : "<"
-            },
-            {
-              "kind" : "genericParameter",
-              "text" : "C"
-            },
-            {
-              "kind" : "text",
-              "text" : ">("
+              "text" : "("
             },
             {
               "kind" : "externalParam",
@@ -206,15 +191,16 @@
             },
             {
               "kind" : "text",
-              "text" : ", "
+              "text" : ", some "
             },
             {
               "kind" : "typeIdentifier",
-              "text" : "C"
+              "preciseIdentifier" : "s:SL",
+              "text" : "Comparable"
             },
             {
               "kind" : "text",
-              "text" : ">, "
+              "text" : "> = \\.sortOrder, "
             },
             {
               "kind" : "externalParam",
@@ -258,28 +244,7 @@
             },
             {
               "kind" : "text",
-              "text" : ">? = nil) "
-            },
-            {
-              "kind" : "keyword",
-              "text" : "where"
-            },
-            {
-              "kind" : "text",
-              "text" : " "
-            },
-            {
-              "kind" : "typeIdentifier",
-              "text" : "C"
-            },
-            {
-              "kind" : "text",
-              "text" : " : "
-            },
-            {
-              "kind" : "typeIdentifier",
-              "preciseIdentifier" : "s:SL",
-              "text" : "Comparable"
+              "text" : ">? = nil)"
             }
           ]
         }
@@ -323,7 +288,7 @@
 "doc://RouteDocs/documentation/RouteDocs/DocsViewContext": {
   "abstract" : [
     {
-      "text" : "This can be used as context for a Documentation view.",
+      "text" : "This can be used as context for a documentation view.",
       "type" : "text"
     }
   ],
@@ -365,15 +330,7 @@
     },
     {
       "kind" : "text",
-      "text" : "<"
-    },
-    {
-      "kind" : "genericParameter",
-      "text" : "C"
-    },
-    {
-      "kind" : "text",
-      "text" : ">("
+      "text" : "("
     },
     {
       "kind" : "externalParam",
@@ -416,11 +373,12 @@
     },
     {
       "kind" : "text",
-      "text" : ", "
+      "text" : ", some "
     },
     {
       "kind" : "typeIdentifier",
-      "text" : "C"
+      "preciseIdentifier" : "s:SL",
+      "text" : "Comparable"
     },
     {
       "kind" : "text",

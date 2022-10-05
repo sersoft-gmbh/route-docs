@@ -22,23 +22,7 @@
       },
       {
         "kind" : "text",
-        "text" : "<"
-      },
-      {
-        "kind" : "genericParameter",
-        "text" : "Docs"
-      },
-      {
-        "kind" : "text",
-        "text" : ", "
-      },
-      {
-        "kind" : "genericParameter",
-        "text" : "C"
-      },
-      {
-        "kind" : "text",
-        "text" : ">("
+        "text" : "("
       },
       {
         "kind" : "externalParam",
@@ -46,11 +30,12 @@
       },
       {
         "kind" : "text",
-        "text" : ": "
+        "text" : ": some "
       },
       {
         "kind" : "typeIdentifier",
-        "text" : "Docs"
+        "preciseIdentifier" : "s:ST",
+        "text" : "Sequence"
       },
       {
         "kind" : "text",
@@ -80,11 +65,12 @@
       },
       {
         "kind" : "text",
-        "text" : ", "
+        "text" : ", some "
       },
       {
         "kind" : "typeIdentifier",
-        "text" : "C"
+        "preciseIdentifier" : "s:SL",
+        "text" : "Comparable"
       },
       {
         "kind" : "text",
@@ -153,23 +139,7 @@
             },
             {
               "kind" : "text",
-              "text" : "<"
-            },
-            {
-              "kind" : "genericParameter",
-              "text" : "Docs"
-            },
-            {
-              "kind" : "text",
-              "text" : ", "
-            },
-            {
-              "kind" : "genericParameter",
-              "text" : "C"
-            },
-            {
-              "kind" : "text",
-              "text" : ">("
+              "text" : "("
             },
             {
               "kind" : "externalParam",
@@ -177,11 +147,12 @@
             },
             {
               "kind" : "text",
-              "text" : ": "
+              "text" : ": some "
             },
             {
               "kind" : "typeIdentifier",
-              "text" : "Docs"
+              "preciseIdentifier" : "s:ST",
+              "text" : "Sequence"
             },
             {
               "kind" : "text",
@@ -220,15 +191,16 @@
             },
             {
               "kind" : "text",
-              "text" : ", "
+              "text" : ", some "
             },
             {
               "kind" : "typeIdentifier",
-              "text" : "C"
+              "preciseIdentifier" : "s:SL",
+              "text" : "Comparable"
             },
             {
               "kind" : "text",
-              "text" : ">, "
+              "text" : "> = \\.sortOrder, "
             },
             {
               "kind" : "externalParam",
@@ -272,71 +244,7 @@
             },
             {
               "kind" : "text",
-              "text" : ">? = nil) "
-            },
-            {
-              "kind" : "keyword",
-              "text" : "where"
-            },
-            {
-              "kind" : "text",
-              "text" : " "
-            },
-            {
-              "kind" : "typeIdentifier",
-              "text" : "Docs"
-            },
-            {
-              "kind" : "text",
-              "text" : " : "
-            },
-            {
-              "kind" : "typeIdentifier",
-              "preciseIdentifier" : "s:ST",
-              "text" : "Sequence"
-            },
-            {
-              "kind" : "text",
-              "text" : ", "
-            },
-            {
-              "kind" : "typeIdentifier",
-              "text" : "C"
-            },
-            {
-              "kind" : "text",
-              "text" : " : "
-            },
-            {
-              "kind" : "typeIdentifier",
-              "preciseIdentifier" : "s:SL",
-              "text" : "Comparable"
-            },
-            {
-              "kind" : "text",
-              "text" : ", "
-            },
-            {
-              "kind" : "typeIdentifier",
-              "text" : "Docs"
-            },
-            {
-              "kind" : "text",
-              "text" : "."
-            },
-            {
-              "kind" : "typeIdentifier",
-              "text" : "Element"
-            },
-            {
-              "kind" : "text",
-              "text" : " == "
-            },
-            {
-              "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentable",
-              "kind" : "typeIdentifier",
-              "preciseIdentifier" : "s:9RouteDocs20EndpointDocumentableP",
-              "text" : "EndpointDocumentable"
+              "text" : ">? = nil)"
             }
           ]
         }
@@ -380,7 +288,7 @@
 "doc://RouteDocs/documentation/RouteDocs/DocsViewContext": {
   "abstract" : [
     {
-      "text" : "This can be used as context for a Documentation view.",
+      "text" : "This can be used as context for a documentation view.",
       "type" : "text"
     }
   ],
@@ -422,23 +330,7 @@
     },
     {
       "kind" : "text",
-      "text" : "<"
-    },
-    {
-      "kind" : "genericParameter",
-      "text" : "Docs"
-    },
-    {
-      "kind" : "text",
-      "text" : ", "
-    },
-    {
-      "kind" : "genericParameter",
-      "text" : "C"
-    },
-    {
-      "kind" : "text",
-      "text" : ">("
+      "text" : "("
     },
     {
       "kind" : "externalParam",
@@ -446,11 +338,12 @@
     },
     {
       "kind" : "text",
-      "text" : ": "
+      "text" : ": some "
     },
     {
       "kind" : "typeIdentifier",
-      "text" : "Docs"
+      "preciseIdentifier" : "s:ST",
+      "text" : "Sequence"
     },
     {
       "kind" : "text",
@@ -480,11 +373,12 @@
     },
     {
       "kind" : "text",
-      "text" : ", "
+      "text" : ", some "
     },
     {
       "kind" : "typeIdentifier",
-      "text" : "C"
+      "preciseIdentifier" : "s:SL",
+      "text" : "Comparable"
     },
     {
       "kind" : "text",
@@ -563,37 +457,6 @@
   "title" : "DocumentationType",
   "type" : "topic",
   "url" : "\/documentation\/routedocs\/documentationtype"
-},
-"doc://RouteDocs/documentation/RouteDocs/EndpointDocumentable": {
-  "abstract" : [
-
-  ],
-  "fragments" : [
-    {
-      "kind" : "keyword",
-      "text" : "protocol"
-    },
-    {
-      "kind" : "text",
-      "text" : " "
-    },
-    {
-      "kind" : "identifier",
-      "text" : "EndpointDocumentable"
-    }
-  ],
-  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentable",
-  "kind" : "symbol",
-  "navigatorTitle" : [
-    {
-      "kind" : "identifier",
-      "text" : "EndpointDocumentable"
-    }
-  ],
-  "role" : "symbol",
-  "title" : "EndpointDocumentable",
-  "type" : "topic",
-  "url" : "\/documentation\/routedocs\/endpointdocumentable"
 },
 "doc://RouteDocs/documentation/RouteDocs/EndpointDocumentation": {
   "abstract" : [

@@ -420,22 +420,12 @@
               },
               {
                 "path" : "\/documentation\/routedocs\/docsviewcontext\/init(documentables:sortedby:usingname:)",
-                "title" : "init<Docs, C>(documentables: Docs, sortedBy: KeyPath<EndpointDocumentation, C>, usingName: KeyPath<DocumentationType, String>?)",
-                "type" : "init"
-              },
-              {
-                "path" : "\/documentation\/routedocs\/docsviewcontext\/init(documentables:usingname:)",
-                "title" : "init<Docs>(documentables: Docs, usingName: KeyPath<DocumentationType, String>?)",
+                "title" : "init(documentables: some Sequence, sortedBy: KeyPath<EndpointDocumentation, some Comparable>, usingName: KeyPath<DocumentationType, String>?)",
                 "type" : "init"
               },
               {
                 "path" : "\/documentation\/routedocs\/docsviewcontext\/init(routes:sortedby:usingname:)",
-                "title" : "init<C>(routes: Routes, sortedBy: KeyPath<EndpointDocumentation, C>, usingName: KeyPath<DocumentationType, String>?)",
-                "type" : "init"
-              },
-              {
-                "path" : "\/documentation\/routedocs\/docsviewcontext\/init(routes:usingname:)",
-                "title" : "init(routes: Routes, usingName: KeyPath<DocumentationType, String>?)",
+                "title" : "init(routes: Routes, sortedBy: KeyPath<EndpointDocumentation, some Comparable>, usingName: KeyPath<DocumentationType, String>?)",
                 "type" : "init"
               },
               {
@@ -552,7 +542,7 @@
                       },
                       {
                         "path" : "\/documentation\/routedocs\/documentationobject\/body-swift.enum\/enumcase\/init(value:)",
-                        "title" : "init<R>(value: R)",
+                        "title" : "init(value: some RawRepresentable)",
                         "type" : "init"
                       },
                       {
@@ -1188,6 +1178,85 @@
             ],
             "path" : "\/documentation\/routedocs\/endpointdocumentation",
             "title" : "EndpointDocumentation",
+            "type" : "struct"
+          },
+          {
+            "children" : [
+              {
+                "title" : "Initializers",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/routedocs\/typedescription\/init(_:)",
+                "title" : "init<T>(T.Type)",
+                "type" : "init"
+              },
+              {
+                "path" : "\/documentation\/routedocs\/typedescription\/init(any:)",
+                "title" : "init(any: Any.Type)",
+                "type" : "init"
+              },
+              {
+                "path" : "\/documentation\/routedocs\/typedescription\/init(from:)",
+                "title" : "init(from: Decoder) throws",
+                "type" : "init"
+              },
+              {
+                "title" : "Instance Properties",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/routedocs\/typedescription\/description",
+                "title" : "var description: String",
+                "type" : "property"
+              },
+              {
+                "path" : "\/documentation\/routedocs\/typedescription\/genericparameters",
+                "title" : "var genericParameters: Array<TypeDescription>",
+                "type" : "property"
+              },
+              {
+                "path" : "\/documentation\/routedocs\/typedescription\/isgeneric",
+                "title" : "var isGeneric: Bool",
+                "type" : "property"
+              },
+              {
+                "path" : "\/documentation\/routedocs\/typedescription\/name",
+                "title" : "let name: String",
+                "type" : "property"
+              },
+              {
+                "title" : "Instance Methods",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/routedocs\/typedescription\/typename(includingmodule:)",
+                "title" : "func typeName(includingModule: Bool) -> String",
+                "type" : "method"
+              },
+              {
+                "title" : "Default Implementations",
+                "type" : "groupMarker"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Operators",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/routedocs\/typedescription\/!=(_:_:)",
+                    "title" : "static func != (Self, Self) -> Bool",
+                    "type" : "op"
+                  }
+                ],
+                "path" : "\/documentation\/routedocs\/typedescription\/equatable-implementations",
+                "title" : "Equatable Implementations",
+                "type" : "symbol"
+              }
+            ],
+            "path" : "\/documentation\/routedocs\/typedescription",
+            "title" : "TypeDescription",
             "type" : "struct"
           }
         ],
