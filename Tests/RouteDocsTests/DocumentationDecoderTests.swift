@@ -41,7 +41,7 @@ final class DocumentationDecoderTests: XCTestCase {
         let date: Date
         let optionalUUID: UUID?
         let dateRange: Range<Date>
-        let arbitraryDict: [String: Int]
+        let arbitraryDict: Dictionary<String, Int>
     }
 
     func testDocObject() {
@@ -50,7 +50,7 @@ final class DocumentationDecoderTests: XCTestCase {
     }
 
     func testSimpleStruct() throws {
-        let doc = try Main.reflectedDocumentation(withCustomUserInfo: [:])
+        let doc = try Main.reflectedDocumentation(withCustomUserInfo: .init())
         let expectedDoc = DocumentationObject(Main.self, fields: [
             "bool": .init(Bool.self),
             "sub1": .init(Main.Sub1.self, fields: [
@@ -106,9 +106,9 @@ final class DocumentationDecoderTests: XCTestCase {
         struct TestObject: Decodable {
             static var lastDecodedInstance: TestObject?
 
-            let coderUserInfo: [CodingUserInfoKey: Any]
+            let coderUserInfo: Dictionary<CodingUserInfoKey, Any>
 
-            init(from decoder: Decoder) throws {
+            init(from decoder: any Decoder) throws {
                 coderUserInfo = decoder.userInfo
                 Self.lastDecodedInstance = self
             }

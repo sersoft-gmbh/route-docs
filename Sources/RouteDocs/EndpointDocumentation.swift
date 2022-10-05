@@ -1,7 +1,6 @@
 import Vapor
-import struct FFFoundation.TypeDescription
 
-public struct DocumentationType: Codable, Equatable, CustomStringConvertible, _RTSendable {
+public struct DocumentationType: Codable, Equatable, CustomStringConvertible, Sendable {
     public let typeDescription: TypeDescription
     public let customName: String?
 
@@ -27,14 +26,14 @@ public struct DocumentationType: Codable, Equatable, CustomStringConvertible, _R
     }
 }
 
-public struct EndpointDocumentation: Codable, Equatable, CustomStringConvertible, _RTSendable {
-    public struct Object: Codable, Equatable, CustomStringConvertible, _RTSendable {
-        public enum Body: Codable, Equatable, CustomStringConvertible, _RTSendable {
+public struct EndpointDocumentation: Codable, Equatable, CustomStringConvertible, Sendable {
+    public struct Object: Codable, Equatable, CustomStringConvertible, Sendable {
+        public enum Body: Codable, Equatable, CustomStringConvertible, Sendable {
             private enum CodingKeys: String, CodingKey {
                 case isEmpty, fields, cases
             }
 
-            public struct Field: Codable, Equatable, CustomStringConvertible, _RTSendable {
+            public struct Field: Codable, Equatable, CustomStringConvertible, Sendable {
                 public let name: String
                 public let type: DocumentationType
                 public let isOptional: Bool
@@ -42,7 +41,7 @@ public struct EndpointDocumentation: Codable, Equatable, CustomStringConvertible
                 public var description: String { "\(name): \(type)\(isOptional ? "?" : "")" }
             }
 
-            public struct EnumCase: Codable, Equatable, CustomStringConvertible, _RTSendable {
+            public struct EnumCase: Codable, Equatable, CustomStringConvertible, Sendable {
                 public let name: String?
                 public let value: String
 
@@ -160,7 +159,7 @@ public struct EndpointDocumentation: Codable, Equatable, CustomStringConvertible
         }
     }
 
-    public struct Payload: Codable, Equatable, CustomStringConvertible {
+    public struct Payload: Codable, Equatable, CustomStringConvertible, @unchecked Sendable { // unchecked because of HTTPMediaType
         public let mediaType: HTTPMediaType
         public let objects: Array<Object>
 
@@ -200,10 +199,6 @@ public struct EndpointDocumentation: Codable, Equatable, CustomStringConvertible
     }
 }
 
-#if compiler(>=5.5.2) && canImport(_Concurrency)
-extension EndpointDocumentation.Payload: @unchecked Sendable {}
-#endif
-
 extension EndpointDocumentation {
     public init(method: HTTPMethod,
                 path: Array<PathComponent>,
@@ -211,7 +206,7 @@ extension EndpointDocumentation {
                 query: Object? = nil,
                 request: Payload? = nil,
                 response: Payload? = nil,
-                requiredAuthorization: Array<String> = []) {
+                requiredAuthorization: Array<String> = .init()) {
         self.init(groupName: groupName, method: method, path: path.string,
                   query: query, request: request, response: response,
                   requiredAuthorization: requiredAuthorization)
@@ -219,7 +214,9 @@ extension EndpointDocumentation {
 }
 
 extension EndpointDocumentation.Payload {
-    public init<T: Decodable>(object: T.Type, as mediaType: HTTPMediaType, customUserInfo: Dictionary<CodingUserInfoKey, Any> = [:]) throws {
+    public init<T: Decodable>(object: T.Type,
+                              as mediaType: HTTPMediaType,
+                              customUserInfo: Dictionary<CodingUserInfoKey, Any> = .init()) throws {
         try self.init(mediaType: mediaType,
                       objects: EndpointDocumentation.Object.objects(from: object.reflectedDocumentation(withCustomUserInfo: customUserInfo)))
     }
@@ -230,13 +227,14 @@ extension EndpointDocumentation.Payload {
     }
 
     @inlinable
-    public init<T: Content>(object: T.Type, customUserInfo: Dictionary<CodingUserInfoKey, Any> = [:]) throws {
+    public init<T: Content>(object: T.Type, customUserInfo: Dictionary<CodingUserInfoKey, Any> = .init()) throws {
         try self.init(object: object, as: object.defaultContentType, customUserInfo: customUserInfo)
     }
 }
 
 extension EndpointDocumentation.Object {
-    fileprivate static func addObjects(from documentation: DocumentationObject, to list: inout Array<EndpointDocumentation.Object>) {
+    fileprivate static func addObjects(from documentation: DocumentationObject,
+                                       to list: inout Array<EndpointDocumentation.Object>) {
         list.appendIfNotExists(self.init(documentation: documentation))
         if case .fields(let fields) = documentation.body {
             fields.values.forEach { addObjects(from: $0, to: &list) }
@@ -254,7 +252,7 @@ extension EndpointDocumentation.Object {
         self.init(type: DocumentationType(actualType), body: .init(documentation: documentation.body))
     }
 
-    public init<T: Decodable>(object: T.Type, customUserInfo: Dictionary<CodingUserInfoKey, Any> = [:]) throws {
+    public init<T: Decodable>(object: T.Type, customUserInfo: Dictionary<CodingUserInfoKey, Any> = .init()) throws {
         try self.init(documentation: object.reflectedDocumentation(withCustomUserInfo: customUserInfo))
     }
 

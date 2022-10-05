@@ -26,7 +26,7 @@ extension Route: EndpointDocumentable {
                                  query: EndpointDocumentation.Object? = nil,
                                  request: EndpointDocumentation.Payload? = nil,
                                  response: EndpointDocumentation.Payload? = nil,
-                                 requiredAuthorization: Array<String> = []) {
+                                 requiredAuthorization: Array<String> = .init()) {
         addDocumentation(.init(method: method, path: path, groupName: groupName,
                                query: query, request: request, response: response,
                                requiredAuthorization: requiredAuthorization))

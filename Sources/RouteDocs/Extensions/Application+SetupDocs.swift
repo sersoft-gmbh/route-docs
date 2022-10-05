@@ -9,16 +9,18 @@ extension DocsViewContext {
 }
 
 extension ViewRenderer {
+    @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
+    public func renderDefaultDocs(with context: DocsViewContext) async throws -> View {
+        if #available(macOS 12, iOS 15, tvOS 15, watchOS 8, *) {
+            return try await render("docs", context)
+        } else {
+            return try await renderDefaultDocs(with: context).get()
+        }
+    }
+
     public func renderDefaultDocs(with context: DocsViewContext) -> EventLoopFuture<View> {
         render("docs", context)
     }
-
-#if compiler(>=5.5) && canImport(_Concurrency)
-    @available(macOS 12, iOS 15, tvOS 15, watchOS 8, *)
-    public func renderDefaultDocs(with context: DocsViewContext) async throws -> View {
-        try await render("docs", context)
-    }
-#endif
 }
 
 extension NIOLeafFiles {
@@ -42,7 +44,7 @@ extension Application {
 
 extension LeafSources {
     /// This registers the source "docs" using the given fileio.
-    /// - Parameter fieio: The non-blocking File IO to use.
+    /// - Parameter fileio: The non-blocking File IO to use.
     @inlinable
     public func addDefaultDocsSource(with fileio: NonBlockingFileIO) throws {
         try register(source: "docs", using: NIOLeafFiles.defaultDocs(with: fileio))

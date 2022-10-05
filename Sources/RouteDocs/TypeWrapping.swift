@@ -2,15 +2,9 @@ public protocol AnyTypeWrapping {
     static var wrappedType: Any.Type { get }
 }
 
-#if compiler(>=5.7)
 public protocol TypeWrapping<Wrapped>: AnyTypeWrapping {
     associatedtype Wrapped
 }
-#else
-public protocol TypeWrapping: AnyTypeWrapping {
-    associatedtype Wrapped
-}
-#endif
 
 extension TypeWrapping {
     @inlinable
@@ -29,7 +23,7 @@ extension AnyTypeWrapping {
         return (wrapped as? AnyTypeWrapping.Type)?.leafType(history: history + CollectionOfOne<Any.Type>(self)) ?? wrapped
     }
 
-    internal static var leafType: Any.Type { leafType(history: []) }
+    internal static var leafType: Any.Type { leafType(history: .init()) }
 }
 
 // We detect optionals seperately, so we need to make them "transparent".

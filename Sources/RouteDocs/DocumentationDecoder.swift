@@ -5,9 +5,9 @@ extension CodingUserInfoKey {
     public static let isDocumentationDecoder = CodingUserInfoKey(rawValue: "IsDocumentationDecoder")!
 }
 
-public struct DocumentationObject: Hashable, CustomStringConvertible, _RTSendable {
-    public enum Body: Hashable, _RTSendable {
-        public struct EnumCase: Hashable, _RTSendable {
+public struct DocumentationObject: Hashable, CustomStringConvertible, Sendable {
+    public enum Body: Hashable, Sendable {
+        public struct EnumCase: Hashable, Sendable {
             public let name: String?
             public let value: String
 
@@ -16,10 +16,11 @@ public struct DocumentationObject: Hashable, CustomStringConvertible, _RTSendabl
                 self.value = value
             }
 
-            public init<R: RawRepresentable>(value: R) {
+            public init(value: some RawRepresentable) {
                 let rawValueDesc = String(describing: value.rawValue)
                 let valueDesc = String(describing: value)
-                self.init(name: rawValueDesc == valueDesc ? nil : valueDesc, value: rawValueDesc)
+                self.init(name: rawValueDesc == valueDesc ? nil : valueDesc,
+                          value: rawValueDesc)
             }
         }
 
@@ -38,15 +39,15 @@ public struct DocumentationObject: Hashable, CustomStringConvertible, _RTSendabl
         fileprivate var fields: Dictionary<String, DocumentationObject>? {
             get {
                 switch self {
-                case .none: return [:]
+                case .none: return .init()
                 case .fields(let fields): return fields
                 case .cases(_): return nil
                 }
             }
             set {
-                guard let new = newValue else { return }
+                guard let newValue else { return }
                 if case .cases(_) = self { return }
-                self = new.isEmpty ? .none : .fields(new)
+                self = newValue.isEmpty ? .none : .fields(newValue)
             }
         }
     }
@@ -128,7 +129,9 @@ extension CustomDocumentable {
 }
 
 extension AnyCustomDocumentable {
-    static func object(with type: Any.Type) -> DocumentationObject { .init(any: type, body: documentationBody) }
+    static func object(with type: Any.Type) -> DocumentationObject {
+        .init(any: type, body: documentationBody)
+    }
 }
 
 extension Optional: AnyCustomDocumentable, CustomDocumentable where Wrapped: CustomDocumentable {
@@ -146,10 +149,10 @@ extension Decodable {
 
 fileprivate struct DocumentationDecoder: Decoder {
     let storage: Storage
-    let codingPath: Array<CodingKey>
+    let codingPath: Array<any CodingKey>
     let userInfo: Dictionary<CodingUserInfoKey, Any>
 
-    private init(storage: Storage, codingPath: Array<CodingKey>, userInfo: Dictionary<CodingUserInfoKey, Any>) {
+    private init(storage: Storage, codingPath: Array<any CodingKey>, userInfo: Dictionary<CodingUserInfoKey, Any>) {
         self.storage = storage
         self.codingPath = codingPath
         self.userInfo = userInfo
@@ -158,11 +161,11 @@ fileprivate struct DocumentationDecoder: Decoder {
     init<T>(type: T.Type, customUserInfo: Dictionary<CodingUserInfoKey, Any>) {
         var userInfo = customUserInfo
         userInfo[.isDocumentationDecoder] = true
-        self.init(storage: .init(type: type), codingPath: [], userInfo: userInfo)
+        self.init(storage: .init(type: type), codingPath: .init(), userInfo: userInfo)
     }
 
-    func push<C: CodingKey>(key: C) -> DocumentationDecoder {
-        .init(storage: storage, codingPath: codingPath + CollectionOfOne<CodingKey>(key), userInfo: userInfo)
+    func push(key: some CodingKey) -> DocumentationDecoder {
+        .init(storage: storage, codingPath: codingPath + CollectionOfOne<any CodingKey>(key), userInfo: userInfo)
     }
 
     func popKey() -> DocumentationDecoder {
@@ -175,14 +178,14 @@ fileprivate struct DocumentationDecoder: Decoder {
         try storage.withCodingPath(codingPath, do: work)
     }
 
-    func setType<C: CodingKey>(_ type: Any.Type, for key: C) throws {
+    func setType(_ type: Any.Type, for key: some CodingKey) throws {
         try storage.setType(type, for: key, at: codingPath)
     }
 
-    func finalizeObject<T: Decodable, C: CodingKey>(ofType type: Any.Type, for key: C) throws -> T {
+    func finalizeObject<T: Decodable>(ofType type: Any.Type, for key: some CodingKey) throws -> T {
         func cache(_ object: T) throws {
             try Cache.cache(entry: .init(object: object,
-                                         documentation: storage.withCodingPath(codingPath + CollectionOfOne<CodingKey>(key),
+                                         documentation: storage.withCodingPath(codingPath + CollectionOfOne<any CodingKey>(key),
                                                                                do: { $0 })))
         }
         if let cachedElement = Cache.cachedValue(for: type) {
@@ -201,15 +204,17 @@ fileprivate struct DocumentationDecoder: Decoder {
         return result
     }
 
-    func singleValueContainer() throws -> SingleValueDecodingContainer {
+    func singleValueContainer() throws -> any SingleValueDecodingContainer {
         SingleValueContainer(decoder: self)
     }
 
-    func container<Key>(keyedBy type: Key.Type) throws -> KeyedDecodingContainer<Key> where Key : CodingKey {
+    func container<Key>(keyedBy type: Key.Type) throws -> KeyedDecodingContainer<Key>
+    where Key: CodingKey
+    {
         KeyedDecodingContainer(KeyedContainer(decoder: self))
     }
 
-    func unkeyedContainer() throws -> UnkeyedDecodingContainer {
+    func unkeyedContainer() throws -> any UnkeyedDecodingContainer {
         UnkeyedContainer(decoder: self)
     }
 }
@@ -225,7 +230,7 @@ extension DocumentationDecoder {
                 hasher.combine(ObjectIdentifier(type))
             }
 
-            static func ==(lhs: KeyTypeCombination, rhs: KeyTypeCombination) -> Bool {
+            static func ==(lhs: Self, rhs: Self) -> Bool {
                 lhs.key == rhs.key && lhs.type == rhs.type
             }
         }
@@ -238,11 +243,13 @@ extension DocumentationDecoder {
             decodedObject = .init(any: type, body: .none)
         }
 
-        func withCodingPath<C, T>(_ path: C, do work: (inout DocumentationObject) throws -> T) throws -> T
-        where C: Collection, C.Element == CodingKey
+        func withCodingPath<Path, T>(_ path: Path, do work: (inout DocumentationObject) throws -> T) throws -> T
+        where Path: Collection, Path.Element == CodingKey
         {
-            func withPath<P>(remainingPath: P, of object: inout DocumentationObject, do work: (inout DocumentationObject) throws -> T) throws -> T
-            where P: Collection, P.Element == C.Element
+            func withPath<RemainingPath>(remainingPath: RemainingPath,
+                                         of object: inout DocumentationObject,
+                                         do work: (inout DocumentationObject) throws -> T) throws -> T
+            where RemainingPath: Collection, RemainingPath.Element == Path.Element
             {
                 guard !remainingPath.isEmpty else { return try work(&object) }
                 let nextKey = remainingPath[remainingPath.startIndex]
@@ -256,22 +263,18 @@ extension DocumentationDecoder {
             return try withPath(remainingPath: path, of: &decodedObject, do: work)
         }
 
-        func setObject<C, P>(_ object: @autoclosure() -> DocumentationObject, for key: C, at codingPath: P) throws
-        where C: CodingKey, P: Collection, P.Element == CodingKey
-        {
+        func setObject(_ object: @autoclosure() -> DocumentationObject,
+                       for key: some CodingKey,
+                       at codingPath: some Collection<any CodingKey>) throws {
             try withCodingPath(codingPath, do: { $0.body.fields?[key.stringValue] = object() })
         }
 
-        func setType<C, P>(_ type: Any.Type, for key: C, at codingPath: P) throws
-        where C: CodingKey, P: Collection, P.Element == CodingKey
-        {
+        func setType(_ type: Any.Type, for key: some CodingKey, at codingPath: some Collection<any CodingKey>) throws {
             try setObject(.init(any: type, body: .none), for: key, at: codingPath)
             keyTypeCounts[KeyTypeCombination(key: key.stringValue, type: type), default: 0] += 1
         }
 
-        func hasPotentialCycle<P>(at codingPath: P) -> Bool
-        where P: BidirectionalCollection, P.Element == CodingKey
-        {
+        func hasPotentialCycle(at codingPath: some BidirectionalCollection<any CodingKey>) -> Bool {
             guard let last = codingPath.last,
                   let existingEntry = try? withCodingPath(codingPath, do: { $0 })
             else { return false }
@@ -285,15 +288,14 @@ extension DocumentationDecoder {
             let documentation: DocumentationObject
         }
 
-        private static let lock = Lock()
-        private static var cache = Dictionary<ObjectIdentifier, Entry>()
+        private static let storage = NIOLockedValueBox(Dictionary<ObjectIdentifier, Entry>())
 
         static func cachedValue(for type: Any.Type) -> Entry? {
-            lock.withLock { cache[ObjectIdentifier(type)] }
+            storage.withLockedValue { $0[ObjectIdentifier(type)] }
         }
 
         static func cache(entry: Entry) {
-            lock.withLock { cache[ObjectIdentifier(type(of: entry.object))] = entry }
+            storage.withLockedValue { $0[ObjectIdentifier(type(of: entry.object))] = entry }
         }
     }
 
@@ -313,7 +315,7 @@ extension DocumentationDecoder {
     fileprivate struct SingleValueContainer: SingleValueDecodingContainer {
         let decoder: DocumentationDecoder
 
-        var codingPath: Array<CodingKey> { decoder.codingPath }
+        var codingPath: Array<any CodingKey> { decoder.codingPath }
 
         func decodeNil() -> Bool { false }
         func decode(_ type: Bool.Type) throws -> Bool { .init() }
@@ -340,11 +342,11 @@ extension DocumentationDecoder {
 
         private let builder = TypeBuilder()
 
-        var codingPath: Array<CodingKey> { decoder.codingPath }
+        var codingPath: Array<any CodingKey> { decoder.codingPath }
 
-        var allKeys: [Key] {
-            guard !decoder.hasPotentialCycle() else { return [] }
-            return Key(stringValue: "{any}").map { [$0] } ?? []
+        var allKeys: Array<Key> {
+            guard !decoder.hasPotentialCycle() else { return .init() }
+            return Key(stringValue: "{any}").map { [$0] } ?? .init()
         }
 
         private func finalize<T>(with type: T.Type, for key: Key) throws {
@@ -429,20 +431,24 @@ extension DocumentationDecoder {
             return .init()
         }
 
-        func decode<T>(_ type: T.Type, forKey key: Key) throws -> T where T : Decodable {
+        func decode<T>(_ type: T.Type, forKey key: Key) throws -> T
+        where T: Decodable
+        {
             try decoder.finalizeObject(ofType: builder.finalizeType(with: type), for: key)
         }
 
-        func nestedContainer<NestedKey>(keyedBy type: NestedKey.Type, forKey key: Key) throws -> KeyedDecodingContainer<NestedKey> where NestedKey : CodingKey {
+        func nestedContainer<NestedKey>(keyedBy type: NestedKey.Type, forKey key: Key) throws -> KeyedDecodingContainer<NestedKey>
+        where NestedKey: CodingKey
+        {
             KeyedDecodingContainer(KeyedContainer<NestedKey>(decoder: decoder.push(key: key)))
         }
 
-        func nestedUnkeyedContainer(forKey key: Key) throws -> UnkeyedDecodingContainer {
+        func nestedUnkeyedContainer(forKey key: Key) throws -> any UnkeyedDecodingContainer {
             UnkeyedContainer(decoder: decoder.push(key: key))
         }
 
-        func superDecoder() throws -> Decoder { decoder }
-        func superDecoder(forKey key: Key) throws -> Decoder { decoder.push(key: key) }
+        func superDecoder() throws -> any Decoder { decoder }
+        func superDecoder(forKey key: Key) throws -> any Decoder { decoder.push(key: key) }
     }
 
     fileprivate struct UnkeyedContainer: UnkeyedDecodingContainer {
@@ -478,7 +484,7 @@ extension DocumentationDecoder {
 
         private let builder = TypeBuilder()
 
-        var codingPath: Array<CodingKey> { decoder.codingPath }
+        var codingPath: Array<any CodingKey> { decoder.codingPath }
 
         var count: Int? { nil }
         var isAtEnd: Bool { currentIndex >= 10 || decoder.hasPotentialCycle() }
@@ -578,7 +584,9 @@ extension DocumentationDecoder {
             return .init()
         }
 
-        mutating func decode<T>(_ type: T.Type) throws -> T where T : Decodable {
+        mutating func decode<T>(_ type: T.Type) throws -> T
+        where T: Decodable
+        {
             let key = IndexKey(index: currentIndex)
             let result: T = try decoder.finalizeObject(ofType: builder.finalizeType(with: type), for: key)
             currentIndex += 1
@@ -586,16 +594,18 @@ extension DocumentationDecoder {
             return result
         }
 
-        mutating func nestedContainer<NestedKey>(keyedBy type: NestedKey.Type) throws -> KeyedDecodingContainer<NestedKey> where NestedKey : CodingKey {
+        mutating func nestedContainer<NestedKey>(keyedBy type: NestedKey.Type) throws -> KeyedDecodingContainer<NestedKey>
+        where NestedKey: CodingKey
+        {
             defer { currentIndex += 1 }
             return KeyedDecodingContainer(KeyedContainer(decoder: decoder.push(key: IndexKey(index: currentIndex))))
         }
 
-        mutating func nestedUnkeyedContainer() throws -> UnkeyedDecodingContainer {
+        mutating func nestedUnkeyedContainer() throws -> any UnkeyedDecodingContainer {
             defer { currentIndex += 1 }
             return UnkeyedContainer(decoder: decoder.push(key: IndexKey(index: currentIndex)))
         }
 
-        mutating func superDecoder() throws -> Decoder { decoder }
+        mutating func superDecoder() throws -> any Decoder { decoder }
     }
 }
