@@ -12,7 +12,7 @@ jobs:
       matrix:
         os: [ macos-12 ]
         swift-version: [ '' ]
-        xcode-version: [ '^14.1' ]
+        xcode-version: [ '^14.1-beta' ]
         include:
           # - os: macos-12
           #   swift-version: ''
