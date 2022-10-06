@@ -87,8 +87,8 @@ fileprivate extension DocumentationType {
     }
 }
 
-fileprivate extension EndpointDocumentation {
-    var sortOrder: String { method.sortOrder + "/" + path }
+extension EndpointDocumentation {
+    public var defaultSortOrder: String { method.sortOrder + "/" + path }
 }
 
 extension DocsViewContext.Documentation.Object.Body.EnumCase {
@@ -156,7 +156,7 @@ fileprivate extension Sequence where Element == EndpointDocumentation {
 
 extension DocsViewContext {
     public init(documentables: some Sequence<any EndpointDocumentable>,
-                sortedBy sortPath: KeyPath<EndpointDocumentation, some Comparable> = \.sortOrder,
+                sortedBy sortPath: KeyPath<EndpointDocumentation, some Comparable> = \.defaultSortOrder,
                 usingName namePath: KeyPath<DocumentationType, String>? = nil) {
         let allDocsByGroup = Dictionary(grouping: documentables.lazy.compactMap(\.documentation), by: \.groupName)
         otherDocumentations = allDocsByGroup[nil, default: []].lazy.contextDocumentation(orderedBy: sortPath, usingName: namePath)
@@ -171,7 +171,7 @@ extension DocsViewContext {
 
     @inlinable
     public init(routes: Routes,
-                sortedBy sortPath: KeyPath<EndpointDocumentation, some Comparable> = \.sortOrder,
+                sortedBy sortPath: KeyPath<EndpointDocumentation, some Comparable> = \.defaultSortOrder,
                 usingName namePath: KeyPath<DocumentationType, String>? = nil) {
         self.init(documentables: routes.all, sortedBy: sortPath, usingName: namePath)
     }
