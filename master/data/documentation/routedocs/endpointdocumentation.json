@@ -111,6 +111,7 @@
     },
     {
       "identifiers" : [
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentation\/defaultSortOrder",
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentation\/description",
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentation\/groupName",
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentation\/method",
@@ -273,6 +274,40 @@
   "title" : "EndpointDocumentation.Payload",
   "type" : "topic",
   "url" : "\/documentation\/routedocs\/endpointdocumentation\/payload"
+},
+"doc://RouteDocs/documentation/RouteDocs/EndpointDocumentation/defaultSortOrder": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "defaultSortOrder"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentation\/defaultSortOrder",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "defaultSortOrder",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/endpointdocumentation\/defaultsortorder"
 },
 "doc://RouteDocs/documentation/RouteDocs/EndpointDocumentation/description": {
   "abstract" : [

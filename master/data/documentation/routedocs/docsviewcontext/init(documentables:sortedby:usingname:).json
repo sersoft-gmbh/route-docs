@@ -200,7 +200,7 @@
             },
             {
               "kind" : "text",
-              "text" : "> = \\.sortOrder, "
+              "text" : "> = \\.defaultSortOrder, "
             },
             {
               "kind" : "externalParam",

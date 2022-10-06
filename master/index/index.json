@@ -1116,6 +1116,11 @@
                 "type" : "groupMarker"
               },
               {
+                "path" : "\/documentation\/routedocs\/endpointdocumentation\/defaultsortorder",
+                "title" : "var defaultSortOrder: String",
+                "type" : "property"
+              },
+              {
                 "path" : "\/documentation\/routedocs\/endpointdocumentation\/description",
                 "title" : "var description: String",
                 "type" : "property"
