@@ -99,6 +99,7 @@
     {
       "identifiers" : [
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentation\/Payload\/init(from:)",
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentation\/Payload\/init(object:)",
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentation\/Payload\/init(object:as:)",
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentation\/Payload\/init(object:as:customUserInfo:)",
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentation\/Payload\/init(object:customUserInfo:)"
@@ -513,6 +514,55 @@
   "title" : "init(from:)",
   "type" : "topic",
   "url" : "\/documentation\/routedocs\/endpointdocumentation\/payload\/init(from:)"
+},
+"doc://RouteDocs/documentation/RouteDocs/EndpointDocumentation/Payload/init(object:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "genericParameter",
+      "text" : "T"
+    },
+    {
+      "kind" : "text",
+      "text" : ">("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "object"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "T"
+    },
+    {
+      "kind" : "text",
+      "text" : ".Type) "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentation\/Payload\/init(object:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(object:)",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/endpointdocumentation\/payload\/init(object:)"
 },
 "doc://RouteDocs/documentation/RouteDocs/EndpointDocumentation/Payload/init(object:as:)": {
   "abstract" : [

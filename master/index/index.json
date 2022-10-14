@@ -1025,6 +1025,11 @@
                     "type" : "init"
                   },
                   {
+                    "path" : "\/documentation\/routedocs\/endpointdocumentation\/payload\/init(object:)",
+                    "title" : "init<T>(object: T.Type) throws",
+                    "type" : "init"
+                  },
+                  {
                     "path" : "\/documentation\/routedocs\/endpointdocumentation\/payload\/init(object:as:)",
                     "title" : "init<T>(object: T.Type, as: HTTPMediaType) throws",
                     "type" : "init"
