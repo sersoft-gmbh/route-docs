@@ -98,9 +98,7 @@
   "topicSections" : [
     {
       "identifiers" : [
-        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentation\/Object\/init(from:)",
-        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentation\/Object\/init(object:)",
-        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentation\/Object\/init(object:customUserInfo:)"
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentation\/Object\/init(from:)"
       ],
       "title" : "Initializers"
     },
@@ -505,134 +503,6 @@
   "title" : "init(from:)",
   "type" : "topic",
   "url" : "\/documentation\/routedocs\/endpointdocumentation\/object\/init(from:)"
-},
-"doc://RouteDocs/documentation/RouteDocs/EndpointDocumentation/Object/init(object:)": {
-  "abstract" : [
-
-  ],
-  "fragments" : [
-    {
-      "kind" : "identifier",
-      "text" : "init"
-    },
-    {
-      "kind" : "text",
-      "text" : "<"
-    },
-    {
-      "kind" : "genericParameter",
-      "text" : "T"
-    },
-    {
-      "kind" : "text",
-      "text" : ">("
-    },
-    {
-      "kind" : "externalParam",
-      "text" : "object"
-    },
-    {
-      "kind" : "text",
-      "text" : ": "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "text" : "T"
-    },
-    {
-      "kind" : "text",
-      "text" : ".Type)"
-    }
-  ],
-  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentation\/Object\/init(object:)",
-  "kind" : "symbol",
-  "role" : "symbol",
-  "title" : "init(object:)",
-  "type" : "topic",
-  "url" : "\/documentation\/routedocs\/endpointdocumentation\/object\/init(object:)"
-},
-"doc://RouteDocs/documentation/RouteDocs/EndpointDocumentation/Object/init(object:customUserInfo:)": {
-  "abstract" : [
-
-  ],
-  "fragments" : [
-    {
-      "kind" : "identifier",
-      "text" : "init"
-    },
-    {
-      "kind" : "text",
-      "text" : "<"
-    },
-    {
-      "kind" : "genericParameter",
-      "text" : "T"
-    },
-    {
-      "kind" : "text",
-      "text" : ">("
-    },
-    {
-      "kind" : "externalParam",
-      "text" : "object"
-    },
-    {
-      "kind" : "text",
-      "text" : ": "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "text" : "T"
-    },
-    {
-      "kind" : "text",
-      "text" : ".Type, "
-    },
-    {
-      "kind" : "externalParam",
-      "text" : "customUserInfo"
-    },
-    {
-      "kind" : "text",
-      "text" : ": "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:SD",
-      "text" : "Dictionary"
-    },
-    {
-      "kind" : "text",
-      "text" : "<"
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:s17CodingUserInfoKeyV",
-      "text" : "CodingUserInfoKey"
-    },
-    {
-      "kind" : "text",
-      "text" : ", "
-    },
-    {
-      "kind" : "keyword",
-      "text" : "Any"
-    },
-    {
-      "kind" : "text",
-      "text" : ">) "
-    },
-    {
-      "kind" : "keyword",
-      "text" : "throws"
-    }
-  ],
-  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentation\/Object\/init(object:customUserInfo:)",
-  "kind" : "symbol",
-  "role" : "symbol",
-  "title" : "init(object:customUserInfo:)",
-  "type" : "topic",
-  "url" : "\/documentation\/routedocs\/endpointdocumentation\/object\/init(object:customuserinfo:)"
 },
 "doc://RouteDocs/documentation/RouteDocs/EndpointDocumentation/Object/type": {
   "abstract" : [

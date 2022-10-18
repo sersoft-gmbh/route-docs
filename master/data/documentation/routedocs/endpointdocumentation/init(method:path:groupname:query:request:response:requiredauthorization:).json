@@ -14,7 +14,7 @@
   "kind" : "symbol",
   "metadata" : {
     "extendedModule" : "RouteDocs",
-    "externalID" : "s:9RouteDocs21EndpointDocumentationV6method4path9groupName5query7request8response21requiredAuthorizationAC8NIOHTTP110HTTPMethodO_Say10RoutingKit13PathComponentOGSSSgAC6ObjectVSgAC7PayloadVSgAXSaySSGtcfc",
+    "externalID" : "s:9RouteDocs21EndpointDocumentationV6method4path9groupName5query7request8response21requiredAuthorizationAC8NIOHTTP110HTTPMethodO_Say10RoutingKit13PathComponentOGSSSgAC5QueryVSgAC7PayloadVSgAXSaySSGtcfc",
     "fragments" : [
       {
         "kind" : "identifier",
@@ -103,8 +103,8 @@
       },
       {
         "kind" : "typeIdentifier",
-        "preciseIdentifier" : "s:9RouteDocs21EndpointDocumentationV6ObjectV",
-        "text" : "Object"
+        "preciseIdentifier" : "s:9RouteDocs21EndpointDocumentationV5QueryV",
+        "text" : "Query"
       },
       {
         "kind" : "text",
@@ -297,10 +297,10 @@
               "text" : "."
             },
             {
-              "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentation\/Object",
+              "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentation\/Query-swift.struct",
               "kind" : "typeIdentifier",
-              "preciseIdentifier" : "s:9RouteDocs21EndpointDocumentationV6ObjectV",
-              "text" : "Object"
+              "preciseIdentifier" : "s:9RouteDocs21EndpointDocumentationV5QueryV",
+              "text" : "Query"
             },
             {
               "kind" : "text",
@@ -458,37 +458,6 @@
   "type" : "topic",
   "url" : "\/documentation\/routedocs\/endpointdocumentation"
 },
-"doc://RouteDocs/documentation/RouteDocs/EndpointDocumentation/Object": {
-  "abstract" : [
-
-  ],
-  "fragments" : [
-    {
-      "kind" : "keyword",
-      "text" : "struct"
-    },
-    {
-      "kind" : "text",
-      "text" : " "
-    },
-    {
-      "kind" : "identifier",
-      "text" : "Object"
-    }
-  ],
-  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentation\/Object",
-  "kind" : "symbol",
-  "navigatorTitle" : [
-    {
-      "kind" : "identifier",
-      "text" : "Object"
-    }
-  ],
-  "role" : "symbol",
-  "title" : "EndpointDocumentation.Object",
-  "type" : "topic",
-  "url" : "\/documentation\/routedocs\/endpointdocumentation\/object"
-},
 "doc://RouteDocs/documentation/RouteDocs/EndpointDocumentation/Payload": {
   "abstract" : [
 
@@ -519,6 +488,37 @@
   "title" : "EndpointDocumentation.Payload",
   "type" : "topic",
   "url" : "\/documentation\/routedocs\/endpointdocumentation\/payload"
+},
+"doc://RouteDocs/documentation/RouteDocs/EndpointDocumentation/Query-swift.struct": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Query"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentation\/Query-swift.struct",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Query"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "EndpointDocumentation.Query",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/endpointdocumentation\/query-swift.struct"
 },
 "doc://RouteDocs/documentation/RouteDocs/EndpointDocumentation/init(method:path:groupName:query:request:response:requiredAuthorization:)": {
   "abstract" : [
@@ -612,8 +612,8 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:9RouteDocs21EndpointDocumentationV6ObjectV",
-      "text" : "Object"
+      "preciseIdentifier" : "s:9RouteDocs21EndpointDocumentationV5QueryV",
+      "text" : "Query"
     },
     {
       "kind" : "text",

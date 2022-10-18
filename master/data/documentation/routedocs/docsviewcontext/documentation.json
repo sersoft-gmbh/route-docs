@@ -96,7 +96,8 @@
     {
       "identifiers" : [
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocsViewContext\/Documentation\/Object",
-        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocsViewContext\/Documentation\/Payload"
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocsViewContext\/Documentation\/Payload",
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocsViewContext\/Documentation\/Query-swift.struct"
       ],
       "title" : "Structures"
     },
@@ -110,7 +111,7 @@
       "identifiers" : [
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocsViewContext\/Documentation\/method",
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocsViewContext\/Documentation\/path",
-        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocsViewContext\/Documentation\/query",
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocsViewContext\/Documentation\/query-swift.property",
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocsViewContext\/Documentation\/request",
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocsViewContext\/Documentation\/requiredAuthorization",
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocsViewContext\/Documentation\/response"
@@ -275,6 +276,37 @@
   "type" : "topic",
   "url" : "\/documentation\/routedocs\/docsviewcontext\/documentation\/payload"
 },
+"doc://RouteDocs/documentation/RouteDocs/DocsViewContext/Documentation/Query-swift.struct": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Query"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocsViewContext\/Documentation\/Query-swift.struct",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Query"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "DocsViewContext.Documentation.Query",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/docsviewcontext\/documentation\/query-swift.struct"
+},
 "doc://RouteDocs/documentation/RouteDocs/DocsViewContext/Documentation/init(documentation:usingName:)": {
   "abstract" : [
 
@@ -416,7 +448,7 @@
   "type" : "topic",
   "url" : "\/documentation\/routedocs\/docsviewcontext\/documentation\/path"
 },
-"doc://RouteDocs/documentation/RouteDocs/DocsViewContext/Documentation/query": {
+"doc://RouteDocs/documentation/RouteDocs/DocsViewContext/Documentation/query-swift.property": {
   "abstract" : [
 
   ],
@@ -457,20 +489,20 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:9RouteDocs0B11ViewContextV13DocumentationV6ObjectV",
-      "text" : "Object"
+      "preciseIdentifier" : "s:9RouteDocs0B11ViewContextV13DocumentationV5QueryV",
+      "text" : "Query"
     },
     {
       "kind" : "text",
       "text" : "?"
     }
   ],
-  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocsViewContext\/Documentation\/query",
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocsViewContext\/Documentation\/query-swift.property",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "query",
   "type" : "topic",
-  "url" : "\/documentation\/routedocs\/docsviewcontext\/documentation\/query"
+  "url" : "\/documentation\/routedocs\/docsviewcontext\/documentation\/query-swift.property"
 },
 "doc://RouteDocs/documentation/RouteDocs/DocsViewContext/Documentation/request": {
   "abstract" : [

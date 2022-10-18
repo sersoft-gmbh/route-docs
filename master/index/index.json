@@ -341,6 +341,31 @@
                     "type" : "struct"
                   },
                   {
+                    "children" : [
+                      {
+                        "title" : "Initializers",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/docsviewcontext\/documentation\/query-swift.struct\/init(query:usingname:)",
+                        "title" : "init(query: EndpointDocumentation.Query, usingName: KeyPath<DocumentationType, String>?)",
+                        "type" : "init"
+                      },
+                      {
+                        "title" : "Instance Properties",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/docsviewcontext\/documentation\/query-swift.struct\/objects",
+                        "title" : "let objects: Array<DocsViewContext.Documentation.Object>",
+                        "type" : "property"
+                      }
+                    ],
+                    "path" : "\/documentation\/routedocs\/docsviewcontext\/documentation\/query-swift.struct",
+                    "title" : "DocsViewContext.Documentation.Query",
+                    "type" : "struct"
+                  },
+                  {
                     "title" : "Initializers",
                     "type" : "groupMarker"
                   },
@@ -364,8 +389,8 @@
                     "type" : "property"
                   },
                   {
-                    "path" : "\/documentation\/routedocs\/docsviewcontext\/documentation\/query",
-                    "title" : "let query: DocsViewContext.Documentation.Object?",
+                    "path" : "\/documentation\/routedocs\/docsviewcontext\/documentation\/query-swift.property",
+                    "title" : "let query: DocsViewContext.Documentation.Query?",
                     "type" : "property"
                   },
                   {
@@ -740,16 +765,6 @@
                     "type" : "init"
                   },
                   {
-                    "path" : "\/documentation\/routedocs\/endpointdocumentation\/object\/init(object:)",
-                    "title" : "init<T>(object: T.Type)",
-                    "type" : "init"
-                  },
-                  {
-                    "path" : "\/documentation\/routedocs\/endpointdocumentation\/object\/init(object:customuserinfo:)",
-                    "title" : "init<T>(object: T.Type, customUserInfo: Dictionary<CodingUserInfoKey, Any>) throws",
-                    "type" : "init"
-                  },
-                  {
                     "title" : "Instance Properties",
                     "type" : "groupMarker"
                   },
@@ -1103,6 +1118,80 @@
                 "type" : "struct"
               },
               {
+                "children" : [
+                  {
+                    "title" : "Initializers",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/routedocs\/endpointdocumentation\/query-swift.struct\/init(from:)",
+                    "title" : "init(from: Decoder) throws",
+                    "type" : "init"
+                  },
+                  {
+                    "path" : "\/documentation\/routedocs\/endpointdocumentation\/query-swift.struct\/init(object:)",
+                    "title" : "init<T>(object: T.Type) throws",
+                    "type" : "init"
+                  },
+                  {
+                    "path" : "\/documentation\/routedocs\/endpointdocumentation\/query-swift.struct\/init(object:customuserinfo:)",
+                    "title" : "init<T>(object: T.Type, customUserInfo: Dictionary<CodingUserInfoKey, Any>) throws",
+                    "type" : "init"
+                  },
+                  {
+                    "title" : "Instance Properties",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/routedocs\/endpointdocumentation\/query-swift.struct\/description",
+                    "title" : "var description: String",
+                    "type" : "property"
+                  },
+                  {
+                    "path" : "\/documentation\/routedocs\/endpointdocumentation\/query-swift.struct\/objects",
+                    "title" : "let objects: Array<EndpointDocumentation.Object>",
+                    "type" : "property"
+                  },
+                  {
+                    "title" : "Instance Methods",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/routedocs\/endpointdocumentation\/query-swift.struct\/filterobjects(with:)-1rwra",
+                    "title" : "func filterObjects(with: (EndpointDocumentation.Object) throws -> EndpointDocumentation.Object?) rethrows -> EndpointDocumentation.Query",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/routedocs\/endpointdocumentation\/query-swift.struct\/filterobjects(with:)-8u15l",
+                    "title" : "func filterObjects(with: (EndpointDocumentation.Object) throws -> Bool) rethrows -> EndpointDocumentation.Query",
+                    "type" : "method"
+                  },
+                  {
+                    "title" : "Default Implementations",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Operators",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/endpointdocumentation\/query-swift.struct\/!=(_:_:)",
+                        "title" : "static func != (Self, Self) -> Bool",
+                        "type" : "op"
+                      }
+                    ],
+                    "path" : "\/documentation\/routedocs\/endpointdocumentation\/query-swift.struct\/equatable-implementations",
+                    "title" : "Equatable Implementations",
+                    "type" : "symbol"
+                  }
+                ],
+                "path" : "\/documentation\/routedocs\/endpointdocumentation\/query-swift.struct",
+                "title" : "EndpointDocumentation.Query",
+                "type" : "struct"
+              },
+              {
                 "title" : "Initializers",
                 "type" : "groupMarker"
               },
@@ -1113,7 +1202,7 @@
               },
               {
                 "path" : "\/documentation\/routedocs\/endpointdocumentation\/init(method:path:groupname:query:request:response:requiredauthorization:)",
-                "title" : "init(method: HTTPMethod, path: Array<PathComponent>, groupName: String?, query: EndpointDocumentation.Object?, request: EndpointDocumentation.Payload?, response: EndpointDocumentation.Payload?, requiredAuthorization: Array<String>)",
+                "title" : "init(method: HTTPMethod, path: Array<PathComponent>, groupName: String?, query: EndpointDocumentation.Query?, request: EndpointDocumentation.Payload?, response: EndpointDocumentation.Payload?, requiredAuthorization: Array<String>)",
                 "type" : "init"
               },
               {
@@ -1146,8 +1235,8 @@
                 "type" : "property"
               },
               {
-                "path" : "\/documentation\/routedocs\/endpointdocumentation\/query",
-                "title" : "let query: EndpointDocumentation.Object?",
+                "path" : "\/documentation\/routedocs\/endpointdocumentation\/query-swift.property",
+                "title" : "let query: EndpointDocumentation.Query?",
                 "type" : "property"
               },
               {
@@ -1193,6 +1282,217 @@
           {
             "children" : [
               {
+                "title" : "Structures",
+                "type" : "groupMarker"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Initializers",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/routedocs\/typedescription\/nameoptions\/init(rawvalue:)",
+                    "title" : "init(rawValue: TypeDescription.NameOptions.RawValue)",
+                    "type" : "init"
+                  },
+                  {
+                    "title" : "Instance Properties",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/routedocs\/typedescription\/nameoptions\/rawvalue-swift.property",
+                    "title" : "let rawValue: TypeDescription.NameOptions.RawValue",
+                    "type" : "property"
+                  },
+                  {
+                    "title" : "Type Aliases",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/routedocs\/typedescription\/nameoptions\/rawvalue-swift.typealias",
+                    "title" : "TypeDescription.NameOptions.RawValue",
+                    "type" : "typealias"
+                  },
+                  {
+                    "title" : "Type Properties",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/routedocs\/typedescription\/nameoptions\/withmodule",
+                    "title" : "static let withModule: TypeDescription.NameOptions",
+                    "type" : "property"
+                  },
+                  {
+                    "path" : "\/documentation\/routedocs\/typedescription\/nameoptions\/withparents",
+                    "title" : "static let withParents: TypeDescription.NameOptions",
+                    "type" : "property"
+                  },
+                  {
+                    "title" : "Default Implementations",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Operators",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/typedescription\/nameoptions\/!=(_:_:)",
+                        "title" : "static func != (Self, Self) -> Bool",
+                        "type" : "op"
+                      }
+                    ],
+                    "path" : "\/documentation\/routedocs\/typedescription\/nameoptions\/equatable-implementations",
+                    "title" : "Equatable Implementations",
+                    "type" : "symbol"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Initializers",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/typedescription\/nameoptions\/init()",
+                        "title" : "init()",
+                        "type" : "init"
+                      },
+                      {
+                        "title" : "Instance Methods",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/typedescription\/nameoptions\/contains(_:)",
+                        "title" : "func contains(Self) -> Bool",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/typedescription\/nameoptions\/formintersection(_:)",
+                        "title" : "func formIntersection(Self)",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/typedescription\/nameoptions\/formsymmetricdifference(_:)",
+                        "title" : "func formSymmetricDifference(Self)",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/typedescription\/nameoptions\/formunion(_:)",
+                        "title" : "func formUnion(Self)",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/typedescription\/nameoptions\/insert(_:)",
+                        "title" : "func insert(Self.Element) -> (inserted: Bool, memberAfterInsert: Self.Element)",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/typedescription\/nameoptions\/intersection(_:)",
+                        "title" : "func intersection(Self) -> Self",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/typedescription\/nameoptions\/remove(_:)",
+                        "title" : "func remove(Self.Element) -> Self.Element?",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/typedescription\/nameoptions\/symmetricdifference(_:)",
+                        "title" : "func symmetricDifference(Self) -> Self",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/typedescription\/nameoptions\/union(_:)",
+                        "title" : "func union(Self) -> Self",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/typedescription\/nameoptions\/update(with:)",
+                        "title" : "func update(with: Self.Element) -> Self.Element?",
+                        "type" : "method"
+                      }
+                    ],
+                    "path" : "\/documentation\/routedocs\/typedescription\/nameoptions\/optionset-implementations",
+                    "title" : "OptionSet Implementations",
+                    "type" : "symbol"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Initializers",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/typedescription\/nameoptions\/init(_:)",
+                        "title" : "init<S>(S)",
+                        "type" : "init"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/typedescription\/nameoptions\/init(arrayliteral:)",
+                        "title" : "init(arrayLiteral: Self.Element...)",
+                        "type" : "init"
+                      },
+                      {
+                        "title" : "Instance Properties",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/typedescription\/nameoptions\/isempty",
+                        "title" : "var isEmpty: Bool",
+                        "type" : "property"
+                      },
+                      {
+                        "title" : "Instance Methods",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/typedescription\/nameoptions\/isdisjoint(with:)",
+                        "title" : "func isDisjoint(with: Self) -> Bool",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/typedescription\/nameoptions\/isstrictsubset(of:)",
+                        "title" : "func isStrictSubset(of: Self) -> Bool",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/typedescription\/nameoptions\/isstrictsuperset(of:)",
+                        "title" : "func isStrictSuperset(of: Self) -> Bool",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/typedescription\/nameoptions\/issubset(of:)",
+                        "title" : "func isSubset(of: Self) -> Bool",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/typedescription\/nameoptions\/issuperset(of:)",
+                        "title" : "func isSuperset(of: Self) -> Bool",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/typedescription\/nameoptions\/subtract(_:)",
+                        "title" : "func subtract(Self)",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/typedescription\/nameoptions\/subtracting(_:)",
+                        "title" : "func subtracting(Self) -> Self",
+                        "type" : "method"
+                      }
+                    ],
+                    "path" : "\/documentation\/routedocs\/typedescription\/nameoptions\/setalgebra-implementations",
+                    "title" : "SetAlgebra Implementations",
+                    "type" : "symbol"
+                  }
+                ],
+                "path" : "\/documentation\/routedocs\/typedescription\/nameoptions",
+                "title" : "TypeDescription.NameOptions",
+                "type" : "struct"
+              },
+              {
                 "title" : "Initializers",
                 "type" : "groupMarker"
               },
@@ -1222,7 +1522,7 @@
               },
               {
                 "path" : "\/documentation\/routedocs\/typedescription\/genericparameters",
-                "title" : "var genericParameters: Array<TypeDescription>",
+                "title" : "let genericParameters: Array<TypeDescription>",
                 "type" : "property"
               },
               {
@@ -1231,8 +1531,23 @@
                 "type" : "property"
               },
               {
+                "path" : "\/documentation\/routedocs\/typedescription\/module",
+                "title" : "let module: String",
+                "type" : "property"
+              },
+              {
                 "path" : "\/documentation\/routedocs\/typedescription\/name",
                 "title" : "let name: String",
+                "type" : "property"
+              },
+              {
+                "path" : "\/documentation\/routedocs\/typedescription\/parent",
+                "title" : "var parent: TypeDescription?",
+                "type" : "property"
+              },
+              {
+                "path" : "\/documentation\/routedocs\/typedescription\/parents",
+                "title" : "var parents: some Sequence",
                 "type" : "property"
               },
               {
@@ -1240,8 +1555,18 @@
                 "type" : "groupMarker"
               },
               {
+                "path" : "\/documentation\/routedocs\/typedescription\/encode(to:)",
+                "title" : "func encode(to: Encoder) throws",
+                "type" : "method"
+              },
+              {
                 "path" : "\/documentation\/routedocs\/typedescription\/typename(includingmodule:)",
                 "title" : "func typeName(includingModule: Bool) -> String",
+                "type" : "method"
+              },
+              {
+                "path" : "\/documentation\/routedocs\/typedescription\/typename(with:)",
+                "title" : "func typeName(with: TypeDescription.NameOptions) -> String",
                 "type" : "method"
               },
               {

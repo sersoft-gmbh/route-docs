@@ -98,6 +98,12 @@
   "topicSections" : [
     {
       "identifiers" : [
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription\/NameOptions"
+      ],
+      "title" : "Structures"
+    },
+    {
+      "identifiers" : [
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription\/init(_:)",
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription\/init(any:)",
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription\/init(from:)"
@@ -109,13 +115,18 @@
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription\/description",
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription\/genericParameters",
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription\/isGeneric",
-        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription\/name"
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription\/module",
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription\/name",
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription\/parent",
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription\/parents"
       ],
       "title" : "Instance Properties"
     },
     {
       "identifiers" : [
-        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription\/typeName(includingModule:)"
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription\/encode(to:)",
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription\/typeName(includingModule:)",
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription\/typeName(with:)"
       ],
       "title" : "Instance Methods"
     },
@@ -214,6 +225,37 @@
   "type" : "topic",
   "url" : "\/documentation\/routedocs\/typedescription\/equatable-implementations"
 },
+"doc://RouteDocs/documentation/RouteDocs/TypeDescription/NameOptions": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "NameOptions"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription\/NameOptions",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "NameOptions"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "TypeDescription.NameOptions",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/typedescription\/nameoptions"
+},
 "doc://RouteDocs/documentation/RouteDocs/TypeDescription/description": {
   "abstract" : [
 
@@ -248,6 +290,56 @@
   "type" : "topic",
   "url" : "\/documentation\/routedocs\/typedescription\/description"
 },
+"doc://RouteDocs/documentation/RouteDocs/TypeDescription/encode(to:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "encode"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "to"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:s7EncoderP",
+      "text" : "Encoder"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription\/encode(to:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "encode(to:)",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/typedescription\/encode(to:)"
+},
 "doc://RouteDocs/documentation/RouteDocs/TypeDescription/genericParameters": {
   "abstract" : [
 
@@ -255,7 +347,7 @@
   "fragments" : [
     {
       "kind" : "keyword",
-      "text" : "var"
+      "text" : "let"
     },
     {
       "kind" : "text",
@@ -445,6 +537,40 @@
   "type" : "topic",
   "url" : "\/documentation\/routedocs\/typedescription\/isgeneric"
 },
+"doc://RouteDocs/documentation/RouteDocs/TypeDescription/module": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "module"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription\/module",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "module",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/typedescription\/module"
+},
 "doc://RouteDocs/documentation/RouteDocs/TypeDescription/name": {
   "abstract" : [
 
@@ -479,10 +605,91 @@
   "type" : "topic",
   "url" : "\/documentation\/routedocs\/typedescription\/name"
 },
+"doc://RouteDocs/documentation/RouteDocs/TypeDescription/parent": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "parent"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:9RouteDocs15TypeDescriptionV",
+      "text" : "TypeDescription"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription\/parent",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "parent",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/typedescription\/parent"
+},
+"doc://RouteDocs/documentation/RouteDocs/TypeDescription/parents": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "parents"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "some"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:ST",
+      "text" : "Sequence"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription\/parents",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "parents",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/typedescription\/parents"
+},
 "doc://RouteDocs/documentation/RouteDocs/TypeDescription/typeName(includingModule:)": {
   "abstract" : [
 
   ],
+  "deprecated" : true,
   "fragments" : [
     {
       "kind" : "keyword",
@@ -529,6 +736,66 @@
   "title" : "typeName(includingModule:)",
   "type" : "topic",
   "url" : "\/documentation\/routedocs\/typedescription\/typename(includingmodule:)"
+},
+"doc://RouteDocs/documentation/RouteDocs/TypeDescription/typeName(with:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "typeName"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "with"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:9RouteDocs15TypeDescriptionV",
+      "text" : "TypeDescription"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:9RouteDocs15TypeDescriptionV11NameOptionsV",
+      "text" : "NameOptions"
+    },
+    {
+      "kind" : "text",
+      "text" : ") -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription\/typeName(with:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "typeName(with:)",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/typedescription\/typename(with:)"
 },
 "doc://RouteDocs/s23CustomStringConvertibleP": {
   "identifier" : "doc:\/\/RouteDocs\/s23CustomStringConvertibleP",
