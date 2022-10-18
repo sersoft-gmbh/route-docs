@@ -1,15 +1,5 @@
 import Vapor
 
-fileprivate protocol _OptionalCustomDocumentationNamed {
-    static var _documentationNameType: Any.Type { get }
-}
-
-extension Optional: _OptionalCustomDocumentationNamed {
-    static var _documentationNameType: Any.Type {
-        (Wrapped.self as? _OptionalCustomDocumentationNamed.Type)?._documentationNameType ?? Wrapped.self
-    }
-}
-
 public struct DocumentationType: Codable, Equatable, CustomStringConvertible, Sendable {
     public let typeDescription: TypeDescription
     public let customName: String?
@@ -20,21 +10,10 @@ public struct DocumentationType: Codable, Equatable, CustomStringConvertible, Se
 
     public var description: String { defaultName }
 
-    init(_ type: Any.Type) {
-        typeDescription = .init(any: type)
-        let docNameType = (type as? _OptionalCustomDocumentationNamed.Type)?._documentationNameType ?? type
-        customName = (docNameType as? CustomDocumentationNamed.Type)?.documentationName
-    }
-
-    init<T>(_ type: T.Type) {
-        typeDescription = .init(type)
-        let docNameType = (type as? _OptionalCustomDocumentationNamed.Type)?._documentationNameType ?? type
-        customName = (docNameType as? CustomDocumentationNamed.Type)?.documentationName
-    }
-
-    init<T: CustomDocumentationNamed>(_ type: T.Type) {
-        typeDescription = .init(type)
-        customName = type.documentationName
+    fileprivate init(parsing type: Any.Type) {
+        let actualType = _leafType(of: _openOptionals(in: type))
+        typeDescription = .init(any: actualType)
+        customName = (actualType as? CustomDocumentationNamed.Type)?.documentationName
     }
 }
 
@@ -294,8 +273,8 @@ extension EndpointDocumentation.Object {
     }
 
     private init(documentation: DocumentationObject) {
-        let actualType = (documentation.type as? AnyTypeWrapping.Type)?.leafType ?? documentation.type
-        self.init(type: DocumentationType(actualType), body: .init(documentation: documentation.body))
+        self.init(type: DocumentationType(parsing: documentation.type),
+                  body: .init(documentation: documentation.body))
     }
 }
 
@@ -313,9 +292,9 @@ extension EndpointDocumentation.Object.Body {
 
 extension EndpointDocumentation.Object.Body.Field {
     fileprivate init(name: String, documentation: DocumentationObject) {
-        let optionalCleanedType = (documentation.type as? AnyOptionalType.Type)?.anyWrappedType ?? documentation.type
-        let leafType = (optionalCleanedType as? AnyTypeWrapping.Type)?.leafType ?? optionalCleanedType
-        self.init(name: name, type: DocumentationType(leafType), isOptional: documentation.isOptional)
+        self.init(name: name,
+                  type: DocumentationType(parsing: documentation.type),
+                  isOptional: documentation.isOptional)
     }
 }
 
@@ -330,4 +309,12 @@ fileprivate extension RangeReplaceableCollection where Element: Equatable {
         guard !contains(element) else { return }
         append(element)
     }
+}
+
+fileprivate func _openOptionals(in type: Any.Type) -> Any.Type {
+    (type as? AnyOptionalType.Type).map { _openOptionals(in: $0.anyWrappedType) } ?? type
+}
+
+fileprivate func _leafType(of type: Any.Type) -> Any.Type {
+    (type as? AnyTypeWrapping.Type)?.leafType ?? type
 }
