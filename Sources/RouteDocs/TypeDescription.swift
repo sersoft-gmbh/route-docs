@@ -63,7 +63,7 @@ public struct TypeDescription: Hashable, Sendable, Codable, CustomStringConverti
         genericParameters = try container.decode(Array<TypeDescription>.self, forKey: .genericParameters)
     }
 
-    public init(from decoder: Decoder) throws {
+    public init(from decoder: any Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         let module: String
         do {
@@ -84,7 +84,7 @@ public struct TypeDescription: Hashable, Sendable, Codable, CustomStringConverti
         self = TypeParser.type(in: String(reflecting: type))
     }
 
-    public func encode(to encoder: Encoder) throws {
+    public func encode(to encoder: any Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
         try container.encode(module, forKey: .module)
         if case .some(let wrapped) = _parent {
@@ -98,18 +98,16 @@ public struct TypeDescription: Hashable, Sendable, Codable, CustomStringConverti
         var typeName = String()
         if case .some(let parent) = _parent, options.contains(.withParents) {
             typeName.append(parent.typeName(with: options))
+            typeName.append(".")
         } else if options.contains(.withModule) { // parent has module already
             typeName.append(module)
+            typeName.append(".")
         }
         typeName.append(name)
-        typeName.append("<\(genericParameters.lazy.map { $0.typeName(with: options) }.joined(separator: ", "))>")
+        if !genericParameters.isEmpty {
+            typeName.append("<\(genericParameters.lazy.map { $0.typeName(with: options) }.joined(separator: ", "))>")
+        }
         return typeName
-    }
-
-
-    @available(*, deprecated, message: "Use typeName(with:)")
-    public func typeName(includingModule: Bool = true) -> String {
-        typeName(with: [includingModule ? .withModule : [], .withParents])
     }
 }
 

@@ -1,5 +1,15 @@
 import Vapor
 
+fileprivate protocol _OptionalCustomDocumentationNamed {
+    static var _documentationNameType: Any.Type { get }
+}
+
+extension Optional: _OptionalCustomDocumentationNamed {
+    static var _documentationNameType: Any.Type {
+        (Wrapped.self as? _OptionalCustomDocumentationNamed.Type)?._documentationNameType ?? Wrapped.self
+    }
+}
+
 public struct DocumentationType: Codable, Equatable, CustomStringConvertible, Sendable {
     public let typeDescription: TypeDescription
     public let customName: String?
@@ -12,12 +22,14 @@ public struct DocumentationType: Codable, Equatable, CustomStringConvertible, Se
 
     init(_ type: Any.Type) {
         typeDescription = .init(any: type)
-        customName = (type as? CustomDocumentationNamed.Type)?.documentationName
+        let docNameType = (type as? _OptionalCustomDocumentationNamed.Type)?._documentationNameType ?? type
+        customName = (docNameType as? CustomDocumentationNamed.Type)?.documentationName
     }
 
     init<T>(_ type: T.Type) {
         typeDescription = .init(type)
-        customName = (type as? CustomDocumentationNamed.Type)?.documentationName
+        let docNameType = (type as? _OptionalCustomDocumentationNamed.Type)?._documentationNameType ?? type
+        customName = (docNameType as? CustomDocumentationNamed.Type)?.documentationName
     }
 
     init<T: CustomDocumentationNamed>(_ type: T.Type) {
