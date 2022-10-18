@@ -1560,11 +1560,6 @@
                 "type" : "method"
               },
               {
-                "path" : "\/documentation\/routedocs\/typedescription\/typename(includingmodule:)",
-                "title" : "func typeName(includingModule: Bool) -> String",
-                "type" : "method"
-              },
-              {
                 "path" : "\/documentation\/routedocs\/typedescription\/typename(with:)",
                 "title" : "func typeName(with: TypeDescription.NameOptions) -> String",
                 "type" : "method"

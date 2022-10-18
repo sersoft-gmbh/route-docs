@@ -125,7 +125,6 @@
     {
       "identifiers" : [
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription\/encode(to:)",
-        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription\/typeName(includingModule:)",
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription\/typeName(with:)"
       ],
       "title" : "Instance Methods"
@@ -684,58 +683,6 @@
   "title" : "parents",
   "type" : "topic",
   "url" : "\/documentation\/routedocs\/typedescription\/parents"
-},
-"doc://RouteDocs/documentation/RouteDocs/TypeDescription/typeName(includingModule:)": {
-  "abstract" : [
-
-  ],
-  "deprecated" : true,
-  "fragments" : [
-    {
-      "kind" : "keyword",
-      "text" : "func"
-    },
-    {
-      "kind" : "text",
-      "text" : " "
-    },
-    {
-      "kind" : "identifier",
-      "text" : "typeName"
-    },
-    {
-      "kind" : "text",
-      "text" : "("
-    },
-    {
-      "kind" : "externalParam",
-      "text" : "includingModule"
-    },
-    {
-      "kind" : "text",
-      "text" : ": "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:Sb",
-      "text" : "Bool"
-    },
-    {
-      "kind" : "text",
-      "text" : ") -> "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:SS",
-      "text" : "String"
-    }
-  ],
-  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription\/typeName(includingModule:)",
-  "kind" : "symbol",
-  "role" : "symbol",
-  "title" : "typeName(includingModule:)",
-  "type" : "topic",
-  "url" : "\/documentation\/routedocs\/typedescription\/typename(includingmodule:)"
 },
 "doc://RouteDocs/documentation/RouteDocs/TypeDescription/typeName(with:)": {
   "abstract" : [
