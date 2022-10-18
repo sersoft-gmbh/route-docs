@@ -23,7 +23,7 @@ extension Route: EndpointDocumentable {
 
     @inlinable
     public func addDocumentation(groupedAs groupName: String? = nil,
-                                 query: EndpointDocumentation.Object? = nil,
+                                 query: EndpointDocumentation.Query? = nil,
                                  request: EndpointDocumentation.Payload? = nil,
                                  response: EndpointDocumentation.Payload? = nil,
                                  requiredAuthorization: Array<String> = .init()) {

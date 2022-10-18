@@ -46,6 +46,10 @@ public struct DocsViewContext: Encodable, Sendable {
             public let body: Body
         }
 
+        public struct Query: Encodable, Sendable {
+            public let objects: Array<Object>
+        }
+
         public struct Payload: Encodable, @unchecked Sendable { // unchecked because of HTTPMediaType
             public let mediaType: HTTPMediaType
             public let objects: Array<Object>
@@ -53,7 +57,7 @@ public struct DocsViewContext: Encodable, Sendable {
 
         public let method: HTTPMethod
         public let path: String
-        public let query: Object?
+        public let query: Query?
         public let request: Payload?
         public let response: Payload?
         public let requiredAuthorization: Array<String>
@@ -83,7 +87,7 @@ fileprivate extension HTTPMethod {
 
 fileprivate extension DocumentationType {
     func docsTypeName(using namePath: KeyPath<DocumentationType, String>?) -> String {
-        customName ?? namePath.map { self[keyPath: $0] } ?? typeDescription.typeName(includingModule: false)
+        customName ?? namePath.map { self[keyPath: $0] } ?? typeDescription.typeName(with: [.withParents])
     }
 }
 
@@ -126,6 +130,13 @@ extension DocsViewContext.Documentation.Object {
     }
 }
 
+extension DocsViewContext.Documentation.Query {
+    public init(query: EndpointDocumentation.Query,
+                usingName namePath: KeyPath<DocumentationType, String>? = nil) {
+        self.init(objects: query.objects.map { .init(object: $0, usingName: namePath) })
+    }
+}
+
 extension DocsViewContext.Documentation.Payload {
     public init(payload: EndpointDocumentation.Payload,
                 usingName namePath: KeyPath<DocumentationType, String>? = nil) {
@@ -139,7 +150,7 @@ extension DocsViewContext.Documentation {
                 usingName namePath: KeyPath<DocumentationType, String>? = nil) {
         self.init(method: documentation.method,
                   path: documentation.path,
-                  query: documentation.query.map { .init(object: $0, usingName: namePath) },
+                  query: documentation.query.map { .init(query: $0, usingName: namePath) },
                   request: documentation.request.map { .init(payload: $0, usingName: namePath) },
                   response: documentation.response.map { .init(payload: $0, usingName: namePath) },
                   requiredAuthorization: documentation.requiredAuthorization)

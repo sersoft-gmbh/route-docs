@@ -5,7 +5,7 @@ public struct DocumentationType: Codable, Equatable, CustomStringConvertible, Se
     public let customName: String?
 
     public var defaultName: String {
-        customName ?? typeDescription.typeName(includingModule: true)
+        customName ?? typeDescription.typeName(with: [.withModule, .withParents])
     }
 
     public var description: String { defaultName }
@@ -159,6 +159,24 @@ public struct EndpointDocumentation: Codable, Equatable, CustomStringConvertible
         }
     }
 
+    public struct Query: Codable, Equatable, CustomStringConvertible, Sendable {
+        public let objects: Array<Object>
+
+        public var description: String {
+            """
+            \(objects.map { String(describing: $0) }.joined(separator: "\n\n"))
+            """
+        }
+
+        public func filterObjects(with closure: (Object) throws -> Object?) rethrows -> Self {
+            try .init(objects: objects.compactMap(closure))
+        }
+
+        public func filterObjects(with closure: (Object) throws -> Bool) rethrows -> Self {
+            try .init(objects: objects.filter(closure))
+        }
+    }
+
     public struct Payload: Codable, Equatable, CustomStringConvertible, @unchecked Sendable { // unchecked because of HTTPMediaType
         public let mediaType: HTTPMediaType
         public let objects: Array<Object>
@@ -182,7 +200,7 @@ public struct EndpointDocumentation: Codable, Equatable, CustomStringConvertible
     public let groupName: String?
     public let method: HTTPMethod
     public let path: String
-    public let query: Object?
+    public let query: Query?
     public let request: Payload?
     public let response: Payload?
     public let requiredAuthorization: Array<String>
@@ -203,7 +221,7 @@ extension EndpointDocumentation {
     public init(method: HTTPMethod,
                 path: Array<PathComponent>,
                 groupName: String? = nil,
-                query: Object? = nil,
+                query: Query? = nil,
                 request: Payload? = nil,
                 response: Payload? = nil,
                 requiredAuthorization: Array<String> = .init()) {
@@ -237,6 +255,17 @@ extension EndpointDocumentation.Payload {
     }
 }
 
+extension EndpointDocumentation.Query {
+    public init<T: Decodable>(object: T.Type,
+                              customUserInfo: Dictionary<CodingUserInfoKey, Any> = .init()) throws {
+        try self.init(objects: EndpointDocumentation.Object.objects(from: object.reflectedDocumentation(withCustomUserInfo: customUserInfo)))
+    }
+
+    public init<T: CustomDocumentable>(object: T.Type) throws {
+        self.init(objects: EndpointDocumentation.Object.objects(from: object.object(with: object)))
+    }
+}
+
 extension EndpointDocumentation.Object {
     fileprivate static func addObjects(from documentation: DocumentationObject,
                                        to list: inout Array<EndpointDocumentation.Object>) {
@@ -255,14 +284,6 @@ extension EndpointDocumentation.Object {
     private init(documentation: DocumentationObject) {
         let actualType = (documentation.type as? AnyTypeWrapping.Type)?.leafType ?? documentation.type
         self.init(type: DocumentationType(actualType), body: .init(documentation: documentation.body))
-    }
-
-    public init<T: Decodable>(object: T.Type, customUserInfo: Dictionary<CodingUserInfoKey, Any> = .init()) throws {
-        try self.init(documentation: object.reflectedDocumentation(withCustomUserInfo: customUserInfo))
-    }
-
-    public init<T: CustomDocumentable>(object: T.Type) {
-        self.init(documentation: object.object(with: object))
     }
 }
 

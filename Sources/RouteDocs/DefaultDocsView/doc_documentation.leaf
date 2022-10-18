@@ -2,7 +2,12 @@
     <div id="endpoint-header-#import("groupID")-#(index)" class="card-header d-flex justify-content-between">
         <h3 class="mb-0 mr-5 flex-fill">
             <!-- 'w-100 text-left' => would stretch the button to full width, extending the clickable space -->
-            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="\#endpoint-content-#import("groupID")-#(index)" aria-expanded="false" aria-controls="endpoint-content-#import("groupID")-#(index)">
+            <button
+                class="btn btn-link collapsed"
+                data-toggle="collapse"
+                data-target="\#endpoint-content-#import("groupID")-#(index)"
+                aria-expanded="false"
+                aria-controls="endpoint-content-#import("groupID")-#(index)">
                 <strong>#(doc.method)</strong> <em>#(doc.path)</em>
             </button>
         </h3>
@@ -14,36 +19,34 @@
             </div>
         #endif
     </div>
-    <div id="endpoint-content-#import("groupID")-#(index)" class="collapse" aria-labelledby="endpoint-header-#import("groupID")-#(index)" data-parent="\##import("accordionID")-#import("groupID")">
+    <div 
+        id="endpoint-content-#import("groupID")-#(index)"
+        class="collapse"
+        aria-labelledby="endpoint-header-#import("groupID")-#(index)"
+        data-parent="\##import("accordionID")-#import("groupID")">
         <div class="card-body">
-            #if(!doc.query || doc.query.body.isEmpty):
+            #if(!doc.query):
                 #if(!doc.request):
-                <!-- if(!doc.request || count(doc.request.objects) <= 0): -->
                     #if(!doc.response):
-                    <!-- if(!doc.response || count(doc.response.objects) <= 0): -->
                         <p class="card-text text-body">
                             <em>This request has no query or body and returns no response (usually a HTTP 204).</em>
                         </p>
                     #endif
                 #endif
             #endif
-            #if(doc.query && !doc.query.body.isEmpty):
+            #if(doc.query):
                 <div class="card">
-                    <h4 class="card-header">Query (<em>#(doc.query.name)</em>) parameters</h4>
-                    #if(doc.query.body.fields):
-                        <ul class="list-group list-group-flush">
-                            #for(field in doc.query.body.fields):
-                                #extend("doc_field"):
-                                    #export("nonOptionalBadgeStyle", "badge-danger")
-                                    #export("optionalBadgeStyle", "badge-secondary")
-                                #endextend
-                            #endfor
-                        </ul>
-                    #endif
+                    <h4 class="card-header">Query parameters</h4>
+                    #for(object in doc.query.objects):
+                        #extend("doc_object"):
+                            #export("nonOptionalBadgeStyle", "badge-danger")
+                            #export("optionalBadgeStyle", "badge-secondary")
+                        #endextend
+                    #endfor
                 </div>
             #endif
             #if(doc.request):
-                <div class="card#if(doc.query && !doc.query.body.isEmpty): mt-3#endif">
+                <div class="card#if(doc.query): mt-3#endif">
                     <h4 class="card-header">
                         Request Body (<em>#(doc.request.mediaType.type)/#(doc.request.mediaType.subtype)</em>)
                     </h4>
@@ -56,7 +59,7 @@
                 </div>
             #endif
             #if(doc.response):
-                <div class="card #if((doc.query && !doc.query.body.isEmpty) || doc.response): mt-3#endif">
+                <div class="card #if(doc.query || doc.response): mt-3#endif">
                     <h4 class="card-header">
                         Response Body (<em>#(doc.response.mediaType.type)/#(doc.response.mediaType.subtype)</em>)
                     </h4>
