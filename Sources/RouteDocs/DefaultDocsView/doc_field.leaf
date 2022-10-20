@@ -1,8 +1,8 @@
 <li class="list-group-item d-flex justify-content-between align-items-center">
     <code>#(field.name)#(":") <strong>#(field.type)</strong></code>
     #if(field.isOptional):
-        <span class="badge #import("optionalBadgeStyle") badge-pill">optional</span>
+        <span class="badge #import("optionalBadgeStyle") rounded-pill">optional</span>
     #else:
-        <span class="badge #import("nonOptionalBadgeStyle") badge-pill">required</span>
+        <span class="badge #import("nonOptionalBadgeStyle") rounded-pill">required</span>
     #endif
 </li>

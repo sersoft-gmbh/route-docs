@@ -72,7 +72,7 @@ extension LeafRenderer {
 
 extension Application.Leaf {
     /// Registers the tags needed to display the default docs.
-    /// Currently this does nothing since we don't have any specific tags. This is reserved as a future improvement
+    /// Currently this does nothing since we don't have any specific tags. This is reserved as a future improvement.
     public func registerDocumentationTags() {}
 
     @inlinable
