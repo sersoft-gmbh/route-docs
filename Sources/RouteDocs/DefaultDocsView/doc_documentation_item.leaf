@@ -1,24 +1,21 @@
 <div class="accordion-item">
-    <div class="accordion-header d-flex justify-content-between" id="endpoint-header-#import("groupID")-#(index)">
-        <h3 class="mb-0 me-5 flex-fill">
-            <!-- 'w-100 text-start' => would stretch the button to full width, extending the clickable space -->
-            <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="\#endpoint-content-#import("groupID")-#(index)"
-                aria-expanded="false"
-                aria-controls="endpoint-content-#import("groupID")-#(index)">
-                <strong>#(doc.method)</strong> <em>#(doc.path)</em>
-            </button>
-        </h3>
-        #if(count(doc.requiredAuthorization) > 0):
-            <div class="ps-1 d-flex align-content-center flex-wrap">
-                #for(requiredAuth in doc.requiredAuthorization):
-                    <span class="badge bg-warning font-monospace mx-1">#(requiredAuth)</span>
-                #endfor
-            </div>
-        #endif
+    <div class="accordion-header" id="endpoint-header-#import("groupID")-#(index)">
+        <button
+            class="accordion-button collapsed d-flex justify-content-between"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="\#endpoint-content-#import("groupID")-#(index)"
+            aria-expanded="false"
+            aria-controls="endpoint-content-#import("groupID")-#(index)">
+            <div class="flex-fill mb-0 me-4"><strong>#(doc.method)</strong>&nbsp;&nbsp;<em>#(doc.path)</em></div>
+            #if(count(doc.requiredAuthorization) > 0):
+                <div class="d-flex align-content-center flex-wrap pe-none ps-1 me-3">
+                    #for(requiredAuth in doc.requiredAuthorization):
+                        <span class="badge bg-warning font-monospace ms-1 text-dark"><small>#(requiredAuth)</small></span>
+                    #endfor
+                </div>
+            #endif
+        </button>
     </div>
     <div 
         id="endpoint-content-#import("groupID")-#(index)"
