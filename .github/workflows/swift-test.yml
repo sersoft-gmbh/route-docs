@@ -51,7 +51,7 @@ jobs:
       - name: Build & Test
         run: swift test -v --parallel --enable-code-coverage
       - name: Generate Coverage Files
-        uses: sersoft-gmbh/swift-coverage-action@v3.0.0
+        uses: sersoft-gmbh/swift-coverage-action@v3.0.1
         id: coverage-files
       - uses: codecov/codecov-action@v3.1.1
         with:
@@ -99,6 +99,11 @@ jobs:
           derived-data-path: .derived-data
       - uses: sersoft-gmbh/swift-coverage-action@v3.0.1
         id: coverage-files
+        with:
+          search-paths: |
+            ./.build
+            ./.derived-data
+            $HOME/Library/Developer/Xcode/DerivedData
       - uses: codecov/codecov-action@v3.1.1
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
