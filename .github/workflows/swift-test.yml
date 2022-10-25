@@ -80,13 +80,21 @@ jobs:
             ${{ runner.os }}-${{ steps.os-version.outputs.version }}-xcode-${{ steps.swift-version.outputs.version }}-
       # The `dump-pif` is a workaround for the PIF generation failure.
       # Since this resolves the packages, we also cache this.
-      - uses: actions/cache@v3
+      - uses: actions/cache@v3.0.11
         with:
           path: .build
           key: ${{ runner.os }}-${{ steps.os-version.outputs.version }}-spm-${{ steps.swift-version.outputs.version }}-${{ hashFiles('**/Package.resolved') }}
           restore-keys: |
             ${{ runner.os }}-${{ steps.os-version.outputs.version }}-spm-${{ steps.swift-version.outputs.version }}-
       - run: swift package dump-pif > /dev/null
+      - uses: sersoft-gmbh/xcodebuild-action@v2.0.1
+        timeout-minutes: 15
+        with:
+          spm-package: './'
+          scheme: route-docs
+          destination: platform=macOS
+          action: clean
+          derived-data-path: .derived-data
       - uses: sersoft-gmbh/xcodebuild-action@v2.0.1
         timeout-minutes: 15
         with:
