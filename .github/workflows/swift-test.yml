@@ -93,14 +93,6 @@ jobs:
           spm-package: './'
           scheme: route-docs
           destination: platform=macOS
-          action: clean
-          derived-data-path: .derived-data
-      - uses: sersoft-gmbh/xcodebuild-action@v2.0.1
-        timeout-minutes: 15
-        with:
-          spm-package: './'
-          scheme: route-docs
-          destination: platform=macOS
           action: test
           parallel-testing-enabled: true
           enable-code-coverage: true
