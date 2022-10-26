@@ -94,7 +94,7 @@ jobs:
           scheme: route-docs
           destination: platform=macOS
           action: test
-          parallel-testing-enabled: true
+          parallel-testing-enabled: ${{ !contains(matrix.destination, 'watchOS') }}
           enable-code-coverage: true
           derived-data-path: .derived-data
       - uses: sersoft-gmbh/swift-coverage-action@v3.0.1
