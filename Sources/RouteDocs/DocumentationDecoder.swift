@@ -295,7 +295,8 @@ extension DocumentationDecoder {
         }
 
         static func cache(entry: Entry) {
-            storage.withLockedValue { $0[ObjectIdentifier(type(of: entry.object))] = entry }
+            // We must use the doc's type here, otherwise we mix up optionals vs. non-optionals.
+            storage.withLockedValue { $0[ObjectIdentifier(entry.documentation.type)] = entry }
         }
     }
 
