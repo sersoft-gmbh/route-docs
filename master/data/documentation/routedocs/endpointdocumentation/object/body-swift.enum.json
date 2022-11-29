@@ -136,6 +136,7 @@
     {
       "generated" : true,
       "identifiers" : [
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentation\/Object\/Body-swift.enum\/CustomStringConvertible-Implementations",
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentation\/Object\/Body-swift.enum\/Equatable-Implementations"
       ],
       "title" : "Default Implementations"
@@ -273,6 +274,17 @@
   "title" : "EndpointDocumentation.Object.Body",
   "type" : "topic",
   "url" : "\/documentation\/routedocs\/endpointdocumentation\/object\/body-swift.enum"
+},
+"doc://RouteDocs/documentation/RouteDocs/EndpointDocumentation/Object/Body-swift.enum/CustomStringConvertible-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentation\/Object\/Body-swift.enum\/CustomStringConvertible-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "CustomStringConvertible Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/endpointdocumentation\/object\/body-swift.enum\/customstringconvertible-implementations"
 },
 "doc://RouteDocs/documentation/RouteDocs/EndpointDocumentation/Object/Body-swift.enum/EnumCase": {
   "abstract" : [

@@ -132,6 +132,7 @@
     {
       "generated" : true,
       "identifiers" : [
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription\/CustomStringConvertible-Implementations",
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription\/Equatable-Implementations"
       ],
       "title" : "Default Implementations"
@@ -212,6 +213,17 @@
   "title" : "TypeDescription",
   "type" : "topic",
   "url" : "\/documentation\/routedocs\/typedescription"
+},
+"doc://RouteDocs/documentation/RouteDocs/TypeDescription/CustomStringConvertible-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription\/CustomStringConvertible-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "CustomStringConvertible Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/typedescription\/customstringconvertible-implementations"
 },
 "doc://RouteDocs/documentation/RouteDocs/TypeDescription/Equatable-Implementations": {
   "abstract" : [
