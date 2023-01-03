@@ -69,7 +69,7 @@ public struct TypeDescription: Hashable, Sendable, Codable, CustomStringConverti
         do {
             module = try container.decode(String.self, forKey: .module)
         } catch DecodingError.keyNotFound(_, _) {
-            let intermediateType =  try TypeParser.type(in: container.decode(String.self, forKey: .name))
+            let intermediateType = try TypeParser.type(in: container.decode(String.self, forKey: .name))
             try self.init(decodedType: intermediateType, container: container)
             return
         }
