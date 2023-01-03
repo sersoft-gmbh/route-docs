@@ -55,7 +55,7 @@
                 </div>
             #endif
             #if(doc.response):
-                <div class="card #if(doc.query || doc.response): mt-3#endif">
+                <div class="card#if(doc.query || doc.response): mt-3#endif">
                     <h4 class="card-header">
                         Response Body (<em>#(doc.response.mediaType.type)/#(doc.response.mediaType.subtype)</em>)
                     </h4>
