@@ -1,0 +1,427 @@
+{
+  "hierarchy" : {
+    "paths" : [
+      [
+
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/RouteDocs\/documentation\/RouteDocs"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "RouteDocs",
+    "modules" : [
+      {
+        "name" : "RouteDocs"
+      }
+    ],
+    "role" : "collection",
+    "roleHeading" : "Framework",
+    "symbolKind" : "module",
+    "title" : "RouteDocs"
+  },
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/AnyCustomDocumentable",
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/AnyTypeWrapping",
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/CustomDocumentable",
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/CustomDocumentationNamed",
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentable",
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeWrapping"
+      ],
+      "title" : "Protocols"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocsViewContext",
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocumentationObject",
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocumentationType",
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentation",
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription"
+      ],
+      "title" : "Structures"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/routedocs"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://RouteDocs/documentation/RouteDocs": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "RouteDocs",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs"
+},
+"doc://RouteDocs/documentation/RouteDocs/AnyCustomDocumentable": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "protocol"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AnyCustomDocumentable"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/AnyCustomDocumentable",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "AnyCustomDocumentable"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "AnyCustomDocumentable",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/anycustomdocumentable"
+},
+"doc://RouteDocs/documentation/RouteDocs/AnyTypeWrapping": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "protocol"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AnyTypeWrapping"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/AnyTypeWrapping",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "AnyTypeWrapping"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "AnyTypeWrapping",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/anytypewrapping"
+},
+"doc://RouteDocs/documentation/RouteDocs/CustomDocumentable": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "protocol"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "CustomDocumentable"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/CustomDocumentable",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "CustomDocumentable"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "CustomDocumentable",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/customdocumentable"
+},
+"doc://RouteDocs/documentation/RouteDocs/CustomDocumentationNamed": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "protocol"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "CustomDocumentationNamed"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/CustomDocumentationNamed",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "CustomDocumentationNamed"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "CustomDocumentationNamed",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/customdocumentationnamed"
+},
+"doc://RouteDocs/documentation/RouteDocs/DocsViewContext": {
+  "abstract" : [
+    {
+      "text" : "This can be used as context for a documentation view.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "DocsViewContext"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocsViewContext",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "DocsViewContext"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "DocsViewContext",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/docsviewcontext"
+},
+"doc://RouteDocs/documentation/RouteDocs/DocumentationObject": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "DocumentationObject"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocumentationObject",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "DocumentationObject"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "DocumentationObject",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/documentationobject"
+},
+"doc://RouteDocs/documentation/RouteDocs/DocumentationType": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "DocumentationType"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocumentationType",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "DocumentationType"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "DocumentationType",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/documentationtype"
+},
+"doc://RouteDocs/documentation/RouteDocs/EndpointDocumentable": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "protocol"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "EndpointDocumentable"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentable",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "EndpointDocumentable"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "EndpointDocumentable",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/endpointdocumentable"
+},
+"doc://RouteDocs/documentation/RouteDocs/EndpointDocumentation": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "EndpointDocumentation"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentation",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "EndpointDocumentation"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "EndpointDocumentation",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/endpointdocumentation"
+},
+"doc://RouteDocs/documentation/RouteDocs/TypeDescription": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "TypeDescription"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "TypeDescription"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "TypeDescription",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/typedescription"
+},
+"doc://RouteDocs/documentation/RouteDocs/TypeWrapping": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "protocol"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "TypeWrapping"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeWrapping",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "TypeWrapping"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "TypeWrapping",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/typewrapping"
+}
+}
+}
