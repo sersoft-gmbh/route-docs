@@ -9,17 +9,8 @@ extension DocsViewContext {
 }
 
 extension ViewRenderer {
-    @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
     public func renderDefaultDocs(with context: DocsViewContext) async throws -> View {
-        if #available(macOS 12, iOS 15, tvOS 15, watchOS 8, *) {
-            return try await render("docs", context)
-        } else {
-            return try await renderDefaultDocs(with: context).get()
-        }
-    }
-
-    public func renderDefaultDocs(with context: DocsViewContext) -> EventLoopFuture<View> {
-        render("docs", context)
+        try await render("docs", context)
     }
 }
 

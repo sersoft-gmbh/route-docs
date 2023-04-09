@@ -112,6 +112,7 @@ public struct TypeDescription: Hashable, Sendable, Codable, CustomStringConverti
 }
 
 extension TypeDescription {
+    @frozen
     public struct NameOptions: OptionSet, Sendable {
         public typealias RawValue = UInt
 

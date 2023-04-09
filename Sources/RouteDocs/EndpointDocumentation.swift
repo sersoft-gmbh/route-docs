@@ -316,5 +316,5 @@ fileprivate func _openOptionals(in type: Any.Type) -> Any.Type {
 }
 
 fileprivate func _leafType(of type: Any.Type) -> Any.Type {
-    (type as? AnyTypeWrapping.Type)?.leafType ?? type
+    (type as? any TypeWrapping.Type)?.leafType ?? type
 }

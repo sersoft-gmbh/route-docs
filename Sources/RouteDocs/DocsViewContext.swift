@@ -92,7 +92,7 @@ fileprivate extension DocumentationType {
 }
 
 extension EndpointDocumentation {
-    public var defaultSortOrder: String { method.sortOrder + "/" + path }
+    public var defaultSortOrder: some Comparable { method.sortOrder + "/" + path }
 }
 
 extension DocsViewContext.Documentation.Object.Body.EnumCase {

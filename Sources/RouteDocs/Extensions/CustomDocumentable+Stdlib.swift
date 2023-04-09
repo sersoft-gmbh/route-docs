@@ -18,7 +18,7 @@ extension UUID: CustomDocumentable {
 
 extension URL: CustomDocumentable {
     @inlinable
-    public static var documentationInstance: URL { URL(fileURLWithPath: "/") }
+    public static var documentationInstance: URL { .init(fileURLWithPath: "/") }
 
     @inlinable
     public static var documentationBody: DocumentationObject.Body { .none }
