@@ -121,7 +121,6 @@
     {
       "generated" : true,
       "identifiers" : [
-        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentation\/Query-swift.struct\/CustomStringConvertible-Implementations",
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentation\/Query-swift.struct\/Equatable-Implementations"
       ],
       "title" : "Default Implementations"
@@ -228,17 +227,6 @@
   "title" : "EndpointDocumentation.Query",
   "type" : "topic",
   "url" : "\/documentation\/routedocs\/endpointdocumentation\/query-swift.struct"
-},
-"doc://RouteDocs/documentation/RouteDocs/EndpointDocumentation/Query-swift.struct/CustomStringConvertible-Implementations": {
-  "abstract" : [
-
-  ],
-  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentation\/Query-swift.struct\/CustomStringConvertible-Implementations",
-  "kind" : "article",
-  "role" : "collectionGroup",
-  "title" : "CustomStringConvertible Implementations",
-  "type" : "topic",
-  "url" : "\/documentation\/routedocs\/endpointdocumentation\/query-swift.struct\/customstringconvertible-implementations"
 },
 "doc://RouteDocs/documentation/RouteDocs/EndpointDocumentation/Query-swift.struct/Equatable-Implementations": {
   "abstract" : [

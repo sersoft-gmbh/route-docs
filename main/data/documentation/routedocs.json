@@ -34,8 +34,6 @@
   "topicSections" : [
     {
       "identifiers" : [
-        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/AnyCustomDocumentable",
-        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/AnyTypeWrapping",
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/CustomDocumentable",
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/CustomDocumentationNamed",
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentable",
@@ -78,68 +76,6 @@
   "title" : "RouteDocs",
   "type" : "topic",
   "url" : "\/documentation\/routedocs"
-},
-"doc://RouteDocs/documentation/RouteDocs/AnyCustomDocumentable": {
-  "abstract" : [
-
-  ],
-  "fragments" : [
-    {
-      "kind" : "keyword",
-      "text" : "protocol"
-    },
-    {
-      "kind" : "text",
-      "text" : " "
-    },
-    {
-      "kind" : "identifier",
-      "text" : "AnyCustomDocumentable"
-    }
-  ],
-  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/AnyCustomDocumentable",
-  "kind" : "symbol",
-  "navigatorTitle" : [
-    {
-      "kind" : "identifier",
-      "text" : "AnyCustomDocumentable"
-    }
-  ],
-  "role" : "symbol",
-  "title" : "AnyCustomDocumentable",
-  "type" : "topic",
-  "url" : "\/documentation\/routedocs\/anycustomdocumentable"
-},
-"doc://RouteDocs/documentation/RouteDocs/AnyTypeWrapping": {
-  "abstract" : [
-
-  ],
-  "fragments" : [
-    {
-      "kind" : "keyword",
-      "text" : "protocol"
-    },
-    {
-      "kind" : "text",
-      "text" : " "
-    },
-    {
-      "kind" : "identifier",
-      "text" : "AnyTypeWrapping"
-    }
-  ],
-  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/AnyTypeWrapping",
-  "kind" : "symbol",
-  "navigatorTitle" : [
-    {
-      "kind" : "identifier",
-      "text" : "AnyTypeWrapping"
-    }
-  ],
-  "role" : "symbol",
-  "title" : "AnyTypeWrapping",
-  "type" : "topic",
-  "url" : "\/documentation\/routedocs\/anytypewrapping"
 },
 "doc://RouteDocs/documentation/RouteDocs/CustomDocumentable": {
   "abstract" : [

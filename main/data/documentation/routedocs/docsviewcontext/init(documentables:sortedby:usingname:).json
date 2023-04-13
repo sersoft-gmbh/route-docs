@@ -39,7 +39,16 @@
       },
       {
         "kind" : "text",
-        "text" : ", "
+        "text" : "<"
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:9RouteDocs20EndpointDocumentableP",
+        "text" : "EndpointDocumentable"
+      },
+      {
+        "kind" : "text",
+        "text" : ">, "
       },
       {
         "kind" : "externalParam",
@@ -156,7 +165,17 @@
             },
             {
               "kind" : "text",
-              "text" : ", "
+              "text" : "<"
+            },
+            {
+              "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentable",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:9RouteDocs20EndpointDocumentableP",
+              "text" : "EndpointDocumentable"
+            },
+            {
+              "kind" : "text",
+              "text" : ">, "
             },
             {
               "kind" : "externalParam",
@@ -347,7 +366,16 @@
     },
     {
       "kind" : "text",
-      "text" : ", "
+      "text" : "<"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:9RouteDocs20EndpointDocumentableP",
+      "text" : "EndpointDocumentable"
+    },
+    {
+      "kind" : "text",
+      "text" : ">, "
     },
     {
       "kind" : "externalParam",
@@ -457,6 +485,37 @@
   "title" : "DocumentationType",
   "type" : "topic",
   "url" : "\/documentation\/routedocs\/documentationtype"
+},
+"doc://RouteDocs/documentation/RouteDocs/EndpointDocumentable": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "protocol"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "EndpointDocumentable"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentable",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "EndpointDocumentable"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "EndpointDocumentable",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/endpointdocumentable"
 },
 "doc://RouteDocs/documentation/RouteDocs/EndpointDocumentation": {
   "abstract" : [

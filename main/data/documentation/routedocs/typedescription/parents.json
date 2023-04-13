@@ -43,6 +43,19 @@
         "kind" : "typeIdentifier",
         "preciseIdentifier" : "s:ST",
         "text" : "Sequence"
+      },
+      {
+        "kind" : "text",
+        "text" : "<"
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:9RouteDocs15TypeDescriptionV",
+        "text" : "TypeDescription"
+      },
+      {
+        "kind" : "text",
+        "text" : ">"
       }
     ],
     "modules" : [
@@ -97,7 +110,17 @@
             },
             {
               "kind" : "text",
-              "text" : " { "
+              "text" : "<"
+            },
+            {
+              "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:9RouteDocs15TypeDescriptionV",
+              "text" : "TypeDescription"
+            },
+            {
+              "kind" : "text",
+              "text" : "> { "
             },
             {
               "kind" : "keyword",
@@ -210,6 +233,19 @@
       "kind" : "typeIdentifier",
       "preciseIdentifier" : "s:ST",
       "text" : "Sequence"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:9RouteDocs15TypeDescriptionV",
+      "text" : "TypeDescription"
+    },
+    {
+      "kind" : "text",
+      "text" : ">"
     }
   ],
   "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription\/parents",

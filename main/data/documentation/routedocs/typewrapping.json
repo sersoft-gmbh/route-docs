@@ -76,28 +76,12 @@
             },
             {
               "kind" : "text",
-              "text" : "> : "
-            },
-            {
-              "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/AnyTypeWrapping",
-              "kind" : "typeIdentifier",
-              "preciseIdentifier" : "s:9RouteDocs15AnyTypeWrappingP",
-              "text" : "AnyTypeWrapping"
+              "text" : ">"
             }
           ]
         }
       ],
       "kind" : "declarations"
-    }
-  ],
-  "relationshipsSections" : [
-    {
-      "identifiers" : [
-        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/AnyTypeWrapping"
-      ],
-      "kind" : "relationships",
-      "title" : "Inherits From",
-      "type" : "inheritsFrom"
     }
   ],
   "schemaVersion" : {
@@ -140,37 +124,6 @@
   "title" : "RouteDocs",
   "type" : "topic",
   "url" : "\/documentation\/routedocs"
-},
-"doc://RouteDocs/documentation/RouteDocs/AnyTypeWrapping": {
-  "abstract" : [
-
-  ],
-  "fragments" : [
-    {
-      "kind" : "keyword",
-      "text" : "protocol"
-    },
-    {
-      "kind" : "text",
-      "text" : " "
-    },
-    {
-      "kind" : "identifier",
-      "text" : "AnyTypeWrapping"
-    }
-  ],
-  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/AnyTypeWrapping",
-  "kind" : "symbol",
-  "navigatorTitle" : [
-    {
-      "kind" : "identifier",
-      "text" : "AnyTypeWrapping"
-    }
-  ],
-  "role" : "symbol",
-  "title" : "AnyTypeWrapping",
-  "type" : "topic",
-  "url" : "\/documentation\/routedocs\/anytypewrapping"
 },
 "doc://RouteDocs/documentation/RouteDocs/TypeWrapping": {
   "abstract" : [

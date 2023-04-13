@@ -14,7 +14,7 @@
   "kind" : "symbol",
   "metadata" : {
     "extendedModule" : "RouteDocs",
-    "externalID" : "s:9RouteDocs21EndpointDocumentationV16defaultSortOrderSSvp",
+    "externalID" : "s:9RouteDocs21EndpointDocumentationV16defaultSortOrderQrvp",
     "fragments" : [
       {
         "kind" : "keyword",
@@ -33,9 +33,17 @@
         "text" : ": "
       },
       {
+        "kind" : "keyword",
+        "text" : "some"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
         "kind" : "typeIdentifier",
-        "preciseIdentifier" : "s:SS",
-        "text" : "String"
+        "preciseIdentifier" : "s:SL",
+        "text" : "Comparable"
       }
     ],
     "modules" : [
@@ -76,9 +84,17 @@
               "text" : ": "
             },
             {
+              "kind" : "keyword",
+              "text" : "some"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
               "kind" : "typeIdentifier",
-              "preciseIdentifier" : "s:SS",
-              "text" : "String"
+              "preciseIdentifier" : "s:SL",
+              "text" : "Comparable"
             },
             {
               "kind" : "text",
@@ -184,9 +200,17 @@
       "text" : ": "
     },
     {
+      "kind" : "keyword",
+      "text" : "some"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:SS",
-      "text" : "String"
+      "preciseIdentifier" : "s:SL",
+      "text" : "Comparable"
     }
   ],
   "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentation\/defaultSortOrder",

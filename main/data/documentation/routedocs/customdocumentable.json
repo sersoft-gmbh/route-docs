@@ -65,31 +65,11 @@
             {
               "kind" : "identifier",
               "text" : "CustomDocumentable"
-            },
-            {
-              "kind" : "text",
-              "text" : " : "
-            },
-            {
-              "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/AnyCustomDocumentable",
-              "kind" : "typeIdentifier",
-              "preciseIdentifier" : "s:9RouteDocs21AnyCustomDocumentableP",
-              "text" : "AnyCustomDocumentable"
             }
           ]
         }
       ],
       "kind" : "declarations"
-    }
-  ],
-  "relationshipsSections" : [
-    {
-      "identifiers" : [
-        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/AnyCustomDocumentable"
-      ],
-      "kind" : "relationships",
-      "title" : "Inherits From",
-      "type" : "inheritsFrom"
     }
   ],
   "schemaVersion" : {
@@ -103,6 +83,7 @@
   "topicSections" : [
     {
       "identifiers" : [
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/CustomDocumentable\/documentationBody",
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/CustomDocumentable\/documentationInstance"
       ],
       "title" : "Type Properties"
@@ -132,37 +113,6 @@
   "title" : "RouteDocs",
   "type" : "topic",
   "url" : "\/documentation\/routedocs"
-},
-"doc://RouteDocs/documentation/RouteDocs/AnyCustomDocumentable": {
-  "abstract" : [
-
-  ],
-  "fragments" : [
-    {
-      "kind" : "keyword",
-      "text" : "protocol"
-    },
-    {
-      "kind" : "text",
-      "text" : " "
-    },
-    {
-      "kind" : "identifier",
-      "text" : "AnyCustomDocumentable"
-    }
-  ],
-  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/AnyCustomDocumentable",
-  "kind" : "symbol",
-  "navigatorTitle" : [
-    {
-      "kind" : "identifier",
-      "text" : "AnyCustomDocumentable"
-    }
-  ],
-  "role" : "symbol",
-  "title" : "AnyCustomDocumentable",
-  "type" : "topic",
-  "url" : "\/documentation\/routedocs\/anycustomdocumentable"
 },
 "doc://RouteDocs/documentation/RouteDocs/CustomDocumentable": {
   "abstract" : [
@@ -194,6 +144,58 @@
   "title" : "CustomDocumentable",
   "type" : "topic",
   "url" : "\/documentation\/routedocs\/customdocumentable"
+},
+"doc://RouteDocs/documentation/RouteDocs/CustomDocumentable/documentationBody": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "static"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "documentationBody"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:9RouteDocs19DocumentationObjectV",
+      "text" : "DocumentationObject"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:9RouteDocs19DocumentationObjectV4BodyO",
+      "text" : "Body"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/CustomDocumentable\/documentationBody",
+  "kind" : "symbol",
+  "required" : true,
+  "role" : "symbol",
+  "title" : "documentationBody",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/customdocumentable\/documentationbody"
 },
 "doc://RouteDocs/documentation/RouteDocs/CustomDocumentable/documentationInstance": {
   "abstract" : [

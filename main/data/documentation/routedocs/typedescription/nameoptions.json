@@ -57,6 +57,14 @@
           ],
           "tokens" : [
             {
+              "kind" : "attribute",
+              "text" : "@frozen"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
               "kind" : "keyword",
               "text" : "struct"
             },

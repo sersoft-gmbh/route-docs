@@ -14,67 +14,9 @@
                 "type" : "groupMarker"
               },
               {
-                "children" : [
-                  {
-                    "children" : [
-                      {
-                        "path" : "\/documentation\/routedocs\/customdocumentable\/anydocumentationinstance",
-                        "title" : "static var anyDocumentationInstance: Any",
-                        "type" : "property"
-                      }
-                    ],
-                    "title" : "CustomDocumentable Implementations",
-                    "type" : "groupMarker"
-                  }
-                ],
-                "path" : "\/documentation\/routedocs\/anycustomdocumentable\/anydocumentationinstance",
-                "title" : "static var anyDocumentationInstance: Any",
-                "type" : "property"
-              },
-              {
-                "path" : "\/documentation\/routedocs\/anycustomdocumentable\/documentationbody",
+                "path" : "\/documentation\/routedocs\/customdocumentable\/documentationbody",
                 "title" : "static var documentationBody: DocumentationObject.Body",
                 "type" : "property"
-              }
-            ],
-            "path" : "\/documentation\/routedocs\/anycustomdocumentable",
-            "title" : "AnyCustomDocumentable",
-            "type" : "protocol"
-          },
-          {
-            "children" : [
-              {
-                "title" : "Type Properties",
-                "type" : "groupMarker"
-              },
-              {
-                "children" : [
-                  {
-                    "children" : [
-                      {
-                        "path" : "\/documentation\/routedocs\/typewrapping\/wrappedtype",
-                        "title" : "static var wrappedType: Any.Type",
-                        "type" : "property"
-                      }
-                    ],
-                    "title" : "TypeWrapping Implementations",
-                    "type" : "groupMarker"
-                  }
-                ],
-                "path" : "\/documentation\/routedocs\/anytypewrapping\/wrappedtype",
-                "title" : "static var wrappedType: Any.Type",
-                "type" : "property"
-              }
-            ],
-            "path" : "\/documentation\/routedocs\/anytypewrapping",
-            "title" : "AnyTypeWrapping",
-            "type" : "protocol"
-          },
-          {
-            "children" : [
-              {
-                "title" : "Type Properties",
-                "type" : "groupMarker"
               },
               {
                 "path" : "\/documentation\/routedocs\/customdocumentable\/documentationinstance",
@@ -445,7 +387,7 @@
               },
               {
                 "path" : "\/documentation\/routedocs\/docsviewcontext\/init(documentables:sortedby:usingname:)",
-                "title" : "init(documentables: some Sequence, sortedBy: KeyPath<EndpointDocumentation, some Comparable>, usingName: KeyPath<DocumentationType, String>?)",
+                "title" : "init(documentables: some Sequence<EndpointDocumentable>, sortedBy: KeyPath<EndpointDocumentation, some Comparable>, usingName: KeyPath<DocumentationType, String>?)",
                 "type" : "init"
               },
               {
@@ -669,22 +611,6 @@
               {
                 "children" : [
                   {
-                    "title" : "Instance Properties",
-                    "type" : "groupMarker"
-                  },
-                  {
-                    "path" : "\/documentation\/routedocs\/documentationobject\/halfwidthcornerquoted",
-                    "title" : "var halfWidthCornerQuoted: String",
-                    "type" : "property"
-                  }
-                ],
-                "path" : "\/documentation\/routedocs\/documentationobject\/customstringconvertible-implementations",
-                "title" : "CustomStringConvertible Implementations",
-                "type" : "symbol"
-              },
-              {
-                "children" : [
-                  {
                     "title" : "Operators",
                     "type" : "groupMarker"
                   },
@@ -741,22 +667,6 @@
               {
                 "title" : "Default Implementations",
                 "type" : "groupMarker"
-              },
-              {
-                "children" : [
-                  {
-                    "title" : "Instance Properties",
-                    "type" : "groupMarker"
-                  },
-                  {
-                    "path" : "\/documentation\/routedocs\/documentationtype\/halfwidthcornerquoted",
-                    "title" : "var halfWidthCornerQuoted: String",
-                    "type" : "property"
-                  }
-                ],
-                "path" : "\/documentation\/routedocs\/documentationtype\/customstringconvertible-implementations",
-                "title" : "CustomStringConvertible Implementations",
-                "type" : "symbol"
               },
               {
                 "children" : [
@@ -871,22 +781,6 @@
                           {
                             "children" : [
                               {
-                                "title" : "Instance Properties",
-                                "type" : "groupMarker"
-                              },
-                              {
-                                "path" : "\/documentation\/routedocs\/endpointdocumentation\/object\/body-swift.enum\/enumcase\/halfwidthcornerquoted",
-                                "title" : "var halfWidthCornerQuoted: String",
-                                "type" : "property"
-                              }
-                            ],
-                            "path" : "\/documentation\/routedocs\/endpointdocumentation\/object\/body-swift.enum\/enumcase\/customstringconvertible-implementations",
-                            "title" : "CustomStringConvertible Implementations",
-                            "type" : "symbol"
-                          },
-                          {
-                            "children" : [
-                              {
                                 "title" : "Operators",
                                 "type" : "groupMarker"
                               },
@@ -943,22 +837,6 @@
                           {
                             "title" : "Default Implementations",
                             "type" : "groupMarker"
-                          },
-                          {
-                            "children" : [
-                              {
-                                "title" : "Instance Properties",
-                                "type" : "groupMarker"
-                              },
-                              {
-                                "path" : "\/documentation\/routedocs\/endpointdocumentation\/object\/body-swift.enum\/field\/halfwidthcornerquoted",
-                                "title" : "var halfWidthCornerQuoted: String",
-                                "type" : "property"
-                              }
-                            ],
-                            "path" : "\/documentation\/routedocs\/endpointdocumentation\/object\/body-swift.enum\/field\/customstringconvertible-implementations",
-                            "title" : "CustomStringConvertible Implementations",
-                            "type" : "symbol"
                           },
                           {
                             "children" : [
@@ -1049,22 +927,6 @@
                       {
                         "children" : [
                           {
-                            "title" : "Instance Properties",
-                            "type" : "groupMarker"
-                          },
-                          {
-                            "path" : "\/documentation\/routedocs\/endpointdocumentation\/object\/body-swift.enum\/halfwidthcornerquoted",
-                            "title" : "var halfWidthCornerQuoted: String",
-                            "type" : "property"
-                          }
-                        ],
-                        "path" : "\/documentation\/routedocs\/endpointdocumentation\/object\/body-swift.enum\/customstringconvertible-implementations",
-                        "title" : "CustomStringConvertible Implementations",
-                        "type" : "symbol"
-                      },
-                      {
-                        "children" : [
-                          {
                             "title" : "Operators",
                             "type" : "groupMarker"
                           },
@@ -1086,22 +948,6 @@
                   {
                     "title" : "Default Implementations",
                     "type" : "groupMarker"
-                  },
-                  {
-                    "children" : [
-                      {
-                        "title" : "Instance Properties",
-                        "type" : "groupMarker"
-                      },
-                      {
-                        "path" : "\/documentation\/routedocs\/endpointdocumentation\/object\/halfwidthcornerquoted",
-                        "title" : "var halfWidthCornerQuoted: String",
-                        "type" : "property"
-                      }
-                    ],
-                    "path" : "\/documentation\/routedocs\/endpointdocumentation\/object\/customstringconvertible-implementations",
-                    "title" : "CustomStringConvertible Implementations",
-                    "type" : "symbol"
                   },
                   {
                     "children" : [
@@ -1195,22 +1041,6 @@
                   {
                     "children" : [
                       {
-                        "title" : "Instance Properties",
-                        "type" : "groupMarker"
-                      },
-                      {
-                        "path" : "\/documentation\/routedocs\/endpointdocumentation\/payload\/halfwidthcornerquoted",
-                        "title" : "var halfWidthCornerQuoted: String",
-                        "type" : "property"
-                      }
-                    ],
-                    "path" : "\/documentation\/routedocs\/endpointdocumentation\/payload\/customstringconvertible-implementations",
-                    "title" : "CustomStringConvertible Implementations",
-                    "type" : "symbol"
-                  },
-                  {
-                    "children" : [
-                      {
                         "title" : "Operators",
                         "type" : "groupMarker"
                       },
@@ -1285,22 +1115,6 @@
                   {
                     "children" : [
                       {
-                        "title" : "Instance Properties",
-                        "type" : "groupMarker"
-                      },
-                      {
-                        "path" : "\/documentation\/routedocs\/endpointdocumentation\/query-swift.struct\/halfwidthcornerquoted",
-                        "title" : "var halfWidthCornerQuoted: String",
-                        "type" : "property"
-                      }
-                    ],
-                    "path" : "\/documentation\/routedocs\/endpointdocumentation\/query-swift.struct\/customstringconvertible-implementations",
-                    "title" : "CustomStringConvertible Implementations",
-                    "type" : "symbol"
-                  },
-                  {
-                    "children" : [
-                      {
                         "title" : "Operators",
                         "type" : "groupMarker"
                       },
@@ -1339,7 +1153,7 @@
               },
               {
                 "path" : "\/documentation\/routedocs\/endpointdocumentation\/defaultsortorder",
-                "title" : "var defaultSortOrder: String",
+                "title" : "var defaultSortOrder: some Comparable",
                 "type" : "property"
               },
               {
@@ -1385,22 +1199,6 @@
               {
                 "title" : "Default Implementations",
                 "type" : "groupMarker"
-              },
-              {
-                "children" : [
-                  {
-                    "title" : "Instance Properties",
-                    "type" : "groupMarker"
-                  },
-                  {
-                    "path" : "\/documentation\/routedocs\/endpointdocumentation\/halfwidthcornerquoted",
-                    "title" : "var halfWidthCornerQuoted: String",
-                    "type" : "property"
-                  }
-                ],
-                "path" : "\/documentation\/routedocs\/endpointdocumentation\/customstringconvertible-implementations",
-                "title" : "CustomStringConvertible Implementations",
-                "type" : "symbol"
               },
               {
                 "children" : [
@@ -1691,7 +1489,7 @@
               },
               {
                 "path" : "\/documentation\/routedocs\/typedescription\/parents",
-                "title" : "var parents: some Sequence",
+                "title" : "var parents: some Sequence<TypeDescription>",
                 "type" : "property"
               },
               {
@@ -1711,22 +1509,6 @@
               {
                 "title" : "Default Implementations",
                 "type" : "groupMarker"
-              },
-              {
-                "children" : [
-                  {
-                    "title" : "Instance Properties",
-                    "type" : "groupMarker"
-                  },
-                  {
-                    "path" : "\/documentation\/routedocs\/typedescription\/halfwidthcornerquoted",
-                    "title" : "var halfWidthCornerQuoted: String",
-                    "type" : "property"
-                  }
-                ],
-                "path" : "\/documentation\/routedocs\/typedescription\/customstringconvertible-implementations",
-                "title" : "CustomStringConvertible Implementations",
-                "type" : "symbol"
               },
               {
                 "children" : [
@@ -1759,6 +1541,6 @@
   "schemaVersion" : {
     "major" : 0,
     "minor" : 1,
-    "patch" : 0
+    "patch" : 1
   }
 }

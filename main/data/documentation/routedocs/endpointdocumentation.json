@@ -127,7 +127,6 @@
     {
       "generated" : true,
       "identifiers" : [
-        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentation\/CustomStringConvertible-Implementations",
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentation\/Equatable-Implementations"
       ],
       "title" : "Default Implementations"
@@ -203,17 +202,6 @@
   "title" : "EndpointDocumentation",
   "type" : "topic",
   "url" : "\/documentation\/routedocs\/endpointdocumentation"
-},
-"doc://RouteDocs/documentation/RouteDocs/EndpointDocumentation/CustomStringConvertible-Implementations": {
-  "abstract" : [
-
-  ],
-  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentation\/CustomStringConvertible-Implementations",
-  "kind" : "article",
-  "role" : "collectionGroup",
-  "title" : "CustomStringConvertible Implementations",
-  "type" : "topic",
-  "url" : "\/documentation\/routedocs\/endpointdocumentation\/customstringconvertible-implementations"
 },
 "doc://RouteDocs/documentation/RouteDocs/EndpointDocumentation/Equatable-Implementations": {
   "abstract" : [
@@ -341,9 +329,17 @@
       "text" : ": "
     },
     {
+      "kind" : "keyword",
+      "text" : "some"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:SS",
-      "text" : "String"
+      "preciseIdentifier" : "s:SL",
+      "text" : "Comparable"
     }
   ],
   "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentation\/defaultSortOrder",
