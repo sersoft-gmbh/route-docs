@@ -10,7 +10,7 @@ jobs:
   test-spm:
     strategy:
       matrix:
-        os: [ macos-12 ]
+        os: [ macos-13 ]
         swift-version: [ '' ]
         xcode-version: [ '^14.3' ]
         include:
@@ -60,7 +60,7 @@ jobs:
           fail_ci_if_error: true
 
   test-xcode:
-    runs-on: macos-12
+    runs-on: macos-13
     strategy:
       matrix:
         platform:
