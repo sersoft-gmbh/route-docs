@@ -1,3 +1,4 @@
+import Foundation
 import XCTest
 @testable import RouteDocs
 
@@ -9,7 +10,7 @@ extension Dictionary {
 final class TypeDescriptionTests: XCTestCase {
     func testVariousTypes() {
         let typeDesc1 = TypeDescription(Dictionary<String, Dictionary<String, Int>.SomeNestedType>.Index.self)
-        let typeDesc2 = TypeDescription(Dictionary<String, Dictionary<String, Int>.Index>.SomeOtherNestedType.self)
+        let typeDesc2 = TypeDescription(Dictionary<UUID, Dictionary<String, Int>.Index>.SomeOtherNestedType.self)
         let expected1 = TypeDescription(
             module: "Swift",
             parent: .init(
@@ -39,7 +40,7 @@ final class TypeDescriptionTests: XCTestCase {
                 parent: nil,
                 name: "Dictionary",
                 genericParameters: [
-                    .init(module: "Swift", parent: nil, name: "String", genericParameters: []),
+                    .init(module: "Foundation", parent: nil, name: "UUID", genericParameters: []),
                     .init(
                         module: "Swift",
                         parent: .init(module: "Swift", parent: nil, name: "Dictionary", genericParameters: [
@@ -56,5 +57,26 @@ final class TypeDescriptionTests: XCTestCase {
         )
         XCTAssertEqual(typeDesc1, expected1)
         XCTAssertEqual(typeDesc2, expected2)
+    }
+
+    func testSpecialTypes() {
+        let anyTypeDesc = TypeDescription(Any.self)
+        let anyExpected = TypeDescription(module: "Swift", parent: nil, name: "Any", genericParameters: [])
+        let voidTypeDesc = TypeDescription(Void.self)
+        let voidExpected = TypeDescription(module: "Swift", parent: nil, name: "Void", genericParameters: [])
+        let deeperAnyTypeDesc = TypeDescription(Dictionary<String, Array<Any>>.self)
+        let deeperAnyExpected = TypeDescription(module: "Swift", parent: nil, name: "Dictionary", genericParameters: [
+            .init(module: "Swift", parent: nil, name: "String", genericParameters: []),
+            .init(module: "Swift", parent: nil, name: "Array", genericParameters: [anyExpected]),
+        ])
+        let deeperVoidTypeDesc = TypeDescription(Dictionary<UUID, Array<Void>>.self)
+        let deeperVoidExpected = TypeDescription(module: "Swift", parent: nil, name: "Dictionary", genericParameters: [
+            .init(module: "Foundation", parent: nil, name: "UUID", genericParameters: []),
+            .init(module: "Swift", parent: nil, name: "Array", genericParameters: [voidExpected]),
+        ])
+        XCTAssertEqual(anyTypeDesc, anyExpected)
+        XCTAssertEqual(voidTypeDesc, voidExpected)
+        XCTAssertEqual(deeperAnyTypeDesc, deeperAnyExpected)
+        XCTAssertEqual(deeperVoidTypeDesc, deeperVoidExpected)
     }
 }

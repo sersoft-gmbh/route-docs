@@ -2,7 +2,14 @@ import NIOConcurrencyHelpers
 import Vapor
 
 extension CodingUserInfoKey {
-    public static let isDocumentationDecoder = CodingUserInfoKey(rawValue: "IsDocumentationDecoder")!
+    public static let isDocumentationDecoder = CodingUserInfoKey(rawValue: "de.sersoft.route-docs.is-documentation-decoder")!
+}
+
+extension Decoder {
+    @inlinable
+    public var isDocumentationDecoder: Bool {
+        userInfo[.isDocumentationDecoder] as? Bool == true
+    }
 }
 
 public struct DocumentationObject: Hashable, CustomStringConvertible, Sendable {

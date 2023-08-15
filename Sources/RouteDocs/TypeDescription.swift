@@ -129,7 +129,14 @@ extension TypeDescription.NameOptions {
     public static let withParents = TypeDescription.NameOptions(rawValue: 1 << 1)
 }
 
-fileprivate struct TypeParser<Text: StringProtocol> {
+fileprivate struct TypeParser<Text: StringProtocol> where Text.SubSequence: RangeReplaceableCollection {
+    @frozen
+    fileprivate enum SpecialTypes<T: StringProtocol> {
+        static var any: T { "Any" }
+        static var void: T { "Void" }
+        static var voidAsTuple: T { "()" }
+    }
+
     private struct Context {
         let name: Text.SubSequence
         var generics = Array<TypeDescription>()
@@ -188,16 +195,20 @@ fileprivate struct TypeParser<Text: StringProtocol> {
     }
 
     private mutating func parseModule() -> (String, isExtension: Bool) {
+        guard peekSpecialType() == nil else { return ("Swift", false) }
         if currentChar == "(" {
             let prefix = seek(to: ")").dropFirst() // Drop past the opening bracket
             seek(to: ":") // (...):MODULE.TYPENAME <- Move past the colon
             return (String(prefix.dropPrefix("extension in ") ?? prefix), true)
-        } else {
-            return (String(seek(to: ".")), false)
         }
+        return (String(seek(to: ".")), false)
     }
 
     private mutating func parseIdentifier() -> Text.SubSequence {
+        if let (index, specialType) = peekSpecialType() {
+            currentIndex = index
+            return specialType
+        }
         if currentChar == "(" { // TODO: Where else can this occur?
             // (unknown context ...)
             seek(to: ".")
@@ -208,6 +219,16 @@ fileprivate struct TypeParser<Text: StringProtocol> {
         } else {
             defer { currentIndex = remainder.endIndex }
             return remainder
+        }
+    }
+
+    private func peekSpecialType() -> (indexAfter: Text.Index, type: Text.SubSequence)? {
+        let index = remainder.firstIndex(where: ",>".contains) ?? remainder.endIndex
+        let identifier = remainder[..<index]
+        switch identifier {
+        case SpecialTypes.any, SpecialTypes.void: return (index, identifier)
+        case SpecialTypes.voidAsTuple: return (index, SpecialTypes.void)
+        default: return nil
         }
     }
 

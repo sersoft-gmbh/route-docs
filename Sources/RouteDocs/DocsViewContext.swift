@@ -73,8 +73,8 @@ public struct DocsViewContext: Encodable, Sendable {
     public let otherDocumentations: Array<Documentation>
 }
 
-fileprivate extension HTTPMethod {
-    var sortOrder: String {
+extension HTTPMethod {
+    fileprivate var sortOrder: String {
         switch self {
         case .GET: return "1GET"
         case .PUT: return "2PUT"
@@ -85,8 +85,8 @@ fileprivate extension HTTPMethod {
     }
 }
 
-fileprivate extension DocumentationType {
-    func docsTypeName(using namePath: KeyPath<DocumentationType, String>?) -> String {
+extension DocumentationType {
+    fileprivate func docsTypeName(using namePath: KeyPath<DocumentationType, String>?) -> String {
         customName ?? namePath.map { self[keyPath: $0] } ?? typeDescription.typeName(with: [.withParents])
     }
 }
@@ -157,8 +157,8 @@ extension DocsViewContext.Documentation {
     }
 }
 
-fileprivate extension Sequence where Element == EndpointDocumentation {
-    func contextDocumentation(orderedBy keyPath: KeyPath<Element, some Comparable>,
+extension Sequence where Element == EndpointDocumentation {
+    fileprivate func contextDocumentation(orderedBy keyPath: KeyPath<Element, some Comparable>,
                               usingName namePath: KeyPath<DocumentationType, String>?) -> Array<DocsViewContext.Documentation> {
         sorted { $0[keyPath: keyPath] < $1[keyPath: keyPath] }
             .map { DocsViewContext.Documentation(documentation: $0, usingName: namePath) }
