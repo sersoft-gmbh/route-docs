@@ -1,21 +1,21 @@
 import Vapor
 
 /// This can be used as context for a documentation view.
-public struct DocsViewContext: Encodable, Sendable {
-    public struct Documentation: Encodable, Sendable {
-        public struct Object: Encodable, Sendable {
-            public enum Body: Encodable, Sendable {
+public struct DocsViewContext: Sendable, Encodable {
+    public struct Documentation: Sendable, Encodable {
+        public struct Object: Sendable, Encodable {
+            public enum Body: Sendable, Encodable {
                 private enum CodingKeys: String, CodingKey {
                     case isEmpty, fields, cases
                 }
 
-                public struct Field: Encodable, Sendable {
+                public struct Field: Sendable, Encodable {
                     public let name: String
                     public let type: String
                     public let isOptional: Bool
                 }
 
-                public struct EnumCase: Encodable, Sendable {
+                public struct EnumCase: Sendable, Encodable {
                     public let name: String?
                     public let value: String
                 }
@@ -42,11 +42,12 @@ public struct DocsViewContext: Encodable, Sendable {
                     }
                 }
             }
+
             public let name: String
             public let body: Body
         }
 
-        public struct Query: Encodable, Sendable {
+        public struct Query: Sendable, Encodable {
             public let objects: Array<Object>
         }
 
@@ -63,7 +64,7 @@ public struct DocsViewContext: Encodable, Sendable {
         public let requiredAuthorization: Array<String>
     }
 
-    public struct GroupedDocumentation: Encodable, Sendable {
+    public struct GroupedDocumentation: Sendable, Encodable {
         public let id: Int
         public let groupName: String
         public let documentations: Array<Documentation>

@@ -12,9 +12,9 @@ extension Decoder {
     }
 }
 
-public struct DocumentationObject: Hashable, CustomStringConvertible, Sendable {
-    public enum Body: Hashable, Sendable {
-        public struct EnumCase: Hashable, Sendable {
+public struct DocumentationObject: Sendable, Hashable, CustomStringConvertible {
+    public enum Body: Sendable, Hashable {
+        public struct EnumCase: Sendable, Hashable {
             public let name: String?
             public let value: String
 
@@ -62,7 +62,7 @@ public struct DocumentationObject: Hashable, CustomStringConvertible, Sendable {
     public let type: Any.Type
     public fileprivate(set) var body: Body
 
-    public var isOptional: Bool { type is AnyOptionalType.Type }
+    public var isOptional: Bool { type is any AnyOptionalType.Type }
 
     public var description: String { description(indentedBy: 0) }
 

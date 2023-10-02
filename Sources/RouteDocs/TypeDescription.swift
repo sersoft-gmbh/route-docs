@@ -1,10 +1,10 @@
-public struct TypeDescription: Hashable, Sendable, Codable, CustomStringConvertible {
+public struct TypeDescription: Sendable, Hashable, Codable, CustomStringConvertible {
     private enum CodingKeys: String, CodingKey {
         case module, parent, name
         case genericParameters = "generic_parameters"
     }
 
-    private enum _ParentStorage: Hashable, Sendable {
+    private enum _ParentStorage: Sendable, Hashable {
         case none
         indirect case some(TypeDescription)
 

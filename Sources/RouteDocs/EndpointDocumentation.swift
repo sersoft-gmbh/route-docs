@@ -1,6 +1,6 @@
 import Vapor
 
-public struct DocumentationType: Codable, Equatable, CustomStringConvertible, Sendable {
+public struct DocumentationType: Sendable, Equatable, Codable, CustomStringConvertible {
     public let typeDescription: TypeDescription
     public let customName: String?
 
@@ -13,18 +13,18 @@ public struct DocumentationType: Codable, Equatable, CustomStringConvertible, Se
     fileprivate init(parsing type: Any.Type) {
         let actualType = _leafType(of: _openOptionals(in: type))
         typeDescription = .init(any: actualType)
-        customName = (actualType as? CustomDocumentationNamed.Type)?.documentationName
+        customName = (actualType as? any CustomDocumentationNamed.Type)?.documentationName
     }
 }
 
-public struct EndpointDocumentation: Codable, Equatable, CustomStringConvertible, Sendable {
-    public struct Object: Codable, Equatable, CustomStringConvertible, Sendable {
-        public enum Body: Codable, Equatable, CustomStringConvertible, Sendable {
+public struct EndpointDocumentation: Sendable, Equatable, Codable, CustomStringConvertible {
+    public struct Object: Sendable, Equatable, Codable, CustomStringConvertible {
+        public enum Body: Sendable, Equatable, Codable, CustomStringConvertible {
             private enum CodingKeys: String, CodingKey {
                 case isEmpty, fields, cases
             }
 
-            public struct Field: Codable, Equatable, CustomStringConvertible, Sendable {
+            public struct Field: Sendable, Equatable, Codable, CustomStringConvertible {
                 public let name: String
                 public let type: DocumentationType
                 public let isOptional: Bool
@@ -32,7 +32,7 @@ public struct EndpointDocumentation: Codable, Equatable, CustomStringConvertible
                 public var description: String { "\(name): \(type)\(isOptional ? "?" : "")" }
             }
 
-            public struct EnumCase: Codable, Equatable, CustomStringConvertible, Sendable {
+            public struct EnumCase: Sendable, Equatable, Codable, CustomStringConvertible {
                 public let name: String?
                 public let value: String
 
@@ -77,7 +77,7 @@ public struct EndpointDocumentation: Codable, Equatable, CustomStringConvertible
                 }
             }
 
-            public init(from decoder: Decoder) throws {
+            public init(from decoder: any Decoder) throws {
                 let container = try decoder.container(keyedBy: CodingKeys.self)
                 if try container.decode(Bool.self, forKey: .isEmpty) {
                     self = .empty
@@ -88,7 +88,7 @@ public struct EndpointDocumentation: Codable, Equatable, CustomStringConvertible
                 }
             }
 
-            public func encode(to encoder: Encoder) throws {
+            public func encode(to encoder: any Encoder) throws {
                 var container = encoder.container(keyedBy: CodingKeys.self)
                 switch self {
                 case .empty:
@@ -150,7 +150,7 @@ public struct EndpointDocumentation: Codable, Equatable, CustomStringConvertible
         }
     }
 
-    public struct Query: Codable, Equatable, CustomStringConvertible, Sendable {
+    public struct Query: Sendable, Equatable, Codable, CustomStringConvertible {
         public let objects: Array<Object>
 
         public var description: String {
@@ -168,7 +168,7 @@ public struct EndpointDocumentation: Codable, Equatable, CustomStringConvertible
         }
     }
 
-    public struct Payload: Codable, Equatable, CustomStringConvertible, @unchecked Sendable { // unchecked because of HTTPMediaType
+    public struct Payload: Equatable, Codable, CustomStringConvertible, @unchecked Sendable { // unchecked because of HTTPMediaType
         public let mediaType: HTTPMediaType
         public let objects: Array<Object>
 
@@ -312,7 +312,7 @@ fileprivate extension RangeReplaceableCollection where Element: Equatable {
 }
 
 fileprivate func _openOptionals(in type: Any.Type) -> Any.Type {
-    (type as? AnyOptionalType.Type).map { _openOptionals(in: $0.anyWrappedType) } ?? type
+    (type as? any AnyOptionalType.Type).map { _openOptionals(in: $0.anyWrappedType) } ?? type
 }
 
 fileprivate func _leafType(of type: Any.Type) -> Any.Type {

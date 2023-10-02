@@ -1,8 +1,17 @@
-// swift-tools-version:5.8
+// swift-tools-version:5.9
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
-import Foundation
+
+let swiftSettings: Array<SwiftSetting> = [
+    .enableUpcomingFeature("ConciseMagicFile"),
+    .enableUpcomingFeature("ExistentialAny"),
+    .enableUpcomingFeature("BareSlashRegexLiterals"),
+    .enableUpcomingFeature("DisableOutwardActorInference"),
+//    .enableExperimentalFeature("AccessLevelOnImport"),
+//    .enableExperimentalFeature("VariadicGenerics"),
+//    .unsafeFlags(["-warn-concurrency"], .when(configuration: .debug)),
+]
 
 let package = Package(
     name: "route-docs",
@@ -17,10 +26,11 @@ let package = Package(
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
-        .package(url: "https://github.com/apple/swift-nio.git", from: "2.42.0"),
-        .package(url: "https://github.com/vapor/vapor.git", from: "4.50.0"),
-        .package(url: "https://github.com/vapor/leaf-kit.git", from: "1.3.0"),
-        .package(url: "https://github.com/vapor/leaf.git", from: "4.0.0"),
+        .package(url: "https://github.com/apple/swift-docc-plugin", from: "1.0.0"),
+        .package(url: "https://github.com/apple/swift-nio", from: "2.59.0"),
+        .package(url: "https://github.com/vapor/vapor", from: "4.84.0"),
+        .package(url: "https://github.com/vapor/leaf-kit", from: "1.10.0"),
+        .package(url: "https://github.com/vapor/leaf", from: "4.2.0"),
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
@@ -35,13 +45,11 @@ let package = Package(
             ],
             resources: [
                 .copy("DefaultDocsView"),
-            ]),
+            ],
+            swiftSettings: swiftSettings),
         .testTarget(
             name: "RouteDocsTests",
-            dependencies: ["RouteDocs"]),
+            dependencies: ["RouteDocs"],
+            swiftSettings: swiftSettings),
     ]
 )
-
-if ProcessInfo.processInfo.environment["ENABLE_DOCC_SUPPORT"] == "1" {
-    package.dependencies.append(.package(url: "https://github.com/apple/swift-docc-plugin", from: "1.0.0"))
-}
