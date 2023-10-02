@@ -1530,6 +1530,665 @@
             "path" : "\/documentation\/routedocs\/typedescription",
             "title" : "TypeDescription",
             "type" : "struct"
+          },
+          {
+            "title" : "Extended Modules",
+            "type" : "groupMarker"
+          },
+          {
+            "children" : [
+              {
+                "title" : "Extended Structures",
+                "type" : "groupMarker"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Default Implementations",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Type Properties",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/foundation\/date\/documentationbody",
+                        "title" : "static var documentationBody: DocumentationObject.Body",
+                        "type" : "property"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/foundation\/date\/documentationinstance",
+                        "title" : "static var documentationInstance: Date",
+                        "type" : "property"
+                      }
+                    ],
+                    "path" : "\/documentation\/routedocs\/foundation\/date\/customdocumentable-implementations",
+                    "title" : "CustomDocumentable Implementations",
+                    "type" : "symbol"
+                  }
+                ],
+                "path" : "\/documentation\/routedocs\/foundation\/date",
+                "title" : "Date",
+                "type" : "extension"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Default Implementations",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Type Properties",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/foundation\/url\/documentationbody",
+                        "title" : "static var documentationBody: DocumentationObject.Body",
+                        "type" : "property"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/foundation\/url\/documentationinstance",
+                        "title" : "static var documentationInstance: URL",
+                        "type" : "property"
+                      }
+                    ],
+                    "path" : "\/documentation\/routedocs\/foundation\/url\/customdocumentable-implementations",
+                    "title" : "CustomDocumentable Implementations",
+                    "type" : "symbol"
+                  }
+                ],
+                "path" : "\/documentation\/routedocs\/foundation\/url",
+                "title" : "URL",
+                "type" : "extension"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Default Implementations",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Type Properties",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/foundation\/uuid\/documentationbody",
+                        "title" : "static var documentationBody: DocumentationObject.Body",
+                        "type" : "property"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/foundation\/uuid\/documentationinstance",
+                        "title" : "static var documentationInstance: UUID",
+                        "type" : "property"
+                      }
+                    ],
+                    "path" : "\/documentation\/routedocs\/foundation\/uuid\/customdocumentable-implementations",
+                    "title" : "CustomDocumentable Implementations",
+                    "type" : "symbol"
+                  }
+                ],
+                "path" : "\/documentation\/routedocs\/foundation\/uuid",
+                "title" : "UUID",
+                "type" : "extension"
+              }
+            ],
+            "path" : "\/documentation\/routedocs\/foundation",
+            "title" : "Foundation",
+            "type" : "extension"
+          },
+          {
+            "children" : [
+              {
+                "title" : "Extended Classes",
+                "type" : "groupMarker"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Instance Methods",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/routedocs\/leafkit\/leafrenderer\/adddefaultdocssource(for:)",
+                    "title" : "func addDefaultDocsSource(for: Application) throws",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/routedocs\/leafkit\/leafrenderer\/adddefaultdocssource(with:)",
+                    "title" : "func addDefaultDocsSource(with: NonBlockingFileIO) throws",
+                    "type" : "method"
+                  }
+                ],
+                "path" : "\/documentation\/routedocs\/leafkit\/leafrenderer",
+                "title" : "LeafRenderer",
+                "type" : "extension"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Instance Methods",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/routedocs\/leafkit\/leafsources\/adddefaultdocssource(for:)",
+                    "title" : "func addDefaultDocsSource(for: Application) throws",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/routedocs\/leafkit\/leafsources\/adddefaultdocssource(with:)",
+                    "title" : "func addDefaultDocsSource(with: NonBlockingFileIO) throws",
+                    "type" : "method"
+                  }
+                ],
+                "path" : "\/documentation\/routedocs\/leafkit\/leafsources",
+                "title" : "LeafSources",
+                "type" : "extension"
+              },
+              {
+                "title" : "Extended Structures",
+                "type" : "groupMarker"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Type Methods",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/routedocs\/leafkit\/nioleaffiles\/defaultdocs(with:)",
+                    "title" : "static func defaultDocs(with: NonBlockingFileIO) -> NIOLeafFiles",
+                    "type" : "method"
+                  }
+                ],
+                "path" : "\/documentation\/routedocs\/leafkit\/nioleaffiles",
+                "title" : "NIOLeafFiles",
+                "type" : "extension"
+              }
+            ],
+            "path" : "\/documentation\/routedocs\/leafkit",
+            "title" : "LeafKit",
+            "type" : "extension"
+          },
+          {
+            "children" : [
+              {
+                "title" : "Extended Protocols",
+                "type" : "groupMarker"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Type Properties",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/routedocs\/swift\/caseiterable\/documentationbody",
+                    "title" : "static var documentationBody: DocumentationObject.Body",
+                    "type" : "property"
+                  }
+                ],
+                "path" : "\/documentation\/routedocs\/swift\/caseiterable",
+                "title" : "CaseIterable",
+                "type" : "extension"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Instance Properties",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/routedocs\/swift\/decoder\/isdocumentationdecoder",
+                    "title" : "var isDocumentationDecoder: Bool",
+                    "type" : "property"
+                  }
+                ],
+                "path" : "\/documentation\/routedocs\/swift\/decoder",
+                "title" : "Decoder",
+                "type" : "extension"
+              },
+              {
+                "title" : "Extended Structures",
+                "type" : "groupMarker"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Default Implementations",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Type Properties",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/swift\/array\/documentationname",
+                        "title" : "static var documentationName: String",
+                        "type" : "property"
+                      }
+                    ],
+                    "path" : "\/documentation\/routedocs\/swift\/array\/customdocumentationnamed-implementations",
+                    "title" : "CustomDocumentationNamed Implementations",
+                    "type" : "symbol"
+                  }
+                ],
+                "path" : "\/documentation\/routedocs\/swift\/array",
+                "title" : "Array",
+                "type" : "extension"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Default Implementations",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Type Properties",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/swift\/closedrange\/documentationname",
+                        "title" : "static var documentationName: String",
+                        "type" : "property"
+                      }
+                    ],
+                    "path" : "\/documentation\/routedocs\/swift\/closedrange\/customdocumentationnamed-implementations",
+                    "title" : "CustomDocumentationNamed Implementations",
+                    "type" : "symbol"
+                  }
+                ],
+                "path" : "\/documentation\/routedocs\/swift\/closedrange",
+                "title" : "ClosedRange",
+                "type" : "extension"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Type Properties",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/routedocs\/swift\/codinguserinfokey\/isdocumentationdecoder",
+                    "title" : "static let isDocumentationDecoder: CodingUserInfoKey",
+                    "type" : "property"
+                  }
+                ],
+                "path" : "\/documentation\/routedocs\/swift\/codinguserinfokey",
+                "title" : "CodingUserInfoKey",
+                "type" : "extension"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Default Implementations",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Type Properties",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/swift\/contiguousarray\/documentationname",
+                        "title" : "static var documentationName: String",
+                        "type" : "property"
+                      }
+                    ],
+                    "path" : "\/documentation\/routedocs\/swift\/contiguousarray\/customdocumentationnamed-implementations",
+                    "title" : "CustomDocumentationNamed Implementations",
+                    "type" : "symbol"
+                  }
+                ],
+                "path" : "\/documentation\/routedocs\/swift\/contiguousarray",
+                "title" : "ContiguousArray",
+                "type" : "extension"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Default Implementations",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Type Properties",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/swift\/partialrangefrom\/documentationname",
+                        "title" : "static var documentationName: String",
+                        "type" : "property"
+                      }
+                    ],
+                    "path" : "\/documentation\/routedocs\/swift\/partialrangefrom\/customdocumentationnamed-implementations",
+                    "title" : "CustomDocumentationNamed Implementations",
+                    "type" : "symbol"
+                  }
+                ],
+                "path" : "\/documentation\/routedocs\/swift\/partialrangefrom",
+                "title" : "PartialRangeFrom",
+                "type" : "extension"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Default Implementations",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Type Properties",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/swift\/partialrangethrough\/documentationname",
+                        "title" : "static var documentationName: String",
+                        "type" : "property"
+                      }
+                    ],
+                    "path" : "\/documentation\/routedocs\/swift\/partialrangethrough\/customdocumentationnamed-implementations",
+                    "title" : "CustomDocumentationNamed Implementations",
+                    "type" : "symbol"
+                  }
+                ],
+                "path" : "\/documentation\/routedocs\/swift\/partialrangethrough",
+                "title" : "PartialRangeThrough",
+                "type" : "extension"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Default Implementations",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Type Properties",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/swift\/partialrangeupto\/documentationname",
+                        "title" : "static var documentationName: String",
+                        "type" : "property"
+                      }
+                    ],
+                    "path" : "\/documentation\/routedocs\/swift\/partialrangeupto\/customdocumentationnamed-implementations",
+                    "title" : "CustomDocumentationNamed Implementations",
+                    "type" : "symbol"
+                  }
+                ],
+                "path" : "\/documentation\/routedocs\/swift\/partialrangeupto",
+                "title" : "PartialRangeUpTo",
+                "type" : "extension"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Default Implementations",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Type Properties",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/swift\/range\/documentationname",
+                        "title" : "static var documentationName: String",
+                        "type" : "property"
+                      }
+                    ],
+                    "path" : "\/documentation\/routedocs\/swift\/range\/customdocumentationnamed-implementations",
+                    "title" : "CustomDocumentationNamed Implementations",
+                    "type" : "symbol"
+                  }
+                ],
+                "path" : "\/documentation\/routedocs\/swift\/range",
+                "title" : "Range",
+                "type" : "extension"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Default Implementations",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Type Properties",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/swift\/set\/documentationname",
+                        "title" : "static var documentationName: String",
+                        "type" : "property"
+                      }
+                    ],
+                    "path" : "\/documentation\/routedocs\/swift\/set\/customdocumentationnamed-implementations",
+                    "title" : "CustomDocumentationNamed Implementations",
+                    "type" : "symbol"
+                  }
+                ],
+                "path" : "\/documentation\/routedocs\/swift\/set",
+                "title" : "Set",
+                "type" : "extension"
+              },
+              {
+                "title" : "Extended Enumerations",
+                "type" : "groupMarker"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Default Implementations",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Type Properties",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/swift\/optional\/documentationbody",
+                        "title" : "static var documentationBody: DocumentationObject.Body",
+                        "type" : "property"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/swift\/optional\/documentationinstance",
+                        "title" : "static var documentationInstance: Optional<Wrapped>",
+                        "type" : "property"
+                      }
+                    ],
+                    "path" : "\/documentation\/routedocs\/swift\/optional\/customdocumentable-implementations",
+                    "title" : "CustomDocumentable Implementations",
+                    "type" : "symbol"
+                  }
+                ],
+                "path" : "\/documentation\/routedocs\/swift\/optional",
+                "title" : "Optional",
+                "type" : "extension"
+              }
+            ],
+            "path" : "\/documentation\/routedocs\/swift",
+            "title" : "Swift",
+            "type" : "extension"
+          },
+          {
+            "children" : [
+              {
+                "title" : "Extended Classes",
+                "type" : "groupMarker"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Instance Properties",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/routedocs\/vapor\/application\/defaultdocsleafsource",
+                    "title" : "var defaultDocsLeafSource: some LeafSource",
+                    "type" : "property"
+                  },
+                  {
+                    "title" : "Extended Structures",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Instance Methods",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/vapor\/application\/leaf\/registerdocumentationtags()",
+                        "title" : "func registerDocumentationTags()",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/vapor\/application\/leaf\/setuproutedocs()",
+                        "title" : "func setupRouteDocs() throws",
+                        "type" : "method"
+                      }
+                    ],
+                    "path" : "\/documentation\/routedocs\/vapor\/application\/leaf",
+                    "title" : "Application.Leaf",
+                    "type" : "extension"
+                  }
+                ],
+                "path" : "\/documentation\/routedocs\/vapor\/application",
+                "title" : "Application",
+                "type" : "extension"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Instance Methods",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/routedocs\/vapor\/route\/adddocumentation(_:)",
+                    "title" : "func addDocumentation(EndpointDocumentation)",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/routedocs\/vapor\/route\/adddocumentation(groupedas:query:request:response:requiredauthorization:)",
+                    "title" : "func addDocumentation(groupedAs: String?, query: EndpointDocumentation.Query?, request: EndpointDocumentation.Payload?, response: EndpointDocumentation.Payload?, requiredAuthorization: Array<String>)",
+                    "type" : "method"
+                  },
+                  {
+                    "title" : "Default Implementations",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Instance Properties",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/vapor\/route\/documentation",
+                        "title" : "var documentation: EndpointDocumentation?",
+                        "type" : "property"
+                      }
+                    ],
+                    "path" : "\/documentation\/routedocs\/vapor\/route\/endpointdocumentable-implementations",
+                    "title" : "EndpointDocumentable Implementations",
+                    "type" : "symbol"
+                  }
+                ],
+                "path" : "\/documentation\/routedocs\/vapor\/route",
+                "title" : "Route",
+                "type" : "extension"
+              },
+              {
+                "title" : "Extended Protocols",
+                "type" : "groupMarker"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Instance Methods",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/routedocs\/vapor\/viewrenderer\/renderdefaultdocs(with:)",
+                    "title" : "func renderDefaultDocs(with: DocsViewContext) async throws -> View",
+                    "type" : "method"
+                  }
+                ],
+                "path" : "\/documentation\/routedocs\/vapor\/viewrenderer",
+                "title" : "ViewRenderer",
+                "type" : "extension"
+              },
+              {
+                "title" : "Extended Structures",
+                "type" : "groupMarker"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Default Implementations",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Initializers",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/vapor\/httpmediatype\/init(from:)",
+                        "title" : "init(from: Decoder) throws",
+                        "type" : "init"
+                      }
+                    ],
+                    "path" : "\/documentation\/routedocs\/vapor\/httpmediatype\/decodable-implementations",
+                    "title" : "Decodable Implementations",
+                    "type" : "symbol"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Instance Methods",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/vapor\/httpmediatype\/encode(to:)",
+                        "title" : "func encode(to: Encoder) throws",
+                        "type" : "method"
+                      }
+                    ],
+                    "path" : "\/documentation\/routedocs\/vapor\/httpmediatype\/encodable-implementations",
+                    "title" : "Encodable Implementations",
+                    "type" : "symbol"
+                  }
+                ],
+                "path" : "\/documentation\/routedocs\/vapor\/httpmediatype",
+                "title" : "HTTPMediaType",
+                "type" : "extension"
+              }
+            ],
+            "path" : "\/documentation\/routedocs\/vapor",
+            "title" : "Vapor",
+            "type" : "extension"
           }
         ],
         "path" : "\/documentation\/routedocs",

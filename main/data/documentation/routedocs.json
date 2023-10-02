@@ -50,6 +50,15 @@
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription"
       ],
       "title" : "Structures"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Foundation",
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/LeafKit",
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Swift",
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Vapor"
+      ],
+      "title" : "Extended Modules"
     }
   ],
   "variants" : [
@@ -297,6 +306,39 @@
   "type" : "topic",
   "url" : "\/documentation\/routedocs\/endpointdocumentation"
 },
+"doc://RouteDocs/documentation/RouteDocs/Foundation": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Foundation",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "Foundation",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/foundation"
+},
+"doc://RouteDocs/documentation/RouteDocs/LeafKit": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/LeafKit",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "LeafKit",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/leafkit"
+},
+"doc://RouteDocs/documentation/RouteDocs/Swift": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Swift",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "Swift",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/swift"
+},
 "doc://RouteDocs/documentation/RouteDocs/TypeDescription": {
   "abstract" : [
 
@@ -358,6 +400,17 @@
   "title" : "TypeWrapping",
   "type" : "topic",
   "url" : "\/documentation\/routedocs\/typewrapping"
+},
+"doc://RouteDocs/documentation/RouteDocs/Vapor": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Vapor",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "Vapor",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/vapor"
 }
 }
 }

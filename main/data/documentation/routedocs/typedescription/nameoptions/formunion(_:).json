@@ -83,7 +83,10 @@
     ],
     "modules" : [
       {
-        "name" : "RouteDocs"
+        "name" : "RouteDocs",
+        "relatedModules" : [
+          "Swift"
+        ]
       }
     ],
     "role" : "symbol",
