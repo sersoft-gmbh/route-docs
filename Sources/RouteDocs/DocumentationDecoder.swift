@@ -59,6 +59,10 @@ public struct DocumentationObject: Sendable, Hashable, CustomStringConvertible {
         }
     }
 
+    public static func clearTypeCaches() {
+        DocumentationDecoder.Cache.clear()
+    }
+
     public let type: Any.Type
     public fileprivate(set) var body: Body
 
@@ -166,7 +170,7 @@ fileprivate struct DocumentationDecoder: Decoder {
         self.init(storage: .init(type: type), codingPath: .init(), userInfo: userInfo)
     }
 
-    func push(key: some CodingKey) -> DocumentationDecoder {
+    func pushKey(_ key: some CodingKey) -> DocumentationDecoder {
         .init(storage: storage, codingPath: codingPath + CollectionOfOne<any CodingKey>(key), userInfo: userInfo)
     }
 
@@ -201,7 +205,7 @@ fileprivate struct DocumentationDecoder: Decoder {
             return result
         }
         try setType(type, for: key)
-        let result = try T(from: push(key: key))
+        let result = try T(from: pushKey(key))
         try cache(result)
         return result
     }
@@ -283,7 +287,7 @@ extension DocumentationDecoder {
     }
 
     fileprivate enum Cache {
-        struct Entry {
+        struct Entry: @unchecked Sendable {
             let object: any Decodable
             let documentation: DocumentationObject
         }
@@ -297,6 +301,10 @@ extension DocumentationDecoder {
         static func cache(entry: Entry) {
             // We must use the doc's type here, otherwise we mix up optionals vs. non-optionals.
             storage.withLockedValue { $0[ObjectIdentifier(entry.documentation.type)] = entry }
+        }
+
+        static func clear() {
+            storage.withLockedValue { $0.removeAll() }
         }
     }
 
@@ -445,15 +453,15 @@ extension DocumentationDecoder {
         func nestedContainer<NestedKey>(keyedBy type: NestedKey.Type, forKey key: Key) throws -> KeyedDecodingContainer<NestedKey>
         where NestedKey: CodingKey
         {
-            KeyedDecodingContainer(KeyedContainer<NestedKey>(decoder: decoder.push(key: key)))
+            KeyedDecodingContainer(KeyedContainer<NestedKey>(decoder: decoder.pushKey(key)))
         }
 
         func nestedUnkeyedContainer(forKey key: Key) throws -> any UnkeyedDecodingContainer {
-            UnkeyedContainer(decoder: decoder.push(key: key))
+            UnkeyedContainer(decoder: decoder.pushKey(key))
         }
 
         func superDecoder() throws -> any Decoder { decoder }
-        func superDecoder(forKey key: Key) throws -> any Decoder { decoder.push(key: key) }
+        func superDecoder(forKey key: Key) throws -> any Decoder { decoder.pushKey(key) }
     }
 
     fileprivate struct UnkeyedContainer: UnkeyedDecodingContainer {
@@ -595,12 +603,12 @@ extension DocumentationDecoder {
         where NestedKey: CodingKey
         {
             defer { currentIndex += 1 }
-            return KeyedDecodingContainer(KeyedContainer(decoder: decoder.push(key: IndexKey(index: currentIndex))))
+            return KeyedDecodingContainer(KeyedContainer(decoder: decoder.pushKey(IndexKey(index: currentIndex))))
         }
 
         mutating func nestedUnkeyedContainer() throws -> any UnkeyedDecodingContainer {
             defer { currentIndex += 1 }
-            return UnkeyedContainer(decoder: decoder.push(key: IndexKey(index: currentIndex)))
+            return UnkeyedContainer(decoder: decoder.pushKey(IndexKey(index: currentIndex)))
         }
 
         mutating func superDecoder() throws -> any Decoder { decoder }
