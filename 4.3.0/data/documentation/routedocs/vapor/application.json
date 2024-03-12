@@ -1,0 +1,259 @@
+{
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs",
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Vapor"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Vapor\/Application"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "extendedModule" : "Vapor",
+    "externalID" : "s:e:s:5Vapor11ApplicationC9RouteDocsE07defaultD10LeafSourceQrvp",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "extension"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "preciseIdentifier" : "s:5Vapor11ApplicationC",
+        "text" : "Application"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "RouteDocs",
+        "relatedModules" : [
+          "Vapor"
+        ]
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "Application"
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Extended Class",
+    "symbolKind" : "extension",
+    "title" : "Application"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "extension"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:5Vapor11ApplicationC",
+              "text" : "Application"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Vapor\/Application\/defaultDocsLeafSource"
+      ],
+      "title" : "Instance Properties"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Vapor\/Application\/Leaf"
+      ],
+      "title" : "Extended Structures"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/routedocs\/vapor\/application"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://RouteDocs/documentation/RouteDocs": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "RouteDocs",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs"
+},
+"doc://RouteDocs/documentation/RouteDocs/Vapor": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Vapor",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "Vapor",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/vapor"
+},
+"doc://RouteDocs/documentation/RouteDocs/Vapor/Application": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "extension"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "s:5Vapor11ApplicationC",
+      "text" : "Application"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Vapor\/Application",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Application"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Application",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/vapor\/application"
+},
+"doc://RouteDocs/documentation/RouteDocs/Vapor/Application/Leaf": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "extension"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "s:5Vapor11ApplicationC",
+      "text" : "Application"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "s:5Vapor11ApplicationC4LeafEADV",
+      "text" : "Leaf"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Vapor\/Application\/Leaf",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Leaf"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Application.Leaf",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/vapor\/application\/leaf"
+},
+"doc://RouteDocs/documentation/RouteDocs/Vapor/Application/defaultDocsLeafSource": {
+  "abstract" : [
+    {
+      "text" : "The default leaf source for the docs.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "defaultDocsLeafSource"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "some"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:7LeafKit0A6SourceP",
+      "text" : "LeafSource"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Vapor\/Application\/defaultDocsLeafSource",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "defaultDocsLeafSource",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/vapor\/application\/defaultdocsleafsource"
+}
+}
+}

@@ -1,0 +1,220 @@
+{
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Vapor"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:m:s:e:s:5Vapor11ApplicationC9RouteDocsE07defaultD10LeafSourceQrvp",
+    "modules" : [
+      {
+        "name" : "RouteDocs"
+      }
+    ],
+    "role" : "collection",
+    "roleHeading" : "Extended Module",
+    "symbolKind" : "extension",
+    "title" : "Vapor"
+  },
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Vapor\/Application",
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Vapor\/Route"
+      ],
+      "title" : "Extended Classes"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Vapor\/ViewRenderer"
+      ],
+      "title" : "Extended Protocols"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Vapor\/HTTPMediaType"
+      ],
+      "title" : "Extended Structures"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/routedocs\/vapor"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://RouteDocs/documentation/RouteDocs": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "RouteDocs",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs"
+},
+"doc://RouteDocs/documentation/RouteDocs/Vapor": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Vapor",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "Vapor",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/vapor"
+},
+"doc://RouteDocs/documentation/RouteDocs/Vapor/Application": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "extension"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "s:5Vapor11ApplicationC",
+      "text" : "Application"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Vapor\/Application",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Application"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Application",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/vapor\/application"
+},
+"doc://RouteDocs/documentation/RouteDocs/Vapor/HTTPMediaType": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "extension"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "s:5Vapor13HTTPMediaTypeV",
+      "text" : "HTTPMediaType"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Vapor\/HTTPMediaType",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "HTTPMediaType"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "HTTPMediaType",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/vapor\/httpmediatype"
+},
+"doc://RouteDocs/documentation/RouteDocs/Vapor/Route": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "extension"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "s:5Vapor5RouteC",
+      "text" : "Route"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Vapor\/Route",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Route"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Route",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/vapor\/route"
+},
+"doc://RouteDocs/documentation/RouteDocs/Vapor/ViewRenderer": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "extension"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "s:5Vapor12ViewRendererP",
+      "text" : "ViewRenderer"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Vapor\/ViewRenderer",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ViewRenderer"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "ViewRenderer",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/vapor\/viewrenderer"
+}
+}
+}

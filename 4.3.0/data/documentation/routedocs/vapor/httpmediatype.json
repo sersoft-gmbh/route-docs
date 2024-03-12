@@ -1,0 +1,212 @@
+{
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs",
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Vapor"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Vapor\/HTTPMediaType"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "extendedModule" : "Vapor",
+    "externalID" : "s:e:s:5Vapor13HTTPMediaTypeV9RouteDocsE10CodingKeys33_C199E9226FE9DC9C7442BABEAA9A6173LLO",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "extension"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "preciseIdentifier" : "s:5Vapor13HTTPMediaTypeV",
+        "text" : "HTTPMediaType"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "RouteDocs",
+        "relatedModules" : [
+          "Vapor"
+        ]
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "HTTPMediaType"
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Extended Structure",
+    "symbolKind" : "extension",
+    "title" : "HTTPMediaType"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "extension"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:5Vapor13HTTPMediaTypeV",
+              "text" : "HTTPMediaType"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "relationshipsSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/RouteDocs\/Se",
+        "doc:\/\/RouteDocs\/SE"
+      ],
+      "kind" : "relationships",
+      "title" : "Conforms To",
+      "type" : "conformsTo"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Vapor\/HTTPMediaType\/Decodable-Implementations",
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Vapor\/HTTPMediaType\/Encodable-Implementations"
+      ],
+      "title" : "Default Implementations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/routedocs\/vapor\/httpmediatype"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://RouteDocs/SE": {
+  "identifier" : "doc:\/\/RouteDocs\/SE",
+  "title" : "Swift.Encodable",
+  "type" : "unresolvable"
+},
+"doc://RouteDocs/Se": {
+  "identifier" : "doc:\/\/RouteDocs\/Se",
+  "title" : "Swift.Decodable",
+  "type" : "unresolvable"
+},
+"doc://RouteDocs/documentation/RouteDocs": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "RouteDocs",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs"
+},
+"doc://RouteDocs/documentation/RouteDocs/Vapor": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Vapor",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "Vapor",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/vapor"
+},
+"doc://RouteDocs/documentation/RouteDocs/Vapor/HTTPMediaType": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "extension"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "s:5Vapor13HTTPMediaTypeV",
+      "text" : "HTTPMediaType"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Vapor\/HTTPMediaType",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "HTTPMediaType"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "HTTPMediaType",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/vapor\/httpmediatype"
+},
+"doc://RouteDocs/documentation/RouteDocs/Vapor/HTTPMediaType/Decodable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Vapor\/HTTPMediaType\/Decodable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Decodable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/vapor\/httpmediatype\/decodable-implementations"
+},
+"doc://RouteDocs/documentation/RouteDocs/Vapor/HTTPMediaType/Encodable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Vapor\/HTTPMediaType\/Encodable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Encodable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/vapor\/httpmediatype\/encodable-implementations"
+}
+}
+}

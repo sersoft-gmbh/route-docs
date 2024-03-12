@@ -1,0 +1,484 @@
+{
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Swift"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:m:s:e:s:SN9RouteDocsAA24CustomDocumentationNamedRzrlE17documentationNameSSvpZ",
+    "modules" : [
+      {
+        "name" : "RouteDocs"
+      }
+    ],
+    "role" : "collection",
+    "roleHeading" : "Extended Module",
+    "symbolKind" : "extension",
+    "title" : "Swift"
+  },
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Swift\/CaseIterable",
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Swift\/Decoder"
+      ],
+      "title" : "Extended Protocols"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Swift\/Array",
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Swift\/ClosedRange",
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Swift\/CodingUserInfoKey",
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Swift\/ContiguousArray",
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Swift\/PartialRangeFrom",
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Swift\/PartialRangeThrough",
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Swift\/PartialRangeUpTo",
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Swift\/Range",
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Swift\/Set"
+      ],
+      "title" : "Extended Structures"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Swift\/Optional"
+      ],
+      "title" : "Extended Enumerations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/routedocs\/swift"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://RouteDocs/documentation/RouteDocs": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "RouteDocs",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs"
+},
+"doc://RouteDocs/documentation/RouteDocs/Swift": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Swift",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "Swift",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/swift"
+},
+"doc://RouteDocs/documentation/RouteDocs/Swift/Array": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "extension"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "s:Sa",
+      "text" : "Array"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Swift\/Array",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Array"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Array",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/swift\/array"
+},
+"doc://RouteDocs/documentation/RouteDocs/Swift/CaseIterable": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "extension"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "s:s12CaseIterableP",
+      "text" : "CaseIterable"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Swift\/CaseIterable",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "CaseIterable"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "CaseIterable",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/swift\/caseiterable"
+},
+"doc://RouteDocs/documentation/RouteDocs/Swift/ClosedRange": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "extension"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "s:SN",
+      "text" : "ClosedRange"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Swift\/ClosedRange",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ClosedRange"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "ClosedRange",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/swift\/closedrange"
+},
+"doc://RouteDocs/documentation/RouteDocs/Swift/CodingUserInfoKey": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "extension"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "s:s17CodingUserInfoKeyV",
+      "text" : "CodingUserInfoKey"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Swift\/CodingUserInfoKey",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "CodingUserInfoKey"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "CodingUserInfoKey",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/swift\/codinguserinfokey"
+},
+"doc://RouteDocs/documentation/RouteDocs/Swift/ContiguousArray": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "extension"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "s:s15ContiguousArrayV",
+      "text" : "ContiguousArray"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Swift\/ContiguousArray",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ContiguousArray"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "ContiguousArray",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/swift\/contiguousarray"
+},
+"doc://RouteDocs/documentation/RouteDocs/Swift/Decoder": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "extension"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "s:s7DecoderP",
+      "text" : "Decoder"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Swift\/Decoder",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Decoder"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Decoder",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/swift\/decoder"
+},
+"doc://RouteDocs/documentation/RouteDocs/Swift/Optional": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "extension"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "s:Sq",
+      "text" : "Optional"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Swift\/Optional",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Optional"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Optional",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/swift\/optional"
+},
+"doc://RouteDocs/documentation/RouteDocs/Swift/PartialRangeFrom": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "extension"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "s:s16PartialRangeFromV",
+      "text" : "PartialRangeFrom"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Swift\/PartialRangeFrom",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "PartialRangeFrom"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "PartialRangeFrom",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/swift\/partialrangefrom"
+},
+"doc://RouteDocs/documentation/RouteDocs/Swift/PartialRangeThrough": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "extension"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "s:s19PartialRangeThroughV",
+      "text" : "PartialRangeThrough"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Swift\/PartialRangeThrough",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "PartialRangeThrough"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "PartialRangeThrough",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/swift\/partialrangethrough"
+},
+"doc://RouteDocs/documentation/RouteDocs/Swift/PartialRangeUpTo": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "extension"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "s:s16PartialRangeUpToV",
+      "text" : "PartialRangeUpTo"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Swift\/PartialRangeUpTo",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "PartialRangeUpTo"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "PartialRangeUpTo",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/swift\/partialrangeupto"
+},
+"doc://RouteDocs/documentation/RouteDocs/Swift/Range": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "extension"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "s:Sn",
+      "text" : "Range"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Swift\/Range",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Range"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Range",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/swift\/range"
+},
+"doc://RouteDocs/documentation/RouteDocs/Swift/Set": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "extension"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "s:Sh",
+      "text" : "Set"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Swift\/Set",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Set"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Set",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/swift\/set"
+}
+}
+}

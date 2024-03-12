@@ -1,0 +1,370 @@
+{
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs",
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocsViewContext",
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocsViewContext\/Documentation",
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocsViewContext\/Documentation\/Object"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocsViewContext\/Documentation\/Object\/body-swift.property"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:9RouteDocs0B11ViewContextV13DocumentationV6ObjectV4bodyAG4BodyOvp",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "let"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "body"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:9RouteDocs0B11ViewContextV",
+        "text" : "DocsViewContext"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:9RouteDocs0B11ViewContextV13DocumentationV",
+        "text" : "Documentation"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:9RouteDocs0B11ViewContextV13DocumentationV6ObjectV",
+        "text" : "Object"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:9RouteDocs0B11ViewContextV13DocumentationV6ObjectV4BodyO",
+        "text" : "Body"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "RouteDocs"
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Instance Property",
+    "symbolKind" : "property",
+    "title" : "body"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "let"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "body"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocsViewContext",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:9RouteDocs0B11ViewContextV",
+              "text" : "DocsViewContext"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocsViewContext\/Documentation",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:9RouteDocs0B11ViewContextV13DocumentationV",
+              "text" : "Documentation"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocsViewContext\/Documentation\/Object",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:9RouteDocs0B11ViewContextV13DocumentationV6ObjectV",
+              "text" : "Object"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocsViewContext\/Documentation\/Object\/Body-swift.enum",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:9RouteDocs0B11ViewContextV13DocumentationV6ObjectV4BodyO",
+              "text" : "Body"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/routedocs\/docsviewcontext\/documentation\/object\/body-swift.property"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://RouteDocs/documentation/RouteDocs": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "RouteDocs",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs"
+},
+"doc://RouteDocs/documentation/RouteDocs/DocsViewContext": {
+  "abstract" : [
+    {
+      "text" : "This can be used as context for a documentation view.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "DocsViewContext"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocsViewContext",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "DocsViewContext"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "DocsViewContext",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/docsviewcontext"
+},
+"doc://RouteDocs/documentation/RouteDocs/DocsViewContext/Documentation": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Documentation"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocsViewContext\/Documentation",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Documentation"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "DocsViewContext.Documentation",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/docsviewcontext\/documentation"
+},
+"doc://RouteDocs/documentation/RouteDocs/DocsViewContext/Documentation/Object": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Object"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocsViewContext\/Documentation\/Object",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Object"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "DocsViewContext.Documentation.Object",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/docsviewcontext\/documentation\/object"
+},
+"doc://RouteDocs/documentation/RouteDocs/DocsViewContext/Documentation/Object/Body-swift.enum": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Body"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocsViewContext\/Documentation\/Object\/Body-swift.enum",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Body"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "DocsViewContext.Documentation.Object.Body",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/docsviewcontext\/documentation\/object\/body-swift.enum"
+},
+"doc://RouteDocs/documentation/RouteDocs/DocsViewContext/Documentation/Object/body-swift.property": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "body"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:9RouteDocs0B11ViewContextV",
+      "text" : "DocsViewContext"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:9RouteDocs0B11ViewContextV13DocumentationV",
+      "text" : "Documentation"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:9RouteDocs0B11ViewContextV13DocumentationV6ObjectV",
+      "text" : "Object"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:9RouteDocs0B11ViewContextV13DocumentationV6ObjectV4BodyO",
+      "text" : "Body"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocsViewContext\/Documentation\/Object\/body-swift.property",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "body",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/docsviewcontext\/documentation\/object\/body-swift.property"
+}
+}
+}
