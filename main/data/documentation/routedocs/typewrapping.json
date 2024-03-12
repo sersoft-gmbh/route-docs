@@ -71,7 +71,9 @@
               "text" : "<"
             },
             {
+              "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeWrapping\/Wrapped",
               "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:9RouteDocs12TypeWrappingP7WrappedQa",
               "text" : "Wrapped"
             },
             {

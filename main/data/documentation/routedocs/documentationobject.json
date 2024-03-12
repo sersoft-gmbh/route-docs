@@ -125,6 +125,12 @@
     },
     {
       "identifiers" : [
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocumentationObject\/clearTypeCaches()"
+      ],
+      "title" : "Type Methods"
+    },
+    {
+      "identifiers" : [
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocumentationObject\/Body-swift.enum"
       ],
       "title" : "Enumerations"
@@ -351,6 +357,43 @@
   "title" : "body",
   "type" : "topic",
   "url" : "\/documentation\/routedocs\/documentationobject\/body-swift.property"
+},
+"doc://RouteDocs/documentation/RouteDocs/DocumentationObject/clearTypeCaches()": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "static"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "clearTypeCaches"
+    },
+    {
+      "kind" : "text",
+      "text" : "()"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocumentationObject\/clearTypeCaches()",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "clearTypeCaches()",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/documentationobject\/cleartypecaches()"
 },
 "doc://RouteDocs/documentation/RouteDocs/DocumentationObject/description": {
   "abstract" : [
@@ -673,7 +716,7 @@
     },
     {
       "kind" : "text",
-      "text" : ": "
+      "text" : ": any "
     },
     {
       "kind" : "keyword",

@@ -239,7 +239,7 @@
                           },
                           {
                             "path" : "\/documentation\/routedocs\/docsviewcontext\/documentation\/object\/body-swift.enum\/encode(to:)",
-                            "title" : "func encode(to: Encoder) throws",
+                            "title" : "func encode(to: any Encoder) throws",
                             "type" : "method"
                           }
                         ],
@@ -387,7 +387,7 @@
               },
               {
                 "path" : "\/documentation\/routedocs\/docsviewcontext\/init(documentables:sortedby:usingname:)",
-                "title" : "init(documentables: some Sequence<EndpointDocumentable>, sortedBy: KeyPath<EndpointDocumentation, some Comparable>, usingName: KeyPath<DocumentationType, String>?)",
+                "title" : "init(documentables: some Sequence<any EndpointDocumentable>, sortedBy: KeyPath<EndpointDocumentation, some Comparable>, usingName: KeyPath<DocumentationType, String>?)",
                 "type" : "init"
               },
               {
@@ -474,7 +474,7 @@
               },
               {
                 "path" : "\/documentation\/routedocs\/documentationobject\/type",
-                "title" : "let type: Any.Type",
+                "title" : "let type: any Any.Type",
                 "type" : "property"
               },
               {
@@ -484,6 +484,15 @@
               {
                 "path" : "\/documentation\/routedocs\/documentationobject\/hash(into:)",
                 "title" : "func hash(into: inout Hasher)",
+                "type" : "method"
+              },
+              {
+                "title" : "Type Methods",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/routedocs\/documentationobject\/cleartypecaches()",
+                "title" : "static func clearTypeCaches()",
                 "type" : "method"
               },
               {
@@ -637,7 +646,7 @@
               },
               {
                 "path" : "\/documentation\/routedocs\/documentationtype\/init(from:)",
-                "title" : "init(from: Decoder) throws",
+                "title" : "init(from: any Decoder) throws",
                 "type" : "init"
               },
               {
@@ -703,7 +712,7 @@
                   },
                   {
                     "path" : "\/documentation\/routedocs\/endpointdocumentation\/object\/init(from:)",
-                    "title" : "init(from: Decoder) throws",
+                    "title" : "init(from: any Decoder) throws",
                     "type" : "init"
                   },
                   {
@@ -752,7 +761,7 @@
                           },
                           {
                             "path" : "\/documentation\/routedocs\/endpointdocumentation\/object\/body-swift.enum\/enumcase\/init(from:)",
-                            "title" : "init(from: Decoder) throws",
+                            "title" : "init(from: any Decoder) throws",
                             "type" : "init"
                           },
                           {
@@ -807,7 +816,7 @@
                           },
                           {
                             "path" : "\/documentation\/routedocs\/endpointdocumentation\/object\/body-swift.enum\/field\/init(from:)",
-                            "title" : "init(from: Decoder) throws",
+                            "title" : "init(from: any Decoder) throws",
                             "type" : "init"
                           },
                           {
@@ -884,7 +893,7 @@
                       },
                       {
                         "path" : "\/documentation\/routedocs\/endpointdocumentation\/object\/body-swift.enum\/init(from:)",
-                        "title" : "init(from: Decoder) throws",
+                        "title" : "init(from: any Decoder) throws",
                         "type" : "init"
                       },
                       {
@@ -907,7 +916,7 @@
                       },
                       {
                         "path" : "\/documentation\/routedocs\/endpointdocumentation\/object\/body-swift.enum\/encode(to:)",
-                        "title" : "func encode(to: Encoder) throws",
+                        "title" : "func encode(to: any Encoder) throws",
                         "type" : "method"
                       },
                       {
@@ -978,7 +987,7 @@
                   },
                   {
                     "path" : "\/documentation\/routedocs\/endpointdocumentation\/payload\/init(from:)",
-                    "title" : "init(from: Decoder) throws",
+                    "title" : "init(from: any Decoder) throws",
                     "type" : "init"
                   },
                   {
@@ -1067,7 +1076,7 @@
                   },
                   {
                     "path" : "\/documentation\/routedocs\/endpointdocumentation\/query-swift.struct\/init(from:)",
-                    "title" : "init(from: Decoder) throws",
+                    "title" : "init(from: any Decoder) throws",
                     "type" : "init"
                   },
                   {
@@ -1139,7 +1148,7 @@
               },
               {
                 "path" : "\/documentation\/routedocs\/endpointdocumentation\/init(from:)",
-                "title" : "init(from: Decoder) throws",
+                "title" : "init(from: any Decoder) throws",
                 "type" : "init"
               },
               {
@@ -1445,12 +1454,12 @@
               },
               {
                 "path" : "\/documentation\/routedocs\/typedescription\/init(any:)",
-                "title" : "init(any: Any.Type)",
+                "title" : "init(any: any Any.Type)",
                 "type" : "init"
               },
               {
                 "path" : "\/documentation\/routedocs\/typedescription\/init(from:)",
-                "title" : "init(from: Decoder) throws",
+                "title" : "init(from: any Decoder) throws",
                 "type" : "init"
               },
               {
@@ -1498,7 +1507,7 @@
               },
               {
                 "path" : "\/documentation\/routedocs\/typedescription\/encode(to:)",
-                "title" : "func encode(to: Encoder) throws",
+                "title" : "func encode(to: any Encoder) throws",
                 "type" : "method"
               },
               {
@@ -2156,7 +2165,7 @@
                       },
                       {
                         "path" : "\/documentation\/routedocs\/vapor\/httpmediatype\/init(from:)",
-                        "title" : "init(from: Decoder) throws",
+                        "title" : "init(from: any Decoder) throws",
                         "type" : "init"
                       }
                     ],
@@ -2172,7 +2181,7 @@
                       },
                       {
                         "path" : "\/documentation\/routedocs\/vapor\/httpmediatype\/encode(to:)",
-                        "title" : "func encode(to: Encoder) throws",
+                        "title" : "func encode(to: any Encoder) throws",
                         "type" : "method"
                       }
                     ],
