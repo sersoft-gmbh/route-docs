@@ -1,0 +1,363 @@
+{
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs",
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentation",
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentation\/Object",
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentation\/Object\/Body-swift.enum"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentation\/Object\/Body-swift.enum\/filter(fieldNames:)-83iow"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:9RouteDocs21EndpointDocumentationV6ObjectV4BodyO6filter10fieldNamesAGSSd_tF",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "func"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "filter"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "fieldNames"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SS",
+        "text" : "String"
+      },
+      {
+        "kind" : "text",
+        "text" : "...) -> "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:9RouteDocs21EndpointDocumentationV",
+        "text" : "EndpointDocumentation"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:9RouteDocs21EndpointDocumentationV6ObjectV",
+        "text" : "Object"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:9RouteDocs21EndpointDocumentationV6ObjectV4BodyO",
+        "text" : "Body"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "RouteDocs"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "EndpointDocumentation.swift",
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/route-docs\/Sources\/RouteDocs\/EndpointDocumentation.swift#L118"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Instance Method",
+    "symbolKind" : "method",
+    "title" : "filter(fieldNames:)"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "func"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "filter"
+            },
+            {
+              "kind" : "text",
+              "text" : "("
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "fieldNames"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:SS",
+              "text" : "String"
+            },
+            {
+              "kind" : "text",
+              "text" : "...) -> "
+            },
+            {
+              "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentation",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:9RouteDocs21EndpointDocumentationV",
+              "text" : "EndpointDocumentation"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentation\/Object",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:9RouteDocs21EndpointDocumentationV6ObjectV",
+              "text" : "Object"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentation\/Object\/Body-swift.enum",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:9RouteDocs21EndpointDocumentationV6ObjectV4BodyO",
+              "text" : "Body"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/routedocs\/endpointdocumentation\/object\/body-swift.enum\/filter(fieldnames:)-83iow"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://RouteDocs/documentation/RouteDocs": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "RouteDocs",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs"
+},
+"doc://RouteDocs/documentation/RouteDocs/EndpointDocumentation": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "EndpointDocumentation"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentation",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "EndpointDocumentation"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "EndpointDocumentation",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/endpointdocumentation"
+},
+"doc://RouteDocs/documentation/RouteDocs/EndpointDocumentation/Object": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Object"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentation\/Object",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Object"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "EndpointDocumentation.Object",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/endpointdocumentation\/object"
+},
+"doc://RouteDocs/documentation/RouteDocs/EndpointDocumentation/Object/Body-swift.enum": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Body"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentation\/Object\/Body-swift.enum",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Body"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "EndpointDocumentation.Object.Body",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/endpointdocumentation\/object\/body-swift.enum"
+},
+"doc://RouteDocs/documentation/RouteDocs/EndpointDocumentation/Object/Body-swift.enum/filter(fieldNames:)-83iow": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "filter"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "fieldNames"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "...) -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:9RouteDocs21EndpointDocumentationV",
+      "text" : "EndpointDocumentation"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:9RouteDocs21EndpointDocumentationV6ObjectV",
+      "text" : "Object"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:9RouteDocs21EndpointDocumentationV6ObjectV4BodyO",
+      "text" : "Body"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentation\/Object\/Body-swift.enum\/filter(fieldNames:)-83iow",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "filter(fieldNames:)",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/endpointdocumentation\/object\/body-swift.enum\/filter(fieldnames:)-83iow"
+}
+}
+}

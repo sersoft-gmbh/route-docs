@@ -1,0 +1,405 @@
+{
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocumentationType"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:9RouteDocs17DocumentationTypeV",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "struct"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "DocumentationType"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "RouteDocs"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "DocumentationType"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "EndpointDocumentation.swift",
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/route-docs\/Sources\/RouteDocs\/EndpointDocumentation.swift#L3"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Structure",
+    "symbolKind" : "struct",
+    "title" : "DocumentationType"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "struct"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "DocumentationType"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "relationshipsSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/RouteDocs\/s23CustomStringConvertibleP",
+        "doc:\/\/RouteDocs\/Se",
+        "doc:\/\/RouteDocs\/SE",
+        "doc:\/\/RouteDocs\/SQ",
+        "doc:\/\/RouteDocs\/s8SendableP"
+      ],
+      "kind" : "relationships",
+      "title" : "Conforms To",
+      "type" : "conformsTo"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "anchor" : "Initializers",
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocumentationType\/init(from:)"
+      ],
+      "title" : "Initializers"
+    },
+    {
+      "anchor" : "Instance-Properties",
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocumentationType\/customName",
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocumentationType\/defaultName",
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocumentationType\/description",
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocumentationType\/typeDescription"
+      ],
+      "title" : "Instance Properties"
+    },
+    {
+      "anchor" : "Default-Implementations",
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocumentationType\/Equatable-Implementations"
+      ],
+      "title" : "Default Implementations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/routedocs\/documentationtype"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://RouteDocs/SE": {
+  "identifier" : "doc:\/\/RouteDocs\/SE",
+  "title" : "Swift.Encodable",
+  "type" : "unresolvable"
+},
+"doc://RouteDocs/SQ": {
+  "identifier" : "doc:\/\/RouteDocs\/SQ",
+  "title" : "Swift.Equatable",
+  "type" : "unresolvable"
+},
+"doc://RouteDocs/Se": {
+  "identifier" : "doc:\/\/RouteDocs\/Se",
+  "title" : "Swift.Decodable",
+  "type" : "unresolvable"
+},
+"doc://RouteDocs/documentation/RouteDocs": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "RouteDocs",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs"
+},
+"doc://RouteDocs/documentation/RouteDocs/DocumentationType": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "DocumentationType"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocumentationType",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "DocumentationType"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "DocumentationType",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/documentationtype"
+},
+"doc://RouteDocs/documentation/RouteDocs/DocumentationType/Equatable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocumentationType\/Equatable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Equatable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/documentationtype\/equatable-implementations"
+},
+"doc://RouteDocs/documentation/RouteDocs/DocumentationType/customName": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "customName"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocumentationType\/customName",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "customName",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/documentationtype\/customname"
+},
+"doc://RouteDocs/documentation/RouteDocs/DocumentationType/defaultName": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "defaultName"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocumentationType\/defaultName",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "defaultName",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/documentationtype\/defaultname"
+},
+"doc://RouteDocs/documentation/RouteDocs/DocumentationType/description": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "description"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocumentationType\/description",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "description",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/documentationtype\/description"
+},
+"doc://RouteDocs/documentation/RouteDocs/DocumentationType/init(from:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "from"
+    },
+    {
+      "kind" : "text",
+      "text" : ": any "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:s7DecoderP",
+      "text" : "Decoder"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocumentationType\/init(from:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(from:)",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/documentationtype\/init(from:)"
+},
+"doc://RouteDocs/documentation/RouteDocs/DocumentationType/typeDescription": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "typeDescription"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:9RouteDocs15TypeDescriptionV",
+      "text" : "TypeDescription"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocumentationType\/typeDescription",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "typeDescription",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/documentationtype\/typedescription"
+},
+"doc://RouteDocs/s23CustomStringConvertibleP": {
+  "identifier" : "doc:\/\/RouteDocs\/s23CustomStringConvertibleP",
+  "title" : "Swift.CustomStringConvertible",
+  "type" : "unresolvable"
+},
+"doc://RouteDocs/s8SendableP": {
+  "identifier" : "doc:\/\/RouteDocs\/s8SendableP",
+  "title" : "Swift.Sendable",
+  "type" : "unresolvable"
+}
+}
+}

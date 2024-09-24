@@ -1,0 +1,277 @@
+{
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs",
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription",
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription\/NameOptions"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription\/NameOptions\/withParents"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "extendedModule" : "RouteDocs",
+    "externalID" : "s:9RouteDocs15TypeDescriptionV11NameOptionsV11withParentsAEvpZ",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "static"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "keyword",
+        "text" : "let"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "withParents"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:9RouteDocs15TypeDescriptionV",
+        "text" : "TypeDescription"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:9RouteDocs15TypeDescriptionV11NameOptionsV",
+        "text" : "NameOptions"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "RouteDocs"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "TypeDescription.swift",
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/route-docs\/Sources\/RouteDocs\/TypeDescription.swift#L129"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Type Property",
+    "symbolKind" : "property",
+    "title" : "withParents"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "static"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "let"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "withParents"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:9RouteDocs15TypeDescriptionV",
+              "text" : "TypeDescription"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription\/NameOptions",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:9RouteDocs15TypeDescriptionV11NameOptionsV",
+              "text" : "NameOptions"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/routedocs\/typedescription\/nameoptions\/withparents"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://RouteDocs/documentation/RouteDocs": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "RouteDocs",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs"
+},
+"doc://RouteDocs/documentation/RouteDocs/TypeDescription": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "TypeDescription"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "TypeDescription"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "TypeDescription",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/typedescription"
+},
+"doc://RouteDocs/documentation/RouteDocs/TypeDescription/NameOptions": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "NameOptions"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription\/NameOptions",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "NameOptions"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "TypeDescription.NameOptions",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/typedescription\/nameoptions"
+},
+"doc://RouteDocs/documentation/RouteDocs/TypeDescription/NameOptions/withParents": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "static"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "withParents"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:9RouteDocs15TypeDescriptionV",
+      "text" : "TypeDescription"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:9RouteDocs15TypeDescriptionV11NameOptionsV",
+      "text" : "NameOptions"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription\/NameOptions\/withParents",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "withParents",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/typedescription\/nameoptions\/withparents"
+}
+}
+}

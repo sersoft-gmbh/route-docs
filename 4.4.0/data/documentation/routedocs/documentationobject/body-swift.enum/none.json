@@ -1,0 +1,196 @@
+{
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs",
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocumentationObject",
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocumentationObject\/Body-swift.enum"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocumentationObject\/Body-swift.enum\/none"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:9RouteDocs19DocumentationObjectV4BodyO4noneyA2EmF",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "case"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "none"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "RouteDocs"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "DocumentationDecoder.swift",
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/route-docs\/Sources\/RouteDocs\/DocumentationDecoder.swift#L38"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Case",
+    "symbolKind" : "case",
+    "title" : "DocumentationObject.Body.none"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "case"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "none"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/routedocs\/documentationobject\/body-swift.enum\/none"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://RouteDocs/documentation/RouteDocs": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "RouteDocs",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs"
+},
+"doc://RouteDocs/documentation/RouteDocs/DocumentationObject": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "DocumentationObject"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocumentationObject",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "DocumentationObject"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "DocumentationObject",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/documentationobject"
+},
+"doc://RouteDocs/documentation/RouteDocs/DocumentationObject/Body-swift.enum": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Body"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocumentationObject\/Body-swift.enum",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Body"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "DocumentationObject.Body",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/documentationobject\/body-swift.enum"
+},
+"doc://RouteDocs/documentation/RouteDocs/DocumentationObject/Body-swift.enum/none": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "none"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocumentationObject\/Body-swift.enum\/none",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "DocumentationObject.Body.none",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/documentationobject\/body-swift.enum\/none"
+}
+}
+}

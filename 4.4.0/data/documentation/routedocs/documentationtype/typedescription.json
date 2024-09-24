@@ -1,0 +1,223 @@
+{
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs",
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocumentationType"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocumentationType\/typeDescription"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:9RouteDocs17DocumentationTypeV15typeDescriptionAA0dF0Vvp",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "let"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "typeDescription"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:9RouteDocs15TypeDescriptionV",
+        "text" : "TypeDescription"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "RouteDocs"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "EndpointDocumentation.swift",
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/route-docs\/Sources\/RouteDocs\/EndpointDocumentation.swift#L4"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Instance Property",
+    "symbolKind" : "property",
+    "title" : "typeDescription"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "let"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "typeDescription"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:9RouteDocs15TypeDescriptionV",
+              "text" : "TypeDescription"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/routedocs\/documentationtype\/typedescription"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://RouteDocs/documentation/RouteDocs": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "RouteDocs",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs"
+},
+"doc://RouteDocs/documentation/RouteDocs/DocumentationType": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "DocumentationType"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocumentationType",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "DocumentationType"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "DocumentationType",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/documentationtype"
+},
+"doc://RouteDocs/documentation/RouteDocs/DocumentationType/typeDescription": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "typeDescription"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:9RouteDocs15TypeDescriptionV",
+      "text" : "TypeDescription"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocumentationType\/typeDescription",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "typeDescription",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/documentationtype\/typedescription"
+},
+"doc://RouteDocs/documentation/RouteDocs/TypeDescription": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "TypeDescription"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "TypeDescription"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "TypeDescription",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/typedescription"
+}
+}
+}

@@ -1,0 +1,267 @@
+{
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs",
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Swift"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Swift\/ClosedRange"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "extendedModule" : "Swift",
+    "externalID" : "s:e:s:SN9RouteDocsAA24CustomDocumentationNamedRzrlE17documentationNameSSvpZ",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "extension"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "preciseIdentifier" : "s:SN",
+        "text" : "ClosedRange"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "RouteDocs",
+        "relatedModules" : [
+          "Swift"
+        ]
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "ClosedRange"
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Extended Structure",
+    "symbolKind" : "extension",
+    "title" : "ClosedRange"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "extension"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:SN",
+              "text" : "ClosedRange"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "relationshipsSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/CustomDocumentationNamed",
+        "doc:\/\/RouteDocs\/s8CopyableP"
+      ],
+      "kind" : "relationships",
+      "title" : "Conforms To",
+      "type" : "conformsTo"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "anchor" : "Default-Implementations",
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Swift\/ClosedRange\/CustomDocumentationNamed-Implementations"
+      ],
+      "title" : "Default Implementations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/routedocs\/swift\/closedrange"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://RouteDocs/documentation/RouteDocs": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "RouteDocs",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs"
+},
+"doc://RouteDocs/documentation/RouteDocs/CustomDocumentationNamed": {
+  "abstract" : [
+
+  ],
+  "conformance" : {
+    "availabilityPrefix" : [
+      {
+        "text" : "Available when",
+        "type" : "text"
+      }
+    ],
+    "conformancePrefix" : [
+      {
+        "text" : "Conforms when",
+        "type" : "text"
+      }
+    ],
+    "constraints" : [
+      {
+        "code" : "Bound",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : " conforms to ",
+        "type" : "text"
+      },
+      {
+        "code" : "CustomDocumentationNamed",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : " and ",
+        "type" : "text"
+      },
+      {
+        "code" : "Comparable",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : ".",
+        "type" : "text"
+      }
+    ]
+  },
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "protocol"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "CustomDocumentationNamed"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/CustomDocumentationNamed",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "CustomDocumentationNamed"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "CustomDocumentationNamed",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/customdocumentationnamed"
+},
+"doc://RouteDocs/documentation/RouteDocs/Swift": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Swift",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "Swift",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/swift"
+},
+"doc://RouteDocs/documentation/RouteDocs/Swift/ClosedRange": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "extension"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "s:SN",
+      "text" : "ClosedRange"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Swift\/ClosedRange",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ClosedRange"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "ClosedRange",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/swift\/closedrange"
+},
+"doc://RouteDocs/documentation/RouteDocs/Swift/ClosedRange/CustomDocumentationNamed-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Swift\/ClosedRange\/CustomDocumentationNamed-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "CustomDocumentationNamed Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/swift\/closedrange\/customdocumentationnamed-implementations"
+},
+"doc://RouteDocs/s8CopyableP": {
+  "identifier" : "doc:\/\/RouteDocs\/s8CopyableP",
+  "title" : "Swift.Copyable",
+  "type" : "unresolvable"
+}
+}
+}

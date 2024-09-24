@@ -1,0 +1,2217 @@
+{
+  "includedArchiveIdentifiers" : [
+    "RouteDocs"
+  ],
+  "interfaceLanguages" : {
+    "swift" : [
+      {
+        "children" : [
+          {
+            "title" : "Protocols",
+            "type" : "groupMarker"
+          },
+          {
+            "children" : [
+              {
+                "title" : "Type Properties",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/routedocs\/customdocumentable\/documentationbody",
+                "title" : "static var documentationBody: DocumentationObject.Body",
+                "type" : "property"
+              },
+              {
+                "path" : "\/documentation\/routedocs\/customdocumentable\/documentationinstance",
+                "title" : "static var documentationInstance: Self",
+                "type" : "property"
+              }
+            ],
+            "path" : "\/documentation\/routedocs\/customdocumentable",
+            "title" : "CustomDocumentable",
+            "type" : "protocol"
+          },
+          {
+            "children" : [
+              {
+                "title" : "Type Properties",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/routedocs\/customdocumentationnamed\/documentationname",
+                "title" : "static var documentationName: String",
+                "type" : "property"
+              }
+            ],
+            "path" : "\/documentation\/routedocs\/customdocumentationnamed",
+            "title" : "CustomDocumentationNamed",
+            "type" : "protocol"
+          },
+          {
+            "children" : [
+              {
+                "title" : "Instance Properties",
+                "type" : "groupMarker"
+              },
+              {
+                "children" : [
+                  {
+                    "children" : [
+                      {
+                        "path" : "\/documentation\/routedocs\/endpointdocumentable\/documentation-16pbb",
+                        "title" : "var documentation: EndpointDocumentation?",
+                        "type" : "property"
+                      }
+                    ],
+                    "title" : "EndpointDocumentable Implementations",
+                    "type" : "groupMarker"
+                  }
+                ],
+                "path" : "\/documentation\/routedocs\/endpointdocumentable\/documentation-114ns",
+                "title" : "var documentation: EndpointDocumentation?",
+                "type" : "property"
+              }
+            ],
+            "path" : "\/documentation\/routedocs\/endpointdocumentable",
+            "title" : "EndpointDocumentable",
+            "type" : "protocol"
+          },
+          {
+            "children" : [
+              {
+                "title" : "Associated Types",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/routedocs\/typewrapping\/wrapped",
+                "title" : "Wrapped",
+                "type" : "associatedtype"
+              }
+            ],
+            "path" : "\/documentation\/routedocs\/typewrapping",
+            "title" : "TypeWrapping",
+            "type" : "protocol"
+          },
+          {
+            "title" : "Structures",
+            "type" : "groupMarker"
+          },
+          {
+            "children" : [
+              {
+                "title" : "Structures",
+                "type" : "groupMarker"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Structures",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Initializers",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/docsviewcontext\/documentation\/object\/init(object:usingname:)",
+                        "title" : "init(object: EndpointDocumentation.Object, usingName: KeyPath<DocumentationType, String>?)",
+                        "type" : "init"
+                      },
+                      {
+                        "title" : "Instance Properties",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/docsviewcontext\/documentation\/object\/body-swift.property",
+                        "title" : "let body: DocsViewContext.Documentation.Object.Body",
+                        "type" : "property"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/docsviewcontext\/documentation\/object\/name",
+                        "title" : "let name: String",
+                        "type" : "property"
+                      },
+                      {
+                        "title" : "Enumerations",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "children" : [
+                          {
+                            "title" : "Structures",
+                            "type" : "groupMarker"
+                          },
+                          {
+                            "children" : [
+                              {
+                                "title" : "Initializers",
+                                "type" : "groupMarker"
+                              },
+                              {
+                                "path" : "\/documentation\/routedocs\/docsviewcontext\/documentation\/object\/body-swift.enum\/enumcase\/init(enumcase:)",
+                                "title" : "init(enumCase: EndpointDocumentation.Object.Body.EnumCase)",
+                                "type" : "init"
+                              },
+                              {
+                                "title" : "Instance Properties",
+                                "type" : "groupMarker"
+                              },
+                              {
+                                "path" : "\/documentation\/routedocs\/docsviewcontext\/documentation\/object\/body-swift.enum\/enumcase\/name",
+                                "title" : "let name: String?",
+                                "type" : "property"
+                              },
+                              {
+                                "path" : "\/documentation\/routedocs\/docsviewcontext\/documentation\/object\/body-swift.enum\/enumcase\/value",
+                                "title" : "let value: String",
+                                "type" : "property"
+                              }
+                            ],
+                            "path" : "\/documentation\/routedocs\/docsviewcontext\/documentation\/object\/body-swift.enum\/enumcase",
+                            "title" : "DocsViewContext.Documentation.Object.Body.EnumCase",
+                            "type" : "struct"
+                          },
+                          {
+                            "children" : [
+                              {
+                                "title" : "Initializers",
+                                "type" : "groupMarker"
+                              },
+                              {
+                                "path" : "\/documentation\/routedocs\/docsviewcontext\/documentation\/object\/body-swift.enum\/field\/init(field:usingname:)",
+                                "title" : "init(field: EndpointDocumentation.Object.Body.Field, usingName: KeyPath<DocumentationType, String>?)",
+                                "type" : "init"
+                              },
+                              {
+                                "title" : "Instance Properties",
+                                "type" : "groupMarker"
+                              },
+                              {
+                                "path" : "\/documentation\/routedocs\/docsviewcontext\/documentation\/object\/body-swift.enum\/field\/isoptional",
+                                "title" : "let isOptional: Bool",
+                                "type" : "property"
+                              },
+                              {
+                                "path" : "\/documentation\/routedocs\/docsviewcontext\/documentation\/object\/body-swift.enum\/field\/name",
+                                "title" : "let name: String",
+                                "type" : "property"
+                              },
+                              {
+                                "path" : "\/documentation\/routedocs\/docsviewcontext\/documentation\/object\/body-swift.enum\/field\/type",
+                                "title" : "let type: String",
+                                "type" : "property"
+                              }
+                            ],
+                            "path" : "\/documentation\/routedocs\/docsviewcontext\/documentation\/object\/body-swift.enum\/field",
+                            "title" : "DocsViewContext.Documentation.Object.Body.Field",
+                            "type" : "struct"
+                          },
+                          {
+                            "title" : "Enumeration Cases",
+                            "type" : "groupMarker"
+                          },
+                          {
+                            "path" : "\/documentation\/routedocs\/docsviewcontext\/documentation\/object\/body-swift.enum\/cases(_:)",
+                            "title" : "case cases(Array<DocsViewContext.Documentation.Object.Body.EnumCase>)",
+                            "type" : "case"
+                          },
+                          {
+                            "path" : "\/documentation\/routedocs\/docsviewcontext\/documentation\/object\/body-swift.enum\/empty",
+                            "title" : "case empty",
+                            "type" : "case"
+                          },
+                          {
+                            "path" : "\/documentation\/routedocs\/docsviewcontext\/documentation\/object\/body-swift.enum\/fields(_:)",
+                            "title" : "case fields(Array<DocsViewContext.Documentation.Object.Body.Field>)",
+                            "type" : "case"
+                          },
+                          {
+                            "title" : "Initializers",
+                            "type" : "groupMarker"
+                          },
+                          {
+                            "path" : "\/documentation\/routedocs\/docsviewcontext\/documentation\/object\/body-swift.enum\/init(body:usingname:)",
+                            "title" : "init(body: EndpointDocumentation.Object.Body, usingName: KeyPath<DocumentationType, String>?)",
+                            "type" : "init"
+                          },
+                          {
+                            "title" : "Instance Methods",
+                            "type" : "groupMarker"
+                          },
+                          {
+                            "path" : "\/documentation\/routedocs\/docsviewcontext\/documentation\/object\/body-swift.enum\/encode(to:)",
+                            "title" : "func encode(to: any Encoder) throws",
+                            "type" : "method"
+                          }
+                        ],
+                        "path" : "\/documentation\/routedocs\/docsviewcontext\/documentation\/object\/body-swift.enum",
+                        "title" : "DocsViewContext.Documentation.Object.Body",
+                        "type" : "enum"
+                      }
+                    ],
+                    "path" : "\/documentation\/routedocs\/docsviewcontext\/documentation\/object",
+                    "title" : "DocsViewContext.Documentation.Object",
+                    "type" : "struct"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Initializers",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/docsviewcontext\/documentation\/payload\/init(payload:usingname:)",
+                        "title" : "init(payload: EndpointDocumentation.Payload, usingName: KeyPath<DocumentationType, String>?)",
+                        "type" : "init"
+                      },
+                      {
+                        "title" : "Instance Properties",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/docsviewcontext\/documentation\/payload\/mediatype",
+                        "title" : "let mediaType: HTTPMediaType",
+                        "type" : "property"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/docsviewcontext\/documentation\/payload\/objects",
+                        "title" : "let objects: Array<DocsViewContext.Documentation.Object>",
+                        "type" : "property"
+                      }
+                    ],
+                    "path" : "\/documentation\/routedocs\/docsviewcontext\/documentation\/payload",
+                    "title" : "DocsViewContext.Documentation.Payload",
+                    "type" : "struct"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Initializers",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/docsviewcontext\/documentation\/query-swift.struct\/init(query:usingname:)",
+                        "title" : "init(query: EndpointDocumentation.Query, usingName: KeyPath<DocumentationType, String>?)",
+                        "type" : "init"
+                      },
+                      {
+                        "title" : "Instance Properties",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/docsviewcontext\/documentation\/query-swift.struct\/objects",
+                        "title" : "let objects: Array<DocsViewContext.Documentation.Object>",
+                        "type" : "property"
+                      }
+                    ],
+                    "path" : "\/documentation\/routedocs\/docsviewcontext\/documentation\/query-swift.struct",
+                    "title" : "DocsViewContext.Documentation.Query",
+                    "type" : "struct"
+                  },
+                  {
+                    "title" : "Initializers",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/routedocs\/docsviewcontext\/documentation\/init(documentation:usingname:)",
+                    "title" : "init(documentation: EndpointDocumentation, usingName: KeyPath<DocumentationType, String>?)",
+                    "type" : "init"
+                  },
+                  {
+                    "title" : "Instance Properties",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/routedocs\/docsviewcontext\/documentation\/method",
+                    "title" : "let method: HTTPMethod",
+                    "type" : "property"
+                  },
+                  {
+                    "path" : "\/documentation\/routedocs\/docsviewcontext\/documentation\/path",
+                    "title" : "let path: String",
+                    "type" : "property"
+                  },
+                  {
+                    "path" : "\/documentation\/routedocs\/docsviewcontext\/documentation\/query-swift.property",
+                    "title" : "let query: DocsViewContext.Documentation.Query?",
+                    "type" : "property"
+                  },
+                  {
+                    "path" : "\/documentation\/routedocs\/docsviewcontext\/documentation\/request",
+                    "title" : "let request: DocsViewContext.Documentation.Payload?",
+                    "type" : "property"
+                  },
+                  {
+                    "path" : "\/documentation\/routedocs\/docsviewcontext\/documentation\/requiredauthorization",
+                    "title" : "let requiredAuthorization: Array<String>",
+                    "type" : "property"
+                  },
+                  {
+                    "path" : "\/documentation\/routedocs\/docsviewcontext\/documentation\/response",
+                    "title" : "let response: DocsViewContext.Documentation.Payload?",
+                    "type" : "property"
+                  }
+                ],
+                "path" : "\/documentation\/routedocs\/docsviewcontext\/documentation",
+                "title" : "DocsViewContext.Documentation",
+                "type" : "struct"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Instance Properties",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/routedocs\/docsviewcontext\/groupeddocumentation\/documentations",
+                    "title" : "let documentations: Array<DocsViewContext.Documentation>",
+                    "type" : "property"
+                  },
+                  {
+                    "path" : "\/documentation\/routedocs\/docsviewcontext\/groupeddocumentation\/groupname",
+                    "title" : "let groupName: String",
+                    "type" : "property"
+                  },
+                  {
+                    "path" : "\/documentation\/routedocs\/docsviewcontext\/groupeddocumentation\/id",
+                    "title" : "let id: Int",
+                    "type" : "property"
+                  }
+                ],
+                "path" : "\/documentation\/routedocs\/docsviewcontext\/groupeddocumentation",
+                "title" : "DocsViewContext.GroupedDocumentation",
+                "type" : "struct"
+              },
+              {
+                "title" : "Initializers",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/routedocs\/docsviewcontext\/init(documentables:sortedby:usingname:)",
+                "title" : "init(documentables: some Sequence<any EndpointDocumentable>, sortedBy: KeyPath<EndpointDocumentation, some Comparable>, usingName: KeyPath<DocumentationType, String>?)",
+                "type" : "init"
+              },
+              {
+                "path" : "\/documentation\/routedocs\/docsviewcontext\/init(routes:sortedby:usingname:)",
+                "title" : "init(routes: Routes, sortedBy: KeyPath<EndpointDocumentation, some Comparable>, usingName: KeyPath<DocumentationType, String>?)",
+                "type" : "init"
+              },
+              {
+                "title" : "Instance Properties",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/routedocs\/docsviewcontext\/groupeddocumentations",
+                "title" : "let groupedDocumentations: Array<DocsViewContext.GroupedDocumentation>",
+                "type" : "property"
+              },
+              {
+                "path" : "\/documentation\/routedocs\/docsviewcontext\/otherdocumentations",
+                "title" : "let otherDocumentations: Array<DocsViewContext.Documentation>",
+                "type" : "property"
+              },
+              {
+                "title" : "Type Properties",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/routedocs\/docsviewcontext\/defaultdocsviewpath",
+                "title" : "static let defaultDocsViewPath: String",
+                "type" : "property"
+              }
+            ],
+            "path" : "\/documentation\/routedocs\/docsviewcontext",
+            "title" : "DocsViewContext",
+            "type" : "struct"
+          },
+          {
+            "children" : [
+              {
+                "title" : "Operators",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/routedocs\/documentationobject\/==(_:_:)",
+                "title" : "static func == (DocumentationObject, DocumentationObject) -> Bool",
+                "type" : "op"
+              },
+              {
+                "title" : "Initializers",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/routedocs\/documentationobject\/init(_:body:)",
+                "title" : "init<T>(T.Type, body: DocumentationObject.Body)",
+                "type" : "init"
+              },
+              {
+                "path" : "\/documentation\/routedocs\/documentationobject\/init(_:fields:)",
+                "title" : "init<T>(T.Type, fields: Dictionary<String, DocumentationObject>)",
+                "type" : "init"
+              },
+              {
+                "path" : "\/documentation\/routedocs\/documentationobject\/init(casesof:)",
+                "title" : "init<T>(casesOf: T.Type)",
+                "type" : "init"
+              },
+              {
+                "title" : "Instance Properties",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/routedocs\/documentationobject\/body-swift.property",
+                "title" : "var body: DocumentationObject.Body",
+                "type" : "property"
+              },
+              {
+                "path" : "\/documentation\/routedocs\/documentationobject\/description",
+                "title" : "var description: String",
+                "type" : "property"
+              },
+              {
+                "path" : "\/documentation\/routedocs\/documentationobject\/isoptional",
+                "title" : "var isOptional: Bool",
+                "type" : "property"
+              },
+              {
+                "path" : "\/documentation\/routedocs\/documentationobject\/type",
+                "title" : "let type: any Any.Type",
+                "type" : "property"
+              },
+              {
+                "title" : "Instance Methods",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/routedocs\/documentationobject\/hash(into:)",
+                "title" : "func hash(into: inout Hasher)",
+                "type" : "method"
+              },
+              {
+                "title" : "Type Methods",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/routedocs\/documentationobject\/cleartypecaches()",
+                "title" : "static func clearTypeCaches()",
+                "type" : "method"
+              },
+              {
+                "title" : "Enumerations",
+                "type" : "groupMarker"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Structures",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Initializers",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/documentationobject\/body-swift.enum\/enumcase\/init(name:value:)",
+                        "title" : "init(name: String?, value: String)",
+                        "type" : "init"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/documentationobject\/body-swift.enum\/enumcase\/init(value:)",
+                        "title" : "init(value: some RawRepresentable)",
+                        "type" : "init"
+                      },
+                      {
+                        "title" : "Instance Properties",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/documentationobject\/body-swift.enum\/enumcase\/name",
+                        "title" : "let name: String?",
+                        "type" : "property"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/documentationobject\/body-swift.enum\/enumcase\/value",
+                        "title" : "let value: String",
+                        "type" : "property"
+                      },
+                      {
+                        "title" : "Default Implementations",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "children" : [
+                          {
+                            "title" : "Operators",
+                            "type" : "groupMarker"
+                          },
+                          {
+                            "path" : "\/documentation\/routedocs\/documentationobject\/body-swift.enum\/enumcase\/!=(_:_:)",
+                            "title" : "static func != (Self, Self) -> Bool",
+                            "type" : "op"
+                          }
+                        ],
+                        "path" : "\/documentation\/routedocs\/documentationobject\/body-swift.enum\/enumcase\/equatable-implementations",
+                        "title" : "Equatable Implementations",
+                        "type" : "symbol"
+                      }
+                    ],
+                    "path" : "\/documentation\/routedocs\/documentationobject\/body-swift.enum\/enumcase",
+                    "title" : "DocumentationObject.Body.EnumCase",
+                    "type" : "struct"
+                  },
+                  {
+                    "title" : "Enumeration Cases",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/routedocs\/documentationobject\/body-swift.enum\/cases(_:)",
+                    "title" : "case cases(Array<DocumentationObject.Body.EnumCase>)",
+                    "type" : "case"
+                  },
+                  {
+                    "path" : "\/documentation\/routedocs\/documentationobject\/body-swift.enum\/fields(_:)",
+                    "title" : "case fields(Dictionary<String, DocumentationObject>)",
+                    "type" : "case"
+                  },
+                  {
+                    "path" : "\/documentation\/routedocs\/documentationobject\/body-swift.enum\/none",
+                    "title" : "case none",
+                    "type" : "case"
+                  },
+                  {
+                    "title" : "Instance Properties",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/routedocs\/documentationobject\/body-swift.enum\/isempty",
+                    "title" : "var isEmpty: Bool",
+                    "type" : "property"
+                  },
+                  {
+                    "title" : "Default Implementations",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Operators",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/documentationobject\/body-swift.enum\/!=(_:_:)",
+                        "title" : "static func != (Self, Self) -> Bool",
+                        "type" : "op"
+                      }
+                    ],
+                    "path" : "\/documentation\/routedocs\/documentationobject\/body-swift.enum\/equatable-implementations",
+                    "title" : "Equatable Implementations",
+                    "type" : "symbol"
+                  }
+                ],
+                "path" : "\/documentation\/routedocs\/documentationobject\/body-swift.enum",
+                "title" : "DocumentationObject.Body",
+                "type" : "enum"
+              },
+              {
+                "title" : "Default Implementations",
+                "type" : "groupMarker"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Operators",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/routedocs\/documentationobject\/!=(_:_:)",
+                    "title" : "static func != (Self, Self) -> Bool",
+                    "type" : "op"
+                  }
+                ],
+                "path" : "\/documentation\/routedocs\/documentationobject\/equatable-implementations",
+                "title" : "Equatable Implementations",
+                "type" : "symbol"
+              }
+            ],
+            "path" : "\/documentation\/routedocs\/documentationobject",
+            "title" : "DocumentationObject",
+            "type" : "struct"
+          },
+          {
+            "children" : [
+              {
+                "title" : "Initializers",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/routedocs\/documentationtype\/init(from:)",
+                "title" : "init(from: any Decoder) throws",
+                "type" : "init"
+              },
+              {
+                "title" : "Instance Properties",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/routedocs\/documentationtype\/customname",
+                "title" : "let customName: String?",
+                "type" : "property"
+              },
+              {
+                "path" : "\/documentation\/routedocs\/documentationtype\/defaultname",
+                "title" : "var defaultName: String",
+                "type" : "property"
+              },
+              {
+                "path" : "\/documentation\/routedocs\/documentationtype\/description",
+                "title" : "var description: String",
+                "type" : "property"
+              },
+              {
+                "path" : "\/documentation\/routedocs\/documentationtype\/typedescription",
+                "title" : "let typeDescription: TypeDescription",
+                "type" : "property"
+              },
+              {
+                "title" : "Default Implementations",
+                "type" : "groupMarker"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Operators",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/routedocs\/documentationtype\/!=(_:_:)",
+                    "title" : "static func != (Self, Self) -> Bool",
+                    "type" : "op"
+                  }
+                ],
+                "path" : "\/documentation\/routedocs\/documentationtype\/equatable-implementations",
+                "title" : "Equatable Implementations",
+                "type" : "symbol"
+              }
+            ],
+            "path" : "\/documentation\/routedocs\/documentationtype",
+            "title" : "DocumentationType",
+            "type" : "struct"
+          },
+          {
+            "children" : [
+              {
+                "title" : "Structures",
+                "type" : "groupMarker"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Initializers",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/routedocs\/endpointdocumentation\/object\/init(from:)",
+                    "title" : "init(from: any Decoder) throws",
+                    "type" : "init"
+                  },
+                  {
+                    "title" : "Instance Properties",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/routedocs\/endpointdocumentation\/object\/body-swift.property",
+                    "title" : "let body: EndpointDocumentation.Object.Body",
+                    "type" : "property"
+                  },
+                  {
+                    "path" : "\/documentation\/routedocs\/endpointdocumentation\/object\/description",
+                    "title" : "var description: String",
+                    "type" : "property"
+                  },
+                  {
+                    "path" : "\/documentation\/routedocs\/endpointdocumentation\/object\/type",
+                    "title" : "let type: DocumentationType",
+                    "type" : "property"
+                  },
+                  {
+                    "title" : "Instance Methods",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/routedocs\/endpointdocumentation\/object\/adjustingbody(with:)",
+                    "title" : "func adjustingBody(with: (inout EndpointDocumentation.Object.Body) throws -> ()) rethrows -> EndpointDocumentation.Object",
+                    "type" : "method"
+                  },
+                  {
+                    "title" : "Enumerations",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Structures",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "children" : [
+                          {
+                            "title" : "Initializers",
+                            "type" : "groupMarker"
+                          },
+                          {
+                            "path" : "\/documentation\/routedocs\/endpointdocumentation\/object\/body-swift.enum\/enumcase\/init(from:)",
+                            "title" : "init(from: any Decoder) throws",
+                            "type" : "init"
+                          },
+                          {
+                            "title" : "Instance Properties",
+                            "type" : "groupMarker"
+                          },
+                          {
+                            "path" : "\/documentation\/routedocs\/endpointdocumentation\/object\/body-swift.enum\/enumcase\/description",
+                            "title" : "var description: String",
+                            "type" : "property"
+                          },
+                          {
+                            "path" : "\/documentation\/routedocs\/endpointdocumentation\/object\/body-swift.enum\/enumcase\/name",
+                            "title" : "let name: String?",
+                            "type" : "property"
+                          },
+                          {
+                            "path" : "\/documentation\/routedocs\/endpointdocumentation\/object\/body-swift.enum\/enumcase\/value",
+                            "title" : "let value: String",
+                            "type" : "property"
+                          },
+                          {
+                            "title" : "Default Implementations",
+                            "type" : "groupMarker"
+                          },
+                          {
+                            "children" : [
+                              {
+                                "title" : "Operators",
+                                "type" : "groupMarker"
+                              },
+                              {
+                                "path" : "\/documentation\/routedocs\/endpointdocumentation\/object\/body-swift.enum\/enumcase\/!=(_:_:)",
+                                "title" : "static func != (Self, Self) -> Bool",
+                                "type" : "op"
+                              }
+                            ],
+                            "path" : "\/documentation\/routedocs\/endpointdocumentation\/object\/body-swift.enum\/enumcase\/equatable-implementations",
+                            "title" : "Equatable Implementations",
+                            "type" : "symbol"
+                          }
+                        ],
+                        "path" : "\/documentation\/routedocs\/endpointdocumentation\/object\/body-swift.enum\/enumcase",
+                        "title" : "EndpointDocumentation.Object.Body.EnumCase",
+                        "type" : "struct"
+                      },
+                      {
+                        "children" : [
+                          {
+                            "title" : "Initializers",
+                            "type" : "groupMarker"
+                          },
+                          {
+                            "path" : "\/documentation\/routedocs\/endpointdocumentation\/object\/body-swift.enum\/field\/init(from:)",
+                            "title" : "init(from: any Decoder) throws",
+                            "type" : "init"
+                          },
+                          {
+                            "title" : "Instance Properties",
+                            "type" : "groupMarker"
+                          },
+                          {
+                            "path" : "\/documentation\/routedocs\/endpointdocumentation\/object\/body-swift.enum\/field\/description",
+                            "title" : "var description: String",
+                            "type" : "property"
+                          },
+                          {
+                            "path" : "\/documentation\/routedocs\/endpointdocumentation\/object\/body-swift.enum\/field\/isoptional",
+                            "title" : "let isOptional: Bool",
+                            "type" : "property"
+                          },
+                          {
+                            "path" : "\/documentation\/routedocs\/endpointdocumentation\/object\/body-swift.enum\/field\/name",
+                            "title" : "let name: String",
+                            "type" : "property"
+                          },
+                          {
+                            "path" : "\/documentation\/routedocs\/endpointdocumentation\/object\/body-swift.enum\/field\/type",
+                            "title" : "let type: DocumentationType",
+                            "type" : "property"
+                          },
+                          {
+                            "title" : "Default Implementations",
+                            "type" : "groupMarker"
+                          },
+                          {
+                            "children" : [
+                              {
+                                "title" : "Operators",
+                                "type" : "groupMarker"
+                              },
+                              {
+                                "path" : "\/documentation\/routedocs\/endpointdocumentation\/object\/body-swift.enum\/field\/!=(_:_:)",
+                                "title" : "static func != (Self, Self) -> Bool",
+                                "type" : "op"
+                              }
+                            ],
+                            "path" : "\/documentation\/routedocs\/endpointdocumentation\/object\/body-swift.enum\/field\/equatable-implementations",
+                            "title" : "Equatable Implementations",
+                            "type" : "symbol"
+                          }
+                        ],
+                        "path" : "\/documentation\/routedocs\/endpointdocumentation\/object\/body-swift.enum\/field",
+                        "title" : "EndpointDocumentation.Object.Body.Field",
+                        "type" : "struct"
+                      },
+                      {
+                        "title" : "Enumeration Cases",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/endpointdocumentation\/object\/body-swift.enum\/cases(_:)",
+                        "title" : "case cases(Array<EndpointDocumentation.Object.Body.EnumCase>)",
+                        "type" : "case"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/endpointdocumentation\/object\/body-swift.enum\/empty",
+                        "title" : "case empty",
+                        "type" : "case"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/endpointdocumentation\/object\/body-swift.enum\/fields(_:)",
+                        "title" : "case fields(Array<EndpointDocumentation.Object.Body.Field>)",
+                        "type" : "case"
+                      },
+                      {
+                        "title" : "Initializers",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/endpointdocumentation\/object\/body-swift.enum\/init(from:)",
+                        "title" : "init(from: any Decoder) throws",
+                        "type" : "init"
+                      },
+                      {
+                        "title" : "Instance Properties",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/endpointdocumentation\/object\/body-swift.enum\/description",
+                        "title" : "var description: String",
+                        "type" : "property"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/endpointdocumentation\/object\/body-swift.enum\/isempty",
+                        "title" : "var isEmpty: Bool",
+                        "type" : "property"
+                      },
+                      {
+                        "title" : "Instance Methods",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/endpointdocumentation\/object\/body-swift.enum\/encode(to:)",
+                        "title" : "func encode(to: any Encoder) throws",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/endpointdocumentation\/object\/body-swift.enum\/filter(fieldnames:)-2cr18",
+                        "title" : "func filter(fieldNames: Set<String>) -> EndpointDocumentation.Object.Body",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/endpointdocumentation\/object\/body-swift.enum\/filter(fieldnames:)-83iow",
+                        "title" : "func filter(fieldNames: String...) -> EndpointDocumentation.Object.Body",
+                        "type" : "method"
+                      },
+                      {
+                        "title" : "Default Implementations",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "children" : [
+                          {
+                            "title" : "Operators",
+                            "type" : "groupMarker"
+                          },
+                          {
+                            "path" : "\/documentation\/routedocs\/endpointdocumentation\/object\/body-swift.enum\/!=(_:_:)",
+                            "title" : "static func != (Self, Self) -> Bool",
+                            "type" : "op"
+                          }
+                        ],
+                        "path" : "\/documentation\/routedocs\/endpointdocumentation\/object\/body-swift.enum\/equatable-implementations",
+                        "title" : "Equatable Implementations",
+                        "type" : "symbol"
+                      }
+                    ],
+                    "path" : "\/documentation\/routedocs\/endpointdocumentation\/object\/body-swift.enum",
+                    "title" : "EndpointDocumentation.Object.Body",
+                    "type" : "enum"
+                  },
+                  {
+                    "title" : "Default Implementations",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Operators",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/endpointdocumentation\/object\/!=(_:_:)",
+                        "title" : "static func != (Self, Self) -> Bool",
+                        "type" : "op"
+                      }
+                    ],
+                    "path" : "\/documentation\/routedocs\/endpointdocumentation\/object\/equatable-implementations",
+                    "title" : "Equatable Implementations",
+                    "type" : "symbol"
+                  }
+                ],
+                "path" : "\/documentation\/routedocs\/endpointdocumentation\/object",
+                "title" : "EndpointDocumentation.Object",
+                "type" : "struct"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Initializers",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/routedocs\/endpointdocumentation\/payload\/init(from:)",
+                    "title" : "init(from: any Decoder) throws",
+                    "type" : "init"
+                  },
+                  {
+                    "path" : "\/documentation\/routedocs\/endpointdocumentation\/payload\/init(object:)",
+                    "title" : "init<T>(object: T.Type) throws",
+                    "type" : "init"
+                  },
+                  {
+                    "path" : "\/documentation\/routedocs\/endpointdocumentation\/payload\/init(object:as:)",
+                    "title" : "init<T>(object: T.Type, as: HTTPMediaType) throws",
+                    "type" : "init"
+                  },
+                  {
+                    "path" : "\/documentation\/routedocs\/endpointdocumentation\/payload\/init(object:as:customuserinfo:)",
+                    "title" : "init<T>(object: T.Type, as: HTTPMediaType, customUserInfo: Dictionary<CodingUserInfoKey, Any>) throws",
+                    "type" : "init"
+                  },
+                  {
+                    "path" : "\/documentation\/routedocs\/endpointdocumentation\/payload\/init(object:customuserinfo:)",
+                    "title" : "init<T>(object: T.Type, customUserInfo: Dictionary<CodingUserInfoKey, Any>) throws",
+                    "type" : "init"
+                  },
+                  {
+                    "title" : "Instance Properties",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/routedocs\/endpointdocumentation\/payload\/description",
+                    "title" : "var description: String",
+                    "type" : "property"
+                  },
+                  {
+                    "path" : "\/documentation\/routedocs\/endpointdocumentation\/payload\/mediatype",
+                    "title" : "let mediaType: HTTPMediaType",
+                    "type" : "property"
+                  },
+                  {
+                    "path" : "\/documentation\/routedocs\/endpointdocumentation\/payload\/objects",
+                    "title" : "let objects: Array<EndpointDocumentation.Object>",
+                    "type" : "property"
+                  },
+                  {
+                    "title" : "Instance Methods",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/routedocs\/endpointdocumentation\/payload\/filterobjects(with:)-41vyz",
+                    "title" : "func filterObjects(with: (EndpointDocumentation.Object) throws -> EndpointDocumentation.Object?) rethrows -> EndpointDocumentation.Payload",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/routedocs\/endpointdocumentation\/payload\/filterobjects(with:)-6tz7d",
+                    "title" : "func filterObjects(with: (EndpointDocumentation.Object) throws -> Bool) rethrows -> EndpointDocumentation.Payload",
+                    "type" : "method"
+                  },
+                  {
+                    "title" : "Default Implementations",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Operators",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/endpointdocumentation\/payload\/!=(_:_:)",
+                        "title" : "static func != (Self, Self) -> Bool",
+                        "type" : "op"
+                      }
+                    ],
+                    "path" : "\/documentation\/routedocs\/endpointdocumentation\/payload\/equatable-implementations",
+                    "title" : "Equatable Implementations",
+                    "type" : "symbol"
+                  }
+                ],
+                "path" : "\/documentation\/routedocs\/endpointdocumentation\/payload",
+                "title" : "EndpointDocumentation.Payload",
+                "type" : "struct"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Initializers",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/routedocs\/endpointdocumentation\/query-swift.struct\/init(from:)",
+                    "title" : "init(from: any Decoder) throws",
+                    "type" : "init"
+                  },
+                  {
+                    "path" : "\/documentation\/routedocs\/endpointdocumentation\/query-swift.struct\/init(object:)",
+                    "title" : "init<T>(object: T.Type) throws",
+                    "type" : "init"
+                  },
+                  {
+                    "path" : "\/documentation\/routedocs\/endpointdocumentation\/query-swift.struct\/init(object:customuserinfo:)",
+                    "title" : "init<T>(object: T.Type, customUserInfo: Dictionary<CodingUserInfoKey, Any>) throws",
+                    "type" : "init"
+                  },
+                  {
+                    "title" : "Instance Properties",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/routedocs\/endpointdocumentation\/query-swift.struct\/description",
+                    "title" : "var description: String",
+                    "type" : "property"
+                  },
+                  {
+                    "path" : "\/documentation\/routedocs\/endpointdocumentation\/query-swift.struct\/objects",
+                    "title" : "let objects: Array<EndpointDocumentation.Object>",
+                    "type" : "property"
+                  },
+                  {
+                    "title" : "Instance Methods",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/routedocs\/endpointdocumentation\/query-swift.struct\/filterobjects(with:)-1rwra",
+                    "title" : "func filterObjects(with: (EndpointDocumentation.Object) throws -> EndpointDocumentation.Object?) rethrows -> EndpointDocumentation.Query",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/routedocs\/endpointdocumentation\/query-swift.struct\/filterobjects(with:)-8u15l",
+                    "title" : "func filterObjects(with: (EndpointDocumentation.Object) throws -> Bool) rethrows -> EndpointDocumentation.Query",
+                    "type" : "method"
+                  },
+                  {
+                    "title" : "Default Implementations",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Operators",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/endpointdocumentation\/query-swift.struct\/!=(_:_:)",
+                        "title" : "static func != (Self, Self) -> Bool",
+                        "type" : "op"
+                      }
+                    ],
+                    "path" : "\/documentation\/routedocs\/endpointdocumentation\/query-swift.struct\/equatable-implementations",
+                    "title" : "Equatable Implementations",
+                    "type" : "symbol"
+                  }
+                ],
+                "path" : "\/documentation\/routedocs\/endpointdocumentation\/query-swift.struct",
+                "title" : "EndpointDocumentation.Query",
+                "type" : "struct"
+              },
+              {
+                "title" : "Initializers",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/routedocs\/endpointdocumentation\/init(from:)",
+                "title" : "init(from: any Decoder) throws",
+                "type" : "init"
+              },
+              {
+                "path" : "\/documentation\/routedocs\/endpointdocumentation\/init(method:path:groupname:query:request:response:requiredauthorization:)",
+                "title" : "init(method: HTTPMethod, path: Array<PathComponent>, groupName: String?, query: EndpointDocumentation.Query?, request: EndpointDocumentation.Payload?, response: EndpointDocumentation.Payload?, requiredAuthorization: Array<String>)",
+                "type" : "init"
+              },
+              {
+                "title" : "Instance Properties",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/routedocs\/endpointdocumentation\/defaultsortorder",
+                "title" : "var defaultSortOrder: some Comparable",
+                "type" : "property"
+              },
+              {
+                "path" : "\/documentation\/routedocs\/endpointdocumentation\/description",
+                "title" : "var description: String",
+                "type" : "property"
+              },
+              {
+                "path" : "\/documentation\/routedocs\/endpointdocumentation\/groupname",
+                "title" : "let groupName: String?",
+                "type" : "property"
+              },
+              {
+                "path" : "\/documentation\/routedocs\/endpointdocumentation\/method",
+                "title" : "let method: HTTPMethod",
+                "type" : "property"
+              },
+              {
+                "path" : "\/documentation\/routedocs\/endpointdocumentation\/path",
+                "title" : "let path: String",
+                "type" : "property"
+              },
+              {
+                "path" : "\/documentation\/routedocs\/endpointdocumentation\/query-swift.property",
+                "title" : "let query: EndpointDocumentation.Query?",
+                "type" : "property"
+              },
+              {
+                "path" : "\/documentation\/routedocs\/endpointdocumentation\/request",
+                "title" : "let request: EndpointDocumentation.Payload?",
+                "type" : "property"
+              },
+              {
+                "path" : "\/documentation\/routedocs\/endpointdocumentation\/requiredauthorization",
+                "title" : "let requiredAuthorization: Array<String>",
+                "type" : "property"
+              },
+              {
+                "path" : "\/documentation\/routedocs\/endpointdocumentation\/response",
+                "title" : "let response: EndpointDocumentation.Payload?",
+                "type" : "property"
+              },
+              {
+                "title" : "Default Implementations",
+                "type" : "groupMarker"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Operators",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/routedocs\/endpointdocumentation\/!=(_:_:)",
+                    "title" : "static func != (Self, Self) -> Bool",
+                    "type" : "op"
+                  }
+                ],
+                "path" : "\/documentation\/routedocs\/endpointdocumentation\/equatable-implementations",
+                "title" : "Equatable Implementations",
+                "type" : "symbol"
+              }
+            ],
+            "path" : "\/documentation\/routedocs\/endpointdocumentation",
+            "title" : "EndpointDocumentation",
+            "type" : "struct"
+          },
+          {
+            "children" : [
+              {
+                "title" : "Structures",
+                "type" : "groupMarker"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Initializers",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/routedocs\/typedescription\/nameoptions\/init(rawvalue:)",
+                    "title" : "init(rawValue: TypeDescription.NameOptions.RawValue)",
+                    "type" : "init"
+                  },
+                  {
+                    "title" : "Instance Properties",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/routedocs\/typedescription\/nameoptions\/rawvalue-swift.property",
+                    "title" : "let rawValue: TypeDescription.NameOptions.RawValue",
+                    "type" : "property"
+                  },
+                  {
+                    "title" : "Type Aliases",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/routedocs\/typedescription\/nameoptions\/rawvalue-swift.typealias",
+                    "title" : "TypeDescription.NameOptions.RawValue",
+                    "type" : "typealias"
+                  },
+                  {
+                    "title" : "Type Properties",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/routedocs\/typedescription\/nameoptions\/withmodule",
+                    "title" : "static let withModule: TypeDescription.NameOptions",
+                    "type" : "property"
+                  },
+                  {
+                    "path" : "\/documentation\/routedocs\/typedescription\/nameoptions\/withparents",
+                    "title" : "static let withParents: TypeDescription.NameOptions",
+                    "type" : "property"
+                  },
+                  {
+                    "title" : "Default Implementations",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Operators",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/typedescription\/nameoptions\/!=(_:_:)",
+                        "title" : "static func != (Self, Self) -> Bool",
+                        "type" : "op"
+                      }
+                    ],
+                    "path" : "\/documentation\/routedocs\/typedescription\/nameoptions\/equatable-implementations",
+                    "title" : "Equatable Implementations",
+                    "type" : "symbol"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Initializers",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/typedescription\/nameoptions\/init()",
+                        "title" : "init()",
+                        "type" : "init"
+                      },
+                      {
+                        "title" : "Instance Methods",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/typedescription\/nameoptions\/contains(_:)",
+                        "title" : "func contains(Self) -> Bool",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/typedescription\/nameoptions\/formintersection(_:)",
+                        "title" : "func formIntersection(Self)",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/typedescription\/nameoptions\/formsymmetricdifference(_:)",
+                        "title" : "func formSymmetricDifference(Self)",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/typedescription\/nameoptions\/formunion(_:)",
+                        "title" : "func formUnion(Self)",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/typedescription\/nameoptions\/insert(_:)",
+                        "title" : "func insert(Self.Element) -> (inserted: Bool, memberAfterInsert: Self.Element)",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/typedescription\/nameoptions\/intersection(_:)",
+                        "title" : "func intersection(Self) -> Self",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/typedescription\/nameoptions\/remove(_:)",
+                        "title" : "func remove(Self.Element) -> Self.Element?",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/typedescription\/nameoptions\/symmetricdifference(_:)",
+                        "title" : "func symmetricDifference(Self) -> Self",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/typedescription\/nameoptions\/union(_:)",
+                        "title" : "func union(Self) -> Self",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/typedescription\/nameoptions\/update(with:)",
+                        "title" : "func update(with: Self.Element) -> Self.Element?",
+                        "type" : "method"
+                      }
+                    ],
+                    "path" : "\/documentation\/routedocs\/typedescription\/nameoptions\/optionset-implementations",
+                    "title" : "OptionSet Implementations",
+                    "type" : "symbol"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Initializers",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/typedescription\/nameoptions\/init(_:)",
+                        "title" : "init<S>(S)",
+                        "type" : "init"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/typedescription\/nameoptions\/init(arrayliteral:)",
+                        "title" : "init(arrayLiteral: Self.Element...)",
+                        "type" : "init"
+                      },
+                      {
+                        "title" : "Instance Properties",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/typedescription\/nameoptions\/isempty",
+                        "title" : "var isEmpty: Bool",
+                        "type" : "property"
+                      },
+                      {
+                        "title" : "Instance Methods",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/typedescription\/nameoptions\/isdisjoint(with:)",
+                        "title" : "func isDisjoint(with: Self) -> Bool",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/typedescription\/nameoptions\/isstrictsubset(of:)",
+                        "title" : "func isStrictSubset(of: Self) -> Bool",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/typedescription\/nameoptions\/isstrictsuperset(of:)",
+                        "title" : "func isStrictSuperset(of: Self) -> Bool",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/typedescription\/nameoptions\/issubset(of:)",
+                        "title" : "func isSubset(of: Self) -> Bool",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/typedescription\/nameoptions\/issuperset(of:)",
+                        "title" : "func isSuperset(of: Self) -> Bool",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/typedescription\/nameoptions\/subtract(_:)",
+                        "title" : "func subtract(Self)",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/typedescription\/nameoptions\/subtracting(_:)",
+                        "title" : "func subtracting(Self) -> Self",
+                        "type" : "method"
+                      }
+                    ],
+                    "path" : "\/documentation\/routedocs\/typedescription\/nameoptions\/setalgebra-implementations",
+                    "title" : "SetAlgebra Implementations",
+                    "type" : "symbol"
+                  }
+                ],
+                "path" : "\/documentation\/routedocs\/typedescription\/nameoptions",
+                "title" : "TypeDescription.NameOptions",
+                "type" : "struct"
+              },
+              {
+                "title" : "Initializers",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/routedocs\/typedescription\/init(_:)",
+                "title" : "init<T>(T.Type)",
+                "type" : "init"
+              },
+              {
+                "path" : "\/documentation\/routedocs\/typedescription\/init(any:)",
+                "title" : "init(any: any Any.Type)",
+                "type" : "init"
+              },
+              {
+                "path" : "\/documentation\/routedocs\/typedescription\/init(from:)",
+                "title" : "init(from: any Decoder) throws",
+                "type" : "init"
+              },
+              {
+                "title" : "Instance Properties",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/routedocs\/typedescription\/description",
+                "title" : "var description: String",
+                "type" : "property"
+              },
+              {
+                "path" : "\/documentation\/routedocs\/typedescription\/genericparameters",
+                "title" : "let genericParameters: Array<TypeDescription>",
+                "type" : "property"
+              },
+              {
+                "path" : "\/documentation\/routedocs\/typedescription\/isgeneric",
+                "title" : "var isGeneric: Bool",
+                "type" : "property"
+              },
+              {
+                "path" : "\/documentation\/routedocs\/typedescription\/module",
+                "title" : "let module: String",
+                "type" : "property"
+              },
+              {
+                "path" : "\/documentation\/routedocs\/typedescription\/name",
+                "title" : "let name: String",
+                "type" : "property"
+              },
+              {
+                "path" : "\/documentation\/routedocs\/typedescription\/parent",
+                "title" : "var parent: TypeDescription?",
+                "type" : "property"
+              },
+              {
+                "path" : "\/documentation\/routedocs\/typedescription\/parents",
+                "title" : "var parents: some Sequence<TypeDescription>",
+                "type" : "property"
+              },
+              {
+                "title" : "Instance Methods",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/routedocs\/typedescription\/encode(to:)",
+                "title" : "func encode(to: any Encoder) throws",
+                "type" : "method"
+              },
+              {
+                "path" : "\/documentation\/routedocs\/typedescription\/typename(with:)",
+                "title" : "func typeName(with: TypeDescription.NameOptions) -> String",
+                "type" : "method"
+              },
+              {
+                "title" : "Default Implementations",
+                "type" : "groupMarker"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Operators",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/routedocs\/typedescription\/!=(_:_:)",
+                    "title" : "static func != (Self, Self) -> Bool",
+                    "type" : "op"
+                  }
+                ],
+                "path" : "\/documentation\/routedocs\/typedescription\/equatable-implementations",
+                "title" : "Equatable Implementations",
+                "type" : "symbol"
+              }
+            ],
+            "path" : "\/documentation\/routedocs\/typedescription",
+            "title" : "TypeDescription",
+            "type" : "struct"
+          },
+          {
+            "title" : "Extended Modules",
+            "type" : "groupMarker"
+          },
+          {
+            "children" : [
+              {
+                "title" : "Extended Structures",
+                "type" : "groupMarker"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Default Implementations",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Type Properties",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/foundationessentials\/date\/documentationbody",
+                        "title" : "static var documentationBody: DocumentationObject.Body",
+                        "type" : "property"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/foundationessentials\/date\/documentationinstance",
+                        "title" : "static var documentationInstance: Date",
+                        "type" : "property"
+                      }
+                    ],
+                    "path" : "\/documentation\/routedocs\/foundationessentials\/date\/customdocumentable-implementations",
+                    "title" : "CustomDocumentable Implementations",
+                    "type" : "symbol"
+                  }
+                ],
+                "path" : "\/documentation\/routedocs\/foundationessentials\/date",
+                "title" : "Date",
+                "type" : "extension"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Default Implementations",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Type Properties",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/foundationessentials\/url\/documentationbody",
+                        "title" : "static var documentationBody: DocumentationObject.Body",
+                        "type" : "property"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/foundationessentials\/url\/documentationinstance",
+                        "title" : "static var documentationInstance: URL",
+                        "type" : "property"
+                      }
+                    ],
+                    "path" : "\/documentation\/routedocs\/foundationessentials\/url\/customdocumentable-implementations",
+                    "title" : "CustomDocumentable Implementations",
+                    "type" : "symbol"
+                  }
+                ],
+                "path" : "\/documentation\/routedocs\/foundationessentials\/url",
+                "title" : "URL",
+                "type" : "extension"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Default Implementations",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Type Properties",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/foundationessentials\/uuid\/documentationbody",
+                        "title" : "static var documentationBody: DocumentationObject.Body",
+                        "type" : "property"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/foundationessentials\/uuid\/documentationinstance",
+                        "title" : "static var documentationInstance: UUID",
+                        "type" : "property"
+                      }
+                    ],
+                    "path" : "\/documentation\/routedocs\/foundationessentials\/uuid\/customdocumentable-implementations",
+                    "title" : "CustomDocumentable Implementations",
+                    "type" : "symbol"
+                  }
+                ],
+                "path" : "\/documentation\/routedocs\/foundationessentials\/uuid",
+                "title" : "UUID",
+                "type" : "extension"
+              }
+            ],
+            "path" : "\/documentation\/routedocs\/foundationessentials",
+            "title" : "FoundationEssentials",
+            "type" : "extension"
+          },
+          {
+            "children" : [
+              {
+                "title" : "Extended Classes",
+                "type" : "groupMarker"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Instance Methods",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/routedocs\/leafkit\/leafrenderer\/adddefaultdocssource(for:)",
+                    "title" : "func addDefaultDocsSource(for: Application) throws",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/routedocs\/leafkit\/leafrenderer\/adddefaultdocssource(with:)",
+                    "title" : "func addDefaultDocsSource(with: NonBlockingFileIO) throws",
+                    "type" : "method"
+                  }
+                ],
+                "path" : "\/documentation\/routedocs\/leafkit\/leafrenderer",
+                "title" : "LeafRenderer",
+                "type" : "extension"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Instance Methods",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/routedocs\/leafkit\/leafsources\/adddefaultdocssource(for:)",
+                    "title" : "func addDefaultDocsSource(for: Application) throws",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/routedocs\/leafkit\/leafsources\/adddefaultdocssource(with:)",
+                    "title" : "func addDefaultDocsSource(with: NonBlockingFileIO) throws",
+                    "type" : "method"
+                  }
+                ],
+                "path" : "\/documentation\/routedocs\/leafkit\/leafsources",
+                "title" : "LeafSources",
+                "type" : "extension"
+              },
+              {
+                "title" : "Extended Structures",
+                "type" : "groupMarker"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Type Methods",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/routedocs\/leafkit\/nioleaffiles\/defaultdocs(with:)",
+                    "title" : "static func defaultDocs(with: NonBlockingFileIO) -> NIOLeafFiles",
+                    "type" : "method"
+                  }
+                ],
+                "path" : "\/documentation\/routedocs\/leafkit\/nioleaffiles",
+                "title" : "NIOLeafFiles",
+                "type" : "extension"
+              }
+            ],
+            "path" : "\/documentation\/routedocs\/leafkit",
+            "title" : "LeafKit",
+            "type" : "extension"
+          },
+          {
+            "children" : [
+              {
+                "title" : "Extended Protocols",
+                "type" : "groupMarker"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Type Properties",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/routedocs\/swift\/caseiterable\/documentationbody",
+                    "title" : "static var documentationBody: DocumentationObject.Body",
+                    "type" : "property"
+                  }
+                ],
+                "path" : "\/documentation\/routedocs\/swift\/caseiterable",
+                "title" : "CaseIterable",
+                "type" : "extension"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Instance Properties",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/routedocs\/swift\/decoder\/isdocumentationdecoder",
+                    "title" : "var isDocumentationDecoder: Bool",
+                    "type" : "property"
+                  }
+                ],
+                "path" : "\/documentation\/routedocs\/swift\/decoder",
+                "title" : "Decoder",
+                "type" : "extension"
+              },
+              {
+                "title" : "Extended Structures",
+                "type" : "groupMarker"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Default Implementations",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Type Properties",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/swift\/array\/documentationname",
+                        "title" : "static var documentationName: String",
+                        "type" : "property"
+                      }
+                    ],
+                    "path" : "\/documentation\/routedocs\/swift\/array\/customdocumentationnamed-implementations",
+                    "title" : "CustomDocumentationNamed Implementations",
+                    "type" : "symbol"
+                  }
+                ],
+                "path" : "\/documentation\/routedocs\/swift\/array",
+                "title" : "Array",
+                "type" : "extension"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Default Implementations",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Type Properties",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/swift\/closedrange\/documentationname",
+                        "title" : "static var documentationName: String",
+                        "type" : "property"
+                      }
+                    ],
+                    "path" : "\/documentation\/routedocs\/swift\/closedrange\/customdocumentationnamed-implementations",
+                    "title" : "CustomDocumentationNamed Implementations",
+                    "type" : "symbol"
+                  }
+                ],
+                "path" : "\/documentation\/routedocs\/swift\/closedrange",
+                "title" : "ClosedRange",
+                "type" : "extension"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Type Properties",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/routedocs\/swift\/codinguserinfokey\/isdocumentationdecoder",
+                    "title" : "static let isDocumentationDecoder: CodingUserInfoKey",
+                    "type" : "property"
+                  }
+                ],
+                "path" : "\/documentation\/routedocs\/swift\/codinguserinfokey",
+                "title" : "CodingUserInfoKey",
+                "type" : "extension"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Default Implementations",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Type Properties",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/swift\/contiguousarray\/documentationname",
+                        "title" : "static var documentationName: String",
+                        "type" : "property"
+                      }
+                    ],
+                    "path" : "\/documentation\/routedocs\/swift\/contiguousarray\/customdocumentationnamed-implementations",
+                    "title" : "CustomDocumentationNamed Implementations",
+                    "type" : "symbol"
+                  }
+                ],
+                "path" : "\/documentation\/routedocs\/swift\/contiguousarray",
+                "title" : "ContiguousArray",
+                "type" : "extension"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Default Implementations",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Type Properties",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/swift\/partialrangefrom\/documentationname",
+                        "title" : "static var documentationName: String",
+                        "type" : "property"
+                      }
+                    ],
+                    "path" : "\/documentation\/routedocs\/swift\/partialrangefrom\/customdocumentationnamed-implementations",
+                    "title" : "CustomDocumentationNamed Implementations",
+                    "type" : "symbol"
+                  }
+                ],
+                "path" : "\/documentation\/routedocs\/swift\/partialrangefrom",
+                "title" : "PartialRangeFrom",
+                "type" : "extension"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Default Implementations",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Type Properties",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/swift\/partialrangethrough\/documentationname",
+                        "title" : "static var documentationName: String",
+                        "type" : "property"
+                      }
+                    ],
+                    "path" : "\/documentation\/routedocs\/swift\/partialrangethrough\/customdocumentationnamed-implementations",
+                    "title" : "CustomDocumentationNamed Implementations",
+                    "type" : "symbol"
+                  }
+                ],
+                "path" : "\/documentation\/routedocs\/swift\/partialrangethrough",
+                "title" : "PartialRangeThrough",
+                "type" : "extension"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Default Implementations",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Type Properties",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/swift\/partialrangeupto\/documentationname",
+                        "title" : "static var documentationName: String",
+                        "type" : "property"
+                      }
+                    ],
+                    "path" : "\/documentation\/routedocs\/swift\/partialrangeupto\/customdocumentationnamed-implementations",
+                    "title" : "CustomDocumentationNamed Implementations",
+                    "type" : "symbol"
+                  }
+                ],
+                "path" : "\/documentation\/routedocs\/swift\/partialrangeupto",
+                "title" : "PartialRangeUpTo",
+                "type" : "extension"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Default Implementations",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Type Properties",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/swift\/range\/documentationname",
+                        "title" : "static var documentationName: String",
+                        "type" : "property"
+                      }
+                    ],
+                    "path" : "\/documentation\/routedocs\/swift\/range\/customdocumentationnamed-implementations",
+                    "title" : "CustomDocumentationNamed Implementations",
+                    "type" : "symbol"
+                  }
+                ],
+                "path" : "\/documentation\/routedocs\/swift\/range",
+                "title" : "Range",
+                "type" : "extension"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Default Implementations",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Type Properties",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/swift\/set\/documentationname",
+                        "title" : "static var documentationName: String",
+                        "type" : "property"
+                      }
+                    ],
+                    "path" : "\/documentation\/routedocs\/swift\/set\/customdocumentationnamed-implementations",
+                    "title" : "CustomDocumentationNamed Implementations",
+                    "type" : "symbol"
+                  }
+                ],
+                "path" : "\/documentation\/routedocs\/swift\/set",
+                "title" : "Set",
+                "type" : "extension"
+              },
+              {
+                "title" : "Extended Enumerations",
+                "type" : "groupMarker"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Default Implementations",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Type Properties",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/swift\/optional\/documentationbody",
+                        "title" : "static var documentationBody: DocumentationObject.Body",
+                        "type" : "property"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/swift\/optional\/documentationinstance",
+                        "title" : "static var documentationInstance: Optional<Wrapped>",
+                        "type" : "property"
+                      }
+                    ],
+                    "path" : "\/documentation\/routedocs\/swift\/optional\/customdocumentable-implementations",
+                    "title" : "CustomDocumentable Implementations",
+                    "type" : "symbol"
+                  }
+                ],
+                "path" : "\/documentation\/routedocs\/swift\/optional",
+                "title" : "Optional",
+                "type" : "extension"
+              }
+            ],
+            "path" : "\/documentation\/routedocs\/swift",
+            "title" : "Swift",
+            "type" : "extension"
+          },
+          {
+            "children" : [
+              {
+                "title" : "Extended Classes",
+                "type" : "groupMarker"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Instance Properties",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/routedocs\/vapor\/application\/defaultdocsleafsource",
+                    "title" : "var defaultDocsLeafSource: some LeafSource",
+                    "type" : "property"
+                  },
+                  {
+                    "title" : "Extended Structures",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Instance Methods",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/vapor\/application\/leaf\/registerdocumentationtags()",
+                        "title" : "func registerDocumentationTags()",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/vapor\/application\/leaf\/setuproutedocs()",
+                        "title" : "func setupRouteDocs() throws",
+                        "type" : "method"
+                      }
+                    ],
+                    "path" : "\/documentation\/routedocs\/vapor\/application\/leaf",
+                    "title" : "Application.Leaf",
+                    "type" : "extension"
+                  }
+                ],
+                "path" : "\/documentation\/routedocs\/vapor\/application",
+                "title" : "Application",
+                "type" : "extension"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Instance Methods",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/routedocs\/vapor\/route\/adddocumentation(_:)",
+                    "title" : "func addDocumentation(EndpointDocumentation)",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/routedocs\/vapor\/route\/adddocumentation(groupedas:query:request:response:requiredauthorization:)",
+                    "title" : "func addDocumentation(groupedAs: String?, query: EndpointDocumentation.Query?, request: EndpointDocumentation.Payload?, response: EndpointDocumentation.Payload?, requiredAuthorization: Array<String>)",
+                    "type" : "method"
+                  },
+                  {
+                    "title" : "Default Implementations",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Instance Properties",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/vapor\/route\/documentation",
+                        "title" : "var documentation: EndpointDocumentation?",
+                        "type" : "property"
+                      }
+                    ],
+                    "path" : "\/documentation\/routedocs\/vapor\/route\/endpointdocumentable-implementations",
+                    "title" : "EndpointDocumentable Implementations",
+                    "type" : "symbol"
+                  }
+                ],
+                "path" : "\/documentation\/routedocs\/vapor\/route",
+                "title" : "Route",
+                "type" : "extension"
+              },
+              {
+                "title" : "Extended Protocols",
+                "type" : "groupMarker"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Instance Methods",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/routedocs\/vapor\/viewrenderer\/renderdefaultdocs(with:)",
+                    "title" : "func renderDefaultDocs(with: DocsViewContext) async throws -> View",
+                    "type" : "method"
+                  }
+                ],
+                "path" : "\/documentation\/routedocs\/vapor\/viewrenderer",
+                "title" : "ViewRenderer",
+                "type" : "extension"
+              },
+              {
+                "title" : "Extended Structures",
+                "type" : "groupMarker"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Default Implementations",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Initializers",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/vapor\/httpmediatype\/init(from:)",
+                        "title" : "init(from: any Decoder) throws",
+                        "type" : "init"
+                      }
+                    ],
+                    "path" : "\/documentation\/routedocs\/vapor\/httpmediatype\/decodable-implementations",
+                    "title" : "Decodable Implementations",
+                    "type" : "symbol"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Instance Methods",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/routedocs\/vapor\/httpmediatype\/encode(to:)",
+                        "title" : "func encode(to: any Encoder) throws",
+                        "type" : "method"
+                      }
+                    ],
+                    "path" : "\/documentation\/routedocs\/vapor\/httpmediatype\/encodable-implementations",
+                    "title" : "Encodable Implementations",
+                    "type" : "symbol"
+                  }
+                ],
+                "path" : "\/documentation\/routedocs\/vapor\/httpmediatype",
+                "title" : "HTTPMediaType",
+                "type" : "extension"
+              }
+            ],
+            "path" : "\/documentation\/routedocs\/vapor",
+            "title" : "Vapor",
+            "type" : "extension"
+          }
+        ],
+        "path" : "\/documentation\/routedocs",
+        "title" : "RouteDocs",
+        "type" : "module"
+      }
+    ]
+  },
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 1,
+    "patch" : 2
+  }
+}

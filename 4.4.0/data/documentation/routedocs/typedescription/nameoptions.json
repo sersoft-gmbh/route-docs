@@ -1,0 +1,555 @@
+{
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs",
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription\/NameOptions"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "extendedModule" : "RouteDocs",
+    "externalID" : "s:9RouteDocs15TypeDescriptionV11NameOptionsV",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "struct"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "NameOptions"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "RouteDocs"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "NameOptions"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "TypeDescription.swift",
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/route-docs\/Sources\/RouteDocs\/TypeDescription.swift#L116"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Structure",
+    "symbolKind" : "struct",
+    "title" : "TypeDescription.NameOptions"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "attribute",
+              "text" : "@frozen"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "struct"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "NameOptions"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "relationshipsSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/RouteDocs\/s15BitwiseCopyableP",
+        "doc:\/\/RouteDocs\/SQ",
+        "doc:\/\/RouteDocs\/s25ExpressibleByArrayLiteralP",
+        "doc:\/\/RouteDocs\/s9OptionSetP",
+        "doc:\/\/RouteDocs\/SY",
+        "doc:\/\/RouteDocs\/s8SendableP",
+        "doc:\/\/RouteDocs\/s10SetAlgebraP"
+      ],
+      "kind" : "relationships",
+      "title" : "Conforms To",
+      "type" : "conformsTo"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "anchor" : "Initializers",
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription\/NameOptions\/init(rawValue:)"
+      ],
+      "title" : "Initializers"
+    },
+    {
+      "anchor" : "Instance-Properties",
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription\/NameOptions\/rawValue-swift.property"
+      ],
+      "title" : "Instance Properties"
+    },
+    {
+      "anchor" : "Type-Aliases",
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription\/NameOptions\/RawValue-swift.typealias"
+      ],
+      "title" : "Type Aliases"
+    },
+    {
+      "anchor" : "Type-Properties",
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription\/NameOptions\/withModule",
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription\/NameOptions\/withParents"
+      ],
+      "title" : "Type Properties"
+    },
+    {
+      "anchor" : "Default-Implementations",
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription\/NameOptions\/Equatable-Implementations",
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription\/NameOptions\/OptionSet-Implementations",
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription\/NameOptions\/SetAlgebra-Implementations"
+      ],
+      "title" : "Default Implementations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/routedocs\/typedescription\/nameoptions"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://RouteDocs/SQ": {
+  "identifier" : "doc:\/\/RouteDocs\/SQ",
+  "title" : "Swift.Equatable",
+  "type" : "unresolvable"
+},
+"doc://RouteDocs/SY": {
+  "identifier" : "doc:\/\/RouteDocs\/SY",
+  "title" : "Swift.RawRepresentable",
+  "type" : "unresolvable"
+},
+"doc://RouteDocs/documentation/RouteDocs": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "RouteDocs",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs"
+},
+"doc://RouteDocs/documentation/RouteDocs/TypeDescription": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "TypeDescription"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "TypeDescription"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "TypeDescription",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/typedescription"
+},
+"doc://RouteDocs/documentation/RouteDocs/TypeDescription/NameOptions": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "NameOptions"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription\/NameOptions",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "NameOptions"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "TypeDescription.NameOptions",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/typedescription\/nameoptions"
+},
+"doc://RouteDocs/documentation/RouteDocs/TypeDescription/NameOptions/Equatable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription\/NameOptions\/Equatable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Equatable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/typedescription\/nameoptions\/equatable-implementations"
+},
+"doc://RouteDocs/documentation/RouteDocs/TypeDescription/NameOptions/OptionSet-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription\/NameOptions\/OptionSet-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "OptionSet Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/typedescription\/nameoptions\/optionset-implementations"
+},
+"doc://RouteDocs/documentation/RouteDocs/TypeDescription/NameOptions/RawValue-swift.typealias": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "RawValue"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription\/NameOptions\/RawValue-swift.typealias",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "RawValue"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "TypeDescription.NameOptions.RawValue",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/typedescription\/nameoptions\/rawvalue-swift.typealias"
+},
+"doc://RouteDocs/documentation/RouteDocs/TypeDescription/NameOptions/SetAlgebra-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription\/NameOptions\/SetAlgebra-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "SetAlgebra Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/typedescription\/nameoptions\/setalgebra-implementations"
+},
+"doc://RouteDocs/documentation/RouteDocs/TypeDescription/NameOptions/init(rawValue:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "rawValue"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:9RouteDocs15TypeDescriptionV",
+      "text" : "TypeDescription"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:9RouteDocs15TypeDescriptionV11NameOptionsV",
+      "text" : "NameOptions"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:9RouteDocs15TypeDescriptionV11NameOptionsV8RawValuea",
+      "text" : "RawValue"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription\/NameOptions\/init(rawValue:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(rawValue:)",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/typedescription\/nameoptions\/init(rawvalue:)"
+},
+"doc://RouteDocs/documentation/RouteDocs/TypeDescription/NameOptions/rawValue-swift.property": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "rawValue"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:9RouteDocs15TypeDescriptionV",
+      "text" : "TypeDescription"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:9RouteDocs15TypeDescriptionV11NameOptionsV",
+      "text" : "NameOptions"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:9RouteDocs15TypeDescriptionV11NameOptionsV8RawValuea",
+      "text" : "RawValue"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription\/NameOptions\/rawValue-swift.property",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "rawValue",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/typedescription\/nameoptions\/rawvalue-swift.property"
+},
+"doc://RouteDocs/documentation/RouteDocs/TypeDescription/NameOptions/withModule": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "static"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "withModule"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:9RouteDocs15TypeDescriptionV",
+      "text" : "TypeDescription"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:9RouteDocs15TypeDescriptionV11NameOptionsV",
+      "text" : "NameOptions"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription\/NameOptions\/withModule",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "withModule",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/typedescription\/nameoptions\/withmodule"
+},
+"doc://RouteDocs/documentation/RouteDocs/TypeDescription/NameOptions/withParents": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "static"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "withParents"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:9RouteDocs15TypeDescriptionV",
+      "text" : "TypeDescription"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:9RouteDocs15TypeDescriptionV11NameOptionsV",
+      "text" : "NameOptions"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription\/NameOptions\/withParents",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "withParents",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/typedescription\/nameoptions\/withparents"
+},
+"doc://RouteDocs/s10SetAlgebraP": {
+  "identifier" : "doc:\/\/RouteDocs\/s10SetAlgebraP",
+  "title" : "Swift.SetAlgebra",
+  "type" : "unresolvable"
+},
+"doc://RouteDocs/s15BitwiseCopyableP": {
+  "identifier" : "doc:\/\/RouteDocs\/s15BitwiseCopyableP",
+  "title" : "Swift.BitwiseCopyable",
+  "type" : "unresolvable"
+},
+"doc://RouteDocs/s25ExpressibleByArrayLiteralP": {
+  "identifier" : "doc:\/\/RouteDocs\/s25ExpressibleByArrayLiteralP",
+  "title" : "Swift.ExpressibleByArrayLiteral",
+  "type" : "unresolvable"
+},
+"doc://RouteDocs/s8SendableP": {
+  "identifier" : "doc:\/\/RouteDocs\/s8SendableP",
+  "title" : "Swift.Sendable",
+  "type" : "unresolvable"
+},
+"doc://RouteDocs/s9OptionSetP": {
+  "identifier" : "doc:\/\/RouteDocs\/s9OptionSetP",
+  "title" : "Swift.OptionSet",
+  "type" : "unresolvable"
+}
+}
+}

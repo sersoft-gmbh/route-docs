@@ -1,0 +1,235 @@
+{
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs",
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentation",
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentation\/Object"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentation\/Object\/description"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:9RouteDocs21EndpointDocumentationV6ObjectV11descriptionSSvp",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "var"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "description"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SS",
+        "text" : "String"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "RouteDocs"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "EndpointDocumentation.swift",
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/route-docs\/Sources\/RouteDocs\/EndpointDocumentation.swift#L126"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Instance Property",
+    "symbolKind" : "property",
+    "title" : "description"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "var"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "description"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:SS",
+              "text" : "String"
+            },
+            {
+              "kind" : "text",
+              "text" : " { "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "get"
+            },
+            {
+              "kind" : "text",
+              "text" : " }"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/routedocs\/endpointdocumentation\/object\/description"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://RouteDocs/documentation/RouteDocs": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "RouteDocs",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs"
+},
+"doc://RouteDocs/documentation/RouteDocs/EndpointDocumentation": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "EndpointDocumentation"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentation",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "EndpointDocumentation"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "EndpointDocumentation",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/endpointdocumentation"
+},
+"doc://RouteDocs/documentation/RouteDocs/EndpointDocumentation/Object": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Object"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentation\/Object",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Object"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "EndpointDocumentation.Object",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/endpointdocumentation\/object"
+},
+"doc://RouteDocs/documentation/RouteDocs/EndpointDocumentation/Object/description": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "description"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentation\/Object\/description",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "description",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/endpointdocumentation\/object\/description"
+}
+}
+}

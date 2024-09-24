@@ -1,0 +1,343 @@
+{
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs",
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentation",
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentation\/Payload"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentation\/Payload\/init(object:)"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "extendedModule" : "RouteDocs",
+    "externalID" : "s:9RouteDocs21EndpointDocumentationV7PayloadV6objectAExm_tKcAA18CustomDocumentableRz5Vapor7ContentRzlufc",
+    "fragments" : [
+      {
+        "kind" : "identifier",
+        "text" : "init"
+      },
+      {
+        "kind" : "text",
+        "text" : "<"
+      },
+      {
+        "kind" : "genericParameter",
+        "text" : "T"
+      },
+      {
+        "kind" : "text",
+        "text" : ">("
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "object"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "text" : "T"
+      },
+      {
+        "kind" : "text",
+        "text" : ".Type) "
+      },
+      {
+        "kind" : "keyword",
+        "text" : "throws"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "RouteDocs"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "EndpointDocumentation.swift",
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/route-docs\/Sources\/RouteDocs\/EndpointDocumentation.swift#L244"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Initializer",
+    "symbolKind" : "init",
+    "title" : "init(object:)"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "init"
+            },
+            {
+              "kind" : "text",
+              "text" : "<"
+            },
+            {
+              "kind" : "genericParameter",
+              "text" : "T"
+            },
+            {
+              "kind" : "text",
+              "text" : ">("
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "object"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "text" : "T"
+            },
+            {
+              "kind" : "text",
+              "text" : ".Type) "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "throws"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "where"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "text" : "T"
+            },
+            {
+              "kind" : "text",
+              "text" : " : "
+            },
+            {
+              "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/CustomDocumentable",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:9RouteDocs18CustomDocumentableP",
+              "text" : "CustomDocumentable"
+            },
+            {
+              "kind" : "text",
+              "text" : ", "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "text" : "T"
+            },
+            {
+              "kind" : "text",
+              "text" : " : "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:5Vapor7ContentP",
+              "text" : "Content"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/routedocs\/endpointdocumentation\/payload\/init(object:)"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://RouteDocs/documentation/RouteDocs": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "RouteDocs",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs"
+},
+"doc://RouteDocs/documentation/RouteDocs/CustomDocumentable": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "protocol"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "CustomDocumentable"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/CustomDocumentable",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "CustomDocumentable"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "CustomDocumentable",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/customdocumentable"
+},
+"doc://RouteDocs/documentation/RouteDocs/EndpointDocumentation": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "EndpointDocumentation"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentation",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "EndpointDocumentation"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "EndpointDocumentation",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/endpointdocumentation"
+},
+"doc://RouteDocs/documentation/RouteDocs/EndpointDocumentation/Payload": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Payload"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentation\/Payload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Payload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "EndpointDocumentation.Payload",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/endpointdocumentation\/payload"
+},
+"doc://RouteDocs/documentation/RouteDocs/EndpointDocumentation/Payload/init(object:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "genericParameter",
+      "text" : "T"
+    },
+    {
+      "kind" : "text",
+      "text" : ">("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "object"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "T"
+    },
+    {
+      "kind" : "text",
+      "text" : ".Type) "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentation\/Payload\/init(object:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(object:)",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/endpointdocumentation\/payload\/init(object:)"
+}
+}
+}

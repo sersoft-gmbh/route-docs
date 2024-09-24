@@ -1,0 +1,663 @@
+{
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs",
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Vapor",
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Vapor\/Route"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Vapor\/Route\/addDocumentation(groupedAs:query:request:response:requiredAuthorization:)"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "extendedModule" : "Vapor",
+    "externalID" : "s:5Vapor5RouteC0B4DocsE16addDocumentation9groupedAs5query7request8response21requiredAuthorizationySSSg_AD08EndpointE0V5QueryVSgAM7PayloadVSgASSaySSGtF",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "func"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "addDocumentation"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "groupedAs"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SS",
+        "text" : "String"
+      },
+      {
+        "kind" : "text",
+        "text" : "?, "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "query"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:9RouteDocs21EndpointDocumentationV",
+        "text" : "EndpointDocumentation"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:9RouteDocs21EndpointDocumentationV5QueryV",
+        "text" : "Query"
+      },
+      {
+        "kind" : "text",
+        "text" : "?, "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "request"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:9RouteDocs21EndpointDocumentationV",
+        "text" : "EndpointDocumentation"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:9RouteDocs21EndpointDocumentationV7PayloadV",
+        "text" : "Payload"
+      },
+      {
+        "kind" : "text",
+        "text" : "?, "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "response"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:9RouteDocs21EndpointDocumentationV",
+        "text" : "EndpointDocumentation"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:9RouteDocs21EndpointDocumentationV7PayloadV",
+        "text" : "Payload"
+      },
+      {
+        "kind" : "text",
+        "text" : "?, "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "requiredAuthorization"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:Sa",
+        "text" : "Array"
+      },
+      {
+        "kind" : "text",
+        "text" : "<"
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SS",
+        "text" : "String"
+      },
+      {
+        "kind" : "text",
+        "text" : ">)"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "RouteDocs",
+        "relatedModules" : [
+          "Vapor"
+        ]
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "EndpointDocumentable.swift",
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/route-docs\/Sources\/RouteDocs\/EndpointDocumentable.swift#L25"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Instance Method",
+    "symbolKind" : "method",
+    "title" : "addDocumentation(groupedAs:query:request:response:requiredAuthorization:)"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "func"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "addDocumentation"
+            },
+            {
+              "kind" : "text",
+              "text" : "("
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "groupedAs"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "internalParam",
+              "text" : "groupName"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:SS",
+              "text" : "String"
+            },
+            {
+              "kind" : "text",
+              "text" : "? = nil, "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "query"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentation",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:9RouteDocs21EndpointDocumentationV",
+              "text" : "EndpointDocumentation"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentation\/Query-swift.struct",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:9RouteDocs21EndpointDocumentationV5QueryV",
+              "text" : "Query"
+            },
+            {
+              "kind" : "text",
+              "text" : "? = nil, "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "request"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentation",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:9RouteDocs21EndpointDocumentationV",
+              "text" : "EndpointDocumentation"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentation\/Payload",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:9RouteDocs21EndpointDocumentationV7PayloadV",
+              "text" : "Payload"
+            },
+            {
+              "kind" : "text",
+              "text" : "? = nil, "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "response"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentation",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:9RouteDocs21EndpointDocumentationV",
+              "text" : "EndpointDocumentation"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentation\/Payload",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:9RouteDocs21EndpointDocumentationV7PayloadV",
+              "text" : "Payload"
+            },
+            {
+              "kind" : "text",
+              "text" : "? = nil, "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "requiredAuthorization"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:Sa",
+              "text" : "Array"
+            },
+            {
+              "kind" : "text",
+              "text" : "<"
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:SS",
+              "text" : "String"
+            },
+            {
+              "kind" : "text",
+              "text" : "> = .init())"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/routedocs\/vapor\/route\/adddocumentation(groupedas:query:request:response:requiredauthorization:)"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://RouteDocs/documentation/RouteDocs": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "RouteDocs",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs"
+},
+"doc://RouteDocs/documentation/RouteDocs/EndpointDocumentation": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "EndpointDocumentation"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentation",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "EndpointDocumentation"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "EndpointDocumentation",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/endpointdocumentation"
+},
+"doc://RouteDocs/documentation/RouteDocs/EndpointDocumentation/Payload": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Payload"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentation\/Payload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Payload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "EndpointDocumentation.Payload",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/endpointdocumentation\/payload"
+},
+"doc://RouteDocs/documentation/RouteDocs/EndpointDocumentation/Query-swift.struct": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Query"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentation\/Query-swift.struct",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Query"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "EndpointDocumentation.Query",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/endpointdocumentation\/query-swift.struct"
+},
+"doc://RouteDocs/documentation/RouteDocs/Vapor": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Vapor",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "Vapor",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/vapor"
+},
+"doc://RouteDocs/documentation/RouteDocs/Vapor/Route": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "extension"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "s:5Vapor5RouteC",
+      "text" : "Route"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Vapor\/Route",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Route"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Route",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/vapor\/route"
+},
+"doc://RouteDocs/documentation/RouteDocs/Vapor/Route/addDocumentation(groupedAs:query:request:response:requiredAuthorization:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "addDocumentation"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "groupedAs"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "query"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:9RouteDocs21EndpointDocumentationV",
+      "text" : "EndpointDocumentation"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:9RouteDocs21EndpointDocumentationV5QueryV",
+      "text" : "Query"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "request"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:9RouteDocs21EndpointDocumentationV",
+      "text" : "EndpointDocumentation"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:9RouteDocs21EndpointDocumentationV7PayloadV",
+      "text" : "Payload"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "response"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:9RouteDocs21EndpointDocumentationV",
+      "text" : "EndpointDocumentation"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:9RouteDocs21EndpointDocumentationV7PayloadV",
+      "text" : "Payload"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "requiredAuthorization"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sa",
+      "text" : "Array"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ">)"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Vapor\/Route\/addDocumentation(groupedAs:query:request:response:requiredAuthorization:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "addDocumentation(groupedAs:query:request:response:requiredAuthorization:)",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/vapor\/route\/adddocumentation(groupedas:query:request:response:requiredauthorization:)"
+}
+}
+}

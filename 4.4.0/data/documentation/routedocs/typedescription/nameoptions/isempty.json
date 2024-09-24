@@ -1,0 +1,256 @@
+{
+  "abstract" : [
+    {
+      "text" : "A Boolean value that indicates whether the set has no elements.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs",
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription",
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription\/NameOptions",
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription\/NameOptions\/SetAlgebra-Implementations"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription\/NameOptions\/isEmpty"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "extendedModule" : "Swift",
+    "externalID" : "s:s10SetAlgebraPsE7isEmptySbvp::SYNTHESIZED::s:9RouteDocs15TypeDescriptionV11NameOptionsV",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "var"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "isEmpty"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:Sb",
+        "text" : "Bool"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "RouteDocs",
+        "relatedModules" : [
+          "Swift"
+        ]
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Instance Property",
+    "symbolKind" : "property",
+    "title" : "isEmpty"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "var"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "isEmpty"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:Sb",
+              "text" : "Bool"
+            },
+            {
+              "kind" : "text",
+              "text" : " { "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "get"
+            },
+            {
+              "kind" : "text",
+              "text" : " }"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/routedocs\/typedescription\/nameoptions\/isempty"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://RouteDocs/documentation/RouteDocs": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "RouteDocs",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs"
+},
+"doc://RouteDocs/documentation/RouteDocs/TypeDescription": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "TypeDescription"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "TypeDescription"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "TypeDescription",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/typedescription"
+},
+"doc://RouteDocs/documentation/RouteDocs/TypeDescription/NameOptions": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "NameOptions"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription\/NameOptions",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "NameOptions"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "TypeDescription.NameOptions",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/typedescription\/nameoptions"
+},
+"doc://RouteDocs/documentation/RouteDocs/TypeDescription/NameOptions/SetAlgebra-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription\/NameOptions\/SetAlgebra-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "SetAlgebra Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/typedescription\/nameoptions\/setalgebra-implementations"
+},
+"doc://RouteDocs/documentation/RouteDocs/TypeDescription/NameOptions/isEmpty": {
+  "abstract" : [
+    {
+      "text" : "A Boolean value that indicates whether the set has no elements.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "isEmpty"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription\/NameOptions\/isEmpty",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "isEmpty",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/typedescription\/nameoptions\/isempty"
+}
+}
+}

@@ -1,0 +1,352 @@
+{
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs",
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Swift",
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Swift\/Optional",
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Swift\/Optional\/CustomDocumentable-Implementations"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Swift\/Optional\/documentationInstance"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "conformance" : {
+      "availabilityPrefix" : [
+        {
+          "text" : "Available when",
+          "type" : "text"
+        }
+      ],
+      "conformancePrefix" : [
+        {
+          "text" : "Conforms when",
+          "type" : "text"
+        }
+      ],
+      "constraints" : [
+        {
+          "code" : "Wrapped",
+          "type" : "codeVoice"
+        },
+        {
+          "text" : " conforms to ",
+          "type" : "text"
+        },
+        {
+          "code" : "CustomDocumentable",
+          "type" : "codeVoice"
+        },
+        {
+          "text" : ".",
+          "type" : "text"
+        }
+      ]
+    },
+    "extendedModule" : "Swift",
+    "externalID" : "s:Sq9RouteDocsAA18CustomDocumentableRzlE21documentationInstancexSgvpZ",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "static"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "keyword",
+        "text" : "var"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "documentationInstance"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:Sq",
+        "text" : "Optional"
+      },
+      {
+        "kind" : "text",
+        "text" : "<"
+      },
+      {
+        "kind" : "typeIdentifier",
+        "text" : "Wrapped"
+      },
+      {
+        "kind" : "text",
+        "text" : ">"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "RouteDocs",
+        "relatedModules" : [
+          "Swift"
+        ]
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "DocumentationDecoder.swift",
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/route-docs\/Sources\/RouteDocs\/DocumentationDecoder.swift#L149"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Type Property",
+    "symbolKind" : "property",
+    "title" : "documentationInstance"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "static"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "var"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "documentationInstance"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:Sq",
+              "text" : "Optional"
+            },
+            {
+              "kind" : "text",
+              "text" : "<"
+            },
+            {
+              "kind" : "typeIdentifier",
+              "text" : "Wrapped"
+            },
+            {
+              "kind" : "text",
+              "text" : "> { "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "get"
+            },
+            {
+              "kind" : "text",
+              "text" : " }"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/routedocs\/swift\/optional\/documentationinstance"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://RouteDocs/documentation/RouteDocs": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "RouteDocs",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs"
+},
+"doc://RouteDocs/documentation/RouteDocs/Swift": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Swift",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "Swift",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/swift"
+},
+"doc://RouteDocs/documentation/RouteDocs/Swift/Optional": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "extension"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "s:Sq",
+      "text" : "Optional"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Swift\/Optional",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Optional"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Optional",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/swift\/optional"
+},
+"doc://RouteDocs/documentation/RouteDocs/Swift/Optional/CustomDocumentable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Swift\/Optional\/CustomDocumentable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "CustomDocumentable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/swift\/optional\/customdocumentable-implementations"
+},
+"doc://RouteDocs/documentation/RouteDocs/Swift/Optional/documentationInstance": {
+  "abstract" : [
+
+  ],
+  "conformance" : {
+    "availabilityPrefix" : [
+      {
+        "text" : "Available when",
+        "type" : "text"
+      }
+    ],
+    "conformancePrefix" : [
+      {
+        "text" : "Conforms when",
+        "type" : "text"
+      }
+    ],
+    "constraints" : [
+      {
+        "code" : "Wrapped",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : " conforms to ",
+        "type" : "text"
+      },
+      {
+        "code" : "CustomDocumentable",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : ".",
+        "type" : "text"
+      }
+    ]
+  },
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "static"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "documentationInstance"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sq",
+      "text" : "Optional"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "Wrapped"
+    },
+    {
+      "kind" : "text",
+      "text" : ">"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Swift\/Optional\/documentationInstance",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "documentationInstance",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/swift\/optional\/documentationinstance"
+}
+}
+}
