@@ -130,7 +130,6 @@ extension TypeDescription.NameOptions {
 }
 
 fileprivate struct TypeParser<Text: StringProtocol> where Text.SubSequence: RangeReplaceableCollection {
-    @frozen
     fileprivate enum SpecialTypes<T: StringProtocol> {
         static var any: T { "Any" }
         static var void: T { "Void" }

@@ -1,5 +1,9 @@
-import NIOConcurrencyHelpers
-import Vapor
+fileprivate import NIOConcurrencyHelpers
+#if swift(>=6.0)
+fileprivate import Vapor
+#else
+public import Vapor
+#endif
 
 extension CodingUserInfoKey {
     public static let isDocumentationDecoder = CodingUserInfoKey(rawValue: "de.sersoft.route-docs.is-documentation-decoder")!

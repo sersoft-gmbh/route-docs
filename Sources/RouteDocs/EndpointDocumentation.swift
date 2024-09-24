@@ -1,4 +1,4 @@
-import Vapor
+public import Vapor
 
 public struct DocumentationType: Sendable, Equatable, Codable, CustomStringConvertible {
     public let typeDescription: TypeDescription

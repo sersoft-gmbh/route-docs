@@ -1,4 +1,4 @@
-import Vapor
+public import Vapor
 
 public protocol EndpointDocumentable {
     var documentation: EndpointDocumentation? { get }

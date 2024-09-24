@@ -1,3 +1,3 @@
-import NIOHTTP1
+public import NIOHTTP1
 
 extension HTTPMethod: Codable {}

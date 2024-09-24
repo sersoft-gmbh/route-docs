@@ -1,6 +1,6 @@
-import Vapor
-import LeafKit
-import Leaf
+public import Vapor
+public import LeafKit
+public import Leaf
 
 extension DocsViewContext {
     public static let defaultDocsViewPath: String = {

@@ -1,4 +1,4 @@
-import Vapor
+public import Vapor
 
 extension HTTPMediaType: Codable {
     private enum CodingKeys: String, CodingKey {

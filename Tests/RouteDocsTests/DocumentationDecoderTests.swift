@@ -104,7 +104,11 @@ final class DocumentationDecoderTests: XCTestCase {
 
     func testPassingCustomUserInfo() throws {
         struct TestObject: Decodable {
+#if swift(>=5.10)
+            static nonisolated(unsafe) var lastDecodedInstance: TestObject?
+#else
             static var lastDecodedInstance: TestObject?
+#endif
 
             let coderUserInfo: Dictionary<CodingUserInfoKey, Any>
 

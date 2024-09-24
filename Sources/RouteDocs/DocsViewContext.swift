@@ -1,4 +1,4 @@
-import Vapor
+public import Vapor
 
 /// This can be used as context for a documentation view.
 public struct DocsViewContext: Sendable, Encodable {
