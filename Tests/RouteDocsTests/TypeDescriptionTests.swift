@@ -8,6 +8,14 @@ extension Dictionary {
 }
 
 final class TypeDescriptionTests: XCTestCase {
+    private var uuidModule: String {
+#if canImport(FoundationEssentials)
+        return "FoundationEssentials"
+#else
+        return "Foundation"
+#endif
+    }
+
     func testVariousTypes() {
         let typeDesc1 = TypeDescription(Dictionary<String, Dictionary<String, Int>.SomeNestedType>.Index.self)
         let typeDesc2 = TypeDescription(Dictionary<UUID, Dictionary<String, Int>.Index>.SomeOtherNestedType.self)
@@ -40,7 +48,7 @@ final class TypeDescriptionTests: XCTestCase {
                 parent: nil,
                 name: "Dictionary",
                 genericParameters: [
-                    .init(module: "Foundation", parent: nil, name: "UUID", genericParameters: []),
+                    .init(module: uuidModule, parent: nil, name: "UUID", genericParameters: []),
                     .init(
                         module: "Swift",
                         parent: .init(module: "Swift", parent: nil, name: "Dictionary", genericParameters: [
@@ -71,7 +79,7 @@ final class TypeDescriptionTests: XCTestCase {
         ])
         let deeperVoidTypeDesc = TypeDescription(Dictionary<UUID, Array<Void>>.self)
         let deeperVoidExpected = TypeDescription(module: "Swift", parent: nil, name: "Dictionary", genericParameters: [
-            .init(module: "Foundation", parent: nil, name: "UUID", genericParameters: []),
+            .init(module: uuidModule, parent: nil, name: "UUID", genericParameters: []),
             .init(module: "Swift", parent: nil, name: "Array", genericParameters: [voidExpected]),
         ])
         XCTAssertEqual(anyTypeDesc, anyExpected)
