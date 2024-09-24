@@ -39,6 +39,10 @@
         "text" : "Query"
       }
     ],
+    "remoteSource" : {
+      "fileName" : "EndpointDocumentation.swift",
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/route-docs\/Sources\/RouteDocs\/EndpointDocumentation.swift#L153"
+    },
     "role" : "symbol",
     "roleHeading" : "Structure",
     "symbolKind" : "struct",
@@ -97,6 +101,8 @@
   ],
   "topicSections" : [
     {
+      "anchor" : "Initializers",
+      "generated" : true,
       "identifiers" : [
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentation\/Query-swift.struct\/init(from:)",
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentation\/Query-swift.struct\/init(object:)",
@@ -105,6 +111,8 @@
       "title" : "Initializers"
     },
     {
+      "anchor" : "Instance-Properties",
+      "generated" : true,
       "identifiers" : [
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentation\/Query-swift.struct\/description",
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentation\/Query-swift.struct\/objects"
@@ -112,6 +120,8 @@
       "title" : "Instance Properties"
     },
     {
+      "anchor" : "Instance-Methods",
+      "generated" : true,
       "identifiers" : [
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentation\/Query-swift.struct\/filterObjects(with:)-1rwra",
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentation\/Query-swift.struct\/filterObjects(with:)-8u15l"
@@ -119,6 +129,7 @@
       "title" : "Instance Methods"
     },
     {
+      "anchor" : "Default-Implementations",
       "generated" : true,
       "identifiers" : [
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentation\/Query-swift.struct\/Equatable-Implementations"

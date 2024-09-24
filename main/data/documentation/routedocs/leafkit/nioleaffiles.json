@@ -89,6 +89,8 @@
   ],
   "topicSections" : [
     {
+      "anchor" : "Type-Methods",
+      "generated" : true,
       "identifiers" : [
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/LeafKit\/NIOLeafFiles\/defaultDocs(with:)"
       ],

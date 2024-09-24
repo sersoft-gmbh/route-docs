@@ -33,6 +33,8 @@
   ],
   "topicSections" : [
     {
+      "anchor" : "Extended-Classes",
+      "generated" : true,
       "identifiers" : [
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/LeafKit\/LeafRenderer",
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/LeafKit\/LeafSources"
@@ -40,6 +42,8 @@
       "title" : "Extended Classes"
     },
     {
+      "anchor" : "Extended-Structures",
+      "generated" : true,
       "identifiers" : [
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/LeafKit\/NIOLeafFiles"
       ],

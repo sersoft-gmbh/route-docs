@@ -33,6 +33,8 @@
   ],
   "topicSections" : [
     {
+      "anchor" : "Extended-Classes",
+      "generated" : true,
       "identifiers" : [
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Vapor\/Application",
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Vapor\/Route"
@@ -40,12 +42,16 @@
       "title" : "Extended Classes"
     },
     {
+      "anchor" : "Extended-Protocols",
+      "generated" : true,
       "identifiers" : [
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Vapor\/ViewRenderer"
       ],
       "title" : "Extended Protocols"
     },
     {
+      "anchor" : "Extended-Structures",
+      "generated" : true,
       "identifiers" : [
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Vapor\/HTTPMediaType"
       ],

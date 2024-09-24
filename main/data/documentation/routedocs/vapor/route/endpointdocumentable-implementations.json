@@ -33,6 +33,7 @@
   ],
   "topicSections" : [
     {
+      "anchor" : "Instance-Properties",
       "generated" : true,
       "identifiers" : [
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Vapor\/Route\/documentation"

@@ -38,6 +38,10 @@
         "text" : "TypeDescription"
       }
     ],
+    "remoteSource" : {
+      "fileName" : "TypeDescription.swift",
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/route-docs\/Sources\/RouteDocs\/TypeDescription.swift#L1"
+    },
     "role" : "symbol",
     "roleHeading" : "Structure",
     "symbolKind" : "struct",
@@ -97,12 +101,16 @@
   ],
   "topicSections" : [
     {
+      "anchor" : "Structures",
+      "generated" : true,
       "identifiers" : [
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription\/NameOptions"
       ],
       "title" : "Structures"
     },
     {
+      "anchor" : "Initializers",
+      "generated" : true,
       "identifiers" : [
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription\/init(_:)",
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription\/init(any:)",
@@ -111,6 +119,8 @@
       "title" : "Initializers"
     },
     {
+      "anchor" : "Instance-Properties",
+      "generated" : true,
       "identifiers" : [
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription\/description",
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription\/genericParameters",
@@ -123,6 +133,8 @@
       "title" : "Instance Properties"
     },
     {
+      "anchor" : "Instance-Methods",
+      "generated" : true,
       "identifiers" : [
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription\/encode(to:)",
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription\/typeName(with:)"
@@ -130,6 +142,7 @@
       "title" : "Instance Methods"
     },
     {
+      "anchor" : "Default-Implementations",
       "generated" : true,
       "identifiers" : [
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription\/Equatable-Implementations"

@@ -56,6 +56,10 @@
         "name" : "RouteDocs"
       }
     ],
+    "remoteSource" : {
+      "fileName" : "DocsViewContext.swift",
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/route-docs\/Sources\/RouteDocs\/DocsViewContext.swift#L64"
+    },
     "role" : "symbol",
     "roleHeading" : "Instance Property",
     "symbolKind" : "property",

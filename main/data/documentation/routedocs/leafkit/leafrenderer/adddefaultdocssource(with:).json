@@ -63,6 +63,10 @@
         ]
       }
     ],
+    "remoteSource" : {
+      "fileName" : "Application+SetupDocs.swift",
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/route-docs\/Sources\/RouteDocs\/Extensions\/Application+SetupDocs.swift#L54"
+    },
     "role" : "symbol",
     "roleHeading" : "Instance Method",
     "symbolKind" : "method",

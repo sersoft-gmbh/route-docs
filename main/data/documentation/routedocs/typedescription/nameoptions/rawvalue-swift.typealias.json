@@ -40,6 +40,10 @@
         "text" : "RawValue"
       }
     ],
+    "remoteSource" : {
+      "fileName" : "TypeDescription.swift",
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/route-docs\/Sources\/RouteDocs\/TypeDescription.swift#L117"
+    },
     "role" : "symbol",
     "roleHeading" : "Type Alias",
     "symbolKind" : "typealias",

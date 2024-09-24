@@ -41,6 +41,10 @@
         "text" : "Body"
       }
     ],
+    "remoteSource" : {
+      "fileName" : "DocsViewContext.swift",
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/route-docs\/Sources\/RouteDocs\/DocsViewContext.swift#L7"
+    },
     "role" : "symbol",
     "roleHeading" : "Enumeration",
     "symbolKind" : "enum",
@@ -96,6 +100,8 @@
   ],
   "topicSections" : [
     {
+      "anchor" : "Structures",
+      "generated" : true,
       "identifiers" : [
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocsViewContext\/Documentation\/Object\/Body-swift.enum\/EnumCase",
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocsViewContext\/Documentation\/Object\/Body-swift.enum\/Field"
@@ -103,6 +109,8 @@
       "title" : "Structures"
     },
     {
+      "anchor" : "Enumeration-Cases",
+      "generated" : true,
       "identifiers" : [
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocsViewContext\/Documentation\/Object\/Body-swift.enum\/cases(_:)",
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocsViewContext\/Documentation\/Object\/Body-swift.enum\/empty",
@@ -111,12 +119,16 @@
       "title" : "Enumeration Cases"
     },
     {
+      "anchor" : "Initializers",
+      "generated" : true,
       "identifiers" : [
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocsViewContext\/Documentation\/Object\/Body-swift.enum\/init(body:usingName:)"
       ],
       "title" : "Initializers"
     },
     {
+      "anchor" : "Instance-Methods",
+      "generated" : true,
       "identifiers" : [
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocsViewContext\/Documentation\/Object\/Body-swift.enum\/encode(to:)"
       ],

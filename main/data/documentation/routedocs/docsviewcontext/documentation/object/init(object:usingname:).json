@@ -93,6 +93,10 @@
         "name" : "RouteDocs"
       }
     ],
+    "remoteSource" : {
+      "fileName" : "DocsViewContext.swift",
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/route-docs\/Sources\/RouteDocs\/DocsViewContext.swift#L127"
+    },
     "role" : "symbol",
     "roleHeading" : "Initializer",
     "symbolKind" : "init",

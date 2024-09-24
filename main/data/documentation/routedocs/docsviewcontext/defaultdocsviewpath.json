@@ -51,6 +51,10 @@
         "name" : "RouteDocs"
       }
     ],
+    "remoteSource" : {
+      "fileName" : "Application+SetupDocs.swift",
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/route-docs\/Sources\/RouteDocs\/Extensions\/Application+SetupDocs.swift#L6"
+    },
     "role" : "symbol",
     "roleHeading" : "Type Property",
     "symbolKind" : "property",

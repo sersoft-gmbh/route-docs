@@ -82,6 +82,7 @@
   "relationshipsSections" : [
     {
       "identifiers" : [
+        "doc:\/\/RouteDocs\/s8CopyableP",
         "doc:\/\/RouteDocs\/Se",
         "doc:\/\/RouteDocs\/SE"
       ],
@@ -100,6 +101,7 @@
   ],
   "topicSections" : [
     {
+      "anchor" : "Default-Implementations",
       "generated" : true,
       "identifiers" : [
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Vapor\/HTTPMediaType\/Decodable-Implementations",
@@ -207,6 +209,11 @@
   "title" : "Encodable Implementations",
   "type" : "topic",
   "url" : "\/documentation\/routedocs\/vapor\/httpmediatype\/encodable-implementations"
+},
+"doc://RouteDocs/s8CopyableP": {
+  "identifier" : "doc:\/\/RouteDocs\/s8CopyableP",
+  "title" : "Swift.Copyable",
+  "type" : "unresolvable"
 }
 }
 }

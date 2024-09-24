@@ -61,6 +61,10 @@
         "name" : "RouteDocs"
       }
     ],
+    "remoteSource" : {
+      "fileName" : "TypeDescription.swift",
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/route-docs\/Sources\/RouteDocs\/TypeDescription.swift#L128"
+    },
     "role" : "symbol",
     "roleHeading" : "Type Property",
     "symbolKind" : "property",

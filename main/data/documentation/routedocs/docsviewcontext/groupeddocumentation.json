@@ -39,6 +39,10 @@
         "text" : "GroupedDocumentation"
       }
     ],
+    "remoteSource" : {
+      "fileName" : "DocsViewContext.swift",
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/route-docs\/Sources\/RouteDocs\/DocsViewContext.swift#L67"
+    },
     "role" : "symbol",
     "roleHeading" : "Structure",
     "symbolKind" : "struct",
@@ -94,6 +98,8 @@
   ],
   "topicSections" : [
     {
+      "anchor" : "Instance-Properties",
+      "generated" : true,
       "identifiers" : [
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocsViewContext\/GroupedDocumentation\/documentations",
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocsViewContext\/GroupedDocumentation\/groupName",

@@ -39,6 +39,10 @@
         "text" : "Body"
       }
     ],
+    "remoteSource" : {
+      "fileName" : "DocumentationDecoder.swift",
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/route-docs\/Sources\/RouteDocs\/DocumentationDecoder.swift#L20"
+    },
     "role" : "symbol",
     "roleHeading" : "Enumeration",
     "symbolKind" : "enum",
@@ -95,12 +99,16 @@
   ],
   "topicSections" : [
     {
+      "anchor" : "Structures",
+      "generated" : true,
       "identifiers" : [
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocumentationObject\/Body-swift.enum\/EnumCase"
       ],
       "title" : "Structures"
     },
     {
+      "anchor" : "Enumeration-Cases",
+      "generated" : true,
       "identifiers" : [
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocumentationObject\/Body-swift.enum\/cases(_:)",
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocumentationObject\/Body-swift.enum\/fields(_:)",
@@ -109,12 +117,15 @@
       "title" : "Enumeration Cases"
     },
     {
+      "anchor" : "Instance-Properties",
+      "generated" : true,
       "identifiers" : [
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocumentationObject\/Body-swift.enum\/isEmpty"
       ],
       "title" : "Instance Properties"
     },
     {
+      "anchor" : "Default-Implementations",
       "generated" : true,
       "identifiers" : [
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocumentationObject\/Body-swift.enum\/Equatable-Implementations"

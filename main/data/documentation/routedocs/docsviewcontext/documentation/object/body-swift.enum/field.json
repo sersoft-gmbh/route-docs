@@ -42,6 +42,10 @@
         "text" : "Field"
       }
     ],
+    "remoteSource" : {
+      "fileName" : "DocsViewContext.swift",
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/route-docs\/Sources\/RouteDocs\/DocsViewContext.swift#L12"
+    },
     "role" : "symbol",
     "roleHeading" : "Structure",
     "symbolKind" : "struct",
@@ -97,12 +101,16 @@
   ],
   "topicSections" : [
     {
+      "anchor" : "Initializers",
+      "generated" : true,
       "identifiers" : [
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocsViewContext\/Documentation\/Object\/Body-swift.enum\/Field\/init(field:usingName:)"
       ],
       "title" : "Initializers"
     },
     {
+      "anchor" : "Instance-Properties",
+      "generated" : true,
       "identifiers" : [
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocsViewContext\/Documentation\/Object\/Body-swift.enum\/Field\/isOptional",
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocsViewContext\/Documentation\/Object\/Body-swift.enum\/Field\/name",

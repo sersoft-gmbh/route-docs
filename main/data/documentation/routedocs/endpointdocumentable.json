@@ -38,6 +38,10 @@
         "text" : "EndpointDocumentable"
       }
     ],
+    "remoteSource" : {
+      "fileName" : "EndpointDocumentable.swift",
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/route-docs\/Sources\/RouteDocs\/EndpointDocumentable.swift#L3"
+    },
     "role" : "symbol",
     "roleHeading" : "Protocol",
     "symbolKind" : "protocol",
@@ -92,6 +96,8 @@
   ],
   "topicSections" : [
     {
+      "anchor" : "Instance-Properties",
+      "generated" : true,
       "identifiers" : [
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentable\/documentation-114ns"
       ],

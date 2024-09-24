@@ -39,6 +39,10 @@
         "text" : "Object"
       }
     ],
+    "remoteSource" : {
+      "fileName" : "EndpointDocumentation.swift",
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/route-docs\/Sources\/RouteDocs\/EndpointDocumentation.swift#L21"
+    },
     "role" : "symbol",
     "roleHeading" : "Structure",
     "symbolKind" : "struct",
@@ -97,12 +101,16 @@
   ],
   "topicSections" : [
     {
+      "anchor" : "Initializers",
+      "generated" : true,
       "identifiers" : [
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentation\/Object\/init(from:)"
       ],
       "title" : "Initializers"
     },
     {
+      "anchor" : "Instance-Properties",
+      "generated" : true,
       "identifiers" : [
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentation\/Object\/body-swift.property",
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentation\/Object\/description",
@@ -111,18 +119,23 @@
       "title" : "Instance Properties"
     },
     {
+      "anchor" : "Instance-Methods",
+      "generated" : true,
       "identifiers" : [
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentation\/Object\/adjustingBody(with:)"
       ],
       "title" : "Instance Methods"
     },
     {
+      "anchor" : "Enumerations",
+      "generated" : true,
       "identifiers" : [
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentation\/Object\/Body-swift.enum"
       ],
       "title" : "Enumerations"
     },
     {
+      "anchor" : "Default-Implementations",
       "generated" : true,
       "identifiers" : [
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentation\/Object\/Equatable-Implementations"

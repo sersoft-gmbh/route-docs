@@ -96,6 +96,10 @@
         ]
       }
     ],
+    "remoteSource" : {
+      "fileName" : "CustomDocumentable+Stdlib.swift",
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/route-docs\/Sources\/RouteDocs\/Extensions\/CustomDocumentable+Stdlib.swift#L60"
+    },
     "role" : "symbol",
     "roleHeading" : "Type Property",
     "symbolKind" : "property",

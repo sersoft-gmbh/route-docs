@@ -39,6 +39,10 @@
         "text" : "Payload"
       }
     ],
+    "remoteSource" : {
+      "fileName" : "EndpointDocumentation.swift",
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/route-docs\/Sources\/RouteDocs\/EndpointDocumentation.swift#L171"
+    },
     "role" : "symbol",
     "roleHeading" : "Structure",
     "symbolKind" : "struct",
@@ -97,6 +101,8 @@
   ],
   "topicSections" : [
     {
+      "anchor" : "Initializers",
+      "generated" : true,
       "identifiers" : [
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentation\/Payload\/init(from:)",
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentation\/Payload\/init(object:)",
@@ -107,6 +113,8 @@
       "title" : "Initializers"
     },
     {
+      "anchor" : "Instance-Properties",
+      "generated" : true,
       "identifiers" : [
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentation\/Payload\/description",
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentation\/Payload\/mediaType",
@@ -115,6 +123,8 @@
       "title" : "Instance Properties"
     },
     {
+      "anchor" : "Instance-Methods",
+      "generated" : true,
       "identifiers" : [
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentation\/Payload\/filterObjects(with:)-41vyz",
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentation\/Payload\/filterObjects(with:)-6tz7d"
@@ -122,6 +132,7 @@
       "title" : "Instance Methods"
     },
     {
+      "anchor" : "Default-Implementations",
       "generated" : true,
       "identifiers" : [
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentation\/Payload\/Equatable-Implementations"

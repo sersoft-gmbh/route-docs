@@ -33,6 +33,7 @@
   ],
   "topicSections" : [
     {
+      "anchor" : "Operators",
       "generated" : true,
       "identifiers" : [
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocumentationObject\/Body-swift.enum\/!=(_:_:)"

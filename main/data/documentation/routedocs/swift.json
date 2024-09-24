@@ -33,6 +33,8 @@
   ],
   "topicSections" : [
     {
+      "anchor" : "Extended-Protocols",
+      "generated" : true,
       "identifiers" : [
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Swift\/CaseIterable",
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Swift\/Decoder"
@@ -40,6 +42,8 @@
       "title" : "Extended Protocols"
     },
     {
+      "anchor" : "Extended-Structures",
+      "generated" : true,
       "identifiers" : [
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Swift\/Array",
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Swift\/ClosedRange",
@@ -54,6 +58,8 @@
       "title" : "Extended Structures"
     },
     {
+      "anchor" : "Extended-Enumerations",
+      "generated" : true,
       "identifiers" : [
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Swift\/Optional"
       ],

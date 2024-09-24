@@ -1,4 +1,7 @@
 {
+  "includedArchiveIdentifiers" : [
+    "RouteDocs"
+  ],
   "interfaceLanguages" : {
     "swift" : [
       {
@@ -1563,22 +1566,22 @@
                         "type" : "groupMarker"
                       },
                       {
-                        "path" : "\/documentation\/routedocs\/foundation\/date\/documentationbody",
+                        "path" : "\/documentation\/routedocs\/foundationessentials\/date\/documentationbody",
                         "title" : "static var documentationBody: DocumentationObject.Body",
                         "type" : "property"
                       },
                       {
-                        "path" : "\/documentation\/routedocs\/foundation\/date\/documentationinstance",
+                        "path" : "\/documentation\/routedocs\/foundationessentials\/date\/documentationinstance",
                         "title" : "static var documentationInstance: Date",
                         "type" : "property"
                       }
                     ],
-                    "path" : "\/documentation\/routedocs\/foundation\/date\/customdocumentable-implementations",
+                    "path" : "\/documentation\/routedocs\/foundationessentials\/date\/customdocumentable-implementations",
                     "title" : "CustomDocumentable Implementations",
                     "type" : "symbol"
                   }
                 ],
-                "path" : "\/documentation\/routedocs\/foundation\/date",
+                "path" : "\/documentation\/routedocs\/foundationessentials\/date",
                 "title" : "Date",
                 "type" : "extension"
               },
@@ -1595,22 +1598,22 @@
                         "type" : "groupMarker"
                       },
                       {
-                        "path" : "\/documentation\/routedocs\/foundation\/url\/documentationbody",
+                        "path" : "\/documentation\/routedocs\/foundationessentials\/url\/documentationbody",
                         "title" : "static var documentationBody: DocumentationObject.Body",
                         "type" : "property"
                       },
                       {
-                        "path" : "\/documentation\/routedocs\/foundation\/url\/documentationinstance",
+                        "path" : "\/documentation\/routedocs\/foundationessentials\/url\/documentationinstance",
                         "title" : "static var documentationInstance: URL",
                         "type" : "property"
                       }
                     ],
-                    "path" : "\/documentation\/routedocs\/foundation\/url\/customdocumentable-implementations",
+                    "path" : "\/documentation\/routedocs\/foundationessentials\/url\/customdocumentable-implementations",
                     "title" : "CustomDocumentable Implementations",
                     "type" : "symbol"
                   }
                 ],
-                "path" : "\/documentation\/routedocs\/foundation\/url",
+                "path" : "\/documentation\/routedocs\/foundationessentials\/url",
                 "title" : "URL",
                 "type" : "extension"
               },
@@ -1627,28 +1630,28 @@
                         "type" : "groupMarker"
                       },
                       {
-                        "path" : "\/documentation\/routedocs\/foundation\/uuid\/documentationbody",
+                        "path" : "\/documentation\/routedocs\/foundationessentials\/uuid\/documentationbody",
                         "title" : "static var documentationBody: DocumentationObject.Body",
                         "type" : "property"
                       },
                       {
-                        "path" : "\/documentation\/routedocs\/foundation\/uuid\/documentationinstance",
+                        "path" : "\/documentation\/routedocs\/foundationessentials\/uuid\/documentationinstance",
                         "title" : "static var documentationInstance: UUID",
                         "type" : "property"
                       }
                     ],
-                    "path" : "\/documentation\/routedocs\/foundation\/uuid\/customdocumentable-implementations",
+                    "path" : "\/documentation\/routedocs\/foundationessentials\/uuid\/customdocumentable-implementations",
                     "title" : "CustomDocumentable Implementations",
                     "type" : "symbol"
                   }
                 ],
-                "path" : "\/documentation\/routedocs\/foundation\/uuid",
+                "path" : "\/documentation\/routedocs\/foundationessentials\/uuid",
                 "title" : "UUID",
                 "type" : "extension"
               }
             ],
-            "path" : "\/documentation\/routedocs\/foundation",
-            "title" : "Foundation",
+            "path" : "\/documentation\/routedocs\/foundationessentials",
+            "title" : "FoundationEssentials",
             "type" : "extension"
           },
           {
@@ -2209,6 +2212,6 @@
   "schemaVersion" : {
     "major" : 0,
     "minor" : 1,
-    "patch" : 1
+    "patch" : 2
   }
 }

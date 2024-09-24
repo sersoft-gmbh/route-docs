@@ -33,6 +33,8 @@
   ],
   "topicSections" : [
     {
+      "anchor" : "Protocols",
+      "generated" : true,
       "identifiers" : [
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/CustomDocumentable",
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/CustomDocumentationNamed",
@@ -42,6 +44,8 @@
       "title" : "Protocols"
     },
     {
+      "anchor" : "Structures",
+      "generated" : true,
       "identifiers" : [
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocsViewContext",
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocumentationObject",
@@ -52,8 +56,10 @@
       "title" : "Structures"
     },
     {
+      "anchor" : "Extended-Modules",
+      "generated" : true,
       "identifiers" : [
-        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Foundation",
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/FoundationEssentials",
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/LeafKit",
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Swift",
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Vapor"
@@ -306,16 +312,16 @@
   "type" : "topic",
   "url" : "\/documentation\/routedocs\/endpointdocumentation"
 },
-"doc://RouteDocs/documentation/RouteDocs/Foundation": {
+"doc://RouteDocs/documentation/RouteDocs/FoundationEssentials": {
   "abstract" : [
 
   ],
-  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Foundation",
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/FoundationEssentials",
   "kind" : "symbol",
   "role" : "collection",
-  "title" : "Foundation",
+  "title" : "FoundationEssentials",
   "type" : "topic",
-  "url" : "\/documentation\/routedocs\/foundation"
+  "url" : "\/documentation\/routedocs\/foundationessentials"
 },
 "doc://RouteDocs/documentation/RouteDocs/LeafKit": {
   "abstract" : [

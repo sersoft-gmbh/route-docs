@@ -89,12 +89,16 @@
   ],
   "topicSections" : [
     {
+      "anchor" : "Instance-Properties",
+      "generated" : true,
       "identifiers" : [
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Vapor\/Application\/defaultDocsLeafSource"
       ],
       "title" : "Instance Properties"
     },
     {
+      "anchor" : "Extended-Structures",
+      "generated" : true,
       "identifiers" : [
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Vapor\/Application\/Leaf"
       ],

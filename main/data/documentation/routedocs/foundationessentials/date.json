@@ -1,0 +1,227 @@
+{
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs",
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/FoundationEssentials"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/FoundationEssentials\/Date"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "extendedModule" : "FoundationEssentials",
+    "externalID" : "s:e:s:20FoundationEssentials4DateV9RouteDocsE21documentationInstanceACvpZ",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "extension"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "preciseIdentifier" : "s:20FoundationEssentials4DateV",
+        "text" : "Date"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "RouteDocs",
+        "relatedModules" : [
+          "FoundationEssentials"
+        ]
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "Date"
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Extended Structure",
+    "symbolKind" : "extension",
+    "title" : "Date"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "extension"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:20FoundationEssentials4DateV",
+              "text" : "Date"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "relationshipsSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/CustomDocumentable",
+        "doc:\/\/RouteDocs\/s8CopyableP"
+      ],
+      "kind" : "relationships",
+      "title" : "Conforms To",
+      "type" : "conformsTo"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "anchor" : "Default-Implementations",
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/FoundationEssentials\/Date\/CustomDocumentable-Implementations"
+      ],
+      "title" : "Default Implementations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/routedocs\/foundationessentials\/date"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://RouteDocs/documentation/RouteDocs": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "RouteDocs",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs"
+},
+"doc://RouteDocs/documentation/RouteDocs/CustomDocumentable": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "protocol"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "CustomDocumentable"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/CustomDocumentable",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "CustomDocumentable"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "CustomDocumentable",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/customdocumentable"
+},
+"doc://RouteDocs/documentation/RouteDocs/FoundationEssentials": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/FoundationEssentials",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "FoundationEssentials",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/foundationessentials"
+},
+"doc://RouteDocs/documentation/RouteDocs/FoundationEssentials/Date": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "extension"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "s:20FoundationEssentials4DateV",
+      "text" : "Date"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/FoundationEssentials\/Date",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Date"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Date",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/foundationessentials\/date"
+},
+"doc://RouteDocs/documentation/RouteDocs/FoundationEssentials/Date/CustomDocumentable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/FoundationEssentials\/Date\/CustomDocumentable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "CustomDocumentable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/foundationessentials\/date\/customdocumentable-implementations"
+},
+"doc://RouteDocs/s8CopyableP": {
+  "identifier" : "doc:\/\/RouteDocs\/s8CopyableP",
+  "title" : "Swift.Copyable",
+  "type" : "unresolvable"
+}
+}
+}

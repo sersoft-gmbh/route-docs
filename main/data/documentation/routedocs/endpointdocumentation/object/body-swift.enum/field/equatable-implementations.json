@@ -35,6 +35,7 @@
   ],
   "topicSections" : [
     {
+      "anchor" : "Operators",
       "generated" : true,
       "identifiers" : [
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentation\/Object\/Body-swift.enum\/Field\/!=(_:_:)"

@@ -1,0 +1,207 @@
+{
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs",
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/FoundationEssentials",
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/FoundationEssentials\/Date"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/FoundationEssentials\/Date\/CustomDocumentable-Implementations"
+  },
+  "kind" : "article",
+  "metadata" : {
+    "modules" : [
+      {
+        "name" : "RouteDocs"
+      }
+    ],
+    "role" : "collectionGroup",
+    "roleHeading" : "API Collection",
+    "title" : "CustomDocumentable Implementations"
+  },
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "anchor" : "Type-Properties",
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/FoundationEssentials\/Date\/documentationBody",
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/FoundationEssentials\/Date\/documentationInstance"
+      ],
+      "title" : "Type Properties"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/routedocs\/foundationessentials\/date\/customdocumentable-implementations"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://RouteDocs/documentation/RouteDocs": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "RouteDocs",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs"
+},
+"doc://RouteDocs/documentation/RouteDocs/FoundationEssentials": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/FoundationEssentials",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "FoundationEssentials",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/foundationessentials"
+},
+"doc://RouteDocs/documentation/RouteDocs/FoundationEssentials/Date": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "extension"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "s:20FoundationEssentials4DateV",
+      "text" : "Date"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/FoundationEssentials\/Date",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Date"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Date",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/foundationessentials\/date"
+},
+"doc://RouteDocs/documentation/RouteDocs/FoundationEssentials/Date/documentationBody": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "static"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "documentationBody"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:9RouteDocs19DocumentationObjectV",
+      "text" : "DocumentationObject"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:9RouteDocs19DocumentationObjectV4BodyO",
+      "text" : "Body"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/FoundationEssentials\/Date\/documentationBody",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "documentationBody",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/foundationessentials\/date\/documentationbody"
+},
+"doc://RouteDocs/documentation/RouteDocs/FoundationEssentials/Date/documentationInstance": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "static"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "documentationInstance"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20FoundationEssentials4DateV",
+      "text" : "Date"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/FoundationEssentials\/Date\/documentationInstance",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "documentationInstance",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/foundationessentials\/date\/documentationinstance"
+}
+}
+}

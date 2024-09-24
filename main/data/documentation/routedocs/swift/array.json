@@ -82,7 +82,8 @@
   "relationshipsSections" : [
     {
       "identifiers" : [
-        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/CustomDocumentationNamed"
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/CustomDocumentationNamed",
+        "doc:\/\/RouteDocs\/s8CopyableP"
       ],
       "kind" : "relationships",
       "title" : "Conforms To",
@@ -99,6 +100,7 @@
   ],
   "topicSections" : [
     {
+      "anchor" : "Default-Implementations",
       "generated" : true,
       "identifiers" : [
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Swift\/Array\/CustomDocumentationNamed-Implementations"
@@ -247,6 +249,11 @@
   "title" : "CustomDocumentationNamed Implementations",
   "type" : "topic",
   "url" : "\/documentation\/routedocs\/swift\/array\/customdocumentationnamed-implementations"
+},
+"doc://RouteDocs/s8CopyableP": {
+  "identifier" : "doc:\/\/RouteDocs\/s8CopyableP",
+  "title" : "Swift.Copyable",
+  "type" : "unresolvable"
 }
 }
 }

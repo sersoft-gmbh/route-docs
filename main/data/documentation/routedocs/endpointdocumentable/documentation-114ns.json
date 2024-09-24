@@ -1,6 +1,7 @@
 {
   "defaultImplementationsSections" : [
     {
+      "anchor" : "EndpointDocumentable-Implementations",
       "identifiers" : [
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentable\/documentation-16pbb"
       ],
@@ -54,6 +55,10 @@
         "name" : "RouteDocs"
       }
     ],
+    "remoteSource" : {
+      "fileName" : "EndpointDocumentable.swift",
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/route-docs\/Sources\/RouteDocs\/EndpointDocumentable.swift#L4"
+    },
     "required" : true,
     "role" : "symbol",
     "roleHeading" : "Instance Property",

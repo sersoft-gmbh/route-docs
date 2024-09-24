@@ -51,6 +51,10 @@
         ]
       }
     ],
+    "remoteSource" : {
+      "fileName" : "EndpointDocumentable.swift",
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/route-docs\/Sources\/RouteDocs\/EndpointDocumentable.swift#L20"
+    },
     "role" : "symbol",
     "roleHeading" : "Instance Method",
     "symbolKind" : "method",

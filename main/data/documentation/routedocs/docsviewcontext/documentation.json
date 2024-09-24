@@ -39,6 +39,10 @@
         "text" : "Documentation"
       }
     ],
+    "remoteSource" : {
+      "fileName" : "DocsViewContext.swift",
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/route-docs\/Sources\/RouteDocs\/DocsViewContext.swift#L5"
+    },
     "role" : "symbol",
     "roleHeading" : "Structure",
     "symbolKind" : "struct",
@@ -94,6 +98,8 @@
   ],
   "topicSections" : [
     {
+      "anchor" : "Structures",
+      "generated" : true,
       "identifiers" : [
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocsViewContext\/Documentation\/Object",
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocsViewContext\/Documentation\/Payload",
@@ -102,12 +108,16 @@
       "title" : "Structures"
     },
     {
+      "anchor" : "Initializers",
+      "generated" : true,
       "identifiers" : [
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocsViewContext\/Documentation\/init(documentation:usingName:)"
       ],
       "title" : "Initializers"
     },
     {
+      "anchor" : "Instance-Properties",
+      "generated" : true,
       "identifiers" : [
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocsViewContext\/Documentation\/method",
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocsViewContext\/Documentation\/path",

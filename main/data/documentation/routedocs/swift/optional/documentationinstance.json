@@ -100,6 +100,10 @@
         ]
       }
     ],
+    "remoteSource" : {
+      "fileName" : "DocumentationDecoder.swift",
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/route-docs\/Sources\/RouteDocs\/DocumentationDecoder.swift#L149"
+    },
     "role" : "symbol",
     "roleHeading" : "Type Property",
     "symbolKind" : "property",

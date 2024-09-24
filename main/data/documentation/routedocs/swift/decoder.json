@@ -89,6 +89,8 @@
   ],
   "topicSections" : [
     {
+      "anchor" : "Instance-Properties",
+      "generated" : true,
       "identifiers" : [
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Swift\/Decoder\/isDocumentationDecoder"
       ],

@@ -83,6 +83,7 @@
     {
       "identifiers" : [
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/CustomDocumentable",
+        "doc:\/\/RouteDocs\/s8CopyableP",
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeWrapping"
       ],
       "kind" : "relationships",
@@ -100,6 +101,7 @@
   ],
   "topicSections" : [
     {
+      "anchor" : "Default-Implementations",
       "generated" : true,
       "identifiers" : [
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Swift\/Optional\/CustomDocumentable-Implementations"
@@ -311,6 +313,11 @@
   "title" : "TypeWrapping",
   "type" : "topic",
   "url" : "\/documentation\/routedocs\/typewrapping"
+},
+"doc://RouteDocs/s8CopyableP": {
+  "identifier" : "doc:\/\/RouteDocs\/s8CopyableP",
+  "title" : "Swift.Copyable",
+  "type" : "unresolvable"
 }
 }
 }

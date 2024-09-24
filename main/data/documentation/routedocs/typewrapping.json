@@ -38,6 +38,10 @@
         "text" : "TypeWrapping"
       }
     ],
+    "remoteSource" : {
+      "fileName" : "TypeWrapping.swift",
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/route-docs\/Sources\/RouteDocs\/TypeWrapping.swift#L1"
+    },
     "role" : "symbol",
     "roleHeading" : "Protocol",
     "symbolKind" : "protocol",
@@ -106,6 +110,8 @@
   ],
   "topicSections" : [
     {
+      "anchor" : "Associated-Types",
+      "generated" : true,
       "identifiers" : [
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeWrapping\/Wrapped"
       ],
