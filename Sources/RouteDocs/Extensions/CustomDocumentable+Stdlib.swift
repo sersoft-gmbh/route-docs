@@ -1,4 +1,8 @@
+#if swift(>=6.0)
 public import Foundation
+#else
+import Foundation
+#endif
 
 extension Date: CustomDocumentable {
     @inlinable
