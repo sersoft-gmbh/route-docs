@@ -4,8 +4,7 @@
       [
         "doc:\/\/RouteDocs\/documentation\/RouteDocs",
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Swift",
-        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Swift\/PartialRangeThrough",
-        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Swift\/PartialRangeThrough\/CustomDocumentationNamed-Implementations"
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Swift\/PartialRangeThrough"
       ]
     ]
   },
@@ -98,7 +97,7 @@
     ],
     "remoteSource" : {
       "fileName" : "CustomDocumentable+Stdlib.swift",
-      "url" : "https:\/\/github.com\/sersoft-gmbh\/route-docs\/Sources\/RouteDocs\/Extensions\/CustomDocumentable+Stdlib.swift#L72"
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/route-docs\/blob\/refs\/heads\/main\/Sources\/RouteDocs\/Extensions\/CustomDocumentable+Stdlib.swift#L72"
     },
     "role" : "symbol",
     "roleHeading" : "Type Property",
@@ -238,17 +237,6 @@
   "title" : "PartialRangeThrough",
   "type" : "topic",
   "url" : "\/documentation\/routedocs\/swift\/partialrangethrough"
-},
-"doc://RouteDocs/documentation/RouteDocs/Swift/PartialRangeThrough/CustomDocumentationNamed-Implementations": {
-  "abstract" : [
-
-  ],
-  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Swift\/PartialRangeThrough\/CustomDocumentationNamed-Implementations",
-  "kind" : "article",
-  "role" : "collectionGroup",
-  "title" : "CustomDocumentationNamed Implementations",
-  "type" : "topic",
-  "url" : "\/documentation\/routedocs\/swift\/partialrangethrough\/customdocumentationnamed-implementations"
 },
 "doc://RouteDocs/documentation/RouteDocs/Swift/PartialRangeThrough/documentationName": {
   "abstract" : [

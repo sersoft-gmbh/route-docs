@@ -41,7 +41,7 @@
     ],
     "remoteSource" : {
       "fileName" : "EndpointDocumentation.swift",
-      "url" : "https:\/\/github.com\/sersoft-gmbh\/route-docs\/Sources\/RouteDocs\/EndpointDocumentation.swift#L21"
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/route-docs\/blob\/refs\/heads\/main\/Sources\/RouteDocs\/EndpointDocumentation.swift#L21"
     },
     "role" : "symbol",
     "roleHeading" : "Structure",
@@ -306,7 +306,15 @@
     },
     {
       "kind" : "text",
-      "text" : "("
+      "text" : "<"
+    },
+    {
+      "kind" : "genericParameter",
+      "text" : "E"
+    },
+    {
+      "kind" : "text",
+      "text" : ">("
     },
     {
       "kind" : "externalParam",
@@ -357,15 +365,31 @@
     },
     {
       "kind" : "text",
-      "text" : " -> ()) "
+      "text" : "("
     },
     {
-      "kind" : "keyword",
-      "text" : "rethrows"
+      "kind" : "typeIdentifier",
+      "text" : "E"
     },
     {
       "kind" : "text",
-      "text" : " -> "
+      "text" : ") -> ()) "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "E"
+    },
+    {
+      "kind" : "text",
+      "text" : ") -> "
     },
     {
       "kind" : "typeIdentifier",

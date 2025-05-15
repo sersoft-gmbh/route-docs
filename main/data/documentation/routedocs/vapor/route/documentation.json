@@ -4,8 +4,7 @@
       [
         "doc:\/\/RouteDocs\/documentation\/RouteDocs",
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Vapor",
-        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Vapor\/Route",
-        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Vapor\/Route\/EndpointDocumentable-Implementations"
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Vapor\/Route"
       ]
     ]
   },
@@ -54,7 +53,7 @@
     ],
     "remoteSource" : {
       "fileName" : "EndpointDocumentable.swift",
-      "url" : "https:\/\/github.com\/sersoft-gmbh\/route-docs\/Sources\/RouteDocs\/EndpointDocumentable.swift#L15"
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/route-docs\/blob\/refs\/heads\/main\/Sources\/RouteDocs\/EndpointDocumentable.swift#L15"
     },
     "role" : "symbol",
     "roleHeading" : "Instance Property",
@@ -226,17 +225,6 @@
   "title" : "Route",
   "type" : "topic",
   "url" : "\/documentation\/routedocs\/vapor\/route"
-},
-"doc://RouteDocs/documentation/RouteDocs/Vapor/Route/EndpointDocumentable-Implementations": {
-  "abstract" : [
-
-  ],
-  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Vapor\/Route\/EndpointDocumentable-Implementations",
-  "kind" : "article",
-  "role" : "collectionGroup",
-  "title" : "EndpointDocumentable Implementations",
-  "type" : "topic",
-  "url" : "\/documentation\/routedocs\/vapor\/route\/endpointdocumentable-implementations"
 },
 "doc://RouteDocs/documentation/RouteDocs/Vapor/Route/documentation": {
   "abstract" : [

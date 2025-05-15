@@ -9,8 +9,7 @@
     "paths" : [
       [
         "doc:\/\/RouteDocs\/documentation\/RouteDocs",
-        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocumentationType",
-        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocumentationType\/Equatable-Implementations"
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocumentationType"
       ]
     ]
   },
@@ -426,17 +425,6 @@
   "title" : "!=(_:_:)",
   "type" : "topic",
   "url" : "\/documentation\/routedocs\/documentationtype\/!=(_:_:)"
-},
-"doc://RouteDocs/documentation/RouteDocs/DocumentationType/Equatable-Implementations": {
-  "abstract" : [
-
-  ],
-  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocumentationType\/Equatable-Implementations",
-  "kind" : "article",
-  "role" : "collectionGroup",
-  "title" : "Equatable Implementations",
-  "type" : "topic",
-  "url" : "\/documentation\/routedocs\/documentationtype\/equatable-implementations"
 }
 }
 }

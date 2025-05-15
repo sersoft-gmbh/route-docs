@@ -4,8 +4,7 @@
       [
         "doc:\/\/RouteDocs\/documentation\/RouteDocs",
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Swift",
-        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Swift\/Range",
-        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Swift\/Range\/CustomDocumentationNamed-Implementations"
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Swift\/Range"
       ]
     ]
   },
@@ -98,7 +97,7 @@
     ],
     "remoteSource" : {
       "fileName" : "CustomDocumentable+Stdlib.swift",
-      "url" : "https:\/\/github.com\/sersoft-gmbh\/route-docs\/Sources\/RouteDocs\/Extensions\/CustomDocumentable+Stdlib.swift#L56"
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/route-docs\/blob\/refs\/heads\/main\/Sources\/RouteDocs\/Extensions\/CustomDocumentable+Stdlib.swift#L56"
     },
     "role" : "symbol",
     "roleHeading" : "Type Property",
@@ -238,17 +237,6 @@
   "title" : "Range",
   "type" : "topic",
   "url" : "\/documentation\/routedocs\/swift\/range"
-},
-"doc://RouteDocs/documentation/RouteDocs/Swift/Range/CustomDocumentationNamed-Implementations": {
-  "abstract" : [
-
-  ],
-  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Swift\/Range\/CustomDocumentationNamed-Implementations",
-  "kind" : "article",
-  "role" : "collectionGroup",
-  "title" : "CustomDocumentationNamed Implementations",
-  "type" : "topic",
-  "url" : "\/documentation\/routedocs\/swift\/range\/customdocumentationnamed-implementations"
 },
 "doc://RouteDocs/documentation/RouteDocs/Swift/Range/documentationName": {
   "abstract" : [

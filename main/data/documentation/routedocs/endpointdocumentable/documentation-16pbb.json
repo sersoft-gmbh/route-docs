@@ -3,8 +3,7 @@
     "paths" : [
       [
         "doc:\/\/RouteDocs\/documentation\/RouteDocs",
-        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentable",
-        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentable\/documentation-114ns"
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentable"
       ]
     ]
   },
@@ -82,7 +81,7 @@
     ],
     "remoteSource" : {
       "fileName" : "EndpointDocumentable.swift",
-      "url" : "https:\/\/github.com\/sersoft-gmbh\/route-docs\/Sources\/RouteDocs\/EndpointDocumentable.swift#L8"
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/route-docs\/blob\/refs\/heads\/main\/Sources\/RouteDocs\/EndpointDocumentable.swift#L8"
     },
     "role" : "symbol",
     "roleHeading" : "Instance Property",
@@ -219,46 +218,6 @@
   "title" : "EndpointDocumentable",
   "type" : "topic",
   "url" : "\/documentation\/routedocs\/endpointdocumentable"
-},
-"doc://RouteDocs/documentation/RouteDocs/EndpointDocumentable/documentation-114ns": {
-  "abstract" : [
-
-  ],
-  "defaultImplementations" : 1,
-  "fragments" : [
-    {
-      "kind" : "keyword",
-      "text" : "var"
-    },
-    {
-      "kind" : "text",
-      "text" : " "
-    },
-    {
-      "kind" : "identifier",
-      "text" : "documentation"
-    },
-    {
-      "kind" : "text",
-      "text" : ": "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:9RouteDocs21EndpointDocumentationV",
-      "text" : "EndpointDocumentation"
-    },
-    {
-      "kind" : "text",
-      "text" : "?"
-    }
-  ],
-  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentable\/documentation-114ns",
-  "kind" : "symbol",
-  "required" : true,
-  "role" : "symbol",
-  "title" : "documentation",
-  "type" : "topic",
-  "url" : "\/documentation\/routedocs\/endpointdocumentable\/documentation-114ns"
 },
 "doc://RouteDocs/documentation/RouteDocs/EndpointDocumentable/documentation-16pbb": {
   "abstract" : [

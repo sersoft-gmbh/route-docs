@@ -12,8 +12,7 @@
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentation",
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentation\/Object",
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentation\/Object\/Body-swift.enum",
-        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentation\/Object\/Body-swift.enum\/EnumCase",
-        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentation\/Object\/Body-swift.enum\/EnumCase\/Equatable-Implementations"
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentation\/Object\/Body-swift.enum\/EnumCase"
       ]
     ]
   },
@@ -522,17 +521,6 @@
   "title" : "!=(_:_:)",
   "type" : "topic",
   "url" : "\/documentation\/routedocs\/endpointdocumentation\/object\/body-swift.enum\/enumcase\/!=(_:_:)"
-},
-"doc://RouteDocs/documentation/RouteDocs/EndpointDocumentation/Object/Body-swift.enum/EnumCase/Equatable-Implementations": {
-  "abstract" : [
-
-  ],
-  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentation\/Object\/Body-swift.enum\/EnumCase\/Equatable-Implementations",
-  "kind" : "article",
-  "role" : "collectionGroup",
-  "title" : "Equatable Implementations",
-  "type" : "topic",
-  "url" : "\/documentation\/routedocs\/endpointdocumentation\/object\/body-swift.enum\/enumcase\/equatable-implementations"
 }
 }
 }

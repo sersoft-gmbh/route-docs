@@ -4,8 +4,7 @@
       [
         "doc:\/\/RouteDocs\/documentation\/RouteDocs",
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Vapor",
-        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Vapor\/HTTPMediaType",
-        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Vapor\/HTTPMediaType\/Decodable-Implementations"
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Vapor\/HTTPMediaType"
       ]
     ]
   },
@@ -58,7 +57,7 @@
     ],
     "remoteSource" : {
       "fileName" : "HTTPMediaType+Codable.swift",
-      "url" : "https:\/\/github.com\/sersoft-gmbh\/route-docs\/Sources\/RouteDocs\/Extensions\/HTTPMediaType+Codable.swift#L8"
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/route-docs\/blob\/refs\/heads\/main\/Sources\/RouteDocs\/Extensions\/HTTPMediaType+Codable.swift#L8"
     },
     "role" : "symbol",
     "roleHeading" : "Initializer",
@@ -194,17 +193,6 @@
   "title" : "HTTPMediaType",
   "type" : "topic",
   "url" : "\/documentation\/routedocs\/vapor\/httpmediatype"
-},
-"doc://RouteDocs/documentation/RouteDocs/Vapor/HTTPMediaType/Decodable-Implementations": {
-  "abstract" : [
-
-  ],
-  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Vapor\/HTTPMediaType\/Decodable-Implementations",
-  "kind" : "article",
-  "role" : "collectionGroup",
-  "title" : "Decodable Implementations",
-  "type" : "topic",
-  "url" : "\/documentation\/routedocs\/vapor\/httpmediatype\/decodable-implementations"
 },
 "doc://RouteDocs/documentation/RouteDocs/Vapor/HTTPMediaType/init(from:)": {
   "abstract" : [

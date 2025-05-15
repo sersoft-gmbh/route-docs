@@ -18,8 +18,7 @@
       [
         "doc:\/\/RouteDocs\/documentation\/RouteDocs",
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription",
-        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription\/NameOptions",
-        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription\/NameOptions\/SetAlgebra-Implementations"
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription\/NameOptions"
       ]
     ]
   },
@@ -396,17 +395,6 @@
   "title" : "TypeDescription.NameOptions",
   "type" : "topic",
   "url" : "\/documentation\/routedocs\/typedescription\/nameoptions"
-},
-"doc://RouteDocs/documentation/RouteDocs/TypeDescription/NameOptions/SetAlgebra-Implementations": {
-  "abstract" : [
-
-  ],
-  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription\/NameOptions\/SetAlgebra-Implementations",
-  "kind" : "article",
-  "role" : "collectionGroup",
-  "title" : "SetAlgebra Implementations",
-  "type" : "topic",
-  "url" : "\/documentation\/routedocs\/typedescription\/nameoptions\/setalgebra-implementations"
 },
 "doc://RouteDocs/documentation/RouteDocs/TypeDescription/NameOptions/isSuperset(of:)": {
   "abstract" : [

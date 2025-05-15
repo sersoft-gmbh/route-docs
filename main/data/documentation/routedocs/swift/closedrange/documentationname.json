@@ -4,8 +4,7 @@
       [
         "doc:\/\/RouteDocs\/documentation\/RouteDocs",
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Swift",
-        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Swift\/ClosedRange",
-        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Swift\/ClosedRange\/CustomDocumentationNamed-Implementations"
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Swift\/ClosedRange"
       ]
     ]
   },
@@ -98,7 +97,7 @@
     ],
     "remoteSource" : {
       "fileName" : "CustomDocumentable+Stdlib.swift",
-      "url" : "https:\/\/github.com\/sersoft-gmbh\/route-docs\/Sources\/RouteDocs\/Extensions\/CustomDocumentable+Stdlib.swift#L60"
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/route-docs\/blob\/refs\/heads\/main\/Sources\/RouteDocs\/Extensions\/CustomDocumentable+Stdlib.swift#L60"
     },
     "role" : "symbol",
     "roleHeading" : "Type Property",
@@ -238,17 +237,6 @@
   "title" : "ClosedRange",
   "type" : "topic",
   "url" : "\/documentation\/routedocs\/swift\/closedrange"
-},
-"doc://RouteDocs/documentation/RouteDocs/Swift/ClosedRange/CustomDocumentationNamed-Implementations": {
-  "abstract" : [
-
-  ],
-  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Swift\/ClosedRange\/CustomDocumentationNamed-Implementations",
-  "kind" : "article",
-  "role" : "collectionGroup",
-  "title" : "CustomDocumentationNamed Implementations",
-  "type" : "topic",
-  "url" : "\/documentation\/routedocs\/swift\/closedrange\/customdocumentationnamed-implementations"
 },
 "doc://RouteDocs/documentation/RouteDocs/Swift/ClosedRange/documentationName": {
   "abstract" : [

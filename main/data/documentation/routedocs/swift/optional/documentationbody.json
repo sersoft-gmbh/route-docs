@@ -4,8 +4,7 @@
       [
         "doc:\/\/RouteDocs\/documentation\/RouteDocs",
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Swift",
-        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Swift\/Optional",
-        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Swift\/Optional\/CustomDocumentable-Implementations"
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Swift\/Optional"
       ]
     ]
   },
@@ -99,7 +98,7 @@
     ],
     "remoteSource" : {
       "fileName" : "DocumentationDecoder.swift",
-      "url" : "https:\/\/github.com\/sersoft-gmbh\/route-docs\/Sources\/RouteDocs\/DocumentationDecoder.swift#L148"
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/route-docs\/blob\/refs\/heads\/main\/Sources\/RouteDocs\/DocumentationDecoder.swift#L148"
     },
     "role" : "symbol",
     "roleHeading" : "Type Property",
@@ -312,17 +311,6 @@
   "title" : "Optional",
   "type" : "topic",
   "url" : "\/documentation\/routedocs\/swift\/optional"
-},
-"doc://RouteDocs/documentation/RouteDocs/Swift/Optional/CustomDocumentable-Implementations": {
-  "abstract" : [
-
-  ],
-  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Swift\/Optional\/CustomDocumentable-Implementations",
-  "kind" : "article",
-  "role" : "collectionGroup",
-  "title" : "CustomDocumentable Implementations",
-  "type" : "topic",
-  "url" : "\/documentation\/routedocs\/swift\/optional\/customdocumentable-implementations"
 },
 "doc://RouteDocs/documentation/RouteDocs/Swift/Optional/documentationBody": {
   "abstract" : [

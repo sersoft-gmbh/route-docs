@@ -4,8 +4,7 @@
       [
         "doc:\/\/RouteDocs\/documentation\/RouteDocs",
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/FoundationEssentials",
-        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/FoundationEssentials\/UUID",
-        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/FoundationEssentials\/UUID\/CustomDocumentable-Implementations"
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/FoundationEssentials\/UUID"
       ]
     ]
   },
@@ -67,7 +66,7 @@
     ],
     "remoteSource" : {
       "fileName" : "CustomDocumentable+Stdlib.swift",
-      "url" : "https:\/\/github.com\/sersoft-gmbh\/route-docs\/Sources\/RouteDocs\/Extensions\/CustomDocumentable+Stdlib.swift#L20"
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/route-docs\/blob\/refs\/heads\/main\/Sources\/RouteDocs\/Extensions\/CustomDocumentable+Stdlib.swift#L20"
     },
     "role" : "symbol",
     "roleHeading" : "Type Property",
@@ -280,17 +279,6 @@
   "title" : "UUID",
   "type" : "topic",
   "url" : "\/documentation\/routedocs\/foundationessentials\/uuid"
-},
-"doc://RouteDocs/documentation/RouteDocs/FoundationEssentials/UUID/CustomDocumentable-Implementations": {
-  "abstract" : [
-
-  ],
-  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/FoundationEssentials\/UUID\/CustomDocumentable-Implementations",
-  "kind" : "article",
-  "role" : "collectionGroup",
-  "title" : "CustomDocumentable Implementations",
-  "type" : "topic",
-  "url" : "\/documentation\/routedocs\/foundationessentials\/uuid\/customdocumentable-implementations"
 },
 "doc://RouteDocs/documentation/RouteDocs/FoundationEssentials/UUID/documentationBody": {
   "abstract" : [

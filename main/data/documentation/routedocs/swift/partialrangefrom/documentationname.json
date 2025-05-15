@@ -4,8 +4,7 @@
       [
         "doc:\/\/RouteDocs\/documentation\/RouteDocs",
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Swift",
-        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Swift\/PartialRangeFrom",
-        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Swift\/PartialRangeFrom\/CustomDocumentationNamed-Implementations"
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Swift\/PartialRangeFrom"
       ]
     ]
   },
@@ -98,7 +97,7 @@
     ],
     "remoteSource" : {
       "fileName" : "CustomDocumentable+Stdlib.swift",
-      "url" : "https:\/\/github.com\/sersoft-gmbh\/route-docs\/Sources\/RouteDocs\/Extensions\/CustomDocumentable+Stdlib.swift#L64"
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/route-docs\/blob\/refs\/heads\/main\/Sources\/RouteDocs\/Extensions\/CustomDocumentable+Stdlib.swift#L64"
     },
     "role" : "symbol",
     "roleHeading" : "Type Property",
@@ -238,17 +237,6 @@
   "title" : "PartialRangeFrom",
   "type" : "topic",
   "url" : "\/documentation\/routedocs\/swift\/partialrangefrom"
-},
-"doc://RouteDocs/documentation/RouteDocs/Swift/PartialRangeFrom/CustomDocumentationNamed-Implementations": {
-  "abstract" : [
-
-  ],
-  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Swift\/PartialRangeFrom\/CustomDocumentationNamed-Implementations",
-  "kind" : "article",
-  "role" : "collectionGroup",
-  "title" : "CustomDocumentationNamed Implementations",
-  "type" : "topic",
-  "url" : "\/documentation\/routedocs\/swift\/partialrangefrom\/customdocumentationnamed-implementations"
 },
 "doc://RouteDocs/documentation/RouteDocs/Swift/PartialRangeFrom/documentationName": {
   "abstract" : [
