@@ -1,15 +1,12 @@
-// swift-tools-version:5.9
+// swift-tools-version:6.0
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
 
 let swiftSettings: Array<SwiftSetting> = [
-    .enableUpcomingFeature("ConciseMagicFile"),
+    .swiftLanguageMode(.v6),
     .enableUpcomingFeature("ExistentialAny"),
-    .enableUpcomingFeature("BareSlashRegexLiterals"),
-    .enableUpcomingFeature("DisableOutwardActorInference"),
-    .enableExperimentalFeature("StrictConcurrency"),
-    .enableExperimentalFeature("AccessLevelOnImport"),
+    .enableUpcomingFeature("InternalImportsByDefault"),
 ]
 
 let package = Package(
@@ -26,8 +23,8 @@ let package = Package(
     dependencies: [
         // Dependencies declare other packages that this package depends on.
         .package(url: "https://github.com/apple/swift-docc-plugin", from: "1.0.0"),
-        .package(url: "https://github.com/apple/swift-nio", from: "2.59.0"),
-        .package(url: "https://github.com/vapor/vapor", from: "4.84.0"),
+        .package(url: "https://github.com/apple/swift-nio", from: "2.64.0"),
+        .package(url: "https://github.com/vapor/vapor", from: "4.92.0"),
         .package(url: "https://github.com/vapor/leaf-kit", from: "1.10.0"),
         .package(url: "https://github.com/vapor/leaf", from: "4.2.0"),
     ],

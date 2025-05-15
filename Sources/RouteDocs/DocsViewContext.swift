@@ -81,7 +81,7 @@ extension HTTPMethod {
         case .PUT: return "2PUT"
         case .POST: return "3POST"
         case .DELETE: return "4DELETE"
-        default: return string
+        default: return rawValue
         }
     }
 }

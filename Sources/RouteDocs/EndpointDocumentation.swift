@@ -143,11 +143,19 @@ public struct EndpointDocumentation: Sendable, Equatable, Codable, CustomStringC
             return "\(type) {\n\(bodyDesc)\n}"
         }
 
+#if swift(>=6.0)
+        public func adjustingBody<E: Error>(with closure: (inout Body) throws(E) -> ()) throws(E) -> Self {
+            var newBody = body
+            try closure(&newBody)
+            return .init(type: type, body: newBody)
+        }
+#else
         public func adjustingBody(with closure: (inout Body) throws -> ()) rethrows -> Self {
             var newBody = body
             try closure(&newBody)
             return .init(type: type, body: newBody)
         }
+#endif
     }
 
     public struct Query: Sendable, Equatable, Codable, CustomStringConvertible {
