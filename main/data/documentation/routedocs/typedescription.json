@@ -84,7 +84,8 @@
         "doc:\/\/RouteDocs\/SE",
         "doc:\/\/RouteDocs\/SQ",
         "doc:\/\/RouteDocs\/SH",
-        "doc:\/\/RouteDocs\/s8SendableP"
+        "doc:\/\/RouteDocs\/s8SendableP",
+        "doc:\/\/RouteDocs\/s16SendableMetatypeP"
       ],
       "kind" : "relationships",
       "title" : "Conforms To",
@@ -140,6 +141,14 @@
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription\/typeName(with:)"
       ],
       "title" : "Instance Methods"
+    },
+    {
+      "anchor" : "Enumerations",
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription\/GenericParameter"
+      ],
+      "title" : "Enumerations"
     },
     {
       "anchor" : "Default-Implementations",
@@ -236,6 +245,37 @@
   "title" : "Equatable Implementations",
   "type" : "topic",
   "url" : "\/documentation\/routedocs\/typedescription\/equatable-implementations"
+},
+"doc://RouteDocs/documentation/RouteDocs/TypeDescription/GenericParameter": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "GenericParameter"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription\/GenericParameter",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "GenericParameter"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "TypeDescription.GenericParameter",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/typedescription\/genericparameter"
 },
 "doc://RouteDocs/documentation/RouteDocs/TypeDescription/NameOptions": {
   "abstract" : [
@@ -386,6 +426,15 @@
       "kind" : "typeIdentifier",
       "preciseIdentifier" : "s:9RouteDocs15TypeDescriptionV",
       "text" : "TypeDescription"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:9RouteDocs15TypeDescriptionV16GenericParameterO",
+      "text" : "GenericParameter"
     },
     {
       "kind" : "text",
@@ -769,6 +818,11 @@
   "title" : "typeName(with:)",
   "type" : "topic",
   "url" : "\/documentation\/routedocs\/typedescription\/typename(with:)"
+},
+"doc://RouteDocs/s16SendableMetatypeP": {
+  "identifier" : "doc:\/\/RouteDocs\/s16SendableMetatypeP",
+  "title" : "Swift.SendableMetatype",
+  "type" : "unresolvable"
 },
 "doc://RouteDocs/s23CustomStringConvertibleP": {
   "identifier" : "doc:\/\/RouteDocs\/s23CustomStringConvertibleP",

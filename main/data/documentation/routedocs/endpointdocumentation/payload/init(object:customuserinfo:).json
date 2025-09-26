@@ -95,7 +95,7 @@
     ],
     "remoteSource" : {
       "fileName" : "EndpointDocumentation.swift",
-      "url" : "https:\/\/github.com\/sersoft-gmbh\/route-docs\/blob\/refs\/heads\/main\/Sources\/RouteDocs\/EndpointDocumentation.swift#L247"
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/route-docs\/blob\/refs\/heads\/main\/Sources\/RouteDocs\/EndpointDocumentation.swift#L239"
     },
     "role" : "symbol",
     "roleHeading" : "Initializer",

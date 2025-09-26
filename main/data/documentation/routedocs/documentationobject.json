@@ -40,7 +40,7 @@
     ],
     "remoteSource" : {
       "fileName" : "DocumentationDecoder.swift",
-      "url" : "https:\/\/github.com\/sersoft-gmbh\/route-docs\/blob\/refs\/heads\/main\/Sources\/RouteDocs\/DocumentationDecoder.swift#L19"
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/route-docs\/blob\/refs\/heads\/main\/Sources\/RouteDocs\/DocumentationDecoder.swift#L15"
     },
     "role" : "symbol",
     "roleHeading" : "Structure",
@@ -82,7 +82,8 @@
         "doc:\/\/RouteDocs\/s23CustomStringConvertibleP",
         "doc:\/\/RouteDocs\/SQ",
         "doc:\/\/RouteDocs\/SH",
-        "doc:\/\/RouteDocs\/s8SendableP"
+        "doc:\/\/RouteDocs\/s8SendableP",
+        "doc:\/\/RouteDocs\/s16SendableMetatypeP"
       ],
       "kind" : "relationships",
       "title" : "Conforms To",
@@ -750,6 +751,11 @@
   "title" : "type",
   "type" : "topic",
   "url" : "\/documentation\/routedocs\/documentationobject\/type"
+},
+"doc://RouteDocs/s16SendableMetatypeP": {
+  "identifier" : "doc:\/\/RouteDocs\/s16SendableMetatypeP",
+  "title" : "Swift.SendableMetatype",
+  "type" : "unresolvable"
 },
 "doc://RouteDocs/s23CustomStringConvertibleP": {
   "identifier" : "doc:\/\/RouteDocs\/s23CustomStringConvertibleP",

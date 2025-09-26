@@ -13,7 +13,7 @@
   },
   "kind" : "symbol",
   "metadata" : {
-    "externalID" : "s:9RouteDocs15TypeDescriptionV17genericParametersSayACGvp",
+    "externalID" : "s:9RouteDocs15TypeDescriptionV17genericParametersSayAC16GenericParameterOGvp",
     "fragments" : [
       {
         "kind" : "keyword",
@@ -47,6 +47,15 @@
       },
       {
         "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:9RouteDocs15TypeDescriptionV16GenericParameterO",
+        "text" : "GenericParameter"
+      },
+      {
+        "kind" : "text",
         "text" : ">"
       }
     ],
@@ -57,7 +66,7 @@
     ],
     "remoteSource" : {
       "fileName" : "TypeDescription.swift",
-      "url" : "https:\/\/github.com\/sersoft-gmbh\/route-docs\/blob\/refs\/heads\/main\/Sources\/RouteDocs\/TypeDescription.swift#L24"
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/route-docs\/blob\/refs\/heads\/main\/Sources\/RouteDocs\/TypeDescription.swift#L87"
     },
     "role" : "symbol",
     "roleHeading" : "Instance Property",
@@ -105,6 +114,16 @@
               "kind" : "typeIdentifier",
               "preciseIdentifier" : "s:9RouteDocs15TypeDescriptionV",
               "text" : "TypeDescription"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription\/GenericParameter",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:9RouteDocs15TypeDescriptionV16GenericParameterO",
+              "text" : "GenericParameter"
             },
             {
               "kind" : "text",
@@ -180,6 +199,37 @@
   "type" : "topic",
   "url" : "\/documentation\/routedocs\/typedescription"
 },
+"doc://RouteDocs/documentation/RouteDocs/TypeDescription/GenericParameter": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "GenericParameter"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription\/GenericParameter",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "GenericParameter"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "TypeDescription.GenericParameter",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/typedescription\/genericparameter"
+},
 "doc://RouteDocs/documentation/RouteDocs/TypeDescription/genericParameters": {
   "abstract" : [
 
@@ -214,6 +264,15 @@
       "kind" : "typeIdentifier",
       "preciseIdentifier" : "s:9RouteDocs15TypeDescriptionV",
       "text" : "TypeDescription"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:9RouteDocs15TypeDescriptionV16GenericParameterO",
+      "text" : "GenericParameter"
     },
     {
       "kind" : "text",

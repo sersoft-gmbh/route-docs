@@ -42,7 +42,7 @@
     ],
     "remoteSource" : {
       "fileName" : "TypeDescription.swift",
-      "url" : "https:\/\/github.com\/sersoft-gmbh\/route-docs\/blob\/refs\/heads\/main\/Sources\/RouteDocs\/TypeDescription.swift#L116"
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/route-docs\/blob\/refs\/heads\/main\/Sources\/RouteDocs\/TypeDescription.swift#L180"
     },
     "role" : "symbol",
     "roleHeading" : "Structure",
@@ -95,6 +95,7 @@
         "doc:\/\/RouteDocs\/s9OptionSetP",
         "doc:\/\/RouteDocs\/SY",
         "doc:\/\/RouteDocs\/s8SendableP",
+        "doc:\/\/RouteDocs\/s16SendableMetatypeP",
         "doc:\/\/RouteDocs\/s10SetAlgebraP"
       ],
       "kind" : "relationships",
@@ -534,6 +535,11 @@
 "doc://RouteDocs/s15BitwiseCopyableP": {
   "identifier" : "doc:\/\/RouteDocs\/s15BitwiseCopyableP",
   "title" : "Swift.BitwiseCopyable",
+  "type" : "unresolvable"
+},
+"doc://RouteDocs/s16SendableMetatypeP": {
+  "identifier" : "doc:\/\/RouteDocs\/s16SendableMetatypeP",
+  "title" : "Swift.SendableMetatype",
   "type" : "unresolvable"
 },
 "doc://RouteDocs/s25ExpressibleByArrayLiteralP": {

@@ -83,7 +83,8 @@
         "doc:\/\/RouteDocs\/Se",
         "doc:\/\/RouteDocs\/SE",
         "doc:\/\/RouteDocs\/SQ",
-        "doc:\/\/RouteDocs\/s8SendableP"
+        "doc:\/\/RouteDocs\/s8SendableP",
+        "doc:\/\/RouteDocs\/s16SendableMetatypeP"
       ],
       "kind" : "relationships",
       "title" : "Conforms To",
@@ -390,6 +391,11 @@
   "title" : "typeDescription",
   "type" : "topic",
   "url" : "\/documentation\/routedocs\/documentationtype\/typedescription"
+},
+"doc://RouteDocs/s16SendableMetatypeP": {
+  "identifier" : "doc:\/\/RouteDocs\/s16SendableMetatypeP",
+  "title" : "Swift.SendableMetatype",
+  "type" : "unresolvable"
 },
 "doc://RouteDocs/s23CustomStringConvertibleP": {
   "identifier" : "doc:\/\/RouteDocs\/s23CustomStringConvertibleP",

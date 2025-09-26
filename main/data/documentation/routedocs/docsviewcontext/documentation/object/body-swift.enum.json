@@ -83,7 +83,8 @@
     {
       "identifiers" : [
         "doc:\/\/RouteDocs\/SE",
-        "doc:\/\/RouteDocs\/s8SendableP"
+        "doc:\/\/RouteDocs\/s8SendableP",
+        "doc:\/\/RouteDocs\/s16SendableMetatypeP"
       ],
       "kind" : "relationships",
       "title" : "Conforms To",
@@ -685,6 +686,11 @@
   "title" : "init(body:usingName:)",
   "type" : "topic",
   "url" : "\/documentation\/routedocs\/docsviewcontext\/documentation\/object\/body-swift.enum\/init(body:usingname:)"
+},
+"doc://RouteDocs/s16SendableMetatypeP": {
+  "identifier" : "doc:\/\/RouteDocs\/s16SendableMetatypeP",
+  "title" : "Swift.SendableMetatype",
+  "type" : "unresolvable"
 },
 "doc://RouteDocs/s8SendableP": {
   "identifier" : "doc:\/\/RouteDocs\/s8SendableP",

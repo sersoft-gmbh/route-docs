@@ -58,7 +58,7 @@
     ],
     "remoteSource" : {
       "fileName" : "DocumentationDecoder.swift",
-      "url" : "https:\/\/github.com\/sersoft-gmbh\/route-docs\/blob\/refs\/heads\/main\/Sources\/RouteDocs\/DocumentationDecoder.swift#L30"
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/route-docs\/blob\/refs\/heads\/main\/Sources\/RouteDocs\/DocumentationDecoder.swift#L26"
     },
     "role" : "symbol",
     "roleHeading" : "Initializer",

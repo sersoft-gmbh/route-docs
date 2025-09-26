@@ -41,7 +41,7 @@
     ],
     "remoteSource" : {
       "fileName" : "DocumentationDecoder.swift",
-      "url" : "https:\/\/github.com\/sersoft-gmbh\/route-docs\/blob\/refs\/heads\/main\/Sources\/RouteDocs\/DocumentationDecoder.swift#L20"
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/route-docs\/blob\/refs\/heads\/main\/Sources\/RouteDocs\/DocumentationDecoder.swift#L16"
     },
     "role" : "symbol",
     "roleHeading" : "Enumeration",
@@ -82,7 +82,8 @@
       "identifiers" : [
         "doc:\/\/RouteDocs\/SQ",
         "doc:\/\/RouteDocs\/SH",
-        "doc:\/\/RouteDocs\/s8SendableP"
+        "doc:\/\/RouteDocs\/s8SendableP",
+        "doc:\/\/RouteDocs\/s16SendableMetatypeP"
       ],
       "kind" : "relationships",
       "title" : "Conforms To",
@@ -451,6 +452,11 @@
   "title" : "DocumentationObject.Body.none",
   "type" : "topic",
   "url" : "\/documentation\/routedocs\/documentationobject\/body-swift.enum\/none"
+},
+"doc://RouteDocs/s16SendableMetatypeP": {
+  "identifier" : "doc:\/\/RouteDocs\/s16SendableMetatypeP",
+  "title" : "Swift.SendableMetatype",
+  "type" : "unresolvable"
 },
 "doc://RouteDocs/s8SendableP": {
   "identifier" : "doc:\/\/RouteDocs\/s8SendableP",
