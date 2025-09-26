@@ -1,8 +1,4 @@
-#if swift(>=6.0)
 public import Foundation
-#else
-import Foundation
-#endif
 
 extension Date: CustomDocumentable {
     @inlinable
@@ -31,7 +27,7 @@ extension URL: CustomDocumentable {
 extension CaseIterable where Self: RawRepresentable {
     @usableFromInline
     static var allCasesDocumentationBody: DocumentationObject.Body {
-        .cases(allCases.map(DocumentationObject.Body.EnumCase.init))
+        .cases(allCases.map { DocumentationObject.Body.EnumCase(value: $0) })
     }
 }
 

@@ -1,3 +1,3 @@
 public import NIOHTTP1
 
-extension HTTPMethod: Codable {}
+extension HTTPMethod: @retroactive Codable {}

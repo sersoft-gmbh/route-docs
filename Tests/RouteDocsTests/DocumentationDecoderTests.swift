@@ -1,7 +1,9 @@
-import XCTest
+import Foundation
+import Testing
 @testable import RouteDocs
 
-final class DocumentationDecoderTests: XCTestCase {
+@Suite
+struct DocumentationDecoderTests {
     struct Main: Decodable {
         struct Sub1: Decodable {
             private enum CodingKeys: String, CodingKey {
@@ -44,12 +46,14 @@ final class DocumentationDecoderTests: XCTestCase {
         let arbitraryDict: Dictionary<String, Int>
     }
 
-    func testDocObject() {
-        XCTAssertFalse(DocumentationObject(Int.self).isOptional)
-        XCTAssertTrue(DocumentationObject(Optional<Int>.self).isOptional)
+    @Test
+    func docObject() {
+        #expect(!DocumentationObject(Int.self).isOptional)
+        #expect(DocumentationObject(Optional<Int>.self).isOptional)
     }
 
-    func testSimpleStruct() throws {
+    @Test
+    func simpleStruct() throws {
         let doc = try Main.reflectedDocumentation(withCustomUserInfo: .init())
         let expectedDoc = DocumentationObject(Main.self, fields: [
             "bool": .init(Bool.self),
@@ -99,15 +103,17 @@ final class DocumentationDecoderTests: XCTestCase {
                 "{any}": .init(Int.self),
             ]),
         ])
-        XCTAssertEqual(doc, expectedDoc)
+        #expect(doc == expectedDoc)
     }
 
-    func testPassingCustomUserInfo() throws {
+    @Test
+    func passingCustomUserInfo() throws {
         struct TestObject: Decodable {
-#if swift(>=5.10)
+#if compiler(>=6.2)
+            @safe
             static nonisolated(unsafe) var lastDecodedInstance: TestObject?
 #else
-            static var lastDecodedInstance: TestObject?
+            static nonisolated(unsafe) var lastDecodedInstance: TestObject?
 #endif
 
             let coderUserInfo: Dictionary<CodingUserInfoKey, Any>
@@ -121,9 +127,9 @@ final class DocumentationDecoderTests: XCTestCase {
         let intKey = CodingUserInfoKey(rawValue: "intKey")!
         let stringKey = CodingUserInfoKey(rawValue: "stringKey")!
         _ = try TestObject.reflectedDocumentation(withCustomUserInfo: [intKey: 42, stringKey: "ABC"])
-        let obj = try XCTUnwrap(TestObject.lastDecodedInstance)
-        XCTAssertEqual(obj.coderUserInfo[.isDocumentationDecoder] as? Bool, true)
-        XCTAssertEqual(obj.coderUserInfo[intKey] as? Int, 42)
-        XCTAssertEqual(obj.coderUserInfo[stringKey] as? String, "ABC")
+        let obj = try #require(TestObject.lastDecodedInstance)
+        #expect(obj.coderUserInfo[.isDocumentationDecoder] as? Bool == true)
+        #expect(obj.coderUserInfo[intKey] as? Int == 42)
+        #expect(obj.coderUserInfo[stringKey] as? String == "ABC")
     }
 }

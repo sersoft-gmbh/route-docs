@@ -1,9 +1,5 @@
 fileprivate import NIOConcurrencyHelpers
-#if swift(>=6.0)
 fileprivate import Vapor
-#else
-public import Vapor
-#endif
 
 extension CodingUserInfoKey {
     public static let isDocumentationDecoder = CodingUserInfoKey(rawValue: "de.sersoft.route-docs.is-documentation-decoder")!
@@ -41,18 +37,18 @@ public struct DocumentationObject: Sendable, Hashable, CustomStringConvertible {
 
         public var isEmpty: Bool {
             switch self {
-            case .none: return true
-            case .fields(let fields): return fields.isEmpty
-            case .cases(let cases): return cases.isEmpty
+            case .none: true
+            case .fields(let fields): fields.isEmpty
+            case .cases(let cases): cases.isEmpty
             }
         }
 
         fileprivate var fields: Dictionary<String, DocumentationObject>? {
             get {
                 switch self {
-                case .none: return .init()
-                case .fields(let fields): return fields
-                case .cases(_): return nil
+                case .none: .init()
+                case .fields(let fields): fields
+                case .cases(_): nil
                 }
             }
             set {

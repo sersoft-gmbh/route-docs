@@ -14,26 +14,13 @@ Finally, there's a default docs page to show all collected route documentation.
 
 Add the following dependency to your `Package.swift`:
 ```swift
-.package(url: "https://github.com/sersoft-gmbh/route-docs.git", from: "2.0.0"),
+.package(url: "https://github.com/sersoft-gmbh/route-docs", from: "2.0.0"),
 ```
 
 ## Compatibility
 
 -   For Vapor up to version 3, use RouteDocs version 1.x.y.
 -   For Vapor as of version 4, use RouteDocs version 2.x.y.
-
-<!--
-## Usage
-
-_TBD_
--->
-
-## Possible Features
-
-While not yet integrated, the following features might provide added value and could make it into RouteDocs in the future:
-
--   Improved cycle detection
--   Better representation of types that are named but encode as a single raw value (e.g. `RawRepresentable` types)
 
 ## Documentation
 

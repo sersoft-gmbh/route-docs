@@ -1,6 +1,6 @@
 public import Vapor
 
-extension HTTPMediaType: Codable {
+extension HTTPMediaType: @retroactive Codable {
     private enum CodingKeys: String, CodingKey {
         case type, subtype, parameters
     }

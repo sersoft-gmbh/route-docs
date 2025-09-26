@@ -51,7 +51,7 @@ public struct DocsViewContext: Sendable, Encodable {
             public let objects: Array<Object>
         }
 
-        public struct Payload: Encodable, @unchecked Sendable { // unchecked because of HTTPMediaType
+        public struct Payload: Encodable, Sendable {
             public let mediaType: HTTPMediaType
             public let objects: Array<Object>
         }

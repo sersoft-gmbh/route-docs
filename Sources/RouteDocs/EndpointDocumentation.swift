@@ -71,9 +71,9 @@ public struct EndpointDocumentation: Sendable, Equatable, Codable, CustomStringC
 
             public var isEmpty: Bool {
                 switch self {
-                case .empty: return true
-                case .fields(let fields): return fields.isEmpty
-                case .cases(let cases): return cases.isEmpty
+                case .empty: true
+                case .fields(let fields): fields.isEmpty
+                case .cases(let cases): cases.isEmpty
                 }
             }
 
@@ -108,9 +108,9 @@ public struct EndpointDocumentation: Sendable, Equatable, Codable, CustomStringC
 
             public func filter(fieldNames: Set<String>) -> Self {
                 switch self {
-                case .empty: return .empty
-                case .fields(let fields): return .fields(fields.filter { !fieldNames.contains($0.name) })
-                case .cases(let cases): return .cases(cases.filter { $0.name.map(fieldNames.contains) != true })
+                case .empty: .empty
+                case .fields(let fields): .fields(fields.filter { !fieldNames.contains($0.name) })
+                case .cases(let cases): .cases(cases.filter { $0.name.map(fieldNames.contains) != true })
                 }
             }
 
@@ -143,19 +143,11 @@ public struct EndpointDocumentation: Sendable, Equatable, Codable, CustomStringC
             return "\(type) {\n\(bodyDesc)\n}"
         }
 
-#if swift(>=6.0)
         public func adjustingBody<E: Error>(with closure: (inout Body) throws(E) -> ()) throws(E) -> Self {
             var newBody = body
             try closure(&newBody)
             return .init(type: type, body: newBody)
         }
-#else
-        public func adjustingBody(with closure: (inout Body) throws -> ()) rethrows -> Self {
-            var newBody = body
-            try closure(&newBody)
-            return .init(type: type, body: newBody)
-        }
-#endif
     }
 
     public struct Query: Sendable, Equatable, Codable, CustomStringConvertible {

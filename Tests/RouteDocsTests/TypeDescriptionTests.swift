@@ -1,22 +1,41 @@
 import Foundation
-import XCTest
+import Testing
 @testable import RouteDocs
+
+#if compiler(>=6.2)
+fileprivate let integerLiteralGenericParametersAvailable = true
+#else
+fileprivate let integerLiteralGenericParametersAvailable = false
+#endif
 
 extension Dictionary {
     enum SomeNestedType {}
     fileprivate enum SomeOtherNestedType {}
 }
 
-final class TypeDescriptionTests: XCTestCase {
+fileprivate extension TypeDescription {
+    init(
+        module: String,
+        parent: TypeDescription?,
+        name: String,
+        genericParameters: some Sequence<TypeDescription>
+    ) {
+        self.init(module: module, parent: parent, name: name, genericParameters: genericParameters.map { .type($0) })
+    }
+}
+
+@Suite
+struct TypeDescriptionTests {
     private var uuidModule: String {
 #if canImport(FoundationEssentials)
-        return "FoundationEssentials"
+        "FoundationEssentials"
 #else
-        return "Foundation"
+        "Foundation"
 #endif
     }
 
-    func testVariousTypes() {
+    @Test
+    func variousTypes() {
         let typeDesc1 = TypeDescription(Dictionary<String, Dictionary<String, Int>.SomeNestedType>.Index.self)
         let typeDesc2 = TypeDescription(Dictionary<UUID, Dictionary<String, Int>.Index>.SomeOtherNestedType.self)
         let expected1 = TypeDescription(
@@ -63,11 +82,12 @@ final class TypeDescriptionTests: XCTestCase {
             name: "SomeOtherNestedType",
             genericParameters: []
         )
-        XCTAssertEqual(typeDesc1, expected1)
-        XCTAssertEqual(typeDesc2, expected2)
+        #expect(typeDesc1 == expected1)
+        #expect(typeDesc2 == expected2)
     }
 
-    func testSpecialTypes() {
+    @Test
+    func specialTypes() {
         let anyTypeDesc = TypeDescription(Any.self)
         let anyExpected = TypeDescription(module: "Swift", parent: nil, name: "Any", genericParameters: [])
         let voidTypeDesc = TypeDescription(Void.self)
@@ -82,9 +102,22 @@ final class TypeDescriptionTests: XCTestCase {
             .init(module: uuidModule, parent: nil, name: "UUID", genericParameters: []),
             .init(module: "Swift", parent: nil, name: "Array", genericParameters: [voidExpected]),
         ])
-        XCTAssertEqual(anyTypeDesc, anyExpected)
-        XCTAssertEqual(voidTypeDesc, voidExpected)
-        XCTAssertEqual(deeperAnyTypeDesc, deeperAnyExpected)
-        XCTAssertEqual(deeperVoidTypeDesc, deeperVoidExpected)
+        #expect(anyTypeDesc == anyExpected)
+        #expect(voidTypeDesc == voidExpected)
+        #expect(deeperAnyTypeDesc == deeperAnyExpected)
+        #expect(deeperVoidTypeDesc == deeperVoidExpected)
+    }
+
+    @Test(.enabled(if: integerLiteralGenericParametersAvailable))
+    @available(macOS 26, iOS 26, tvOS 26, watchOS 26, visionOS 26, *)
+    func integerLiteralGenericTypes() {
+#if compiler(>=6.2)
+        let inlineArray = TypeDescription(InlineArray<5, String>.self)
+        let expectedInlineArray = TypeDescription(module: "Swift", parent: nil, name: "InlineArray", genericParameters: [
+            .integerLiteral(name: nil, value: 5, valueType: .init(module: "Swift", parent: nil, name: "Int", genericParameters: [])),
+            .type(.init(module: "Swift", parent: nil, name: "String", genericParameters: [])),
+        ])
+        #expect(inlineArray == expectedInlineArray)
+#endif
     }
 }

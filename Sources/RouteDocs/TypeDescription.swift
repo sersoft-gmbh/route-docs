@@ -10,8 +10,71 @@ public struct TypeDescription: Sendable, Hashable, Codable, CustomStringConverti
 
         var value: TypeDescription? {
             switch self {
-            case .none: return nil
-            case .some(let desc): return desc
+            case .none: nil
+            case .some(let desc): desc
+            }
+        }
+    }
+
+    public enum GenericParameter: Sendable, Hashable, Codable, CustomStringConvertible {
+        private enum CodingKeys: String, CodingKey {
+            enum IntegerLiteralKeys: String, CodingKey {
+                case name, value
+                case valueType = "value_type"
+            }
+            case type
+            case integerLiteral = "integer_literal"
+        }
+
+        indirect case type(TypeDescription)
+#if compiler(>=6.2)
+        case integerLiteral(name: String?, value: Int, valueType: TypeDescription)
+#endif
+
+        public var description: String { typeName(with: [.withModule, .withParents]) }
+
+        public init(from decoder: any Decoder) throws {
+            let container = try decoder.container(keyedBy: CodingKeys.self)
+            guard !container.allKeys.isEmpty else { // legacy
+                self = .type(try TypeDescription(from: decoder))
+                return
+            }
+            let hasType = container.allKeys.contains(.type)
+            let hasIntegerLiteral = container.allKeys.contains(.integerLiteral)
+            if hasType && hasIntegerLiteral {
+                throw DecodingError.dataCorrupted(.init(codingPath: container.codingPath,
+                                                        debugDescription: "Cannot contain both 'type' and 'integerLiteral' keys"))
+            }
+            if hasType {
+                self = try .type(container.decode(TypeDescription.self, forKey: .type))
+            } else if hasIntegerLiteral {
+                let subContainer = try container.nestedContainer(keyedBy: CodingKeys.IntegerLiteralKeys.self, forKey: .integerLiteral)
+                self = try .integerLiteral(name: subContainer.decodeIfPresent(String.self, forKey: .name),
+                                           value: subContainer.decode(Int.self, forKey: .value),
+                                           valueType: subContainer.decode(TypeDescription.self, forKey: .valueType))
+            } else {
+                throw DecodingError.dataCorrupted(.init(codingPath: container.codingPath,
+                                                        debugDescription: "Requires either 'type' or 'integerLiteral' keys"))
+            }
+        }
+
+        public func encode(to encoder: any Encoder) throws {
+            var container = encoder.container(keyedBy: CodingKeys.self)
+            switch self {
+            case .type(let type):
+                try container.encode(type, forKey: .type)
+            case .integerLiteral(let name, let value, let valueType):
+                var nestedContainer = container.nestedContainer(keyedBy: CodingKeys.IntegerLiteralKeys.self, forKey: .integerLiteral)
+                try nestedContainer.encodeIfPresent(name, forKey: .name)
+                try nestedContainer.encode(value, forKey: .value)
+                try nestedContainer.encode(valueType, forKey: .valueType)
+            }
+        }
+
+        func typeName(with options: NameOptions) -> String {
+            switch self {
+            case .type(let type): type.typeName(with: options)
+            case .integerLiteral(_, let value, _): String(value)
             }
         }
     }
@@ -21,7 +84,7 @@ public struct TypeDescription: Sendable, Hashable, Codable, CustomStringConverti
     public let module: String
     public var parent: TypeDescription? { _parent.value }
     public let name: String
-    public let genericParameters: Array<TypeDescription>
+    public let genericParameters: Array<GenericParameter>
 
     public var parents: some Sequence<TypeDescription> {
         sequence(state: parent, next: { state in
@@ -41,8 +104,9 @@ public struct TypeDescription: Sendable, Hashable, Codable, CustomStringConverti
         module: String,
         parent: TypeDescription?,
         name: String,
-        genericParameters: Array<TypeDescription>
+        genericParameters: Array<GenericParameter>
     ) {
+        assert(!module.isEmpty)
         self.module = module
         self._parent = parent.map(_ParentStorage.some) ?? .none
         self.name = name
@@ -53,14 +117,14 @@ public struct TypeDescription: Sendable, Hashable, Codable, CustomStringConverti
         module = decodedModule
         _parent = try container.decodeIfPresent(TypeDescription.self, forKey: .parent).map(_ParentStorage.some) ?? .none
         name = try container.decode(String.self, forKey: .name)
-        genericParameters = try container.decode(Array<TypeDescription>.self, forKey: .genericParameters)
+        genericParameters = try container.decode(Array<GenericParameter>.self, forKey: .genericParameters)
     }
 
     private init(decodedType: TypeDescription, container: KeyedDecodingContainer<CodingKeys>) throws {
         module = decodedType.module
         _parent = decodedType._parent
         name = decodedType.name
-        genericParameters = try container.decode(Array<TypeDescription>.self, forKey: .genericParameters)
+        genericParameters = try container.decode(Array<GenericParameter>.self, forKey: .genericParameters)
     }
 
     public init(from decoder: any Decoder) throws {
@@ -138,7 +202,7 @@ fileprivate struct TypeParser<Text: StringProtocol> where Text.SubSequence: Rang
 
     private struct Context {
         let name: Text.SubSequence
-        var generics = Array<TypeDescription>()
+        var generics = Array<TypeDescription.GenericParameter>()
 
         func typeDescription(in module: String, parent: TypeDescription?) -> TypeDescription {
             .init(module: module, parent: parent, name: String(name), genericParameters: generics)
@@ -185,7 +249,7 @@ fileprivate struct TypeParser<Text: StringProtocol> where Text.SubSequence: Rang
             case ".":
                 parent = context.typeDescription(in: module, parent: parent)
                 context = .init(name: parseIdentifier())
-            case " ", "<": context.generics.append(parseSubtype())
+            case " ", "<": context.generics.append(parseGenericParameter())
             case ",", ">": break loop
             default: fatalError("Invalid type! Unexpected character: \(currentChar)")
             }
@@ -231,6 +295,15 @@ fileprivate struct TypeParser<Text: StringProtocol> where Text.SubSequence: Rang
         }
     }
 
+#if compiler(>=6.2)
+    private mutating func parseIntegerLiteralGenericParameter() -> Int? {
+        let index = remainder.firstIndex(where: ",>".contains) ?? remainder.endIndex
+        guard let value = Int(remainder[..<index]) else { return nil }
+        currentIndex = remainder.index(after: index)
+        return value
+    }
+#endif
+
     @discardableResult
     private mutating func seek(to char: Text.Element) -> Text.SubSequence {
         guard let index = remainder.firstIndex(of: char)
@@ -243,6 +316,17 @@ fileprivate struct TypeParser<Text: StringProtocol> where Text.SubSequence: Rang
         var subParser = TypeParser<Text.SubSequence>(string: remainder)
         defer { currentIndex = subParser.currentIndex }
         return subParser.parseType()
+    }
+
+    private mutating func parseGenericParameter() -> TypeDescription.GenericParameter {
+        var subParser = TypeParser<Text.SubSequence>(string: remainder)
+        defer { currentIndex = subParser.currentIndex }
+#if compiler(>=6.2)
+        if let value = subParser.parseIntegerLiteralGenericParameter() {
+            return .integerLiteral(name: nil, value: value, valueType: TypeDescription(Int.self))
+        }
+#endif
+        return .type(subParser.parseType())
     }
 }
 
