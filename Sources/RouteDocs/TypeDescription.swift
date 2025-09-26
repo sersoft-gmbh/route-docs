@@ -18,12 +18,16 @@ public struct TypeDescription: Sendable, Hashable, Codable, CustomStringConverti
 
     public enum GenericParameter: Sendable, Hashable, Codable, CustomStringConvertible {
         private enum CodingKeys: String, CodingKey {
+#if compiler(>=6.2)
             enum IntegerLiteralKeys: String, CodingKey {
                 case name, value
                 case valueType = "value_type"
             }
+#endif
             case type
+#if compiler(>=6.2)
             case integerLiteral = "integer_literal"
+#endif
         }
 
         indirect case type(TypeDescription)
@@ -40,6 +44,7 @@ public struct TypeDescription: Sendable, Hashable, Codable, CustomStringConverti
                 return
             }
             let hasType = container.allKeys.contains(.type)
+#if compiler(>=6.2)
             let hasIntegerLiteral = container.allKeys.contains(.integerLiteral)
             if hasType && hasIntegerLiteral {
                 throw DecodingError.dataCorrupted(.init(codingPath: container.codingPath,
@@ -56,6 +61,9 @@ public struct TypeDescription: Sendable, Hashable, Codable, CustomStringConverti
                 throw DecodingError.dataCorrupted(.init(codingPath: container.codingPath,
                                                         debugDescription: "Requires either 'type' or 'integerLiteral' keys"))
             }
+#else
+            self = try .type(container.decode(TypeDescription.self, forKey: .type))
+#endif
         }
 
         public func encode(to encoder: any Encoder) throws {
@@ -63,18 +71,22 @@ public struct TypeDescription: Sendable, Hashable, Codable, CustomStringConverti
             switch self {
             case .type(let type):
                 try container.encode(type, forKey: .type)
+#if compiler(>=6.2)
             case .integerLiteral(let name, let value, let valueType):
                 var nestedContainer = container.nestedContainer(keyedBy: CodingKeys.IntegerLiteralKeys.self, forKey: .integerLiteral)
                 try nestedContainer.encodeIfPresent(name, forKey: .name)
                 try nestedContainer.encode(value, forKey: .value)
                 try nestedContainer.encode(valueType, forKey: .valueType)
+#endif
             }
         }
 
         func typeName(with options: NameOptions) -> String {
             switch self {
             case .type(let type): type.typeName(with: options)
+#if compiler(>=6.2)
             case .integerLiteral(_, let value, _): String(value)
+#endif
             }
         }
     }
