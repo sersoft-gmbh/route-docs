@@ -1,0 +1,231 @@
+{
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs",
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/LeafKit"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/LeafKit\/NIOLeafFiles"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "extendedModule" : "LeafKit",
+    "externalID" : "s:e:s:7LeafKit12NIOLeafFilesV9RouteDocsE07defaultF04withAC8NIOPosix17NonBlockingFileIOV_tFZ",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "extension"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "preciseIdentifier" : "s:7LeafKit12NIOLeafFilesV",
+        "text" : "NIOLeafFiles"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "RouteDocs",
+        "relatedModules" : [
+          "LeafKit"
+        ]
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "NIOLeafFiles"
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Extended Structure",
+    "symbolKind" : "extension",
+    "title" : "NIOLeafFiles"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "extension"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:7LeafKit12NIOLeafFilesV",
+              "text" : "NIOLeafFiles"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "anchor" : "Type-Methods",
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/LeafKit\/NIOLeafFiles\/defaultDocs(with:)"
+      ],
+      "title" : "Type Methods"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/routedocs\/leafkit\/nioleaffiles"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://RouteDocs/documentation/RouteDocs": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "RouteDocs",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs"
+},
+"doc://RouteDocs/documentation/RouteDocs/LeafKit": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/LeafKit",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "LeafKit",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/leafkit"
+},
+"doc://RouteDocs/documentation/RouteDocs/LeafKit/NIOLeafFiles": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "extension"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "s:7LeafKit12NIOLeafFilesV",
+      "text" : "NIOLeafFiles"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/LeafKit\/NIOLeafFiles",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "NIOLeafFiles"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "NIOLeafFiles",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/leafkit\/nioleaffiles"
+},
+"doc://RouteDocs/documentation/RouteDocs/LeafKit/NIOLeafFiles/defaultDocs(with:)": {
+  "abstract" : [
+    {
+      "text" : "The default leaf source for the docs.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "static"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "defaultDocs"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "with"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:8NIOPosix17NonBlockingFileIOV",
+      "text" : "NonBlockingFileIO"
+    },
+    {
+      "kind" : "text",
+      "text" : ") -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:7LeafKit12NIOLeafFilesV",
+      "text" : "NIOLeafFiles"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/LeafKit\/NIOLeafFiles\/defaultDocs(with:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "defaultDocs(with:)",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/leafkit\/nioleaffiles\/defaultdocs(with:)"
+}
+}
+}
