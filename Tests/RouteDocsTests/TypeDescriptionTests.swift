@@ -108,6 +108,17 @@ struct TypeDescriptionTests {
         #expect(deeperVoidTypeDesc == deeperVoidExpected)
     }
 
+    @available(macOS 15.0, iOS 18.0, watchOS 11.0, tvOS 18.0, visionOS 2.0, *)
+    func bigIntegerTypes() {
+        let int128Desc = TypeDescription(Int128.self)
+        let int128Expected = TypeDescription(module: "Swift", parent: nil, name: "Int128", genericParameters: [])
+        let uint128Desc = TypeDescription(UInt128.self)
+        let uint128Expected = TypeDescription(module: "Swift", parent: nil, name: "UInt128", genericParameters: [])
+
+        #expect(int128Desc == int128Expected)
+        #expect(uint128Desc == uint128Expected)
+    }
+
     @Test(.enabled(if: integerLiteralGenericParametersAvailable))
     @available(macOS 26, iOS 26, tvOS 26, watchOS 26, visionOS 26, *)
     func integerLiteralGenericTypes() {

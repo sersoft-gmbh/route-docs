@@ -336,11 +336,15 @@ extension DocumentationDecoder {
         func decode(_ type: Int16.Type) throws -> Int16 { .init() }
         func decode(_ type: Int32.Type) throws -> Int32 { .init() }
         func decode(_ type: Int64.Type) throws -> Int64 { .init() }
+        @available(macOS 15.0, iOS 18.0, watchOS 11.0, tvOS 18.0, visionOS 2.0, *)
+        func decode(_ type: Int128.Type) throws -> Int128 { .init() }
         func decode(_ type: UInt.Type) throws -> UInt { .init() }
         func decode(_ type: UInt8.Type) throws -> UInt8 { .init() }
         func decode(_ type: UInt16.Type) throws -> UInt16 { .init() }
         func decode(_ type: UInt32.Type) throws -> UInt32 { .init() }
         func decode(_ type: UInt64.Type) throws -> UInt64 { .init() }
+        @available(macOS 15.0, iOS 18.0, watchOS 11.0, tvOS 18.0, visionOS 2.0, *)
+        func decode(_ type: UInt128.Type) throws -> UInt128 { .init() }
         func decode<T>(_ type: T.Type) throws -> T where T: Decodable {
             try type.init(from: decoder)
         }
@@ -419,6 +423,12 @@ extension DocumentationDecoder {
             return .init()
         }
 
+        @available(macOS 15.0, iOS 18.0, watchOS 11.0, tvOS 18.0, visionOS 2.0, *)
+        func decode(_ type: Int128.Type, forKey key: Key) throws -> Int128 {
+            try finalize(with: type, for: key)
+            return .init()
+        }
+
         func decode(_ type: UInt.Type, forKey key: Key) throws -> UInt {
             try finalize(with: type, for: key)
             return .init()
@@ -440,6 +450,12 @@ extension DocumentationDecoder {
         }
 
         func decode(_ type: UInt64.Type, forKey key: Key) throws -> UInt64 {
+            try finalize(with: type, for: key)
+            return .init()
+        }
+
+        @available(macOS 15.0, iOS 18.0, watchOS 11.0, tvOS 18.0, visionOS 2.0, *)
+        func decode(_ type: UInt128.Type, forKey key: Key) throws -> UInt128 {
             try finalize(with: type, for: key)
             return .init()
         }
@@ -564,6 +580,12 @@ extension DocumentationDecoder {
             return .init()
         }
 
+        @available(macOS 15.0, iOS 18.0, watchOS 11.0, tvOS 18.0, visionOS 2.0, *)
+        mutating func decode(_ type: Int128.Type) throws -> Int128 {
+            try finalize(with: type)
+            return .init()
+        }
+
         mutating func decode(_ type: UInt.Type) throws -> UInt {
             try finalize(with: type)
             return .init()
@@ -585,6 +607,12 @@ extension DocumentationDecoder {
         }
 
         mutating func decode(_ type: UInt64.Type) throws -> UInt64 {
+            try finalize(with: type)
+            return .init()
+        }
+
+        @available(macOS 15.0, iOS 18.0, watchOS 11.0, tvOS 18.0, visionOS 2.0, *)
+        mutating func decode(_ type: UInt128.Type) throws -> UInt128 {
             try finalize(with: type)
             return .init()
         }

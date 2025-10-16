@@ -106,6 +106,49 @@ struct DocumentationDecoderTests {
         #expect(doc == expectedDoc)
     }
 
+    @available(macOS 15.0, iOS 18.0, watchOS 11.0, tvOS 18.0, visionOS 2.0, *)
+    struct BigTypes: Decodable {
+        struct RawInt128: RawRepresentable, Decodable {
+            typealias RawValue = Int128
+
+            let rawValue: RawValue
+        }
+
+        struct RawUInt128: RawRepresentable, Decodable {
+            typealias RawValue = UInt128
+
+            let rawValue: UInt128
+        }
+
+        let int128: Int128
+        let uint128: UInt128
+
+        let rawInt128: RawInt128
+        let rawUInt128: RawUInt128
+
+        let int128Array: Array<Int128>
+        let uint128Array: Array<UInt128>
+    }
+
+    @Test
+    @available(macOS 15.0, iOS 18.0, watchOS 11.0, tvOS 18.0, visionOS 2.0, *)
+    func bigObjects() throws {
+        let doc = try BigTypes.reflectedDocumentation(withCustomUserInfo: .init())
+        let expectedDoc = DocumentationObject(BigTypes.self, fields: [
+            "int128": .init(Int128.self),
+            "uint128": .init(UInt128.self),
+            "rawInt128": .init(BigTypes.RawInt128.self),
+            "rawUInt128": .init(BigTypes.RawUInt128.self),
+            "int128Array": .init(Array<Int128>.self, fields: [
+                "{0...}": .init(Int128.self),
+            ]),
+            "uint128Array": .init(Array<UInt128>.self, fields: [
+                "{0...}": .init(UInt128.self),
+            ]),
+        ])
+        #expect(doc == expectedDoc)
+    }
+
     @Test
     func passingCustomUserInfo() throws {
         struct TestObject: Decodable {
