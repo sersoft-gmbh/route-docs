@@ -77,11 +77,11 @@ public struct DocsViewContext: Sendable, Encodable {
 extension HTTPMethod {
     fileprivate var sortOrder: String {
         switch self {
-        case .GET: return "1GET"
-        case .PUT: return "2PUT"
-        case .POST: return "3POST"
-        case .DELETE: return "4DELETE"
-        default: return rawValue
+        case .GET: "1GET"
+        case .PUT: "2PUT"
+        case .POST: "3POST"
+        case .DELETE: "4DELETE"
+        default: rawValue
         }
     }
 }
@@ -160,7 +160,7 @@ extension DocsViewContext.Documentation {
 
 extension Sequence where Element == EndpointDocumentation {
     fileprivate func contextDocumentation(orderedBy keyPath: KeyPath<Element, some Comparable>,
-                              usingName namePath: KeyPath<DocumentationType, String>?) -> Array<DocsViewContext.Documentation> {
+                                          usingName namePath: KeyPath<DocumentationType, String>?) -> Array<DocsViewContext.Documentation> {
         sorted { $0[keyPath: keyPath] < $1[keyPath: keyPath] }
             .map { DocsViewContext.Documentation(documentation: $0, usingName: namePath) }
     }

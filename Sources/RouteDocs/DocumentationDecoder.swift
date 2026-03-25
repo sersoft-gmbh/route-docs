@@ -63,26 +63,46 @@ public struct DocumentationObject: Sendable, Hashable, CustomStringConvertible {
         DocumentationDecoder.Cache.clear()
     }
 
-    public let type: Any.Type
+#if hasFeature(NonescapableTypes)
+    public let type: any (~Copyable & ~Escapable).Type
+#else
+    public let type: any ~Copyable.Type
+#endif
     public fileprivate(set) var body: Body
 
-    public var isOptional: Bool { type is any AnyOptionalType.Type }
+    public var isOptional: Bool { _isOptionalType(type) }
 
     public var description: String { description(indentedBy: 0) }
 
-    fileprivate init(any type: Any.Type, body: Body) {
+#if hasFeature(NonescapableTypes)
+    fileprivate init(any type: any (~Copyable & ~Escapable).Type, body: Body) {
         self.type = type
         self.body = body
     }
 
-    public init<T>(_ type: T.Type, body: Body = .none) {
+    public init<T: ~Copyable & ~Escapable>(_ type: T.Type, body: Body = .none) {
         self.init(any: type, body: body)
     }
 
     @inlinable
-    public init<T>(_ type: T.Type, fields: Dictionary<String, DocumentationObject>) {
+    public init<T: ~Copyable & ~Escapable>(_ type: T.Type, fields: Dictionary<String, DocumentationObject>) {
         self.init(type, body: .fields(fields))
     }
+#else
+    fileprivate init(any type: any ~Copyable.Type, body: Body) {
+        self.type = type
+        self.body = body
+    }
+
+    public init<T: ~Copyable>(_ type: T.Type, body: Body = .none) {
+        self.init(any: type, body: body)
+    }
+
+    @inlinable
+    public init<T: ~Copyable>(_ type: T.Type, fields: Dictionary<String, DocumentationObject>) {
+        self.init(type, body: .fields(fields))
+    }
+#endif
 
     @inlinable
     public init<T>(casesOf type: T.Type) where T: CaseIterable, T: RawRepresentable {
@@ -121,32 +141,42 @@ public struct DocumentationObject: Sendable, Hashable, CustomStringConvertible {
     }
 
     public static func ==(lhs: Self, rhs: Self) -> Bool {
+#if compiler(>=6.2)
         lhs.type == rhs.type && lhs.body == rhs.body
+#else
+        String(reflecting: lhs.type) == String(reflecting: rhs.type) && lhs.body == rhs.body
+#endif
     }
 }
 
-public protocol CustomDocumentationNamed {
+#if hasFeature(NonescapableTypes)
+public protocol CustomDocumentationNamed: ~Copyable, ~Escapable {
     static var documentationName: String { get }
 }
+#else
+public protocol CustomDocumentationNamed: ~Copyable {
+    static var documentationName: String { get }
+}
+#endif
 
-public protocol CustomDocumentable {
+public protocol CustomDocumentable: ~Copyable {
     static var documentationInstance: Self { get }
     static var documentationBody: DocumentationObject.Body { get }
 }
 
-extension CustomDocumentable {
-    static func object(with type: Any.Type) -> DocumentationObject {
+extension CustomDocumentable where Self: ~Copyable {
+    internal static func object(with type: AnyType) -> DocumentationObject {
         .init(any: type, body: documentationBody)
     }
 }
 
-extension Optional: CustomDocumentable where Wrapped: CustomDocumentable {
+extension Optional: CustomDocumentable where Wrapped: CustomDocumentable/*, Wrapped: ~Copyable*/ {
     public static var documentationBody: DocumentationObject.Body { Wrapped.documentationBody }
     public static var documentationInstance: Self { .some(Wrapped.documentationInstance) }
 }
 
 extension Decodable {
-    static func reflectedDocumentation(withCustomUserInfo customUserInfo: Dictionary<CodingUserInfoKey, Any>) throws -> DocumentationObject {
+    internal static func reflectedDocumentation(withCustomUserInfo customUserInfo: Dictionary<CodingUserInfoKey, Any>) throws -> DocumentationObject {
         let decoder = DocumentationDecoder(type: self, customUserInfo: customUserInfo)
         _ = try self.init(from: decoder)
         return decoder.storage.decodedObject
@@ -164,10 +194,10 @@ fileprivate struct DocumentationDecoder: Decoder {
         self.userInfo = userInfo
     }
 
-    init<T>(type: T.Type, customUserInfo: Dictionary<CodingUserInfoKey, Any>) {
+    init<T: ~Copyable>(type: T.Type, customUserInfo: Dictionary<CodingUserInfoKey, Any>) {
         var userInfo = customUserInfo
         userInfo[.isDocumentationDecoder] = true
-        self.init(storage: .init(type: type), codingPath: .init(), userInfo: userInfo)
+        self.init(storage: Storage(type: type), codingPath: .init(), userInfo: userInfo)
     }
 
     func pushKey(_ key: some CodingKey) -> DocumentationDecoder {
@@ -184,11 +214,11 @@ fileprivate struct DocumentationDecoder: Decoder {
         try storage.withCodingPath(codingPath, do: work)
     }
 
-    func setType(_ type: Any.Type, for key: some CodingKey) throws {
+    func setType(_ type: AnyType, for key: some CodingKey) throws {
         try storage.setType(type, for: key, at: codingPath)
     }
 
-    func finalizeObject<T: Decodable>(ofType type: Any.Type, for key: some CodingKey) throws -> T {
+    func finalizeObject<T: Decodable>(ofType type: AnyType, for key: some CodingKey) throws -> T {
         func cache(_ object: T) throws {
             try Cache.cache(entry: .init(object: object,
                                          documentation: storage.withCodingPath(codingPath + CollectionOfOne<any CodingKey>(key),
@@ -229,15 +259,23 @@ extension DocumentationDecoder {
     fileprivate final class Storage {
         private struct KeyTypeCombination: Hashable {
             let key: String
-            let type: Any.Type
+            let type: AnyType
 
             func hash(into hasher: inout Hasher) {
                 hasher.combine(key)
+#if compiler(>=6.3)
                 hasher.combine(ObjectIdentifier(type))
+#else
+                hasher.combine(String(reflecting: type))
+#endif
             }
 
             static func ==(lhs: Self, rhs: Self) -> Bool {
+#if compiler(>=6.3)
                 lhs.key == rhs.key && lhs.type == rhs.type
+#else
+                lhs.key == rhs.key && String(reflecting: lhs.type) == String(reflecting: rhs.type)
+#endif
             }
         }
 
@@ -245,12 +283,18 @@ extension DocumentationDecoder {
 
         private var keyTypeCounts = Dictionary<KeyTypeCombination, Int>()
 
-        init<T>(type: T.Type) {
+#if hasFeature(NonescapableTypes)
+        init<T: ~Copyable & ~Escapable>(type: T.Type) {
             decodedObject = .init(any: type, body: .none)
         }
+#else
+        init<T: ~Copyable>(type: T.Type) {
+            decodedObject = .init(any: type, body: .none)
+        }
+#endif
 
-        func withCodingPath<T>(_ path: some Collection<any CodingKey>,
-                               do work: (inout DocumentationObject) throws -> T) throws -> T {
+        func withCodingPath<T: ~Copyable>(_ path: some Collection<any CodingKey>,
+                                          do work: (inout DocumentationObject) throws -> T) throws -> T {
             func withPath(remainingPath: some Collection<any CodingKey>,
                           of object: inout DocumentationObject,
                           do work: (inout DocumentationObject) throws -> T) throws -> T {
@@ -273,7 +317,7 @@ extension DocumentationDecoder {
             try withCodingPath(codingPath, do: { $0.body.fields?[key.stringValue] = object() })
         }
 
-        func setType(_ type: Any.Type, for key: some CodingKey, at codingPath: some Collection<any CodingKey>) throws {
+        func setType(_ type: AnyType, for key: some CodingKey, at codingPath: some Collection<any CodingKey>) throws {
             try setObject(.init(any: type, body: .none), for: key, at: codingPath)
             keyTypeCounts[KeyTypeCombination(key: key.stringValue, type: type), default: 0] += 1
         }
@@ -292,15 +336,31 @@ extension DocumentationDecoder {
             let documentation: DocumentationObject
         }
 
-        private static let storage = NIOLockedValueBox(Dictionary<ObjectIdentifier, Entry>())
+#if compiler(>=6.3)
+        private typealias CacheKey = ObjectIdentifier
 
-        static func cachedValue(for type: Any.Type) -> Entry? {
-            storage.withLockedValue { $0[ObjectIdentifier(type)] }
+        @inline(always)
+        private static func cacheKey(for type: AnyType) -> CacheKey {
+            ObjectIdentifier(type)
+        }
+#else
+        private typealias CacheKey = String
+
+        @inline(__always)
+        private static func cacheKey(for type: AnyType) -> CacheKey {
+            String(reflecting: type)
+        }
+#endif
+
+        private static let storage = NIOLockedValueBox(Dictionary<CacheKey, Entry>())
+
+        static func cachedValue(for type: AnyType) -> Entry? {
+            storage.withLockedValue { $0[cacheKey(for: type)] }
         }
 
         static func cache(entry: Entry) {
             // We must use the doc's type here, otherwise we mix up optionals vs. non-optionals.
-            storage.withLockedValue { $0[ObjectIdentifier(entry.documentation.type)] = entry }
+            storage.withLockedValue { $0[cacheKey(for: entry.documentation.type)] = entry }
         }
 
         static func clear() {
@@ -315,10 +375,17 @@ extension DocumentationDecoder {
             isOptional = true
         }
 
-        func finalizeType<T>(with _: T.Type) -> Any.Type {
+#if hasFeature(NonescapableTypes)
+        func finalizeType<T: ~Copyable & ~Escapable>(with _: T.Type) -> AnyType {
             defer { isOptional = false }
             return isOptional ? Optional<T>.self : T.self
         }
+#else
+        func finalizeType<T: ~Copyable>(with _: T.Type) -> AnyType {
+            defer { isOptional = false }
+            return isOptional ? Optional<T>.self : T.self
+        }
+#endif
     }
 
     fileprivate struct SingleValueContainer: SingleValueDecodingContainer {
@@ -366,9 +433,15 @@ extension DocumentationDecoder {
             return Key(stringValue: "{any}").map { [$0] } ?? .init()
         }
 
-        private func finalize<T>(with type: T.Type, for key: Key) throws {
+#if hasFeature(NonescapableTypes)
+        private func finalize<T: ~Copyable & ~Escapable>(with type: T.Type, for key: Key) throws {
             try decoder.setType(builder.finalizeType(with: type), for: key)
         }
+#else
+        private func finalize<T: ~Copyable>(with type: T.Type, for key: Key) throws {
+            try decoder.setType(builder.finalizeType(with: type), for: key)
+        }
+#endif
 
         func contains(_ key: Key) -> Bool { !decoder.hasPotentialCycle() }
 
@@ -511,15 +584,27 @@ extension DocumentationDecoder {
         var count: Int? { nil }
         var isAtEnd: Bool { currentIndex >= 10 || decoder.hasPotentialCycle() }
 
-        private mutating func finalize<T>(with type: T.Type, for key: IndexKey) throws {
+#if hasFeature(NonescapableTypes)
+        private mutating func finalize<T: ~Copyable & ~Escapable>(with type: T.Type, for key: IndexKey) throws {
             try decoder.setType(builder.finalizeType(with: type), for: key)
         }
 
-        private mutating func finalize<T>(with type: T.Type) throws {
+        private mutating func finalize<T: ~Copyable & ~Escapable>(with type: T.Type) throws {
             try finalize(with: type, for: IndexKey(index: currentIndex))
             currentIndex += 1
             try compressTypeFieldsIfNeeded()
         }
+#else
+        private mutating func finalize<T: ~Copyable>(with type: T.Type, for key: IndexKey) throws {
+            try decoder.setType(builder.finalizeType(with: type), for: key)
+        }
+
+        private mutating func finalize<T: ~Copyable>(with type: T.Type) throws {
+            try finalize(with: type, for: IndexKey(index: currentIndex))
+            currentIndex += 1
+            try compressTypeFieldsIfNeeded()
+        }
+#endif
 
         private func compressTypeFieldsIfNeeded() throws {
             guard isAtEnd else { return }

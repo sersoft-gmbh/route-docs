@@ -112,12 +112,10 @@ public struct TypeDescription: Sendable, Hashable, Codable, CustomStringConverti
     public var description: String { typeName(with: [.withModule, .withParents]) }
 
     // private but @testable
-    init(
-        module: String,
-        parent: TypeDescription?,
-        name: String,
-        genericParameters: Array<GenericParameter>
-    ) {
+    init(module: String,
+         parent: TypeDescription?,
+         name: String,
+         genericParameters: Array<GenericParameter>) {
         assert(!module.isEmpty)
         self.module = module
         self._parent = parent.map(_ParentStorage.some) ?? .none
@@ -152,13 +150,23 @@ public struct TypeDescription: Sendable, Hashable, Codable, CustomStringConverti
         try self.init(decodedModule: module, container: container)
     }
 
-    public init<T>(_ type: T.Type) {
+#if hasFeature(NonescapableTypes)
+    public init<T: ~Copyable & ~Escapable>(_ type: T.Type) {
         self = TypeParser.type(in: String(reflecting: type))
     }
 
-    public init(any type: Any.Type) {
+    public init(any type: any (Any & ~Copyable & ~Escapable).Type) {
         self = TypeParser.type(in: String(reflecting: type))
     }
+#else
+    public init<T: ~Copyable>(_ type: T.Type) {
+        self = TypeParser.type(in: String(reflecting: type))
+    }
+
+    public init(any type: any (Any & ~Copyable).Type) {
+        self = TypeParser.type(in: String(reflecting: type))
+    }
+#endif
 
     public func encode(to encoder: any Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)

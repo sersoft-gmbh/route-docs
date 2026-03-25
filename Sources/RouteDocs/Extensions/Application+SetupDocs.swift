@@ -1,3 +1,4 @@
+internal import Foundation
 public import Vapor
 public import LeafKit
 public import Leaf

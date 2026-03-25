@@ -1,8 +1,14 @@
 public import Vapor
 
-public protocol EndpointDocumentable {
+#if hasFeature(NonescapableTypes)
+public protocol EndpointDocumentable: ~Copyable, ~Escapable {
     var documentation: EndpointDocumentation? { get }
 }
+#else
+public protocol EndpointDocumentable: ~Copyable {
+    var documentation: EndpointDocumentation? { get }
+}
+#endif
 
 extension EndpointDocumentable where Self: Extendable {
     public fileprivate(set) var documentation: EndpointDocumentation? {

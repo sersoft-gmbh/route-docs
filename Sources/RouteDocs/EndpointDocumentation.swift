@@ -10,8 +10,8 @@ public struct DocumentationType: Sendable, Equatable, Codable, CustomStringConve
 
     public var description: String { defaultName }
 
-    fileprivate init(parsing type: Any.Type) {
-        let actualType = _leafType(of: _openOptionals(in: type))
+    fileprivate init(parsing type: AnyType) {
+        let actualType = _leafType(of: _unwrapOptionals(in: type))
         typeDescription = .init(any: actualType)
         customName = (actualType as? any CustomDocumentationNamed.Type)?.documentationName
     }
@@ -230,7 +230,7 @@ extension EndpointDocumentation.Payload {
                       objects: EndpointDocumentation.Object.objects(from: object.reflectedDocumentation(withCustomUserInfo: customUserInfo)))
     }
 
-    public init<T: CustomDocumentable>(object: T.Type, as mediaType: HTTPMediaType) throws {
+    public init<T: CustomDocumentable & ~Copyable>(object: T.Type, as mediaType: HTTPMediaType) throws {
         self.init(mediaType: mediaType,
                   objects: EndpointDocumentation.Object.objects(from: object.object(with: object)))
     }
@@ -309,12 +309,4 @@ fileprivate extension RangeReplaceableCollection where Element: Equatable {
         guard !contains(element) else { return }
         append(element)
     }
-}
-
-fileprivate func _openOptionals(in type: Any.Type) -> Any.Type {
-    (type as? any AnyOptionalType.Type).map { _openOptionals(in: $0.anyWrappedType) } ?? type
-}
-
-fileprivate func _leafType(of type: Any.Type) -> Any.Type {
-    (type as? any TypeWrapping.Type)?.leafType ?? type
 }
