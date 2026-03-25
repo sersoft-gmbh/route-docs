@@ -29,23 +29,23 @@ fileprivate func leafType(of wrapping: TypeWrappingType, history: Array<AnyType>
         // and return the last element (which is us in this case).
         return wrapping
     }
-    return leafType(of: wrapped, history: history + CollectionOfOne<AnyType>(wrapping))
+    return leafTypeOrType(of: wrapped, history: history + CollectionOfOne<AnyType>(wrapping))
 }
 
 #if compiler(>=6.3)
 @inline(always)
-fileprivate func leafType(of type: AnyType, history: @autoclosure () -> Array<AnyType>) -> AnyType {
+fileprivate func leafTypeOrType(of type: AnyType, history: @autoclosure () -> Array<AnyType>) -> AnyType {
     guard let wrapping = type as? TypeWrappingType else { return type }
     return leafType(of: wrapping, history: history())
 }
 #else
 @inline(__always)
-fileprivate func leafType(of type: AnyType, history: @autoclosure () -> Array<AnyType>) -> AnyType {
+fileprivate func leafTypeOrType(of type: AnyType, history: @autoclosure () -> Array<AnyType>) -> AnyType {
     guard let wrapping = type as? TypeWrappingType else { return type }
     return leafType(of: wrapping, history: history())
 }
 #endif
 
 func _leafType(of type: AnyType) -> AnyType {
-    leafType(of: type, history: [])
+    leafTypeOrType(of: type, history: [])
 }
