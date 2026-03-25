@@ -134,14 +134,18 @@ public struct DocumentationObject: Sendable, Hashable, CustomStringConvertible {
         \(String(repeating: " ", count: indentionLevel))}
         """
     }
-
+    
     public func hash(into hasher: inout Hasher) {
+#if compiler(>=6.3)
         hasher.combine(ObjectIdentifier(type))
+#else
+        hasher.combine(String(reflecting: type))
+#endif
         hasher.combine(body)
     }
 
     public static func ==(lhs: Self, rhs: Self) -> Bool {
-#if compiler(>=6.2)
+#if compiler(>=6.3)
         lhs.type == rhs.type && lhs.body == rhs.body
 #else
         String(reflecting: lhs.type) == String(reflecting: rhs.type) && lhs.body == rhs.body
