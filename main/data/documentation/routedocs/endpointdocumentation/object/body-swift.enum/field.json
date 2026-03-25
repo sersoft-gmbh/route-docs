@@ -308,7 +308,10 @@
 },
 "doc://RouteDocs/documentation/RouteDocs/EndpointDocumentation/Object/Body-swift.enum/Field/description": {
   "abstract" : [
-
+    {
+      "text" : "A textual representation of this instance.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
@@ -342,7 +345,10 @@
 },
 "doc://RouteDocs/documentation/RouteDocs/EndpointDocumentation/Object/Body-swift.enum/Field/init(from:)": {
   "abstract" : [
-
+    {
+      "text" : "Creates a new instance by decoding from the given decoder.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {

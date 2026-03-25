@@ -229,7 +229,10 @@
 },
 "doc://RouteDocs/documentation/RouteDocs/DocumentationObject/==(_:_:)": {
   "abstract" : [
-
+    {
+      "text" : "Returns a Boolean value indicating whether two values are equal.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
@@ -415,7 +418,10 @@
 },
 "doc://RouteDocs/documentation/RouteDocs/DocumentationObject/description": {
   "abstract" : [
-
+    {
+      "text" : "A textual representation of this instance.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
@@ -449,7 +455,18 @@
 },
 "doc://RouteDocs/documentation/RouteDocs/DocumentationObject/hash(into:)": {
   "abstract" : [
-
+    {
+      "text" : "Hashes the essential components of this value by feeding them into the",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "given hasher.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
@@ -734,15 +751,7 @@
     },
     {
       "kind" : "text",
-      "text" : ": any "
-    },
-    {
-      "kind" : "keyword",
-      "text" : "Any"
-    },
-    {
-      "kind" : "text",
-      "text" : ".Type"
+      "text" : ": any (~Copyable & ~Escapable).Type"
     }
   ],
   "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocumentationObject\/type",

@@ -1,4 +1,18 @@
 {
+  "abstract" : [
+    {
+      "text" : "The raw type that can be used to represent all values of the conforming",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "type.",
+      "type" : "text"
+    }
+  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -42,7 +56,7 @@
     ],
     "remoteSource" : {
       "fileName" : "TypeDescription.swift",
-      "url" : "https:\/\/github.com\/sersoft-gmbh\/route-docs\/blob\/refs\/heads\/main\/Sources\/RouteDocs\/TypeDescription.swift#L193"
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/route-docs\/blob\/refs\/heads\/main\/Sources\/RouteDocs\/TypeDescription.swift#L201"
     },
     "role" : "symbol",
     "roleHeading" : "Type Alias",
@@ -85,6 +99,54 @@
         }
       ],
       "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "discussion",
+          "level" : 2,
+          "text" : "Discussion",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Every distinct value of the conforming type has a corresponding unique",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "value of the ",
+              "type" : "text"
+            },
+            {
+              "code" : "RawValue",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " type, but there may be values of the ",
+              "type" : "text"
+            },
+            {
+              "code" : "RawValue",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "type that don’t have a corresponding value of the conforming type.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        }
+      ],
+      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -184,7 +246,18 @@
 },
 "doc://RouteDocs/documentation/RouteDocs/TypeDescription/NameOptions/RawValue-swift.typealias": {
   "abstract" : [
-
+    {
+      "text" : "The raw type that can be used to represent all values of the conforming",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "type.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {

@@ -83,7 +83,7 @@
     {
       "identifiers" : [
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/CustomDocumentable",
-        "doc:\/\/RouteDocs\/s8CopyableP",
+        "doc:\/\/RouteDocs\/s9EscapableP",
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeWrapping"
       ],
       "kind" : "relationships",
@@ -162,6 +162,14 @@
       },
       {
         "code" : "CustomDocumentable",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : " and ",
+        "type" : "text"
+      },
+      {
+        "code" : "Copyable",
         "type" : "codeVoice"
       },
       {
@@ -282,6 +290,22 @@
         "type" : "codeVoice"
       },
       {
+        "text" : ", ",
+        "type" : "text"
+      },
+      {
+        "code" : "Copyable",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : ", and ",
+        "type" : "text"
+      },
+      {
+        "code" : "Escapable",
+        "type" : "codeVoice"
+      },
+      {
         "text" : ".",
         "type" : "text"
       }
@@ -314,9 +338,9 @@
   "type" : "topic",
   "url" : "\/documentation\/routedocs\/typewrapping"
 },
-"doc://RouteDocs/s8CopyableP": {
-  "identifier" : "doc:\/\/RouteDocs\/s8CopyableP",
-  "title" : "Swift.Copyable",
+"doc://RouteDocs/s9EscapableP": {
+  "identifier" : "doc:\/\/RouteDocs\/s9EscapableP",
+  "title" : "Swift.Escapable",
   "type" : "unresolvable"
 }
 }

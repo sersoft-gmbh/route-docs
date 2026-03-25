@@ -40,7 +40,7 @@
     ],
     "remoteSource" : {
       "fileName" : "EndpointDocumentable.swift",
-      "url" : "https:\/\/github.com\/sersoft-gmbh\/route-docs\/blob\/refs\/heads\/main\/Sources\/RouteDocs\/EndpointDocumentable.swift#L3"
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/route-docs\/blob\/refs\/heads\/main\/Sources\/RouteDocs\/EndpointDocumentable.swift#L4"
     },
     "role" : "symbol",
     "roleHeading" : "Protocol",
@@ -69,6 +69,10 @@
             {
               "kind" : "identifier",
               "text" : "EndpointDocumentable"
+            },
+            {
+              "kind" : "text",
+              "text" : " : ~Copyable, ~Escapable"
             }
           ]
         }

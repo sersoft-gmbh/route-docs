@@ -82,8 +82,7 @@
   "relationshipsSections" : [
     {
       "identifiers" : [
-        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/CustomDocumentationNamed",
-        "doc:\/\/RouteDocs\/s8CopyableP"
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/CustomDocumentationNamed"
       ],
       "kind" : "relationships",
       "title" : "Conforms To",
@@ -161,6 +160,22 @@
       },
       {
         "code" : "CustomDocumentationNamed",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : ", ",
+        "type" : "text"
+      },
+      {
+        "code" : "Copyable",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : ", and ",
+        "type" : "text"
+      },
+      {
+        "code" : "Escapable",
         "type" : "codeVoice"
       },
       {
@@ -249,11 +264,6 @@
   "title" : "CustomDocumentationNamed Implementations",
   "type" : "topic",
   "url" : "\/documentation\/routedocs\/swift\/contiguousarray\/customdocumentationnamed-implementations"
-},
-"doc://RouteDocs/s8CopyableP": {
-  "identifier" : "doc:\/\/RouteDocs\/s8CopyableP",
-  "title" : "Swift.Copyable",
-  "type" : "unresolvable"
 }
 }
 }

@@ -48,7 +48,8 @@
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription\/NameOptions\/formIntersection(_:)",
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription\/NameOptions\/formSymmetricDifference(_:)",
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription\/NameOptions\/formUnion(_:)",
-        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription\/NameOptions\/insert(_:)",
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription\/NameOptions\/insert(_:)-44ei8",
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription\/NameOptions\/insert(_:)-4w95q",
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription\/NameOptions\/intersection(_:)",
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription\/NameOptions\/remove(_:)",
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription\/NameOptions\/symmetricDifference(_:)",
@@ -518,7 +519,7 @@
   "type" : "topic",
   "url" : "\/documentation\/routedocs\/typedescription\/nameoptions\/init()"
 },
-"doc://RouteDocs/documentation/RouteDocs/TypeDescription/NameOptions/insert(_:)": {
+"doc://RouteDocs/documentation/RouteDocs/TypeDescription/NameOptions/insert(_:)-44ei8": {
   "abstract" : [
     {
       "text" : "Adds the given element to the option set if it is not already a member.",
@@ -626,12 +627,140 @@
       "text" : ")"
     }
   ],
-  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription\/NameOptions\/insert(_:)",
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription\/NameOptions\/insert(_:)-44ei8",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "insert(_:)",
   "type" : "topic",
-  "url" : "\/documentation\/routedocs\/typedescription\/nameoptions\/insert(_:)"
+  "url" : "\/documentation\/routedocs\/typedescription\/nameoptions\/insert(_:)-44ei8"
+},
+"doc://RouteDocs/documentation/RouteDocs/TypeDescription/NameOptions/insert(_:)-4w95q": {
+  "abstract" : [
+
+  ],
+  "conformance" : {
+    "availabilityPrefix" : [
+      {
+        "text" : "Available when",
+        "type" : "text"
+      }
+    ],
+    "conformancePrefix" : [
+      {
+        "text" : "Conforms when",
+        "type" : "text"
+      }
+    ],
+    "constraints" : [
+      {
+        "code" : "Self",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : " is ",
+        "type" : "text"
+      },
+      {
+        "code" : "Self.Element",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : " and ",
+        "type" : "text"
+      },
+      {
+        "code" : "RawValue",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : " conforms to ",
+        "type" : "text"
+      },
+      {
+        "code" : "FixedWidthInteger",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : ".",
+        "type" : "text"
+      }
+    ]
+  },
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "insert"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "Self"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:s10SetAlgebraP7ElementQa",
+      "text" : "Element"
+    },
+    {
+      "kind" : "text",
+      "text" : ") -> (inserted"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    },
+    {
+      "kind" : "text",
+      "text" : ", memberAfterInsert"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "Self"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:s10SetAlgebraP7ElementQa",
+      "text" : "Element"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription\/NameOptions\/insert(_:)-4w95q",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "insert(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/routedocs\/typedescription\/nameoptions\/insert(_:)-4w95q"
 },
 "doc://RouteDocs/documentation/RouteDocs/TypeDescription/NameOptions/intersection(_:)": {
   "abstract" : [

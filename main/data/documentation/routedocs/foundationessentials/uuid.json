@@ -83,7 +83,7 @@
     {
       "identifiers" : [
         "doc:\/\/RouteDocs\/documentation\/RouteDocs\/CustomDocumentable",
-        "doc:\/\/RouteDocs\/s8CopyableP"
+        "doc:\/\/RouteDocs\/s9EscapableP"
       ],
       "kind" : "relationships",
       "title" : "Conforms To",
@@ -218,9 +218,9 @@
   "type" : "topic",
   "url" : "\/documentation\/routedocs\/foundationessentials\/uuid\/customdocumentable-implementations"
 },
-"doc://RouteDocs/s8CopyableP": {
-  "identifier" : "doc:\/\/RouteDocs\/s8CopyableP",
-  "title" : "Swift.Copyable",
+"doc://RouteDocs/s9EscapableP": {
+  "identifier" : "doc:\/\/RouteDocs\/s9EscapableP",
+  "title" : "Swift.Escapable",
   "type" : "unresolvable"
 }
 }

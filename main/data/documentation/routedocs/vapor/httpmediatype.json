@@ -84,7 +84,8 @@
       "identifiers" : [
         "doc:\/\/RouteDocs\/s8CopyableP",
         "doc:\/\/RouteDocs\/Se",
-        "doc:\/\/RouteDocs\/SE"
+        "doc:\/\/RouteDocs\/SE",
+        "doc:\/\/RouteDocs\/s9EscapableP"
       ],
       "kind" : "relationships",
       "title" : "Conforms To",
@@ -213,6 +214,11 @@
 "doc://RouteDocs/s8CopyableP": {
   "identifier" : "doc:\/\/RouteDocs\/s8CopyableP",
   "title" : "Swift.Copyable",
+  "type" : "unresolvable"
+},
+"doc://RouteDocs/s9EscapableP": {
+  "identifier" : "doc:\/\/RouteDocs\/s9EscapableP",
+  "title" : "Swift.Escapable",
   "type" : "unresolvable"
 }
 }

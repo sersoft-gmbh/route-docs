@@ -82,8 +82,7 @@
   "relationshipsSections" : [
     {
       "identifiers" : [
-        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentable",
-        "doc:\/\/RouteDocs\/s8CopyableP"
+        "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentable"
       ],
       "kind" : "relationships",
       "title" : "Conforms To",
@@ -414,11 +413,6 @@
   "title" : "addDocumentation(groupedAs:query:request:response:requiredAuthorization:)",
   "type" : "topic",
   "url" : "\/documentation\/routedocs\/vapor\/route\/adddocumentation(groupedas:query:request:response:requiredauthorization:)"
-},
-"doc://RouteDocs/s8CopyableP": {
-  "identifier" : "doc:\/\/RouteDocs\/s8CopyableP",
-  "title" : "Swift.Copyable",
-  "type" : "unresolvable"
 }
 }
 }

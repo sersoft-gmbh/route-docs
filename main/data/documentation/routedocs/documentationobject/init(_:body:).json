@@ -13,7 +13,7 @@
   },
   "kind" : "symbol",
   "metadata" : {
-    "externalID" : "s:9RouteDocs19DocumentationObjectV_4bodyACxm_AC4BodyOtclufc",
+    "externalID" : "s:9RouteDocs19DocumentationObjectV_4bodyACxm_AC4BodyOtcRi_zRi0_zlufc",
     "fragments" : [
       {
         "kind" : "identifier",
@@ -73,7 +73,7 @@
     ],
     "remoteSource" : {
       "fileName" : "DocumentationDecoder.swift",
-      "url" : "https:\/\/github.com\/sersoft-gmbh\/route-docs\/blob\/refs\/heads\/main\/Sources\/RouteDocs\/DocumentationDecoder.swift#L78"
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/route-docs\/blob\/refs\/heads\/main\/Sources\/RouteDocs\/DocumentationDecoder.swift#L83"
     },
     "role" : "symbol",
     "roleHeading" : "Initializer",
@@ -157,7 +157,31 @@
             },
             {
               "kind" : "text",
-              "text" : " = .none)"
+              "text" : " = .none) "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "where"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "text" : "T"
+            },
+            {
+              "kind" : "text",
+              "text" : " : ~Copyable, "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "text" : "T"
+            },
+            {
+              "kind" : "text",
+              "text" : " : ~Escapable"
             }
           ]
         }

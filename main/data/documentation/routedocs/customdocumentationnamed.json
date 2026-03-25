@@ -40,7 +40,7 @@
     ],
     "remoteSource" : {
       "fileName" : "DocumentationDecoder.swift",
-      "url" : "https:\/\/github.com\/sersoft-gmbh\/route-docs\/blob\/refs\/heads\/main\/Sources\/RouteDocs\/DocumentationDecoder.swift#L128"
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/route-docs\/blob\/refs\/heads\/main\/Sources\/RouteDocs\/DocumentationDecoder.swift#L153"
     },
     "role" : "symbol",
     "roleHeading" : "Protocol",
@@ -69,6 +69,10 @@
             {
               "kind" : "identifier",
               "text" : "CustomDocumentationNamed"
+            },
+            {
+              "kind" : "text",
+              "text" : " : ~Copyable, ~Escapable"
             }
           ]
         }
@@ -241,6 +245,22 @@
         "type" : "codeVoice"
       },
       {
+        "text" : ", ",
+        "type" : "text"
+      },
+      {
+        "code" : "Copyable",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : ", and ",
+        "type" : "text"
+      },
+      {
+        "code" : "Escapable",
+        "type" : "codeVoice"
+      },
+      {
         "text" : ".",
         "type" : "text"
       }
@@ -374,6 +394,22 @@
       },
       {
         "code" : "CustomDocumentationNamed",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : ", ",
+        "type" : "text"
+      },
+      {
+        "code" : "Copyable",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : ", and ",
+        "type" : "text"
+      },
+      {
+        "code" : "Escapable",
         "type" : "codeVoice"
       },
       {

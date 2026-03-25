@@ -40,7 +40,7 @@
     ],
     "remoteSource" : {
       "fileName" : "DocumentationDecoder.swift",
-      "url" : "https:\/\/github.com\/sersoft-gmbh\/route-docs\/blob\/refs\/heads\/main\/Sources\/RouteDocs\/DocumentationDecoder.swift#L132"
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/route-docs\/blob\/refs\/heads\/main\/Sources\/RouteDocs\/DocumentationDecoder.swift#L162"
     },
     "role" : "symbol",
     "roleHeading" : "Protocol",
@@ -69,6 +69,10 @@
             {
               "kind" : "identifier",
               "text" : "CustomDocumentable"
+            },
+            {
+              "kind" : "text",
+              "text" : " : ~Copyable"
             }
           ]
         }
@@ -382,6 +386,14 @@
       },
       {
         "code" : "CustomDocumentable",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : " and ",
+        "type" : "text"
+      },
+      {
+        "code" : "Copyable",
         "type" : "codeVoice"
       },
       {

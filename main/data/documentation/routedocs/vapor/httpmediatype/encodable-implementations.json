@@ -111,7 +111,10 @@
 },
 "doc://RouteDocs/documentation/RouteDocs/Vapor/HTTPMediaType/encode(to:)": {
   "abstract" : [
-
+    {
+      "text" : "Encodes this value into the given encoder.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {

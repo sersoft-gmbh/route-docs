@@ -15,7 +15,7 @@
   "kind" : "symbol",
   "metadata" : {
     "extendedModule" : "RouteDocs",
-    "externalID" : "s:9RouteDocs21EndpointDocumentationV7PayloadV6object2asAExm_5Vapor13HTTPMediaTypeVtKcAA18CustomDocumentableRzlufc",
+    "externalID" : "s:9RouteDocs21EndpointDocumentationV7PayloadV6object2asAExm_5Vapor13HTTPMediaTypeVtKcAA18CustomDocumentableRzRi_zlufc",
     "fragments" : [
       {
         "kind" : "identifier",
@@ -182,6 +182,18 @@
               "kind" : "typeIdentifier",
               "preciseIdentifier" : "s:9RouteDocs18CustomDocumentableP",
               "text" : "CustomDocumentable"
+            },
+            {
+              "kind" : "text",
+              "text" : ", "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "text" : "T"
+            },
+            {
+              "kind" : "text",
+              "text" : " : ~Copyable"
             }
           ]
         }

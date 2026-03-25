@@ -439,7 +439,10 @@
 },
 "doc://RouteDocs/documentation/RouteDocs/EndpointDocumentation/Object/Body-swift.enum/description": {
   "abstract" : [
-
+    {
+      "text" : "A textual representation of this instance.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
@@ -498,7 +501,10 @@
 },
 "doc://RouteDocs/documentation/RouteDocs/EndpointDocumentation/Object/Body-swift.enum/encode(to:)": {
   "abstract" : [
-
+    {
+      "text" : "Encodes this value into the given encoder.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
@@ -769,7 +775,10 @@
 },
 "doc://RouteDocs/documentation/RouteDocs/EndpointDocumentation/Object/Body-swift.enum/init(from:)": {
   "abstract" : [
-
+    {
+      "text" : "Creates a new instance by decoding from the given decoder.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {

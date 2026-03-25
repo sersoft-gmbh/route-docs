@@ -13,7 +13,7 @@
   },
   "kind" : "symbol",
   "metadata" : {
-    "externalID" : "s:9RouteDocs19DocumentationObjectV4typeypXpvp",
+    "externalID" : "s:9RouteDocs19DocumentationObjectV4typeypRi_s_Ri0_sXPXpvp",
     "fragments" : [
       {
         "kind" : "keyword",
@@ -29,15 +29,7 @@
       },
       {
         "kind" : "text",
-        "text" : ": any "
-      },
-      {
-        "kind" : "keyword",
-        "text" : "Any"
-      },
-      {
-        "kind" : "text",
-        "text" : ".Type"
+        "text" : ": any (~Copyable & ~Escapable).Type"
       }
     ],
     "modules" : [
@@ -47,7 +39,7 @@
     ],
     "remoteSource" : {
       "fileName" : "DocumentationDecoder.swift",
-      "url" : "https:\/\/github.com\/sersoft-gmbh\/route-docs\/blob\/refs\/heads\/main\/Sources\/RouteDocs\/DocumentationDecoder.swift#L66"
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/route-docs\/blob\/refs\/heads\/main\/Sources\/RouteDocs\/DocumentationDecoder.swift#L67"
     },
     "role" : "symbol",
     "roleHeading" : "Instance Property",
@@ -79,15 +71,7 @@
             },
             {
               "kind" : "text",
-              "text" : ": any "
-            },
-            {
-              "kind" : "keyword",
-              "text" : "Any"
-            },
-            {
-              "kind" : "text",
-              "text" : ".Type"
+              "text" : ": any (~Copyable & ~Escapable).Type"
             }
           ]
         }
@@ -178,15 +162,7 @@
     },
     {
       "kind" : "text",
-      "text" : ": any "
-    },
-    {
-      "kind" : "keyword",
-      "text" : "Any"
-    },
-    {
-      "kind" : "text",
-      "text" : ".Type"
+      "text" : ": any (~Copyable & ~Escapable).Type"
     }
   ],
   "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocumentationObject\/type",

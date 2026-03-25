@@ -13,7 +13,7 @@
   },
   "kind" : "symbol",
   "metadata" : {
-    "externalID" : "s:9RouteDocs15TypeDescriptionV3anyACypXp_tcfc",
+    "externalID" : "s:9RouteDocs15TypeDescriptionV3anyACypRi_s_Ri0_sXPXp_tcfc",
     "fragments" : [
       {
         "kind" : "identifier",
@@ -29,15 +29,7 @@
       },
       {
         "kind" : "text",
-        "text" : ": any "
-      },
-      {
-        "kind" : "keyword",
-        "text" : "Any"
-      },
-      {
-        "kind" : "text",
-        "text" : ".Type)"
+        "text" : ": any (~Copyable & ~Escapable).Type)"
       }
     ],
     "modules" : [
@@ -47,7 +39,7 @@
     ],
     "remoteSource" : {
       "fileName" : "TypeDescription.swift",
-      "url" : "https:\/\/github.com\/sersoft-gmbh\/route-docs\/blob\/refs\/heads\/main\/Sources\/RouteDocs\/TypeDescription.swift#L159"
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/route-docs\/blob\/refs\/heads\/main\/Sources\/RouteDocs\/TypeDescription.swift#L158"
     },
     "role" : "symbol",
     "roleHeading" : "Initializer",
@@ -87,15 +79,7 @@
             },
             {
               "kind" : "text",
-              "text" : ": any "
-            },
-            {
-              "kind" : "keyword",
-              "text" : "Any"
-            },
-            {
-              "kind" : "text",
-              "text" : ".Type)"
+              "text" : ": any (~Copyable & ~Escapable).Type)"
             }
           ]
         }
@@ -186,15 +170,7 @@
     },
     {
       "kind" : "text",
-      "text" : ": any "
-    },
-    {
-      "kind" : "keyword",
-      "text" : "Any"
-    },
-    {
-      "kind" : "text",
-      "text" : ".Type)"
+      "text" : ": any (~Copyable & ~Escapable).Type)"
     }
   ],
   "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription\/init(any:)",

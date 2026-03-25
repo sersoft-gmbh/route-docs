@@ -465,7 +465,10 @@
 },
 "doc://RouteDocs/documentation/RouteDocs/DocsViewContext/Documentation/Object/Body-swift.enum/encode(to:)": {
   "abstract" : [
-
+    {
+      "text" : "Encodes this value into the given encoder.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {

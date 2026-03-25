@@ -256,7 +256,10 @@
 },
 "doc://RouteDocs/documentation/RouteDocs/EndpointDocumentation/Payload/description": {
   "abstract" : [
-
+    {
+      "text" : "A textual representation of this instance.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
@@ -487,7 +490,10 @@
 },
 "doc://RouteDocs/documentation/RouteDocs/EndpointDocumentation/Payload/init(from:)": {
   "abstract" : [
-
+    {
+      "text" : "Creates a new instance by decoding from the given decoder.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {

@@ -284,7 +284,10 @@
 },
 "doc://RouteDocs/documentation/RouteDocs/DocumentationType/description": {
   "abstract" : [
-
+    {
+      "text" : "A textual representation of this instance.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
@@ -318,7 +321,10 @@
 },
 "doc://RouteDocs/documentation/RouteDocs/DocumentationType/init(from:)": {
   "abstract" : [
-
+    {
+      "text" : "Creates a new instance by decoding from the given decoder.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
