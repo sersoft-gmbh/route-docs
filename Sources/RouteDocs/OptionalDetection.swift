@@ -2,7 +2,7 @@
  This code produces warnings, that are incorrect: https://github.com/swiftlang/swift/issues/88103
  */
 
-#if hasFeature(NonescapableTypes)
+#if hasFeature(NonescapableTypes) && compiler(>=6.2)
 fileprivate protocol AnyOptional: ~Copyable, ~Escapable {
     static var wrappedType: AnyType { get }
 }
@@ -25,7 +25,7 @@ func _isOptionalType(_ type: AnyType) -> Bool {
 }
 
 func _unwrapOptionals(in type: AnyType) -> AnyType {
-#if hasFeature(NonescapableTypes)
+#if hasFeature(NonescapableTypes) && compiler(>=6.2)
     (type as? any (AnyOptional & ~Copyable & ~Escapable).Type).map { _unwrapOptionals(in: $0.wrappedType) } ?? type
 #else
     (type as? any (AnyOptional & ~Copyable).Type).map { _openOptionals(in: $0.wrappedType) } ?? type

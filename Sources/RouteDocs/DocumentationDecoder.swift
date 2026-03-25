@@ -134,7 +134,7 @@ public struct DocumentationObject: Sendable, Hashable, CustomStringConvertible {
         \(String(repeating: " ", count: indentionLevel))}
         """
     }
-    
+
     public func hash(into hasher: inout Hasher) {
 #if compiler(>=6.3)
         hasher.combine(ObjectIdentifier(type))
@@ -379,7 +379,7 @@ extension DocumentationDecoder {
             isOptional = true
         }
 
-#if hasFeature(NonescapableTypes)
+#if hasFeature(NonescapableTypes) && compiler(>=6.2)
         func finalizeType<T: ~Copyable & ~Escapable>(with _: T.Type) -> AnyType {
             defer { isOptional = false }
             return isOptional ? Optional<T>.self : T.self
@@ -437,7 +437,7 @@ extension DocumentationDecoder {
             return Key(stringValue: "{any}").map { [$0] } ?? .init()
         }
 
-#if hasFeature(NonescapableTypes)
+#if hasFeature(NonescapableTypes) && compiler(>=6.2)
         private func finalize<T: ~Copyable & ~Escapable>(with type: T.Type, for key: Key) throws {
             try decoder.setType(builder.finalizeType(with: type), for: key)
         }
@@ -588,7 +588,7 @@ extension DocumentationDecoder {
         var count: Int? { nil }
         var isAtEnd: Bool { currentIndex >= 10 || decoder.hasPotentialCycle() }
 
-#if hasFeature(NonescapableTypes)
+#if hasFeature(NonescapableTypes) && compiler(>=6.2)
         private mutating func finalize<T: ~Copyable & ~Escapable>(with type: T.Type, for key: IndexKey) throws {
             try decoder.setType(builder.finalizeType(with: type), for: key)
         }
