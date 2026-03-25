@@ -11,7 +11,7 @@ extension Optional: AnyOptional where Wrapped: ~Copyable, Wrapped: ~Escapable {
     static var wrappedType: AnyType { Wrapped.self }
 }
 #else
-fileprivate protocol AnyOptional: ~Copyable, ~Escapable {
+fileprivate protocol AnyOptional: ~Copyable {
     static var wrappedType: AnyType { get }
 }
 
