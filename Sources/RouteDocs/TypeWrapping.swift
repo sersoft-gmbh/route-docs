@@ -32,14 +32,14 @@ fileprivate func leafType(of wrapping: TypeWrappingType, history: Array<AnyType>
     return leafType(of: wrapped, history: history + CollectionOfOne<AnyType>(wrapping))
 }
 
-#if compiler(>=6.2)
+#if compiler(>=6.3)
 @inline(always)
 fileprivate func leafType(of type: AnyType, history: @autoclosure () -> Array<AnyType>) -> AnyType {
     guard let wrapping = type as? TypeWrappingType else { return type }
     return leafType(of: wrapping, history: history())
 }
 #else
-@inline(always)
+@inline(__always)
 fileprivate func leafType(of type: AnyType, history: @autoclosure () -> Array<AnyType>) -> AnyType {
     guard let wrapping = type as? TypeWrappingType else { return type }
     return leafType(of: wrapping, history: history())
