@@ -22,8 +22,16 @@ fileprivate typealias TypeWrappingType = any (TypeWrapping & ~Copyable)
 extension Optional: TypeWrapping where Wrapped: TypeWrapping/*, Wrapped: ~Copyable*/ {}
 
 fileprivate func leafType(of wrapping: TypeWrappingType, history: Array<AnyType>) -> AnyType {
+    func equalTypes(lhs: AnyType, rhs: AnyType) -> Bool {
+#if compiler(>=6.3)
+        lhs == rhs
+#else
+        String(reflecting: lhs) == String(reflecting: rhs)
+#endif
+    }
+
     let wrapped = wrapping._wrappedType
-    guard !history.contains(where: { $0 == wrapped }) else {
+    guard !history.contains(where: { equalTypes(lhs: $0, rhs: wrapped) }) else {
         // If the history contains our wrapped type already, we encountered a loop.
         // Loops aren't necessarily bad, we just need to detect them
         // and return the last element (which is us in this case).
