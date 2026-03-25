@@ -21,7 +21,7 @@ fileprivate typealias TypeWrappingType = any (TypeWrapping & ~Copyable)
 // We detect optionals seperately, so we need to make them "transparent".
 extension Optional: TypeWrapping where Wrapped: TypeWrapping/*, Wrapped: ~Copyable*/ {}
 
-#if compiler(>=6.3)
+#if compiler(>=6.2)
 fileprivate func leafType(of wrapping: TypeWrappingType, history: Array<AnyType>) -> AnyType {
     let wrapped = wrapping._wrappedType
     guard !history.contains(where: { $0 == wrapped }) else {
