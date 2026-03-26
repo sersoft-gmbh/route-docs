@@ -21,21 +21,13 @@ fileprivate typealias TypeWrappingType = any (TypeWrapping & ~Copyable).Type
 // We detect optionals seperately, so we need to make them "transparent".
 extension Optional: TypeWrapping where Wrapped: TypeWrapping/*, Wrapped: ~Copyable*/ {}
 
-#if compiler(>=6.2)
-fileprivate func leafType(of wrapping: TypeWrappingType, history: Array<AnyType>) -> AnyType {
-    let wrapped = wrapping._wrappedType
-    guard !history.contains(where: { $0 == wrapped }) else {
-        // If the history contains our wrapped type already, we encountered a loop.
-        // Loops aren't necessarily bad, we just need to detect them
-        // and return the last element (which is us in this case).
-        return wrapping
-    }
-    return leafTypeOrType(of: wrapped, history: history + CollectionOfOne<AnyType>(wrapping))
-}
-#else
 fileprivate func leafType(of wrapping: borrowing TypeWrappingType, history: Array<AnyType>) -> AnyType {
     func equalTypes(lhs: AnyType, rhs: AnyType) -> Bool {
+#if compiler(>=6.3)
+        lhs == rhs
+#else
         String(reflecting: lhs) == String(reflecting: rhs)
+#endif
     }
 
     let wrapped = wrapping._wrappedType
@@ -47,7 +39,6 @@ fileprivate func leafType(of wrapping: borrowing TypeWrappingType, history: Arra
     }
     return leafTypeOrType(of: wrapped, history: history + CollectionOfOne<AnyType>(wrapping))
 }
-#endif
 
 #if compiler(>=6.3)
 @inline(always)
