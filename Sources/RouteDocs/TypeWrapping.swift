@@ -15,7 +15,7 @@ public protocol TypeWrapping<Wrapped>: ~Copyable {
 fileprivate extension TypeWrapping where Self: ~Copyable {
     static var _wrappedType: AnyType { Wrapped.self }
 }
-fileprivate typealias TypeWrappingType = any (TypeWrapping & ~Copyable)
+fileprivate typealias TypeWrappingType = any (TypeWrapping & ~Copyable).Type
 #endif
 
 // We detect optionals seperately, so we need to make them "transparent".

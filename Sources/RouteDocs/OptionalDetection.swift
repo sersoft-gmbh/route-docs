@@ -28,6 +28,6 @@ func _unwrapOptionals(in type: AnyType) -> AnyType {
 #if hasFeature(NonescapableTypes) && compiler(>=6.2)
     (type as? any (AnyOptional & ~Copyable & ~Escapable).Type).map { _unwrapOptionals(in: $0.wrappedType) } ?? type
 #else
-    (type as? any (AnyOptional & ~Copyable).Type).map { _openOptionals(in: $0.wrappedType) } ?? type
+    (type as? any (AnyOptional & ~Copyable).Type).map { _unwrapOptionals(in: $0.wrappedType) } ?? type
 #endif
 }

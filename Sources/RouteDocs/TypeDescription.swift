@@ -43,8 +43,8 @@ public struct TypeDescription: Sendable, Hashable, Codable, CustomStringConverti
                 self = .type(try TypeDescription(from: decoder))
                 return
             }
-            let hasType = container.allKeys.contains(.type)
 #if compiler(>=6.2)
+            let hasType = container.allKeys.contains(.type)
             let hasIntegerLiteral = container.allKeys.contains(.integerLiteral)
             if hasType && hasIntegerLiteral {
                 throw DecodingError.dataCorrupted(.init(codingPath: container.codingPath,
