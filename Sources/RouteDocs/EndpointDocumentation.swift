@@ -252,7 +252,7 @@ extension EndpointDocumentation.Query {
         try self.init(objects: EndpointDocumentation.Object.objects(from: object.reflectedDocumentation(withCustomUserInfo: customUserInfo)))
     }
 
-    public init<T: CustomDocumentable>(object: T.Type) throws {
+    public init<T: CustomDocumentable & ~Copyable>(object: T.Type) throws {
         self.init(objects: EndpointDocumentation.Object.objects(from: object.object(with: object)))
     }
 }

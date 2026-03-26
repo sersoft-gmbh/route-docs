@@ -136,20 +136,12 @@ public struct DocumentationObject: Sendable, Hashable, CustomStringConvertible {
     }
 
     public func hash(into hasher: inout Hasher) {
-#if compiler(>=6.3)
-        hasher.combine(ObjectIdentifier(type))
-#else
-        hasher.combine(String(reflecting: type))
-#endif
+        _hashType(type, into: &hasher)
         hasher.combine(body)
     }
 
     public static func ==(lhs: Self, rhs: Self) -> Bool {
-#if compiler(>=6.3)
-        lhs.type == rhs.type && lhs.body == rhs.body
-#else
-        String(reflecting: lhs.type) == String(reflecting: rhs.type) && lhs.body == rhs.body
-#endif
+        _equalTypes(lhs.type, rhs.type) && lhs.body == rhs.body
     }
 }
 
@@ -267,19 +259,11 @@ extension DocumentationDecoder {
 
             func hash(into hasher: inout Hasher) {
                 hasher.combine(key)
-#if compiler(>=6.3)
-                hasher.combine(ObjectIdentifier(type))
-#else
-                hasher.combine(String(reflecting: type))
-#endif
+                _hashType(type, into: &hasher)
             }
 
             static func ==(lhs: Self, rhs: Self) -> Bool {
-#if compiler(>=6.3)
-                lhs.key == rhs.key && lhs.type == rhs.type
-#else
-                lhs.key == rhs.key && String(reflecting: lhs.type) == String(reflecting: rhs.type)
-#endif
+                lhs.key == rhs.key && _equalTypes(lhs.type, rhs.type)
             }
         }
 
@@ -342,17 +326,23 @@ extension DocumentationDecoder {
 
 #if compiler(>=6.3)
         private typealias CacheKey = ObjectIdentifier
-
         @inline(always)
         private static func cacheKey(for type: AnyType) -> CacheKey {
             ObjectIdentifier(type)
         }
-#else
-        private typealias CacheKey = String
-
+#elseif compiler(>=6.2)
+        private typealias CacheKey = ObjectIdentifier
         @inline(__always)
         private static func cacheKey(for type: AnyType) -> CacheKey {
             String(reflecting: type)
+        }
+#else
+        private struct CacheKey: Hashable, @unchecked Sendable {
+            let typePointer: UnsafeRawPointer
+        }
+        @inline(__always)
+        private static func cacheKey(for type: AnyType) -> CacheKey {
+            CacheKey(typePointer: unsafeBitCast(type, to: UnsafeRawPointer.self))
         }
 #endif
 
