@@ -334,7 +334,7 @@ extension DocumentationDecoder {
         private typealias CacheKey = ObjectIdentifier
         @inline(__always)
         private static func cacheKey(for type: AnyType) -> CacheKey {
-            String(reflecting: type)
+            ObjectIdentifier(type)
         }
 #else
         private struct CacheKey: Hashable, @unchecked Sendable {
