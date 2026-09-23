@@ -1,5 +1,5 @@
 /*
- This code produces warnings, that are incorrect: https://github.com/swiftlang/swift/issues/88103
+ This code produces warnings that are incorrect: https://github.com/swiftlang/swift/issues/88103
  */
 
 #if hasFeature(NonescapableTypes) && compiler(>=6.2)

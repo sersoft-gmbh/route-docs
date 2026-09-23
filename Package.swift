@@ -1,4 +1,4 @@
-// swift-tools-version:6.3
+// swift-tools-version:6.4
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
@@ -11,14 +11,14 @@ let swiftSettings: Array<SwiftSetting> = [
     .enableUpcomingFeature("ExistentialAny"),
     .enableUpcomingFeature("InternalImportsByDefault"),
     .enableUpcomingFeature("MemberImportVisibility"),
-    .enableUpcomingFeature("NonescapableType"),
     .enableUpcomingFeature("ImmutableWeakCaptures"),
+    .enableUpcomingFeature("NonisolatedNonsendingByDefault"),
 ]
 
 let package = Package(
     name: "route-docs",
     platforms: [
-        .macOS(.v10_15),
+        .macOS(.v12),
     ],
     products: [
         // Products define the executables and libraries produced by a package, and make them visible to other packages.

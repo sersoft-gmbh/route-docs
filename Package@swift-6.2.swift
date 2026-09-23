@@ -10,8 +10,9 @@ let swiftSettings: Array<SwiftSetting> = [
     // .treatAllWarnings(as: .error),
     .enableUpcomingFeature("ExistentialAny"),
     .enableUpcomingFeature("InternalImportsByDefault"),
-    .enableUpcomingFeature("NonescapableType"),
     .enableUpcomingFeature("MemberImportVisibility"),
+    .enableUpcomingFeature("ImmutableWeakCaptures"),
+    .enableUpcomingFeature("NonisolatedNonsendingByDefault"),
 ]
 
 let package = Package(

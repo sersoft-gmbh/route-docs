@@ -10,6 +10,7 @@ extension DocsViewContext {
 }
 
 extension ViewRenderer {
+    @concurrent
     public func renderDefaultDocs(with context: DocsViewContext) async throws -> View {
         try await render("docs", context)
     }

@@ -1,6 +1,6 @@
 #if hasFeature(NonescapableTypes)
 public protocol TypeWrapping<Wrapped>: ~Copyable, ~Escapable {
-    associatedtype Wrapped
+    associatedtype Wrapped: ~Copyable, ~Escapable
 }
 fileprivate typealias TypeWrappingType = any (TypeWrapping & ~Copyable & ~Escapable).Type
 
@@ -9,7 +9,7 @@ fileprivate extension TypeWrapping where Self: ~Copyable, Self: ~Escapable {
 }
 #else
 public protocol TypeWrapping<Wrapped>: ~Copyable {
-    associatedtype Wrapped
+    associatedtype Wrapped: ~Copyable
 }
 
 fileprivate extension TypeWrapping where Self: ~Copyable {
@@ -19,7 +19,11 @@ fileprivate typealias TypeWrappingType = any (TypeWrapping & ~Copyable).Type
 #endif
 
 // We detect optionals seperately, so we need to make them "transparent".
+#if hasFeature(NonescapableTypes) && compiler(>=6.2)
+extension Optional: TypeWrapping where Wrapped: TypeWrapping, Wrapped: ~Copyable, Wrapped: ~Escapable {}
+#else
 extension Optional: TypeWrapping where Wrapped: TypeWrapping/*, Wrapped: ~Copyable*/ {}
+#endif
 
 fileprivate func leafType(of wrapping: TypeWrappingType, history: Array<AnyType>) -> AnyType {
     let wrapped = wrapping._wrappedType

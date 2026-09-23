@@ -168,7 +168,7 @@ public struct EndpointDocumentation: Sendable, Equatable, Codable, CustomStringC
         }
     }
 
-    public struct Payload: Equatable, Codable, CustomStringConvertible, @unchecked Sendable { // unchecked because of HTTPMediaType
+    public struct Payload: Equatable, Codable, CustomStringConvertible, Sendable {
         public let mediaType: HTTPMediaType
         public let objects: Array<Object>
 
