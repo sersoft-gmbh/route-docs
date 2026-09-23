@@ -363,10 +363,7 @@
 },
 "doc://RouteDocs/documentation/RouteDocs/EndpointDocumentation/description": {
   "abstract" : [
-    {
-      "text" : "A textual representation of this instance.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {
@@ -438,10 +435,7 @@
 },
 "doc://RouteDocs/documentation/RouteDocs/EndpointDocumentation/init(from:)": {
   "abstract" : [
-    {
-      "text" : "Creates a new instance by decoding from the given decoder.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {
@@ -564,15 +558,6 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:9RouteDocs21EndpointDocumentationV",
-      "text" : "EndpointDocumentation"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
       "preciseIdentifier" : "s:9RouteDocs21EndpointDocumentationV5QueryV",
       "text" : "Query"
     },
@@ -590,15 +575,6 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:9RouteDocs21EndpointDocumentationV",
-      "text" : "EndpointDocumentation"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
       "preciseIdentifier" : "s:9RouteDocs21EndpointDocumentationV7PayloadV",
       "text" : "Payload"
     },
@@ -613,15 +589,6 @@
     {
       "kind" : "text",
       "text" : ": "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:9RouteDocs21EndpointDocumentationV",
-      "text" : "EndpointDocumentation"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
     },
     {
       "kind" : "typeIdentifier",
@@ -757,15 +724,6 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:9RouteDocs21EndpointDocumentationV",
-      "text" : "EndpointDocumentation"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
       "preciseIdentifier" : "s:9RouteDocs21EndpointDocumentationV5QueryV",
       "text" : "Query"
     },
@@ -801,15 +759,6 @@
     {
       "kind" : "text",
       "text" : ": "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:9RouteDocs21EndpointDocumentationV",
-      "text" : "EndpointDocumentation"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
     },
     {
       "kind" : "typeIdentifier",
@@ -895,15 +844,6 @@
     {
       "kind" : "text",
       "text" : ": "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:9RouteDocs21EndpointDocumentationV",
-      "text" : "EndpointDocumentation"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
     },
     {
       "kind" : "typeIdentifier",

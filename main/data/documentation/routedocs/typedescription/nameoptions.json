@@ -277,18 +277,7 @@
 },
 "doc://RouteDocs/documentation/RouteDocs/TypeDescription/NameOptions/RawValue-swift.typealias": {
   "abstract" : [
-    {
-      "text" : "The raw type that can be used to represent all values of the conforming",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "type.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {
@@ -330,10 +319,7 @@
 },
 "doc://RouteDocs/documentation/RouteDocs/TypeDescription/NameOptions/init(rawValue:)": {
   "abstract" : [
-    {
-      "text" : "Creates a new option set from the given raw value.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {
@@ -354,24 +340,6 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:9RouteDocs15TypeDescriptionV",
-      "text" : "TypeDescription"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:9RouteDocs15TypeDescriptionV11NameOptionsV",
-      "text" : "NameOptions"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
       "preciseIdentifier" : "s:9RouteDocs15TypeDescriptionV11NameOptionsV8RawValuea",
       "text" : "RawValue"
     },
@@ -389,10 +357,7 @@
 },
 "doc://RouteDocs/documentation/RouteDocs/TypeDescription/NameOptions/rawValue-swift.property": {
   "abstract" : [
-    {
-      "text" : "The corresponding value of the raw type.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {
@@ -410,24 +375,6 @@
     {
       "kind" : "text",
       "text" : ": "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:9RouteDocs15TypeDescriptionV",
-      "text" : "TypeDescription"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:9RouteDocs15TypeDescriptionV11NameOptionsV",
-      "text" : "NameOptions"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
     },
     {
       "kind" : "typeIdentifier",

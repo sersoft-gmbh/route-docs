@@ -310,10 +310,7 @@
 },
 "doc://RouteDocs/documentation/RouteDocs/TypeDescription/description": {
   "abstract" : [
-    {
-      "text" : "A textual representation of this instance.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {
@@ -347,10 +344,7 @@
 },
 "doc://RouteDocs/documentation/RouteDocs/TypeDescription/encode(to:)": {
   "abstract" : [
-    {
-      "text" : "Encodes this value into the given encoder.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {
@@ -375,7 +369,15 @@
     },
     {
       "kind" : "text",
-      "text" : ": any "
+      "text" : ": "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "any"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
     },
     {
       "kind" : "typeIdentifier",
@@ -430,15 +432,6 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:9RouteDocs15TypeDescriptionV",
-      "text" : "TypeDescription"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
       "preciseIdentifier" : "s:9RouteDocs15TypeDescriptionV16GenericParameterO",
       "text" : "GenericParameter"
     },
@@ -477,6 +470,7 @@
     },
     {
       "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:9RouteDocs15TypeDescriptionVyACxmcRi_zRi0_zlufc1TL_xmfp",
       "text" : "T"
     },
     {
@@ -510,7 +504,33 @@
     },
     {
       "kind" : "text",
-      "text" : ": any (~Copyable & ~Escapable).Type)"
+      "text" : ": "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "any"
+    },
+    {
+      "kind" : "text",
+      "text" : " (~"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:s8CopyableP",
+      "text" : "Copyable"
+    },
+    {
+      "kind" : "text",
+      "text" : " & ~"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:s9EscapableP",
+      "text" : "Escapable"
+    },
+    {
+      "kind" : "text",
+      "text" : ").Type)"
     }
   ],
   "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription\/init(any:)",
@@ -522,10 +542,7 @@
 },
 "doc://RouteDocs/documentation/RouteDocs/TypeDescription/init(from:)": {
   "abstract" : [
-    {
-      "text" : "Creates a new instance by decoding from the given decoder.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {
@@ -542,7 +559,15 @@
     },
     {
       "kind" : "text",
-      "text" : ": any "
+      "text" : ": "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "any"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
     },
     {
       "kind" : "typeIdentifier",
@@ -788,15 +813,6 @@
     {
       "kind" : "text",
       "text" : ": "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:9RouteDocs15TypeDescriptionV",
-      "text" : "TypeDescription"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
     },
     {
       "kind" : "typeIdentifier",

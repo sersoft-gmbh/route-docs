@@ -482,24 +482,6 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:9RouteDocs0B11ViewContextV",
-      "text" : "DocsViewContext"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:9RouteDocs0B11ViewContextV13DocumentationV",
-      "text" : "Documentation"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
       "preciseIdentifier" : "s:9RouteDocs0B11ViewContextV13DocumentationV5QueryV",
       "text" : "Query"
     },
@@ -535,24 +517,6 @@
     {
       "kind" : "text",
       "text" : ": "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:9RouteDocs0B11ViewContextV",
-      "text" : "DocsViewContext"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:9RouteDocs0B11ViewContextV13DocumentationV",
-      "text" : "Documentation"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
     },
     {
       "kind" : "typeIdentifier",
@@ -638,24 +602,6 @@
     {
       "kind" : "text",
       "text" : ": "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:9RouteDocs0B11ViewContextV",
-      "text" : "DocsViewContext"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:9RouteDocs0B11ViewContextV13DocumentationV",
-      "text" : "Documentation"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
     },
     {
       "kind" : "typeIdentifier",

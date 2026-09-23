@@ -229,10 +229,7 @@
 },
 "doc://RouteDocs/documentation/RouteDocs/DocumentationObject/==(_:_:)": {
   "abstract" : [
-    {
-      "text" : "Returns a Boolean value indicating whether two values are equal.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {
@@ -261,21 +258,11 @@
     },
     {
       "kind" : "text",
-      "text" : "("
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:9RouteDocs19DocumentationObjectV",
-      "text" : "DocumentationObject"
+      "text" : "(`Self`"
     },
     {
       "kind" : "text",
-      "text" : ", "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:9RouteDocs19DocumentationObjectV",
-      "text" : "DocumentationObject"
+      "text" : ", `Self`"
     },
     {
       "kind" : "text",
@@ -359,15 +346,6 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:9RouteDocs19DocumentationObjectV",
-      "text" : "DocumentationObject"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
       "preciseIdentifier" : "s:9RouteDocs19DocumentationObjectV4BodyO",
       "text" : "Body"
     }
@@ -418,10 +396,7 @@
 },
 "doc://RouteDocs/documentation/RouteDocs/DocumentationObject/description": {
   "abstract" : [
-    {
-      "text" : "A textual representation of this instance.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {
@@ -455,18 +430,7 @@
 },
 "doc://RouteDocs/documentation/RouteDocs/DocumentationObject/hash(into:)": {
   "abstract" : [
-    {
-      "text" : "Hashes the essential components of this value by feeding them into the",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "given hasher.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {
@@ -541,6 +505,7 @@
     },
     {
       "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:9RouteDocs19DocumentationObjectV_4bodyACxm_AC4BodyOtcRi_zRi0_zlufc1TL_xmfp",
       "text" : "T"
     },
     {
@@ -554,15 +519,6 @@
     {
       "kind" : "text",
       "text" : ": "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:9RouteDocs19DocumentationObjectV",
-      "text" : "DocumentationObject"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
     },
     {
       "kind" : "typeIdentifier",
@@ -604,6 +560,7 @@
     },
     {
       "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:9RouteDocs19DocumentationObjectV_6fieldsACxm_SDySSACGtcRi_zRi0_zlufc1TL_xmfp",
       "text" : "T"
     },
     {
@@ -684,6 +641,7 @@
     },
     {
       "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:9RouteDocs19DocumentationObjectV7casesOfACxm_tcs12CaseIterableRzSYRzlufc1TL_xmfp",
       "text" : "T"
     },
     {
@@ -751,7 +709,33 @@
     },
     {
       "kind" : "text",
-      "text" : ": any (~Copyable & ~Escapable).Type"
+      "text" : ": "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "any"
+    },
+    {
+      "kind" : "text",
+      "text" : " (~"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:s8CopyableP",
+      "text" : "Copyable"
+    },
+    {
+      "kind" : "text",
+      "text" : " & ~"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:s9EscapableP",
+      "text" : "Escapable"
+    },
+    {
+      "kind" : "text",
+      "text" : ").Type"
     }
   ],
   "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocumentationObject\/type",

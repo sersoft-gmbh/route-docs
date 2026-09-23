@@ -29,7 +29,33 @@
       },
       {
         "kind" : "text",
-        "text" : ": any (~Copyable & ~Escapable).Type"
+        "text" : ": "
+      },
+      {
+        "kind" : "keyword",
+        "text" : "any"
+      },
+      {
+        "kind" : "text",
+        "text" : " (~"
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:s8CopyableP",
+        "text" : "Copyable"
+      },
+      {
+        "kind" : "text",
+        "text" : " & ~"
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:s9EscapableP",
+        "text" : "Escapable"
+      },
+      {
+        "kind" : "text",
+        "text" : ").Type"
       }
     ],
     "modules" : [
@@ -71,7 +97,33 @@
             },
             {
               "kind" : "text",
-              "text" : ": any (~Copyable & ~Escapable).Type"
+              "text" : ": "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "any"
+            },
+            {
+              "kind" : "text",
+              "text" : " (~"
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:s8CopyableP",
+              "text" : "Copyable"
+            },
+            {
+              "kind" : "text",
+              "text" : " & ~"
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:s9EscapableP",
+              "text" : "Escapable"
+            },
+            {
+              "kind" : "text",
+              "text" : ").Type"
             }
           ]
         }
@@ -162,7 +214,33 @@
     },
     {
       "kind" : "text",
-      "text" : ": any (~Copyable & ~Escapable).Type"
+      "text" : ": "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "any"
+    },
+    {
+      "kind" : "text",
+      "text" : " (~"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:s8CopyableP",
+      "text" : "Copyable"
+    },
+    {
+      "kind" : "text",
+      "text" : " & ~"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:s9EscapableP",
+      "text" : "Escapable"
+    },
+    {
+      "kind" : "text",
+      "text" : ").Type"
     }
   ],
   "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocumentationObject\/type",

@@ -178,11 +178,27 @@
         "type" : "text"
       },
       {
+        "code" : "Wrapped.Wrapped",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : " conforms to ",
+        "type" : "text"
+      },
+      {
         "code" : "Copyable",
         "type" : "codeVoice"
       },
       {
         "text" : ", and ",
+        "type" : "text"
+      },
+      {
+        "code" : "Wrapped.Wrapped",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : " conforms to ",
         "type" : "text"
       },
       {
@@ -270,6 +286,10 @@
     {
       "kind" : "identifier",
       "text" : "Wrapped"
+    },
+    {
+      "kind" : "text",
+      "text" : " : ~Copyable, ~Escapable"
     }
   ],
   "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeWrapping\/Wrapped",

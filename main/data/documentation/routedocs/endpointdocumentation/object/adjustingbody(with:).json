@@ -58,24 +58,6 @@
       },
       {
         "kind" : "typeIdentifier",
-        "preciseIdentifier" : "s:9RouteDocs21EndpointDocumentationV",
-        "text" : "EndpointDocumentation"
-      },
-      {
-        "kind" : "text",
-        "text" : "."
-      },
-      {
-        "kind" : "typeIdentifier",
-        "preciseIdentifier" : "s:9RouteDocs21EndpointDocumentationV6ObjectV",
-        "text" : "Object"
-      },
-      {
-        "kind" : "text",
-        "text" : "."
-      },
-      {
-        "kind" : "typeIdentifier",
         "preciseIdentifier" : "s:9RouteDocs21EndpointDocumentationV6ObjectV4BodyO",
         "text" : "Body"
       },
@@ -93,6 +75,7 @@
       },
       {
         "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:9RouteDocs21EndpointDocumentationV6ObjectV13adjustingBody4withAEyAE0G0OzxYKXE_txYKs5ErrorRzlF1EL_xmfp",
         "text" : "E"
       },
       {
@@ -109,6 +92,7 @@
       },
       {
         "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:9RouteDocs21EndpointDocumentationV6ObjectV13adjustingBody4withAEyAE0G0OzxYKXE_txYKs5ErrorRzlF1EL_xmfp",
         "text" : "E"
       },
       {
@@ -204,26 +188,6 @@
               "text" : " "
             },
             {
-              "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentation",
-              "kind" : "typeIdentifier",
-              "preciseIdentifier" : "s:9RouteDocs21EndpointDocumentationV",
-              "text" : "EndpointDocumentation"
-            },
-            {
-              "kind" : "text",
-              "text" : "."
-            },
-            {
-              "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentation\/Object",
-              "kind" : "typeIdentifier",
-              "preciseIdentifier" : "s:9RouteDocs21EndpointDocumentationV6ObjectV",
-              "text" : "Object"
-            },
-            {
-              "kind" : "text",
-              "text" : "."
-            },
-            {
               "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentation\/Object\/Body-swift.enum",
               "kind" : "typeIdentifier",
               "preciseIdentifier" : "s:9RouteDocs21EndpointDocumentationV6ObjectV4BodyO",
@@ -243,6 +207,7 @@
             },
             {
               "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:9RouteDocs21EndpointDocumentationV6ObjectV13adjustingBody4withAEyAE0G0OzxYKXE_txYKs5ErrorRzlF1EL_xmfp",
               "text" : "E"
             },
             {
@@ -259,6 +224,7 @@
             },
             {
               "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:9RouteDocs21EndpointDocumentationV6ObjectV13adjustingBody4withAEyAE0G0OzxYKXE_txYKs5ErrorRzlF1EL_xmfp",
               "text" : "E"
             },
             {
@@ -485,24 +451,6 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:9RouteDocs21EndpointDocumentationV",
-      "text" : "EndpointDocumentation"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:9RouteDocs21EndpointDocumentationV6ObjectV",
-      "text" : "Object"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
       "preciseIdentifier" : "s:9RouteDocs21EndpointDocumentationV6ObjectV4BodyO",
       "text" : "Body"
     },
@@ -520,6 +468,7 @@
     },
     {
       "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:9RouteDocs21EndpointDocumentationV6ObjectV13adjustingBody4withAEyAE0G0OzxYKXE_txYKs5ErrorRzlF1EL_xmfp",
       "text" : "E"
     },
     {
@@ -536,6 +485,7 @@
     },
     {
       "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:9RouteDocs21EndpointDocumentationV6ObjectV13adjustingBody4withAEyAE0G0OzxYKXE_txYKs5ErrorRzlF1EL_xmfp",
       "text" : "E"
     },
     {

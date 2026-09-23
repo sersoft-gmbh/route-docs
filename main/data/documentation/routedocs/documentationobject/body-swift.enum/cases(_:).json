@@ -43,24 +43,6 @@
       },
       {
         "kind" : "typeIdentifier",
-        "preciseIdentifier" : "s:9RouteDocs19DocumentationObjectV",
-        "text" : "DocumentationObject"
-      },
-      {
-        "kind" : "text",
-        "text" : "."
-      },
-      {
-        "kind" : "typeIdentifier",
-        "preciseIdentifier" : "s:9RouteDocs19DocumentationObjectV4BodyO",
-        "text" : "Body"
-      },
-      {
-        "kind" : "text",
-        "text" : "."
-      },
-      {
-        "kind" : "typeIdentifier",
         "preciseIdentifier" : "s:9RouteDocs19DocumentationObjectV4BodyO8EnumCaseV",
         "text" : "EnumCase"
       },
@@ -118,26 +100,6 @@
             {
               "kind" : "text",
               "text" : "<"
-            },
-            {
-              "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocumentationObject",
-              "kind" : "typeIdentifier",
-              "preciseIdentifier" : "s:9RouteDocs19DocumentationObjectV",
-              "text" : "DocumentationObject"
-            },
-            {
-              "kind" : "text",
-              "text" : "."
-            },
-            {
-              "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocumentationObject\/Body-swift.enum",
-              "kind" : "typeIdentifier",
-              "preciseIdentifier" : "s:9RouteDocs19DocumentationObjectV4BodyO",
-              "text" : "Body"
-            },
-            {
-              "kind" : "text",
-              "text" : "."
             },
             {
               "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocumentationObject\/Body-swift.enum\/EnumCase",
@@ -310,24 +272,6 @@
     {
       "kind" : "text",
       "text" : "<"
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:9RouteDocs19DocumentationObjectV",
-      "text" : "DocumentationObject"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:9RouteDocs19DocumentationObjectV4BodyO",
-      "text" : "Body"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
     },
     {
       "kind" : "typeIdentifier",

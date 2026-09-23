@@ -163,7 +163,23 @@
         "type" : "codeVoice"
       },
       {
-        "text" : " and ",
+        "text" : ", ",
+        "type" : "text"
+      },
+      {
+        "code" : "Copyable",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : ", ",
+        "type" : "text"
+      },
+      {
+        "code" : "Escapable",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : ", and ",
         "type" : "text"
       },
       {

@@ -71,24 +71,7 @@
       },
       {
         "kind" : "text",
-        "text" : ": "
-      },
-      {
-        "kind" : "typeIdentifier",
-        "preciseIdentifier" : "s:Sq",
-        "text" : "Optional"
-      },
-      {
-        "kind" : "text",
-        "text" : "<"
-      },
-      {
-        "kind" : "typeIdentifier",
-        "text" : "Wrapped"
-      },
-      {
-        "kind" : "text",
-        "text" : ">"
+        "text" : ": `Self`"
       }
     ],
     "modules" : [
@@ -141,24 +124,11 @@
             },
             {
               "kind" : "text",
-              "text" : ": "
-            },
-            {
-              "kind" : "typeIdentifier",
-              "preciseIdentifier" : "s:Sq",
-              "text" : "Optional"
+              "text" : ": `Self`"
             },
             {
               "kind" : "text",
-              "text" : "<"
-            },
-            {
-              "kind" : "typeIdentifier",
-              "text" : "Wrapped"
-            },
-            {
-              "kind" : "text",
-              "text" : "> { "
+              "text" : " { "
             },
             {
               "kind" : "keyword",
@@ -309,24 +279,7 @@
     },
     {
       "kind" : "text",
-      "text" : ": "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:Sq",
-      "text" : "Optional"
-    },
-    {
-      "kind" : "text",
-      "text" : "<"
-    },
-    {
-      "kind" : "typeIdentifier",
-      "text" : "Wrapped"
-    },
-    {
-      "kind" : "text",
-      "text" : ">"
+      "text" : ": `Self`"
     }
   ],
   "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/Swift\/Optional\/documentationInstance",

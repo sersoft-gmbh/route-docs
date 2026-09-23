@@ -335,24 +335,6 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:9RouteDocs21EndpointDocumentationV",
-      "text" : "EndpointDocumentation"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:9RouteDocs21EndpointDocumentationV6ObjectV",
-      "text" : "Object"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
       "preciseIdentifier" : "s:9RouteDocs21EndpointDocumentationV6ObjectV4BodyO",
       "text" : "Body"
     },
@@ -370,6 +352,7 @@
     },
     {
       "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:9RouteDocs21EndpointDocumentationV6ObjectV13adjustingBody4withAEyAE0G0OzxYKXE_txYKs5ErrorRzlF1EL_xmfp",
       "text" : "E"
     },
     {
@@ -386,6 +369,7 @@
     },
     {
       "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:9RouteDocs21EndpointDocumentationV6ObjectV13adjustingBody4withAEyAE0G0OzxYKXE_txYKs5ErrorRzlF1EL_xmfp",
       "text" : "E"
     },
     {
@@ -437,24 +421,6 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:9RouteDocs21EndpointDocumentationV",
-      "text" : "EndpointDocumentation"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:9RouteDocs21EndpointDocumentationV6ObjectV",
-      "text" : "Object"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
       "preciseIdentifier" : "s:9RouteDocs21EndpointDocumentationV6ObjectV4BodyO",
       "text" : "Body"
     }
@@ -468,10 +434,7 @@
 },
 "doc://RouteDocs/documentation/RouteDocs/EndpointDocumentation/Object/description": {
   "abstract" : [
-    {
-      "text" : "A textual representation of this instance.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {
@@ -505,10 +468,7 @@
 },
 "doc://RouteDocs/documentation/RouteDocs/EndpointDocumentation/Object/init(from:)": {
   "abstract" : [
-    {
-      "text" : "Creates a new instance by decoding from the given decoder.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

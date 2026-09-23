@@ -43,6 +43,7 @@
       },
       {
         "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:9RouteDocs21EndpointDocumentationV7PayloadV6object2as14customUserInfoAExm_5Vapor13HTTPMediaTypeVSDys06CodingiJ3KeyVypGtKcSeRzlufc1TL_xmfp",
         "text" : "T"
       },
       {
@@ -156,6 +157,7 @@
             },
             {
               "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:9RouteDocs21EndpointDocumentationV7PayloadV6object2as14customUserInfoAExm_5Vapor13HTTPMediaTypeVSDys06CodingiJ3KeyVypGtKcSeRzlufc1TL_xmfp",
               "text" : "T"
             },
             {
@@ -382,6 +384,7 @@
     },
     {
       "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:9RouteDocs21EndpointDocumentationV7PayloadV6object2as14customUserInfoAExm_5Vapor13HTTPMediaTypeVSDys06CodingiJ3KeyVypGtKcSeRzlufc1TL_xmfp",
       "text" : "T"
     },
     {

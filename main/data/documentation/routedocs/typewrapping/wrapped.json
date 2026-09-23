@@ -26,6 +26,10 @@
       {
         "kind" : "identifier",
         "text" : "Wrapped"
+      },
+      {
+        "kind" : "text",
+        "text" : " : ~Copyable, ~Escapable"
       }
     ],
     "modules" : [
@@ -65,6 +69,10 @@
             {
               "kind" : "identifier",
               "text" : "Wrapped"
+            },
+            {
+              "kind" : "text",
+              "text" : " : ~Copyable, ~Escapable"
             }
           ]
         }
@@ -152,6 +160,10 @@
     {
       "kind" : "identifier",
       "text" : "Wrapped"
+    },
+    {
+      "kind" : "text",
+      "text" : " : ~Copyable, ~Escapable"
     }
   ],
   "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeWrapping\/Wrapped",

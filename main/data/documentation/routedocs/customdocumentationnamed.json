@@ -325,11 +325,27 @@
         "type" : "codeVoice"
       },
       {
-        "text" : " and ",
+        "text" : ", ",
         "type" : "text"
       },
       {
         "code" : "Comparable",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : ", ",
+        "type" : "text"
+      },
+      {
+        "code" : "Copyable",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : ", and ",
+        "type" : "text"
+      },
+      {
+        "code" : "Escapable",
         "type" : "codeVoice"
       },
       {
@@ -477,11 +493,27 @@
         "type" : "codeVoice"
       },
       {
-        "text" : " and ",
+        "text" : ", ",
         "type" : "text"
       },
       {
         "code" : "Comparable",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : ", ",
+        "type" : "text"
+      },
+      {
+        "code" : "Copyable",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : ", and ",
+        "type" : "text"
+      },
+      {
+        "code" : "Escapable",
         "type" : "codeVoice"
       },
       {
@@ -549,11 +581,27 @@
         "type" : "codeVoice"
       },
       {
-        "text" : " and ",
+        "text" : ", ",
         "type" : "text"
       },
       {
         "code" : "Comparable",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : ", ",
+        "type" : "text"
+      },
+      {
+        "code" : "Copyable",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : ", and ",
+        "type" : "text"
+      },
+      {
+        "code" : "Escapable",
         "type" : "codeVoice"
       },
       {
@@ -621,11 +669,27 @@
         "type" : "codeVoice"
       },
       {
-        "text" : " and ",
+        "text" : ", ",
         "type" : "text"
       },
       {
         "code" : "Comparable",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : ", ",
+        "type" : "text"
+      },
+      {
+        "code" : "Copyable",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : ", and ",
+        "type" : "text"
+      },
+      {
+        "code" : "Escapable",
         "type" : "codeVoice"
       },
       {
@@ -693,11 +757,27 @@
         "type" : "codeVoice"
       },
       {
-        "text" : " and ",
+        "text" : ", ",
         "type" : "text"
       },
       {
         "code" : "Comparable",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : ", ",
+        "type" : "text"
+      },
+      {
+        "code" : "Copyable",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : ", and ",
+        "type" : "text"
+      },
+      {
+        "code" : "Escapable",
         "type" : "codeVoice"
       },
       {
@@ -765,7 +845,23 @@
         "type" : "codeVoice"
       },
       {
-        "text" : " and ",
+        "text" : ", ",
+        "type" : "text"
+      },
+      {
+        "code" : "Copyable",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : ", ",
+        "type" : "text"
+      },
+      {
+        "code" : "Escapable",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : ", and ",
         "type" : "text"
       },
       {

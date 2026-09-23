@@ -43,6 +43,7 @@
       },
       {
         "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:9RouteDocs21EndpointDocumentationV7PayloadV6object2asAExm_5Vapor13HTTPMediaTypeVtKcAA18CustomDocumentableRzRi_zlufc1TL_xmfp",
         "text" : "T"
       },
       {
@@ -122,6 +123,7 @@
             },
             {
               "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:9RouteDocs21EndpointDocumentationV7PayloadV6object2asAExm_5Vapor13HTTPMediaTypeVtKcAA18CustomDocumentableRzRi_zlufc1TL_xmfp",
               "text" : "T"
             },
             {
@@ -358,6 +360,7 @@
     },
     {
       "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:9RouteDocs21EndpointDocumentationV7PayloadV6object2asAExm_5Vapor13HTTPMediaTypeVtKcAA18CustomDocumentableRzRi_zlufc1TL_xmfp",
       "text" : "T"
     },
     {

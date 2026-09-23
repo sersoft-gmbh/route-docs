@@ -33,6 +33,7 @@
       },
       {
         "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:9RouteDocs19DocumentationObjectV_4bodyACxm_AC4BodyOtcRi_zRi0_zlufc1TL_xmfp",
         "text" : "T"
       },
       {
@@ -46,15 +47,6 @@
       {
         "kind" : "text",
         "text" : ": "
-      },
-      {
-        "kind" : "typeIdentifier",
-        "preciseIdentifier" : "s:9RouteDocs19DocumentationObjectV",
-        "text" : "DocumentationObject"
-      },
-      {
-        "kind" : "text",
-        "text" : "."
       },
       {
         "kind" : "typeIdentifier",
@@ -125,6 +117,7 @@
             },
             {
               "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:9RouteDocs19DocumentationObjectV_4bodyACxm_AC4BodyOtcRi_zRi0_zlufc1TL_xmfp",
               "text" : "T"
             },
             {
@@ -138,16 +131,6 @@
             {
               "kind" : "text",
               "text" : ": "
-            },
-            {
-              "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocumentationObject",
-              "kind" : "typeIdentifier",
-              "preciseIdentifier" : "s:9RouteDocs19DocumentationObjectV",
-              "text" : "DocumentationObject"
-            },
-            {
-              "kind" : "text",
-              "text" : "."
             },
             {
               "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/DocumentationObject\/Body-swift.enum",
@@ -307,6 +290,7 @@
     },
     {
       "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:9RouteDocs19DocumentationObjectV_4bodyACxm_AC4BodyOtcRi_zRi0_zlufc1TL_xmfp",
       "text" : "T"
     },
     {
@@ -320,15 +304,6 @@
     {
       "kind" : "text",
       "text" : ": "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:9RouteDocs19DocumentationObjectV",
-      "text" : "DocumentationObject"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
     },
     {
       "kind" : "typeIdentifier",

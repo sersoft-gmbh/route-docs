@@ -264,10 +264,7 @@
 },
 "doc://RouteDocs/documentation/RouteDocs/TypeDescription/GenericParameter/description": {
   "abstract" : [
-    {
-      "text" : "A textual representation of this instance.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {
@@ -301,10 +298,7 @@
 },
 "doc://RouteDocs/documentation/RouteDocs/TypeDescription/GenericParameter/encode(to:)": {
   "abstract" : [
-    {
-      "text" : "Encodes this value into the given encoder.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {
@@ -329,7 +323,15 @@
     },
     {
       "kind" : "text",
-      "text" : ": any "
+      "text" : ": "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "any"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
     },
     {
       "kind" : "typeIdentifier",
@@ -354,10 +356,7 @@
 },
 "doc://RouteDocs/documentation/RouteDocs/TypeDescription/GenericParameter/init(from:)": {
   "abstract" : [
-    {
-      "text" : "Creates a new instance by decoding from the given decoder.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {
@@ -374,7 +373,15 @@
     },
     {
       "kind" : "text",
-      "text" : ": any "
+      "text" : ": "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "any"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
     },
     {
       "kind" : "typeIdentifier",

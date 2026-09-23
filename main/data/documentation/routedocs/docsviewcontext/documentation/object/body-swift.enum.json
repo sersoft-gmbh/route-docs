@@ -387,42 +387,6 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:9RouteDocs0B11ViewContextV",
-      "text" : "DocsViewContext"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:9RouteDocs0B11ViewContextV13DocumentationV",
-      "text" : "Documentation"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:9RouteDocs0B11ViewContextV13DocumentationV6ObjectV",
-      "text" : "Object"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:9RouteDocs0B11ViewContextV13DocumentationV6ObjectV4BodyO",
-      "text" : "Body"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
       "preciseIdentifier" : "s:9RouteDocs0B11ViewContextV13DocumentationV6ObjectV4BodyO8EnumCaseV",
       "text" : "EnumCase"
     },
@@ -465,10 +429,7 @@
 },
 "doc://RouteDocs/documentation/RouteDocs/DocsViewContext/Documentation/Object/Body-swift.enum/encode(to:)": {
   "abstract" : [
-    {
-      "text" : "Encodes this value into the given encoder.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {
@@ -493,7 +454,15 @@
     },
     {
       "kind" : "text",
-      "text" : ": any "
+      "text" : ": "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "any"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
     },
     {
       "kind" : "typeIdentifier",
@@ -545,42 +514,6 @@
     {
       "kind" : "text",
       "text" : "<"
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:9RouteDocs0B11ViewContextV",
-      "text" : "DocsViewContext"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:9RouteDocs0B11ViewContextV13DocumentationV",
-      "text" : "Documentation"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:9RouteDocs0B11ViewContextV13DocumentationV6ObjectV",
-      "text" : "Object"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:9RouteDocs0B11ViewContextV13DocumentationV6ObjectV4BodyO",
-      "text" : "Body"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
     },
     {
       "kind" : "typeIdentifier",

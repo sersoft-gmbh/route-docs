@@ -256,10 +256,7 @@
 },
 "doc://RouteDocs/documentation/RouteDocs/EndpointDocumentation/Payload/description": {
   "abstract" : [
-    {
-      "text" : "A textual representation of this instance.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {
@@ -322,15 +319,6 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:9RouteDocs21EndpointDocumentationV",
-      "text" : "EndpointDocumentation"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
       "preciseIdentifier" : "s:9RouteDocs21EndpointDocumentationV6ObjectV",
       "text" : "Object"
     },
@@ -345,15 +333,6 @@
     {
       "kind" : "text",
       "text" : " -> "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:9RouteDocs21EndpointDocumentationV",
-      "text" : "EndpointDocumentation"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
     },
     {
       "kind" : "typeIdentifier",
@@ -425,15 +404,6 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:9RouteDocs21EndpointDocumentationV",
-      "text" : "EndpointDocumentation"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
       "preciseIdentifier" : "s:9RouteDocs21EndpointDocumentationV6ObjectV",
       "text" : "Object"
     },
@@ -490,10 +460,7 @@
 },
 "doc://RouteDocs/documentation/RouteDocs/EndpointDocumentation/Payload/init(from:)": {
   "abstract" : [
-    {
-      "text" : "Creates a new instance by decoding from the given decoder.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {
@@ -564,6 +531,7 @@
     },
     {
       "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:9RouteDocs21EndpointDocumentationV7PayloadV6objectAExm_tKcAA18CustomDocumentableRz5Vapor7ContentRzlufc1TL_xmfp",
       "text" : "T"
     },
     {
@@ -613,6 +581,7 @@
     },
     {
       "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:9RouteDocs21EndpointDocumentationV7PayloadV6object2asAExm_5Vapor13HTTPMediaTypeVtKcAA18CustomDocumentableRzRi_zlufc1TL_xmfp",
       "text" : "T"
     },
     {
@@ -679,6 +648,7 @@
     },
     {
       "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:9RouteDocs21EndpointDocumentationV7PayloadV6object2as14customUserInfoAExm_5Vapor13HTTPMediaTypeVSDys06CodingiJ3KeyVypGtKcSeRzlufc1TL_xmfp",
       "text" : "T"
     },
     {
@@ -779,6 +749,7 @@
     },
     {
       "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:9RouteDocs21EndpointDocumentationV7PayloadV6object14customUserInfoAExm_SDys06CodinghI3KeyVypGtKc5Vapor7ContentRzlufc1TL_xmfp",
       "text" : "T"
     },
     {
@@ -894,15 +865,6 @@
     {
       "kind" : "text",
       "text" : "<"
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:9RouteDocs21EndpointDocumentationV",
-      "text" : "EndpointDocumentation"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
     },
     {
       "kind" : "typeIdentifier",

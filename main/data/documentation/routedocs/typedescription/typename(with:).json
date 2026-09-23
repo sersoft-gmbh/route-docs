@@ -41,15 +41,6 @@
       },
       {
         "kind" : "typeIdentifier",
-        "preciseIdentifier" : "s:9RouteDocs15TypeDescriptionV",
-        "text" : "TypeDescription"
-      },
-      {
-        "kind" : "text",
-        "text" : "."
-      },
-      {
-        "kind" : "typeIdentifier",
         "preciseIdentifier" : "s:9RouteDocs15TypeDescriptionV11NameOptionsV",
         "text" : "NameOptions"
       },
@@ -119,16 +110,6 @@
             {
               "kind" : "text",
               "text" : ": "
-            },
-            {
-              "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription",
-              "kind" : "typeIdentifier",
-              "preciseIdentifier" : "s:9RouteDocs15TypeDescriptionV",
-              "text" : "TypeDescription"
-            },
-            {
-              "kind" : "text",
-              "text" : "."
             },
             {
               "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/TypeDescription\/NameOptions",
@@ -274,15 +255,6 @@
     {
       "kind" : "text",
       "text" : ": "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:9RouteDocs15TypeDescriptionV",
-      "text" : "TypeDescription"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
     },
     {
       "kind" : "typeIdentifier",

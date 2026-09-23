@@ -14,7 +14,7 @@
   "kind" : "symbol",
   "metadata" : {
     "extendedModule" : "Swift",
-    "externalID" : "s:e:s:Sq9RouteDocsAA12TypeWrappingRzlE7Wrappeda",
+    "externalID" : "s:e:s:Sq9RouteDocsAA12TypeWrappingRzRi_zRi0_zrlE7Wrappeda",
     "fragments" : [
       {
         "kind" : "keyword",
@@ -294,11 +294,27 @@
         "type" : "text"
       },
       {
+        "code" : "Wrapped.Wrapped",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : " conforms to ",
+        "type" : "text"
+      },
+      {
         "code" : "Copyable",
         "type" : "codeVoice"
       },
       {
         "text" : ", and ",
+        "type" : "text"
+      },
+      {
+        "code" : "Wrapped.Wrapped",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : " conforms to ",
         "type" : "text"
       },
       {

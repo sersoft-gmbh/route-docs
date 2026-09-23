@@ -42,15 +42,6 @@
       },
       {
         "kind" : "typeIdentifier",
-        "preciseIdentifier" : "s:9RouteDocs21EndpointDocumentationV",
-        "text" : "EndpointDocumentation"
-      },
-      {
-        "kind" : "text",
-        "text" : "."
-      },
-      {
-        "kind" : "typeIdentifier",
         "preciseIdentifier" : "s:9RouteDocs21EndpointDocumentationV6ObjectV",
         "text" : "Object"
       },
@@ -65,15 +56,6 @@
       {
         "kind" : "text",
         "text" : " -> "
-      },
-      {
-        "kind" : "typeIdentifier",
-        "preciseIdentifier" : "s:9RouteDocs21EndpointDocumentationV",
-        "text" : "EndpointDocumentation"
-      },
-      {
-        "kind" : "text",
-        "text" : "."
       },
       {
         "kind" : "typeIdentifier",
@@ -165,16 +147,6 @@
               "text" : ": ("
             },
             {
-              "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentation",
-              "kind" : "typeIdentifier",
-              "preciseIdentifier" : "s:9RouteDocs21EndpointDocumentationV",
-              "text" : "EndpointDocumentation"
-            },
-            {
-              "kind" : "text",
-              "text" : "."
-            },
-            {
               "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentation\/Object",
               "kind" : "typeIdentifier",
               "preciseIdentifier" : "s:9RouteDocs21EndpointDocumentationV6ObjectV",
@@ -191,16 +163,6 @@
             {
               "kind" : "text",
               "text" : " -> "
-            },
-            {
-              "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentation",
-              "kind" : "typeIdentifier",
-              "preciseIdentifier" : "s:9RouteDocs21EndpointDocumentationV",
-              "text" : "EndpointDocumentation"
-            },
-            {
-              "kind" : "text",
-              "text" : "."
             },
             {
               "identifier" : "doc:\/\/RouteDocs\/documentation\/RouteDocs\/EndpointDocumentation\/Object",
@@ -399,15 +361,6 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:9RouteDocs21EndpointDocumentationV",
-      "text" : "EndpointDocumentation"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
       "preciseIdentifier" : "s:9RouteDocs21EndpointDocumentationV6ObjectV",
       "text" : "Object"
     },
@@ -422,15 +375,6 @@
     {
       "kind" : "text",
       "text" : " -> "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:9RouteDocs21EndpointDocumentationV",
-      "text" : "EndpointDocumentation"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
     },
     {
       "kind" : "typeIdentifier",
