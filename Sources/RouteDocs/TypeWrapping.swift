@@ -1,6 +1,10 @@
 #if hasFeature(NonescapableTypes)
 public protocol TypeWrapping<Wrapped>: ~Copyable, ~Escapable {
+#if compiler(>=6.3)
     associatedtype Wrapped: ~Copyable, ~Escapable
+#else
+    associatedtype Wrapped
+#endif
 }
 fileprivate typealias TypeWrappingType = any (TypeWrapping & ~Copyable & ~Escapable).Type
 
@@ -9,7 +13,11 @@ fileprivate extension TypeWrapping where Self: ~Copyable, Self: ~Escapable {
 }
 #else
 public protocol TypeWrapping<Wrapped>: ~Copyable {
+#if compiler(>=6.3)
     associatedtype Wrapped: ~Copyable
+#else
+    associatedtype Wrapped
+#endif
 }
 
 fileprivate extension TypeWrapping where Self: ~Copyable {
