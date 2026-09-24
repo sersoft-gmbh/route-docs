@@ -10,10 +10,16 @@ extension DocsViewContext {
 }
 
 extension ViewRenderer {
+#if compiler(>=6.2)
     @concurrent
     public func renderDefaultDocs(with context: DocsViewContext) async throws -> View {
         try await render("docs", context)
     }
+#else
+    public func renderDefaultDocs(with context: DocsViewContext) async throws -> View {
+        try await render("docs", context)
+    }
+#endif
 }
 
 extension NIOLeafFiles {
