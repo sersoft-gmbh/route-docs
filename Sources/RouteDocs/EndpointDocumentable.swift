@@ -1,6 +1,6 @@
 public import Vapor
 
-#if hasFeature(NonescapableTypes)
+#if compiler(>=6.2)
 public protocol EndpointDocumentable: ~Copyable, ~Escapable {
     var documentation: EndpointDocumentation? { get }
 }

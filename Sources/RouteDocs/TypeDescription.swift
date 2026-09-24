@@ -150,7 +150,7 @@ public struct TypeDescription: Sendable, Hashable, Codable, CustomStringConverti
         try self.init(decodedModule: module, container: container)
     }
 
-#if hasFeature(NonescapableTypes)
+#if compiler(>=6.2)
     public init<T: ~Copyable & ~Escapable>(_ type: T.Type) {
         self = TypeParser.type(in: String(reflecting: type))
     }

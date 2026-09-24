@@ -63,7 +63,7 @@ public struct DocumentationObject: Sendable, Hashable, CustomStringConvertible {
         DocumentationDecoder.Cache.clear()
     }
 
-#if hasFeature(NonescapableTypes)
+#if compiler(>=6.2)
     public let type: any (~Copyable & ~Escapable).Type
 #else
     public let type: any ~Copyable.Type
@@ -74,7 +74,7 @@ public struct DocumentationObject: Sendable, Hashable, CustomStringConvertible {
 
     public var description: String { description(indentedBy: 0) }
 
-#if hasFeature(NonescapableTypes)
+#if compiler(>=6.2)
     fileprivate init(any type: any (~Copyable & ~Escapable).Type, body: Body) {
         self.type = type
         self.body = body
@@ -145,7 +145,7 @@ public struct DocumentationObject: Sendable, Hashable, CustomStringConvertible {
     }
 }
 
-#if hasFeature(NonescapableTypes)
+#if compiler(>=6.2)
 public protocol CustomDocumentationNamed: ~Copyable, ~Escapable {
     static var documentationName: String { get }
 }
@@ -271,7 +271,7 @@ extension DocumentationDecoder {
 
         private var keyTypeCounts = Dictionary<KeyTypeCombination, Int>()
 
-#if hasFeature(NonescapableTypes)
+#if compiler(>=6.2)
         init<T: ~Copyable & ~Escapable>(type: T.Type) {
             decodedObject = .init(any: type, body: .none)
         }
@@ -369,7 +369,7 @@ extension DocumentationDecoder {
             isOptional = true
         }
 
-#if hasFeature(NonescapableTypes) && compiler(>=6.2)
+#if compiler(>=6.2)
         func finalizeType<T: ~Copyable & ~Escapable>(with _: T.Type) -> AnyType {
             defer { isOptional = false }
             return isOptional ? Optional<T>.self : T.self
@@ -427,7 +427,7 @@ extension DocumentationDecoder {
             return Key(stringValue: "{any}").map { [$0] } ?? .init()
         }
 
-#if hasFeature(NonescapableTypes) && compiler(>=6.2)
+#if compiler(>=6.2)
         private func finalize<T: ~Copyable & ~Escapable>(with type: T.Type, for key: Key) throws {
             try decoder.setType(builder.finalizeType(with: type), for: key)
         }
@@ -578,7 +578,7 @@ extension DocumentationDecoder {
         var count: Int? { nil }
         var isAtEnd: Bool { currentIndex >= 10 || decoder.hasPotentialCycle() }
 
-#if hasFeature(NonescapableTypes) && compiler(>=6.2)
+#if compiler(>=6.2)
         private mutating func finalize<T: ~Copyable & ~Escapable>(with type: T.Type, for key: IndexKey) throws {
             try decoder.setType(builder.finalizeType(with: type), for: key)
         }

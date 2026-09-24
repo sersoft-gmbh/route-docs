@@ -1,4 +1,4 @@
-#if hasFeature(NonescapableTypes)
+#if compiler(>=6.2)
 internal typealias AnyType = any (~Copyable & ~Escapable).Type
 #else
 internal typealias AnyType = any ~Copyable.Type
